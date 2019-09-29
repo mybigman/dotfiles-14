@@ -1,3 +1,5 @@
 #!/bin/bash
 
-rofi -modi drun -show drun -opacity "90" -lines "8" -line-margin "4" -width "20" -padding "16"
+tema="-theme $HOME/.config/rofi/themes/dark.rasi" 
+
+rofi $tema -show drun -opacity "80" -lines 8 -line-margin 4 -width 20 -padding 16
