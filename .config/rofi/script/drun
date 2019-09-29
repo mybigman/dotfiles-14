@@ -1,0 +1,3 @@
+#!/bin/bash
+
+rofi -modi drun -show drun -opacity "90" -lines "8" -line-margin "4" -width "20" -padding "16"
