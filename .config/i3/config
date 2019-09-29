@@ -1,0 +1,313 @@
+# Crédits: Franklin Souza
+# Telegram: @FranklinTech
+# Dúvidas: https://i3wm.org/docs/userguide.html
+
+####################################################################
+################ P R I N C I P A L #################################
+####################################################################
+
+#set $gaps_inner_default 10
+#set $gaps_outer_default 0
+#gaps inner $gaps_inner_default
+#gaps outer $gaps_outer_default
+
+
+# $mod = Windows
+# Mod4 = Alt
+set $mod Mod4
+
+# Fonte
+
+font pango:DejaVu Sans Mono 8
+#font pango:Fantasque Sans Mono 9
+
+floating_modifier $mod
+
+new_window pixel 0
+default_border pixel 3
+
+# smart|urgent|focus|none
+focus_on_window_activation focus
+
+####################################################################
+################ C O R E S #########################################
+####################################################################
+
+set_from_resource $bg background
+
+# classe                borda   fundo   texto   ind.    borda filho
+client.focused          #ffffff #474747 #ffffff #ffffff   #ffffff
+client.focused_inactive #f9a3a3 #212121 #fc5757 #ffffff   #f84242
+client.unfocused        #ffffff #474747 #ffffff #ff0000   #ffffff
+client.urgent           #2f343a #900000 #ffffff #900000   #900000
+client.placeholder      #000000 #0c0c0c #ffffff #000000   #0c0c0c
+
+####################################################################
+################ A T A L H O S #####################################
+####################################################################
+
+#Chamar a polybar (caso ela não subir)
+#bindsym $mod+m exec polybar -r top
+#bindsym $mod+n exec polybar -r bottom
+
+# Iniciar terminal
+#bindsym $mod+Return exec i3-sensible-terminal
+bindsym $mod+Return exec termite
+#bindsym $mod+Return exec sakura
+
+# Matar janela focada
+bindsym $mod+Shift+q kill
+bindsym $mod+q kill
+
+# Mudar foco
+bindsym $mod+j focus left
+bindsym $mod+k focus down
+bindsym $mod+l focus up
+bindsym $mod+ccedilla focus right
+
+# Alternativa
+bindsym $mod+Left focus left
+bindsym $mod+Down focus down
+bindsym $mod+Up focus up
+bindsym $mod+Right focus right
+
+# Mover janela focada
+bindsym $mod+Shift+j move left
+bindsym $mod+Shift+k move down
+bindsym $mod+Shift+l move up
+bindsym $mod+Shift+ccedilla move right
+
+# Alternativa
+bindsym $mod+Shift+Left move left
+bindsym $mod+Shift+Down move down
+bindsym $mod+Shift+Up move up
+bindsym $mod+Shift+Right move right
+
+# Orientação horizontal
+bindsym $mod+h split h
+
+# Orientação vertical
+bindsym $mod+v split v
+
+# Entrar em modo tela cheia
+bindsym $mod+f fullscreen toggle
+
+# change container layout (stacked, tabbed, toggle split)
+bindsym $mod+s layout stacking
+bindsym $mod+w layout tabbed
+bindsym $mod+e layout toggle split
+
+# Tela maximizada/floating
+bindsym $mod+Shift+space floating toggle
+
+# change focus between tiling / floating windows
+bindsym $mod+space focus mode_toggle
+
+# Centro
+bindsym $mod+Shift+c move position center
+
+# Restartar i3
+bindsym $mod+Shift+r restart
+
+# Launchers
+
+#bindsym $mod+d exec dmenu_run
+bindsym $mod+d exec --no-startup-id $HOME/.config/rofi/script/drun
+#bindsym $mod+d exec synapse
+
+# Lock
+#bindsym $mod+Shift+x exec --no-startup-id $HOME/.local/lock/fortune
+
+# Screenshot
+bindsym Print exec flameshot gui
+
+####################################################################
+################ A R E A S #########################################
+####################################################################
+
+set $ws1 "1"
+set $ws2 "2"
+set $ws3 "3"
+set $ws4 "4"
+set $ws5 "5"
+set $ws6 "6"
+set $ws7 "7"
+set $ws8 "8"
+set $ws9 "9"
+set $ws10 "10"
+################
+#set $ws1 ""
+#set $ws2 ""
+#set $ws3 ""
+#set $ws4 ""
+#set $ws5 ""
+#set $ws6 ""
+#set $ws7 ""
+#set $ws8 ""
+#set $ws9 ""
+#set $ws10 ""
+
+# Navegar pelas workspaces
+bindsym $mod+1 workspace number $ws1
+bindsym $mod+2 workspace number $ws2
+bindsym $mod+3 workspace number $ws3
+bindsym $mod+4 workspace number $ws4
+bindsym $mod+5 workspace number $ws5
+bindsym $mod+6 workspace number $ws6
+bindsym $mod+7 workspace number $ws7
+bindsym $mod+8 workspace number $ws8
+bindsym $mod+9 workspace number $ws9
+bindsym $mod+0 workspace number $ws10
+
+# Mover foco para as workspace
+bindsym $mod+Shift+1 move container to workspace number $ws1
+bindsym $mod+Shift+2 move container to workspace number $ws2
+bindsym $mod+Shift+3 move container to workspace number $ws3
+bindsym $mod+Shift+4 move container to workspace number $ws4
+bindsym $mod+Shift+5 move container to workspace number $ws5
+bindsym $mod+Shift+6 move container to workspace number $ws6
+bindsym $mod+Shift+7 move container to workspace number $ws7
+bindsym $mod+Shift+8 move container to workspace number $ws8
+bindsym $mod+Shift+9 move container to workspace number $ws9
+bindsym $mod+Shift+0 move container to workspace number $ws10
+
+####################################################################
+################ R E G R A S #######################################
+####################################################################
+
+# Sakura (Terminal
+
+for_window [class="(Sakura)"]floating enable, move position center
+
+# Termite (Terminal)
+
+for_window [class="(Termite)"]floating enable, move position center
+
+# Telegram (Desktop)
+
+for_window [class="(Telegram)"]floating enable, move position center
+
+# Thunar (Gerenciador de arquivos)
+
+for_window [class="(Thunar)"]floating enable, move position center
+
+# VLC (Player de música/Vídeo)
+
+for_window [class="(vlc)"]floating enable, move position center
+
+# Mousepad (Editor de texto)
+
+for_window [class="(Mousepad)"]floating enable, move position center
+
+# Gedit (Editor de texto)
+
+for_window [class="(Gedit)"]floating enable, move position center
+
+# Feh (Gerenciador de imagens)
+
+for_window [class="(Feh)"]floating enable, move position center
+
+# Viewnior (Gerenciador de imagens)
+
+for_window [class="(Viewnior)"]floating enable, move position center
+
+# Gucharmap (Mapa de caracteres)
+
+for_window [class="(Gucharmap)"]floating enable, move position center
+
+# Qbittorrent (Gerenciador torrent)
+
+for_window [class="(Qbittorrent)"]floating enable, move position center
+
+####################################################################
+################ G R U P O S #######################################
+####################################################################
+# resize window (you can also use the mouse for that)
+mode "resize" {
+        # These bindings trigger as soon as you enter the resize mode
+
+        # Pressing left will shrink the window’s width.
+        # Pressing right will grow the window’s width.
+        # Pressing up will shrink the window’s height.
+        # Pressing down will grow the window’s height.
+        bindsym j resize shrink width 10 px or 10 ppt
+        bindsym k resize grow height 10 px or 10 ppt
+        bindsym l resize shrink height 10 px or 10 ppt
+        bindsym ccedilla resize grow width 10 px or 10 ppt
+
+        # same bindings, but for the arrow keys
+        bindsym Left resize shrink width 10 px or 10 ppt
+        bindsym Down resize grow height 10 px or 10 ppt
+        bindsym Up resize shrink height 10 px or 10 ppt
+        bindsym Right resize grow width 10 px or 10 ppt
+
+        # back to normal: Enter or Escape or $mod+r
+        bindsym Return mode "default"
+        bindsym Escape mode "default"
+        bindsym $mod+r mode "default"
+}
+bindsym $mod+r mode "resize"
+
+####################################################################
+################ G A P S ###########################################
+####################################################################
+set $mode_gaps Gaps: (o) outer, (i) inner
+set $mode_gaps_outer Outer Gaps: +|-|0|d (local), Shift + +|-|0|d (global)
+set $mode_gaps_inner Inner Gaps: +|-|0|d (local), Shift + +|-|0|d (global)
+bindsym $mod+Shift+g mode "$mode_gaps"
+
+mode "$mode_gaps" {
+        bindsym o      mode "$mode_gaps_outer"
+        bindsym i      mode "$mode_gaps_inner"
+        bindsym Return mode "default"
+        bindsym Escape mode "default"
+}
+
+mode "$mode_gaps_inner" {
+        bindsym plus  gaps inner current plus 5
+        bindsym minus gaps inner current minus 5
+        bindsym 0     gaps inner current set 0
+
+        bindsym Shift+plus  gaps inner all plus 5
+        bindsym Shift+minus gaps inner all minus 5
+        bindsym Shift+0     gaps inner all set 0
+
+        bindsym d gaps inner current set $gaps_inner_default, mode "default"
+        bindsym Shift+d gaps inner all set $gaps_inner_default, mode "default"
+
+        bindsym Return mode "default"
+        bindsym Escape mode "default"
+}
+
+mode "$mode_gaps_outer" {
+        bindsym plus  gaps outer current plus 5
+        bindsym minus gaps outer current minus 5
+        bindsym 0     gaps outer current set 0
+
+        bindsym Shift+plus  gaps outer all plus 5
+        bindsym Shift+minus gaps outer all minus 5
+        bindsym Shift+0     gaps outer all set 0
+
+        bindsym d gaps outer current set $gaps_outer_default, mode "default"
+        bindsym Shift+d gaps outer all set $gaps_outer_default, mode "default"
+
+        bindsym Return mode "default"
+        bindsym Escape mode "default"
+}
+
+####################################################################
+################ I N I T ###########################################
+####################################################################
+# xss-lock grabs a logind suspend inhibit lock and will use i3lock to lock the
+# screen before suspend. Use loginctl lock-session to lock your screen.
+exec --no-startup-id xss-lock --transfer-sleep-lock -- i3lock --nofork
+exec_always --no-startup-id $HOME/.config/polybar/launcher.sh
+exec_always --no-startup-id feh --bg-fill $HOME/Frank/Wallpapers/005.jpg
+#exec --no-startup-id compton -b --respect-prop-shadow
+exec --no-startup-id compton --active-opacity 0.9 --blur-background
+#exec polybar -r top &
+#exec polybar -r bottom &
+exec compton &
+exec numlockx on &
+exec flameshot &
+exec setxkbmap -model abnt2 -layout br -variant abnt2 &
