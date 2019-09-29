@@ -1,0 +1,102 @@
+#!/usr/bin/conky -q -d -c
+
+update_interval 1.0
+double_buffer yes
+own_window yes
+own_window_type normal
+own_window_transparent yes
+own_window_argb_visual yes
+own_window_class override 
+use_xft yes
+xftfont Liberation Mono:size=10
+maximum_width 310 # largura
+default_color white
+alignment tr #top_right  # top_middle, bottom_left, bottom_right, bottom_middle, middle_left, middle_middle, middle_right, or none
+background yes
+uppercase no
+background yes
+own_window_hints undecorated,sticky,skip_taskbar,skip_pager,below 
+TEXT
+#${color #ffffff}${font QuickSandLight:size=10}${alignc}Informações${font}
+${alignc}${image /home/frank/Frank/Png/014.png -p 0,300 -s 310x310}
+${alignc}${color #ffffff}${font QuickSandLight:size=10}Kernel: $sysname $kernel $machine 
+
+${alignc}${color #ffffff}${font QuickSandLight:size=14}Arch Linux${font}
+#${alignc}${color #ffffff}${font QuickSandLight:size=8}XFCE 1.14${font}
+
+${color #ffffff}${font QuickSandLight:size=20}${alignc}Franklin Souza${font}
+${color #ffffff}$hr
+${alignc}${color #ffffff}${font stylebats:size=18}${font}Uptime:${color #ffffff} $uptime
+#${font stylebats:size=18}${font}Load:$color $loadavg
+
+${color #ffffff}CPU Usado:${color #00BFFF} ${cpubar 10,190} ${cpu}%
+${color #ffffff}CPU: $color$freq MHz
+${color #00BFFF}${cpugraph 10,310}
+${color #ffffff}RAM Uso:$color $mem/$memmax - $memperc% ${color #00BFFF}
+${membar 10,310}
+${color #ffffff}Swap Uso: $swap/$swapmax - $swapperc% ${color #00BFFF}
+${swapbar 10,310}
+
+${color #ffffff}$hr
+#${color #ffffff}$stippled_hr
+
+${color #ffffff}Rede:
+${color #ffffff}Down: ${color #ffffff}${downspeed enp3s0}${color #ffffff} k/s ${alignr}${color #ffffff}${upspeed enp3s0}${color #ffffff} k/s${color #ffffff} :Up
+${color #970300}${downspeedgraph enp3s0 10,150}${alignr}${color #297F00}${upspeedgraph enp3s0 10,150}
+${color #ffffff}${totaldown enp3s0}${alignr}${color #ffffff}${totalup enp3s0} 
+
+${color #ffffff} R: U:${color #ffffff}${fs_used /} T:${fs_size /} L:(${fs_free_perc /}%)
+
+${color #ffffff} H: U:${color #ffffff}${fs_used /home} T:${fs_size /home} L:(${fs_free_perc /home}%)
+
+${color #ffffff}Name ${alignr} PID   CPU%   MEM%
+${color #ffffff} ${top name 1} ${alignr}${top pid 1} ${top cpu 1} ${top mem 1}
+${color #ffffff} ${top name 2} ${alignr}${top pid 2} ${top cpu 2} ${top mem 2}
+${color #ffffff} ${top name 3} ${alignr}${top pid 3} ${top cpu 3} ${top mem 3}
+
+${color #ffffff}Core1: ${cpu cpu1}% $freq MHz ${color #00BFFF}${alignr}${cpubar cpu1 6,150}
+${color #ffffff}Core2: ${cpu cpu2}% $freq MHz ${color #00BFFF}${alignr}${cpubar cpu2 6,150} 
+${color #ffffff}Core3: ${cpu cpu3}% $freq MHz ${color #00BFFF}${alignr}${cpubar cpu3 6,150} 
+
+${color #ffffff}${alignc}CPU TEMP: ${exec sensors | grep "Core 0" | awk -F: '{ print $2 }' | awk -F' ' '{ print $1}'}
+
+${alignc}${color #ffffff}${font QuickSandLight:size=9}Música
+
+${alignc}${mpd_smart 80}
+
+${color #00BFFF}${alignc}${mpd_bar 6,220} ${mpd_percent}% #VOL: ${mpd_vol}%
+
+${color #ffffff}${alignc}VOL: ${mpd_vol}%
+${color #ffffff}${alignc}${mpd_status}
+
+${color #ffffff}$hr
+#${color #ffffff}$stippled_hr
+${alignc}${color #ffffff}${font QuickSandLight:size=12}${time %H:%M:%S}${font}${color}
+${color #ffffff}${alignc}${font QuickSandLight:size=12}${time %A}, ${time %e} de ${time %B} de ${time %G}${font}
+
+#${color #ffffff}${alignc}${font QuickSandLight:size=7}Conky Version: ${conky_version}
+
+#${alignc}Core 0: ${exec sensors | grep "Core 0" | awk -F: '{ print $2 }' | awk -F' ' '{ print $1}'} // ${alignc}Core 1: ${exec sensors | grep "Core 1" | awk -F: '{ print $2 }' | awk -F' ' '{ print $1}'}
+#${alignc}Core 2: ${exec sensors | grep "Core 2" | awk -F: '{ print $2 }' | awk -F' ' '{ print $1}'} // ${alignc}Core 3: ${exec sensors | grep "Core 3" | awk -F: '{ print $2 }' | awk -F' ' '{ print $1}'}
+
+#${alignc}Core 1: ${exec sensors | grep "Core 1" | awk -F: '{ print $2 }' | awk -F' ' '{ print $1}'}
+#${alignc}Core 2: ${exec sensors | grep "Core 2" | awk -F: '{ print $2 }' | awk -F' ' '{ print $1}'}
+#${color2}${goto 85}${voffset 1}${font :size=8}${time %d %B %Y}
+#${alignc}Bateria
+#${battery_bar}
+#${color #ffffff}$stippled_hr
+
+#${alignc}Data
+# Para a CPU
+#${color #7fff00}${font Weather:size=18}RL${color}${font} CPU Temp: ${execi 1 /usr/bin/sensors 
+#| grep temp2 | cut -c11-20;}${alignr 3}
+# Para a Placa Mae
+#${color red}${font Weather:size=18}z${color}${font} MB Temp : ${execi 1 /usr/bin/sensors 
+#| grep temp1 | cut -c11-20;}
+# Temperatura do disco
+#${color red}${font Weather:size=18}z${color}${font}Temp disco: ${execi 10 
+#/usr/sbin/hddtemp -q /dev/sda | cut -c28-35;}
+# Medicao da rotacao da ventuinha da cpu
+#${font stylebats:size=18}l${font}RPM FAN : ${execi 1 /usr/bin/sensors | grep fan2 | cut 
+#-c11-22;}
+#${alignc}${mpd_title 20}
