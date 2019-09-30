@@ -629,7 +629,7 @@ disk_display="bar"
 # Values:   'ascii', 'caca', 'chafa', 'jp2a', 'iterm2', 'off',
 #           'termpix', 'pixterm', 'tycat', 'w3m', 'kitty'
 # Flag:     --backend
-image_backend="ascii"
+image_backend="w3m"
 
 # Image Source
 #
@@ -643,7 +643,7 @@ image_backend="ascii"
 # NOTE: 'auto' will pick the best image source for whatever image backend is used.
 #       In ascii mode, distro ascii art will be used and in an image mode, your
 #       wallpaper will be used.
-image_source="auto"
+image_source="$HOME/Frank/Wallpapers/038.jpg"
 
 
 # Ascii Options
@@ -701,6 +701,7 @@ image_loop="off"
 # Default: '~/.cache/thumbnails/neofetch'
 # Values:  'dir'
 thumbnail_dir="${XDG_CACHE_HOME:-${HOME}/.cache}/thumbnails/neofetch"
+#thumbnail_dir="$HOME/Frank/Wallpapers/038.jpg"
 
 # Crop mode
 #
