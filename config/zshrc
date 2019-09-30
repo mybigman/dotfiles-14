@@ -143,7 +143,7 @@ source $ZSH/oh-my-zsh.sh
   alias up="sudo pacman -Syu"
   alias upg="sudo pacman -Syy"
   alias edt="vim ~/.zhsrc"
-  alias del="rm-r ~/.zsh_history"
+  alias del="rm -rf ~/.zsh_history"
   alias off="poweroff"
   alias rb="reboot"
   alias br="setxkbmap -model abnt2 -layout br -variant abnt2"
