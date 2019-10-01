@@ -468,8 +468,8 @@ margin-bottom = 5
 [module/terminal]
 type = custom/text
 content = "%{F#ffffff}%{F-}"
-click-left = sakura  &
-click-right = termite &
+click-left = termite  &
+click-right = sakura &
 
 [module/browser]
 type = custom/text
@@ -505,7 +505,7 @@ content-underline = #8df8d8
 
 [module/linux]
 type = custom/text
-content = "%{F#0061ff}%{F-} Arch Linux"
+content = "%{F#fffff}%{F-} Arch Linux"
 ;content-underline = #ff00d1
 
 [module/wall]
@@ -531,7 +531,7 @@ click-left = bash -c 'scrot "$HOME/Imagens/Captura de tela de %d-%m-%Y %H:%M:%S.
 
 [module/torrent]
 type = custom/text
-content = "%{F#ffffff}%{F-}"
+content = "%{F#ffffff}%{F-}"
 click-left = qbittorrent
 
 [module/tux]
