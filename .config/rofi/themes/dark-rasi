@@ -1,6 +1,6 @@
 * {
     selected-normal-foreground:  #ffffff;
-    foreground:                  #5f6b85;
+    foreground:                  #36f4a6;
     background:                  #3b4252;
     normal-foreground:           @foreground;
     alternate-normal-background: #3b4252;
@@ -33,7 +33,7 @@
 
 #window {
     background-color: @background;
-    border:           3;
+    border:           0;
     padding:          2;
 }
 
