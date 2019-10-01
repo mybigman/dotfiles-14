@@ -8,7 +8,6 @@ print_info() {
     info underline
 
     info "" distro
-  # info "Host" model
     info "" kernel
     info "" uptime
     info "" packages
@@ -16,28 +15,20 @@ print_info() {
     info "" resolution
     info "" de
     info "" wm
-  # info "WM Theme" wm_theme
-  # info "Theme" theme
-  # info "Icons" icons
-  # info "Terminal" term
-  # info "Terminal Font" term_font
     info "" cpu
     info "" gpu
     info "" memory
 
     # info "GPU Driver" gpu_driver  # Linux/macOS only
-    # info "CPU Usage" cpu_usage
+    # info "" cpu_usage
     # info "Disk" disk
     # info "Battery" battery
-    # info "Font" font
-      info "" song
-    # [[ $player ]] && prin "Music Player" "$player"
-    # info "Local IP" local_ip
-    # info "Public IP" public_ip
-    # info "Users" users
-    # info "Locale" locale  # This only works on glibc systems.
+    # info "" song
+    # [[ $player ]] && prin "" "$player"
     prin "" @FranklinTech
+    prin "" https://github.com/fffranks
     prin "" "I Love LINUX"
+    
 
     info cols
 }
