@@ -61,7 +61,7 @@ font-2 = Hack Nerd Font:pixelsize=13;2
 ;font-6 = feather:style=Regular:pixelsize=12;2
 
 modules-left = terminal thunar browser telegram
-modules-right = alsa memory cpu temperature user date print powermenu
+modules-right = alsa memory cpu temperature user date print refresh powermenu
 modules-center = linux
 ;tray-position = 
 ;tray-padding = 2
@@ -118,7 +118,7 @@ font-2 = Hack Nerd Font:pixelsize=13;2
 
 modules-left = i3
 modules-center = mpd
-modules-right = wall trash
+modules-right = 
 
 tray-position =
 tray-padding = 2
@@ -516,6 +516,11 @@ type = custom/text
 content = "%{F#ffffff}%{F-}"
 click-left = thunar trash:/// &
 
+[module/refresh]
+type = custom/text
+content = 
+content-foreground = #fffff
+click-left = i3-msg restart &
 
 [module/print]
 type = custom/text
