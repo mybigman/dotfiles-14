@@ -1,4 +1,4 @@
-         4MMMMMMMMMMMML
+                         4MMMMMMMMMMMML
                        4MMMMMMMMMMMMMMMML
                       MMMMMMMMMMMMMMMMMMML
                      4MMMMMMMMMMMMMMMMMMMMM
@@ -35,4 +35,4 @@
  "                    "MMMMMMMMMMMMMMMMMMM"              """
   """"                "MMMMMMMMMMMMMMMMMM"           """"
       """"""""       MMMMM               "        ""
-              """"""""                      """""""  Larry Ewing & r^2
+              """"""""                      """""""
