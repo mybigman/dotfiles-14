@@ -58,7 +58,7 @@ font-1 = "xos4 Terminess Powerline:pixelsize=13;1"
 font-2 = Hack Nerd Font:pixelsize=13;2
 ;font-4 = Siji:pixelsize=10;1
 ;font-5 = Typicons:pixelsize=15;2
-;font-6 = feather:style=Regular:pixelsize=12;2
+font-6 = feather:style=Regular:pixelsize=12;2
 
 modules-left = terminal thunar browser telegram
 modules-right = alsa memory cpu temperature user date print refresh powermenu
@@ -114,11 +114,11 @@ font-1 = "xos4 Terminess Powerline:pixelsize=13;1"
 font-2 = Hack Nerd Font:pixelsize=13;2
 ;font-4 = Siji:pixelsize=10;1
 ;font-5 = Typicons:pixelsize=15;2
-;font-6 = feather:style=Regular:pixelsize=12;2
+font-6 = feather:style=Regular:pixelsize=12;2
 
 modules-left = i3
 modules-center = mpd
-modules-right = 
+modules-right =
 
 tray-position =
 tray-padding = 2
@@ -248,7 +248,8 @@ label-urgent-padding = 1
 type = internal/mpd
 ;format-online = <label-song> <toggle> <icon-repeatone> <label-time> <icon-stop>
 ;format-online = <label-song>  <icon-prev> <icon-stop> <toggle> <icon-next>
-format-online = <label-song> <icon-prev> <icon-stop> <toggle> <icon-next> <label-time>
+;format-online = <label-song> <icon-prev> <icon-stop> <toggle> <icon-next> <label-time>
+format-online = <label-song> <toggle> <icon-stop> <label-time> 
 
 icon-prev = 
 icon-stop = 
@@ -263,9 +264,10 @@ icon-repeatone = ¹
 icon-single = single
 icon-consume = consume
 
-label-song =   %title%
-label-song-maxlen = 25
-label-song-ellipsis = true
+;label-song =   %title%
+;label-song-maxlen = 25
+;label-song-ellipsis = true
+label-song = %{F#ffffff}%{F-} %title%%{F-}
 
 ; Modulo xbacklight
 
@@ -513,7 +515,7 @@ click-left = thunar /home/frank/Frank/Wallpapers/ &
 
 [module/trash]
 type = custom/text
-content = "%{F#ffffff}%{F-}"
+content = "%{F#ffffff}%{F-}"
 click-left = thunar trash:/// &
 
 [module/refresh]
@@ -536,3 +538,9 @@ click-left = qbittorrent
 type = custom/text
 content = "%{F#ffffff}%{F-}"
 ;content-underline = #ff00d1
+
+[module/lock]
+type = custom/text
+content = 
+content-foreground = #ffffff
+click-left = $HOME/.local/lock/fortune &
