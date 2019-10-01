@@ -1,2 +1,1 @@
-# dotfiles
-# arch linux
+# Arch Linux
