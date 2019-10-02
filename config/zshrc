@@ -142,7 +142,7 @@ source $ZSH/oh-my-zsh.sh
   alias x="startx"
   alias up="sudo pacman -Syu"
   alias upg="sudo pacman -Syy"
-  alias edt="vim ~/.zhsrc"
+  alias edt="vim ~/.zshrc"
   alias del="rm -rf ~/.zsh_history"
   alias off="poweroff"
   alias rb="reboot"
