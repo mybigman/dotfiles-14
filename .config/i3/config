@@ -36,8 +36,8 @@ focus_on_window_activation focus
 set_from_resource $bg background
 
 # classe                borda   fundo   texto   ind.    borda filho
-client.focused          #ffffff #474747 #ffffff #ffffff   #36f4a6
-client.focused_inactive #f9a3a3 #212121 #fc5757 #ffffff   #1c1c1c
+client.focused          #ffffff #474747 #ffffff #ffffff   #ffffff
+client.focused_inactive #f9a3a3 #212121 #fc5757 #ffffff   #f96a6a
 client.unfocused        #ffffff #474747 #ffffff #ff0000   #ffffff
 client.urgent           #2f343a #900000 #ffffff #900000   #900000
 client.placeholder      #000000 #0c0c0c #ffffff #000000   #0c0c0c
@@ -305,8 +305,8 @@ mode "$mode_gaps_outer" {
 # xss-lock grabs a logind suspend inhibit lock and will use i3lock to lock the
 # screen before suspend. Use loginctl lock-session to lock your screen.
 exec --no-startup-id xss-lock --transfer-sleep-lock -- i3lock --nofork
-exec_always --no-startup-id $HOME/.config/polybar/launcher.sh
-exec_always --no-startup-id feh --bg-fill $HOME/Frank/Wallpapers/055.png
+exec_always --no-startup-id $HOME/.config/polybar/Scripts/launcher.sh
+exec_always --no-startup-id feh --bg-fill $HOME/Frank/Wallpapers/017.jpg
 #exec --no-startup-id compton -b --respect-prop-shadow
 #exec --no-startup-id compton --active-opacity 0.9 --blur-background
 #exec polybar -r top &
