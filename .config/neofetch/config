@@ -87,7 +87,7 @@ os_arch="off"
 # on:   '2 days, 10 hours, 3 mins'
 # off:  '2 days, 10 hours, 3 minutes'
 # tiny: '2d 10h 3m'
-uptime_shorthand="on"
+uptime_shorthand="tiny"
 
 
 # Memory
@@ -634,7 +634,7 @@ image_backend="w3m"
 # NOTE: 'auto' will pick the best image source for whatever image backend is used.
 #       In ascii mode, distro ascii art will be used and in an image mode, your
 #       wallpaper will be used.
-image_source="$HOME/Frank/Wallpapers/055.png"
+image_source="$HOME/Frank/Wallpapers/017.jpg"
 
 
 # Ascii Options
@@ -692,7 +692,7 @@ image_loop="off"
 # Default: '~/.cache/thumbnails/neofetch'
 # Values:  'dir'
 thumbnail_dir="${XDG_CACHE_HOME:-${HOME}/.cache}/thumbnails/neofetch"
-#thumbnail_dir="$HOME/Frank/Wallpapers/038.jpg"
+#thumbnail_dir="$HOME/Frank/Wallpapers/020.jpg"
 
 # Crop mode
 #
