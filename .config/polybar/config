@@ -61,7 +61,7 @@ font-2 = Hack Nerd Font:pixelsize=13;2
 font-6 = feather:style=Regular:pixelsize=12;2
 
 modules-left = terminal thunar browser telegram
-modules-right = alsa memory cpu temperature user date print refresh powermenu
+modules-right = volume memory cpu temperature user date print refresh powermenu
 modules-center = linux
 ;tray-position = 
 ;tray-padding = 2
@@ -118,7 +118,7 @@ font-6 = feather:style=Regular:pixelsize=12;2
 
 modules-left = i3
 modules-center = mpd
-modules-right =
+modules-right = uptime
 
 tray-position =
 tray-padding = 2
@@ -152,13 +152,26 @@ label-indicator-margin = 1
 label-indicator-background = ${colors.secondary}
 label-indicator-underline = ${colors.secondary}
 
+; Modulo uptime
+
+[module/uptime]
+type = custom/script
+interval = 30
+exec = ~/.config/polybar/Scripts/uptime.sh
+label = %output%
+;format = <label>
+;format-suffix = " "
+format-suffix-foreground = #ffffff
+;format-underline =  ${colors.uptime}
+
 ; Modulo filesystem
 
 [module/filesystem]
 type = internal/fs
 interval = 10
 
-mount-0 = /
+;mount-0 = /
+;mount-1 = /home
 
 label-mounted = %mountpoint%%{F-}: %percentage_used%%
 label-unmounted = %mountpoint% Não MONTADO
@@ -227,8 +240,8 @@ label-mode-foreground = ${colors.secondary}
 label-mode-padding = 1
 
 label-focused = %name%
-label-focused-foreground = ${colors.secondary}
-label-focused-background = ${colors.background-alt}
+label-focused-foreground = #0f0e10
+label-focused-background = #ffffff
 label-focused-padding = 1
 
 label-unfocused = %name%
@@ -247,9 +260,9 @@ label-urgent-padding = 1
 [module/mpd]
 type = internal/mpd
 ;format-online = <label-song> <toggle> <icon-repeatone> <label-time> <icon-stop>
-;format-online = <label-song>  <icon-prev> <icon-stop> <toggle> <icon-next>
-;format-online = <label-song> <icon-prev> <icon-stop> <toggle> <icon-next> <label-time>
-format-online = <label-song> <toggle> <icon-stop> <label-time> 
+;format-online = <label-song>  <icon-prev> <icon-stop> <toggle> <icon-next> <label-time>
+;format-online = <label-song> <icon-prev> <icon-stop> <toggle> <icon-next> <label-time> <bar-progress>
+format-online = <label-song> <icon-stop> <toggle> <label-time>
 
 icon-prev = 
 icon-stop = 
@@ -366,7 +379,7 @@ bar-volume-empty-foreground = ${colors.foreground-alt}
 
 ; Modulo alsa
 
-[module/alsa]
+[module/volume]
 type = internal/alsa
 
 format-volume = <label-volume> 
@@ -495,7 +508,7 @@ click-left = thunar &
 
 [module/vlc]
 type = custom/text
-content = "%{F#ffffff}%{F-}"
+content = "%{F#f18c3d}%{F-}"
 click-left = vlc &
 
 [module/user]
