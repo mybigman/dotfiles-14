@@ -148,7 +148,7 @@ source $ZSH/oh-my-zsh.sh
   alias rb="reboot"
   alias br="setxkbmap -model abnt2 -layout br -variant abnt2"
   alias music="mpd && ncmpcpp"
-
+  alias km="killall mpd"
 
 
 
