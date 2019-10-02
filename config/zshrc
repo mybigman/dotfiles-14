@@ -169,6 +169,5 @@ source $ZSH/oh-my-zsh.sh
 
 
 # neofetch
-# neofetch --ascii $HOME/.ascii/rose | lolcat
 # cmatrix
 # figlet FRANKLIN
