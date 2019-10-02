@@ -118,7 +118,7 @@ font-6 = feather:style=Regular:pixelsize=12;2
 
 modules-left = i3
 modules-center = mpd
-modules-right = uptime
+modules-right =
 
 tray-position =
 tray-padding = 2
@@ -157,10 +157,10 @@ label-indicator-underline = ${colors.secondary}
 [module/uptime]
 type = custom/script
 interval = 30
-exec = ~/.config/polybar/Scripts/uptime.sh
+exec = ~/.config/polybar/scripts/uptime.sh
 label = %output%
-;format = <label>
 ;format-suffix = " "
+format = <label>
 format-suffix-foreground = #ffffff
 ;format-underline =  ${colors.uptime}
 
@@ -335,11 +335,11 @@ label = %percentage_used%%
 type = internal/date
 interval = 5
 
-;date = " %d-%m-%y"
-date-alt = " %d-%m-%y"
+;date = " %d/%m/%y"
+date-alt = " %d/%m/%y"
 
 time = %H:%M
-;time-alt = %H:%M:%S
+;time-alt = %H:%M
 
 
 format-prefix = 
@@ -412,6 +412,8 @@ format-volume-underline = #ffffff
 
 [module/temperature]
 type = internal/temperature
+interval = 0.5
+hwmon-path = /sys/devices/platform/coretemp.0/hwmon/hwmon2/temp1_input
 thermal-zone = 0
 warn-temperature = 60
 
@@ -428,6 +430,7 @@ ramp-0 = 
 ramp-1 = 
 ramp-2 = 
 ramp-foreground = #8df88d
+
 
 ; Module powermenu
 
@@ -494,7 +497,7 @@ click-left = firefox &
 [module/telegram]
 type = custom/text
 content = "%{F#ffffff}%{F-}"
-click-left = /home/frank/Downloads/Telegram/Telegram &
+click-left = $HOME/Downloads/Telegram/Telegram &
 
 [module/update]
 type = custom/text
@@ -504,7 +507,7 @@ click-left = exec sudo pacman -Syu
 [module/thunar]
 type = custom/text
 content = "%{F#ffffff}%{F-}"
-click-left = thunar &
+click-left = nautilus &
 
 [module/vlc]
 type = custom/text
