@@ -176,9 +176,9 @@ mount-0 = /home
 ;spacing = 2
 
 format-mounted-prefix = " "
-format-mounted-prefix-foreground = #f0ff00
-label-mounted-underline = #f0ff00
-format-mounted-prefix-underline = #f0ff00
+format-mounted-prefix-foreground = #7f90f9
+label-mounted-underline = #7f90f9
+format-mounted-prefix-underline = #7f90f9
 format = <label>
 
 format-mounted = <label-mounted>
@@ -199,10 +199,10 @@ mount-0 = /
 ;spacing = 2
 
 format-mounted-prefix = " "
-format-mounted-prefix-foreground = #ff0000
-;format-mounted-foreground = #ff0000
-label-mounted-underline = #ff0000
-format-mounted-prefix-underline = #ff0000
+format-mounted-prefix-foreground = #f97f7f
+;format-mounted-foreground = #f97f7f
+label-mounted-underline = #f97f7f
+format-mounted-prefix-underline = #f97f7f
 
 format = <label>
 
