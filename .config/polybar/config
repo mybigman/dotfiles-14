@@ -60,9 +60,9 @@ font-2 = Hack Nerd Font:pixelsize=13;2
 ;font-2 = Typicons:pixelsize=15;2
 ;font-2 = feather:style=Regular:pixelsize=12;2
 
-modules-left = linux
-modules-right = alsa xkeyboard memory filesystem filesystem2 cpu temperature user date print refresh powermenu
-modules-center = mpd
+modules-left = mpd
+modules-right = alsa xkeyboard memory filesystem2 cpu temperature date print refresh powermenu
+modules-center = 
 ;tray-position = 
 ;tray-padding = 2
 ;tray-transparent = true
@@ -176,7 +176,7 @@ mount-0 = /home
 ;spacing = 2
 
 format-mounted-prefix = " "
-format-mounted-prefix-foreground = #ff33d4
+format-mounted-prefix-foreground = #f0ff00
 format = <label>
 
 format-mounted = <label-mounted>
@@ -195,14 +195,36 @@ mount-0 = /
 ;fixed-values = true
 ;spacing = 2
 
-format-mounted-prefix = " "
-format-mounted-prefix-foreground = #3933ff
+format-mounted-prefix = " "
+format-mounted-prefix-foreground = #ff0000
 format = <label>
 
 format-mounted = <label-mounted>
 
 ;label-mounted = %mountpoint% %percentage_used%%
 label-mounted = / %free%  
+label-unmounted = %mountpoint% não montado
+;label-unmounted-foreground = ${colors.foreground-alt}
+
+[module/filesystem3]
+type = internal/fs
+interval = 60
+
+mount-0 = /home
+mount-1 = /
+;mount-0 = /home
+
+;fixed-values = true
+;spacing = 2
+
+;format-mounted-prefix = " "
+;format-mounted-prefix-foreground = #ff0000
+format = <label>
+
+format-mounted = <label-mounted>
+
+;label-mounted = %mountpoint% %percentage_used%%
+label-mounted =   %free% 
 label-unmounted = %mountpoint% não montado
 ;label-unmounted-foreground = ${colors.foreground-alt}
 
@@ -269,7 +291,7 @@ label-mode-foreground = ${colors.secondary}
 label-mode-padding = 1
 
 label-focused = %name%
-label-focused-foreground = #36f4a6
+label-focused-foreground = #fffff
 label-focused-background = #1c1c1c
 label-focused-padding = 1
 
