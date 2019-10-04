@@ -107,16 +107,16 @@ bindsym $mod+space focus mode_toggle
 bindsym $mod+Shift+c move position center
 
 # Restartar i3
-# bindsym $mod+Shift+r restart
+ bindsym $mod+Shift+r restart
 
 # Launchers
 
 #bindsym $mod+d exec dmenu_run
-bindsym $mod+d exec --no-startup-id $HOME/.config/rofi/script/drun
+bindsym $mod+d exec --no-startup-id $HOME/.config/rofi/script/drun.sh
 #bindsym $mod+d exec synapse
 
 # Lock
-bindsym $mod+Shift+x exec --no-startup-id $HOME/.local/lock/fortune
+#bindsym $mod+Shift+x exec --no-startup-id $HOME/.local/lock/fortune
 
 # Screenshot
 bindsym Print exec flameshot gui
@@ -223,6 +223,10 @@ for_window [class="(Qbittorrent)"]floating enable, move position center
 
 for_window [class="(popcorntime)"]floating enable, move position center
 
+# Nautilus (Gerenciador de Arquivos)
+
+for_window [class="(Nautilus)"]floating enable, move position center
+
 ####################################################################
 ################ G R U P O S #######################################
 ####################################################################
@@ -305,10 +309,10 @@ mode "$mode_gaps_outer" {
 # xss-lock grabs a logind suspend inhibit lock and will use i3lock to lock the
 # screen before suspend. Use loginctl lock-session to lock your screen.
 exec --no-startup-id xss-lock --transfer-sleep-lock -- i3lock --nofork
-exec_always --no-startup-id $HOME/.config/polybar/Scripts/launcher.sh
-exec_always --no-startup-id feh --bg-fill $HOME/Frank/Wallpapers/017.jpg
+exec_always --no-startup-id $HOME/.config/polybar/scripts/launcher.sh
+exec_always --no-startup-id feh --bg-fill $HOME/Franks/Wallpapers/000.jpg
 #exec --no-startup-id compton -b --respect-prop-shadow
-#exec --no-startup-id compton --active-opacity 0.9 --blur-background
+exec --no-startup-id compton --active-opacity 0.9 --blur-background
 #exec polybar -r top &
 #exec polybar -r bottom &
 exec compton &
