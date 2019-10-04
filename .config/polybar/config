@@ -178,7 +178,7 @@ mount-0 = /home
 format-mounted-prefix = " "
 format-mounted-prefix-foreground = #f0ff00
 label-mounted-underline = #f0ff00
-format-mount-prefix-underline = #f0ff00
+format-mounted-prefix-underline = #f0ff00
 format = <label>
 
 format-mounted = <label-mounted>
