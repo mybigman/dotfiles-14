@@ -61,8 +61,8 @@ font-2 = Hack Nerd Font:pixelsize=13;2
 ;font-2 = feather:style=Regular:pixelsize=12;2
 
 modules-left = mpd
-modules-right = alsa memory filesystem filesystem2 cpu temperature date print refresh powermenu
-modules-center = 
+modules-right = alsa memory  cpu temperature filesystem filesystem2 date print refresh powermenu
+modules-center = linux
 ;tray-position = 
 ;tray-padding = 2
 ;tray-transparent = true
@@ -198,7 +198,7 @@ mount-0 = /
 ;fixed-values = true
 ;spacing = 2
 
-format-mounted-prefix = " "
+format-mounted-prefix = " "
 format-mounted-prefix-foreground = #f97f7f
 ;format-mounted-foreground = #f97f7f
 label-mounted-underline = #f97f7f
@@ -556,7 +556,7 @@ click-left = firefox &
 [module/telegram]
 type = custom/text
 content = "%{F#ffffff}%{F-}"
-click-left = $HOME/Downloads/Telegram/Telegram &
+click-left = exec Downloads/Telegram/Telegram/Telegram &
 
 [module/update]
 type = custom/text
