@@ -1,631 +1,209 @@
-# $HOME/.config/polybar/config
 # Crédits: Franklin Souza
 # Telegram: @FranklinTech
-# Dúvidas: https://github.com/jaagr/polybar
-
-;============================================================
-;   ██████╗  ██████╗ ██╗  ██╗   ██╗██████╗  █████╗ ██████╗
-;   ██╔══██╗██╔═══██╗██║  ╚██╗ ██╔╝██╔══██╗██╔══██╗██╔══██╗
-;   ██████╔╝██║   ██║██║   ╚████╔╝ ██████╔╝███████║██████╔╝
-;   ██╔═══╝ ██║   ██║██║    ╚██╔╝  ██╔══██╗██╔══██║██╔══██╗
-;   ██║     ╚██████╔╝███████╗██║   ██████╔╝██║  ██║██║  ██║
-;   ╚═╝      ╚═════╝ ╚══════╝╚═╝   ╚═════╝ ╚═╝  ╚═╝╚═╝  ╚═╝
-;============================================================
-
-; Cores
-
-[colors]
-;background = ${xrdb:color0:#222}
-background = #00000000
-;background = #222
-background-alt = #444
-;foreground = ${xrdb:color7:#222}
-foreground = #dfdfdf
-foreground-alt = #555
-primary = #ffb52a
-secondary = #000000
-alert = #ff0000
-
-; Barra/TOPO
-
-[bar/top]
-monitor = ${env:MONITOR:VGA-1}
-dpi = 80
-width = 100%
-height = 20
-radius = 0.0
-fixed-center = true
-
-background = ${colors.background}
-foreground = ${colors.foreground}
-
-line-size = 2
-line-color = #f00
-
-border-size = 1
-;border-color = #fc7878
-
-padding-left = 0
-padding-right = 2
-
-module-margin-left = 1
-module-margin-right = 2
-
-;font-0 = fixed:pixelsize=10;1
-font-0 = "Fantasque Sans Mono:style=Regular:pixelsize=10;1"
-font-1 = "xos4 Terminess Powerline:pixelsize=13;1"
-;font-2 = unifont:fontformat=truetype:size=8:antialias=false;0
-font-2 = Hack Nerd Font:pixelsize=13;2
-;font-4 = Siji:pixelsize=10;1
-;font-2 = Typicons:pixelsize=15;2
-;font-2 = feather:style=Regular:pixelsize=12;2
-
-modules-left = mpd
-modules-right = alsa memory  cpu temperature filesystem filesystem2 date print refresh powermenu
-modules-center = linux
-;tray-position = 
-;tray-padding = 2
-;tray-transparent = true
-;tray-background = #0063ff
-
-;wm-restack = bspwm
-;wm-restack = i3
-
-override-redirect = false
-
-;scroll-up = bspwm-desknext
-;scroll-down = bspwm-deskprev
-
-;scroll-up = i3wm-wsnext
-;scroll-down = i3wm-wsprev
-
-cursor-click = pointer
-cursor-scroll = ns-resize
-
-; Barra/Bottom
-
-[bar/bottom]
-monitor = ${env:MONITOR:VGA-1}
-dpi = 95
-width = 100%
-height = 20
-fixed-center = true
-bottom = true
-
-background = ${colors.background}
-foreground = ${colors.foreground}
-
-line-size = 1
-line-color = ${colors.alert}
-
-border-size = 1
-;border-color = #494b49
-
-padding-left = 1
-padding-right = 1
-
-module-margin-left = 0
-module-margin-right = 1
-
-;font-0 = fixed:pixelsize=10;1
-font-0 = "Fantasque Sans Mono:style=Regular:pixelsize=10;1"
-font-1 = "xos4 Terminess Powerline:pixelsize=13;1"
-;font-2 = unifont:fontformat=truetype:size=8:antialias=false;0
-font-2 = Hack Nerd Font:pixelsize=13;2
-;font-4 = Siji:pixelsize=10;1
-;font-2 = Typicons:pixelsize=15;2
-;font-2 = feather:style=Regular:pixelsize=12;2
+# Dúvidas: https://github.com/dylanaraps/neofetch/wiki/Customizing-Info
 
-modules-left = i3
-modules-center = terminal nautilus browser telegram vlc
-modules-right = twitch github
+#				INFORMAÇÕES
+#########################################################
 
-tray-position =
-tray-padding = 2
-;tray-transparent = true
-;tray-background = #0063ff
+print_info() {
+    
+    prin "Franklin Souza"
+    prin "--------------"
+    info "" title
+    info underline
 
-cursor-click = pointer
-cursor-scroll = ns-resize
+    info "" distro
+    info "" kernel
+    info "" uptime
+    info "" packages
+    info "" shell
+    info "" resolution
+    info "" de
+    info "" wm
+    info "" cpu
+    info "" gpu
+    info "" memory
+    info "" song
+    prin "" @FranklinTech
+    prin "" https://github.com/fffranks
+    prin "" "I Love LINUX"
+    
 
-; Modulo xwindows
+    info cols
+}
 
-[module/xwindow]
-type = internal/xwindow
-label = %title:0:30:...%
 
-; Modulo xkeyboard
+# 			MAIS INFORMAÇÕES
+#########################################################
+								
+# Kernel
 
-[module/xkeyboard]
-type = internal/xkeyboard
-blacklist-0 = num lock
+kernel_shorthand="off"
+#########################################################
 
-format-prefix = " "
-format-prefix-foreground = #ff5733
-format-prefix-underline = #ff5733
+# Distribuição
 
-label-layout = %layout%
-label-layout-underline = #ff5733
+distro_shorthand="off"
 
-label-indicator-padding = 2
-label-indicator-margin = 1
-label-indicator-background = #000000
-label-indicator-underline = #ff0000
+os_arch="off"
+#########################################################
 
-; Modulo uptime
+# Uptime
 
-[module/uptime]
-type = custom/script
-interval = 30
-exec = ~/.config/polybar/script/uptime.sh
-label = %output%
-;format-suffix = " "
-format = <label>
-format-suffix-foreground = #ffffff
-;format-underline =  ${colors.uptime}
+uptime_shorthand="tiny"
+#########################################################
 
-; Modulo filesystem
+# Memória RAM
 
-[module/filesystem]
-type = internal/fs
-interval = 20
+memory_percent="on"
+#########################################################
 
-mount-0 = /home
-;
-;fixed-values = true
-;spacing = 2
+# Pacotes
 
-format-mounted-prefix = " "
-format-mounted-prefix-foreground = #7f90f9
-label-mounted-underline = #7f90f9
-format-mounted-prefix-underline = #7f90f9
-format = <label>
+package_managers="on"
+#########################################################
 
-format-mounted = <label-mounted>
-
-label-mounted = %percentage_used%%
-;label-mounted = %free%  
-label-unmounted = %mountpoint% Não montado
-;label-unmounted-foreground = ${colors.foreground-alt}
-
-
-[module/filesystem2]
-type = internal/fs
-interval = 20
- 
-mount-0 = /
-
-;fixed-values = true
-;spacing = 2
-
-format-mounted-prefix = " "
-format-mounted-prefix-foreground = #f97f7f
-;format-mounted-foreground = #f97f7f
-label-mounted-underline = #f97f7f
-format-mounted-prefix-underline = #f97f7f
-
-format = <label>
-
-format-mounted = <label-mounted>
-
-label-mounted =  %percentage_used%%
-;label-mounted = %free%  
-label-unmounted = %mountpoint% Não montado
-;label-unmounted-foreground = ${colors.foreground-alt}
-
-
-[module/filesystem3]
-type = internal/fs
-interval = 60
-
-mount-0 = /home
-mount-1 = /
-;mount-0 = /home
-
-;fixed-values = true
-;spacing = 2
-
-;format-mounted-prefix = " "
-;format-mounted-prefix-foreground = #ff0000
-format = <label>
-
-format-mounted = <label-mounted>
-
-;label-mounted = %mountpoint% %percentage_used%%
-label-mounted =   %free% 
-label-unmounted = %mountpoint% não montado
-;label-unmounted-foreground = ${colors.foreground-alt}
-
-; Modulo bspwm
-
-[module/bspwm]
-type = internal/bspwm
-
-label-focused = %index%
-label-focused-background = ${colors.background-alt}
-label-focused-underline= ${colors.primary}
-label-focused-padding = 2
-
-label-occupied = %index%
-label-occupied-padding = 2
-
-label-urgent = %index%!
-label-urgent-background = ${colors.alert}
-label-urgent-padding = 2
-
-label-empty = %index%
-label-empty-foreground = ${colors.foreground-alt}
-label-empty-padding = 2
-
-; Separator in between workspaces
-; label-separator = |
-
-; Modulo i3wm
-
-[module/i3]
-type = internal/i3
-format = <label-state> <label-mode>
-index-sort = true
-wrapping-scroll = false
-pin-workspaces = true
-
-ws-icon-0 = 1;
-ws-icon-1 = 2;
-ws-icon-2 = 3;
-ws-icon-3 = 4;
-ws-icon-4 = 5;
-ws-icon-5 = 6;
-ws-icon-6 = 7;
-ws-icon-7 = 8;
-ws-icon-8 = 9;
-ws-icon-9 = 10;
-
-;set $ws1 "1:"
-;set $ws2 "2:"
-;set $ws3 "3:"
-;set $ws4 "4:"
-;set $ws5 "5:"
-;set $ws6 "6:"
-;set $ws7 "7:"
-;set $ws8 "8:"
-;set $ws9 "9:"
-;set $ws10 "10:"
-
-strip-wsnumbers = false
-label-state-foreground = ${colors.principal}
-
-label-mode = %mode%
-label-mode-foreground = ${colors.secondary}
-label-mode-padding = 1
-
-label-focused = %name%
-label-focused-foreground = #fffff
-label-focused-background = #1c1c1c
-label-focused-padding = 1
-
-label-unfocused = %name%
-label-unfocused-padding = 1
-
-label-visible = %name%
-label-visible-background = ${colors.background-alt}
-label-visible-padding = 1
-
-label-urgent = %name%
-label-urgent-background = ${colors.alert}
-label-urgent-padding = 1
-
-; Modulo mpd
-
-[module/mpd]
-type = internal/mpd
-;format-online = <label-song> <toggle> <icon-repeatone> <label-time> <icon-stop>
-;format-online = <label-song>  <icon-prev> <icon-stop> <toggle> <icon-next> <label-time>
-;format-online = <label-song> <icon-prev> <icon-stop> <toggle> <icon-next> <label-time> <bar-progress>
-format-online = <label-song> <icon-stop> <toggle> <label-time>
-
-icon-prev = 
-icon-stop = 
-icon-play = 
-icon-pause = 
-icon-next = 
-icon-seekb = seekb
-icon-seekf = seekf
-icon-random = rdm
-icon-repeat = 
-icon-repeatone = ¹
-icon-single = single
-icon-consume = consume
-
-;label-song =  %title%
-;label-song-maxlen = 25
-;label-song-ellipsis = true
-label-song = %{F#ffffff}%{F-} %title%%{F-}
-
-; Modulo xbacklight
-
-[module/xbacklight]
-type = internal/xbacklight
-
-format = <label> <bar>
-label = BL
-
-bar-width = 10
-bar-indicator = |
-bar-indicator-foreground = #fff
-bar-indicator-font = 2
-bar-fill = ─
-bar-fill-font = 2
-bar-fill-foreground = #9f78e1
-bar-empty = ─
-bar-empty-font = 2
-bar-empty-foreground = ${colors.foreground-alt}
-
-; Modulo backlight-acpi
-
-[module/backlight-acpi]
-inherit = module/xbacklight
-type = internal/backlight
-card = intel_backlight
-
-; Modulo cpu
-
-[module/cpu]
-type = internal/cpu
-interval = 1.5
-format-prefix = " "
-format-prefix-foreground = #8dd3f8
-format-underline = #8dd3f8
-label = %percentage:2%%
-
-; Modulo memory
-
-
-[module/memory]
-type = internal/memory
-interval = 2
-format-prefix = " "
-format-prefix-foreground = #f8f08d
-format-underline = #f8f08d
-label = %percentage_used%%
-
-; Modulo date
-
-[module/date]
-type = internal/date
-interval = 5
-
-;date = " %d/%m/%y"
-date-alt = " %d/%m/%y"
-
-time = %H:%M
-;time-alt = %H:%M
-
-
-format-prefix = 
-format-prefix-foreground = #f8ce8d
-format-underline = #f8ce8d
-
-label = %date% %time%
-
-; Modulo pulseaudio
-
-[module/pulseaudio]
-type = internal/pulseaudio
-
-format-volume = <label-volume> 
-label-volume = VOL %percentage%%
-label-volume-foreground = ${root.foreground}
-
-label-muted =  muted
-label-muted-foreground = #666
-
-;bar-volume-width = 10
-;bar-volume-foreground-0 = #55aa55
-;bar-volume-foreground-1 = #55aa55
-;bar-volume-foreground-2 = #55aa55
-;bar-volume-foreground-3 = #55aa55
-;bar-volume-foreground-4 = #55aa55
-;bar-volume-foreground-5 = #f5a70a
-;bar-volume-foreground-6 = #ff5555
-;bar-volume-gradient = false
-;bar-volume-indicator = |
-;bar-volume-indicator-font = 2
-;bar-volume-fill = ─
-;bar-volume-fill-font = 2
-;bar-volume-empty = ─
-;bar-volume-empty-font = 2
-;bar-volume-empty-foreground = ${colors.foreground-alt}
-
-; Modulo alsa
-
-[module/alsa]
-type = internal/alsa
-
-format-volume = <label-volume>
-label-volume = 墳 %percentage%%
-label-volume-foreground = ${root.foreground}
-
-format-muted-prefix = " "
-format-muted-foreground = #ffffff
-label-muted = Som MUTADO
-format-volume-underline = #ffffff
-
-bar-volume-width = 10
-bar-volume-foreground-0 = #55aa55
-bar-volume-foreground-1 = #55aa55
-bar-volume-foreground-2 = #55aa55
-bar-volume-foreground-3 = #55aa55
-bar-volume-foreground-4 = #55aa55
-bar-volume-foreground-5 = #f5a70a
-bar-volume-foreground-6 = #ff5555
-bar-volume-gradient = false
-bar-volume-indicator = |
-bar-volume-indicator-font = 2
-bar-volume-fill = ─
-bar-volume-fill-font = 2
-bar-volume-empty = ─
-bar-volume-empty-font = 2
-bar-volume-empty-foreground = ${colors.foreground-alt}
-
-; Modulo temperature
-
-[module/temperature]
-type = internal/temperature
-interval = 0.5
-hwmon-path = /sys/devices/platform/coretemp.0/hwmon/hwmon2/temp1_input
-thermal-zone = 0
-warn-temperature = 60
-
-format = <ramp> <label>
-format-underline = #8df88d
-format-warn = <ramp> <label-warn>
-format-warn-underline = ${self.format-underline}
-
-label = %temperature-c%
-label-warn = %temperature-c%
-label-warn-foreground = ${colors.secondary}
-
-ramp-0 = 
-ramp-1 = 
-ramp-2 = 
-ramp-foreground = #8df88d
-
-
-; Module powermenu
-
-[module/powermenu]
-type = custom/menu
-
-expand-right = true
-
-format-spacing = 1
-
-label-open = 
-label-open-foreground = #ffffff
-;label-open-foreground = ${colors.secondary}
-label-close = Cancelar
-;label-close-foreground = ${colors.secondary}
-label-separator = |
-label-separator-foreground = ${colors.foreground-alt}
-
-menu-0-0 = "Sair"
-menu-0-0-exec = menu-open-1 
-menu-0-1 = "Suspender"
-menu-0-1-exec = menu-open-2 
-menu-0-2 = "Reiniciar"
-menu-0-2-exec = menu-open-3 
-menu-0-3 = "Desligar"
-menu-0-3-exec = menu-open-4 
-menu-1-0 = "Sair AGORA!?"
-menu-1-0-exec = i3-msg exit 
-menu-2-0 = "Suspender AGORA!?
-"menu-2-0-exec = systemctl suspend
-menu-3-0 = "Reiniciar AGORA!?"
-menu-3-0-exec = systemctl reboot 
-menu-4-0 = "Desligar AGORA!?"
-menu-4-0-exec = systemctl poweroff
-
-; Configurações
-
-[settings]
-screenchange-reload = true
-;compositing-background = xor
-;compositing-background = screen
-;compositing-foreground = source
-;compositing-border = over
-
-[global/wm]
-margin-top = 5
-margin-bottom = 5
-
-; vim:ft=dosini
-
-[module/terminal]
-type = custom/text
-content = "%{F#ffffff}%{F-}"
-click-left = termite  &
-click-right = sakura &
-
-[module/browser]
-type = custom/text
-content = "%{F#ffffff}%{F-}"
-click-left = firefox &
-;click-middle = qutebrowser &
-;click-right = chromium &
-
-[module/telegram]
-type = custom/text
-content = "%{F#ffffff}%{F-}"
-click-left = exec Downloads/Telegram/Telegram/Telegram &
-
-[module/update]
-type = custom/text
-content = "%{F#ffffff}%{F-}"
-click-left = exec sudo pacman -Syu
-
-[module/nautilus]
-type = custom/text
-content = "%{F#ffffff}%{F-}"
-click-left = nautilus &
-
-[module/vlc]
-type = custom/text
-content = "%{F#ffffff}嗢%{F-}"
-click-left = vlc &
-
-[module/user]
-type = custom/text
-content = "%{F#8df8d8}%{F-} Frank"
-content-underline = #8df8d8
-
-[module/linux]
-type = custom/text
-content = "%{F#fffff}%{F-} Arch Linux"
-;content-underline = #ff00d1
-
-[module/wall]
-type = custom/text
-content = "%{F#ffffff}%{F-}"
-click-left = thunar /home/frank/Frank/Wallpapers/ &
-
-[module/trash]
-type = custom/text
-content = "%{F#ffffff}%{F-}"
-click-left = thunar trash:/// &
-
-[module/refresh]
-type = custom/text
-content = 
-content-foreground = #fffff
-click-left = i3-msg restart &
-
-[module/print]
-type = custom/text
-content = "%{F#ffffff}%{F-}"
-click-left = bash -c 'scrot "$HOME/Imagens/Captura de tela de %d-%m-%Y %H:%M:%S.png"' &
-
-[module/torrent]
-type = custom/text
-content = "%{F#fffff}%{F-}"
-click-left = qbittorrent
-
-[module/tux]
-type = custom/text
-content = "%{F#ffffff}%{F-}"
-;content-underline = #ff00d1
-
-[module/lock]
-type = custom/text
-content = 
-content-foreground = #ffffff
-click-left = $HOME/.local/lock/fortune &
-
-[module/twitch]
-type = custom/text
-content = "%{F#ffffff}既%{F-}"
-click-left = firefox https://www.twitch.tv/ &
-
-[module/github]
-type = custom/text
-content = "%{F#ffffff}%{F-}"
-click-left = firefox https://github.com/fffranks &
+# Shell
+
+shell_path="off"
+
+shell_version="on"
+#########################################################
+
+# CPU
+
+speed_type="bios_limit"
+
+speed_shorthand="on"
+
+cpu_brand="on"
+
+cpu_speed="off"
+
+cpu_cores="logical"
+
+cpu_temp="C"
+#########################################################
+
+# GPU - Placa gráfica
+
+gpu_brand="on"
+
+gpu_type="all"
+#########################################################
+
+# Resolução de tela
+
+refresh_rate="on"
+#########################################################
+
+# GTK Temas/ Icones / Fontes
+
+gtk_shorthand="on"
+
+gtk2="off"
+
+gtk3="off"
+#########################################################
+
+# Som
+
+music_player="auto"
+
+song_format='%title%'
+
+song_shorthand="off"
+
+mpc_args=()
+#########################################################
+
+# Opções de texto
+
+underline_enabled="on"
+
+underline_char=" ☰ "
+#########################################################
+
+# Separador
+
+separator=" ➤ "
+#########################################################
+
+# Color Blocks
+
+
+# Color block range
+
+block_range=(0 7)
+
+block_width=3
+
+block_height=1
+#########################################################
+
+# Barra de progresso
+
+bar_char_elapsed="-"
+bar_char_total="="
+
+bar_border="on"
+
+bar_length=15
+
+bar_color_elapsed="distro"
+bar_color_total="distro"
+
+cpu_display="off"
+memory_display="off"
+battery_display="off"
+disk_display="bar"
+#########################################################
+
+# Configurações backend
+
+image_backend="w3m"
+
+image_source="$HOME/Frank/Wallpapers/017.jpg"
+#########################################################
+
+# Opções de Ascii
+
+ascii_distro="auto"
+#########################################################
+
+# Cores de Ascii
+
+ascii_bold="on"
+#########################################################
+
+# Opções de imagens
+
+image_loop="off"
+#########################################################
+
+# Crop mode
+
+crop_mode="normal"
+
+image_size="auto"
+#########################################################
+
+# Gap between image and text
+
+gap=3
+#########################################################
+
+# Image offsets
+
+yoffset=0
+xoffset=0
+#########################################################
+
+# Cor da imagem de background
+
+background_color=
+#########################################################
+
+# Misc Options
+
+stdout="off"
