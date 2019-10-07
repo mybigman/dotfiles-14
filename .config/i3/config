@@ -30,6 +30,16 @@ default_border pixel 3
 focus_on_window_activation focus
 
 ####################################################################
+################ TIRAR AS BORDAS ###################################
+####################################################################
+
+default_border pixel 0
+default_floating_border pixel 0
+
+hide_edge_borders smart
+
+
+####################################################################
 ################ C O R E S #########################################
 ####################################################################
 
@@ -226,6 +236,14 @@ for_window [class="(popcorntime)"]floating enable, move position center
 # Nautilus (Gerenciador de Arquivos)
 
 for_window [class="(Nautilus)"]floating enable, move position center
+
+# Galculator (Calculadora)
+
+for_window [class="(Galculator)"]floating enable, move position center
+
+# Pavucontrol (Gerenciador de aúdio)
+
+for_window [class="(Pavucontrol)"]floating enable, move position center
 
 ####################################################################
 ################ G R U P O S #######################################
