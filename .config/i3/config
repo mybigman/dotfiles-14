@@ -328,9 +328,10 @@ mode "$mode_gaps_outer" {
 # screen before suspend. Use loginctl lock-session to lock your screen.
 exec --no-startup-id xss-lock --transfer-sleep-lock -- i3lock --nofork
 exec_always --no-startup-id $HOME/.config/polybar/scripts/launcher.sh
-exec_always --no-startup-id feh --bg-fill $HOME/Franks/Wallpapers/000.jpg
+exec_always --no-startup-id feh --bg-fill $HOME/Franks/Wallpapers/005.jpg
 #exec --no-startup-id compton -b --respect-prop-shadow
-exec --no-startup-id compton --active-opacity 0.9 --blur-background
+#exec --no-startup-id compton --active-opacity 0.9 --blur-background
+exec --no-startup-id compton --config ~/.config/compton.conf
 #exec polybar -r top &
 #exec polybar -r bottom &
 exec compton &
