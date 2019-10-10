@@ -1,7 +1,7 @@
 configuration {
     show-icons:                     true;
     icon-theme:                     "Flat-Remix-Blue-Dark";
-    font:                           "SFNS Display 9";
+    font:                           "Literation Mono Nerd Font Complete 9";
 }
 
 
@@ -19,12 +19,12 @@ configuration {
 window {
     transparency:                   "real";
     background-color:               @background;
-    height:                         500px;
+    height:                         400px;
     width:                          900;
     location:                       northwest;
     anchor:                         northwest;
     x-offset:                       300;
-    y-offset:                       200;
+    y-offset:                       250;
 }
 
 prompt {
@@ -33,14 +33,14 @@ prompt {
 
 entry  {
     expand:                         false;
-    width:                          36em;
-    margin:                         40px -270px 20px 450px;
+    width:                          30em;
+    margin:                         40px -200px 20px 230px;
     border-radius:                  12;
     padding:                        10px 10px 10px 10px;
     background-color:               #ffffff20;
     border:                         0px 0px solid 0px 0px;
     border-color:                   @text-color;
-    font:                           "SFNS Display 12";
+    font:                           "Literation Mono Nerd Font Complete 12";
 }
 
 listview {
