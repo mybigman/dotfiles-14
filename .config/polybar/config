@@ -61,7 +61,7 @@ font-2 = Hack Nerd Font:pixelsize=13;2
 ;font-2 = feather:style=Regular:pixelsize=12;2
 
 modules-left = mpd
-modules-right = alsa memory  cpu temperature filesystem filesystem2 date print refresh powermenu
+modules-right = kernel alsa pacman  memory  cpu temperature filesystem filesystem2 date print refresh powermenu
 modules-center = linux
 ;tray-position = 
 ;tray-padding = 2
@@ -299,7 +299,7 @@ label-mode-foreground = ${colors.secondary}
 label-mode-padding = 1
 
 label-focused = %name%
-label-focused-foreground = #fffff
+label-focused-foreground = #ffffff
 label-focused-background = #1c1c1c
 label-focused-padding = 1
 
@@ -576,7 +576,7 @@ format-suffix-foreground = #000000
 [module/telegram]
 type = custom/text
 content = "%{F#ffffff}%{F-}"
-click-left = exec Downloads/Telegram/Telegram &
+click-left = exec Downloads/Telegram/Telegram/Telegram &
 
 [module/update]
 type = custom/text
@@ -610,7 +610,7 @@ click-left = thunar /home/frank/Frank/Wallpapers/ &
 
 [module/trash]
 type = custom/text
-content = "%{F#ffffff}%{F-}"
+content = "%{F#ffffff}%{F-}"
 click-left = thunar trash:/// &
 
 [module/refresh]
@@ -649,3 +649,15 @@ click-left = firefox https://www.twitch.tv/ &
 type = custom/text
 content = "%{F#ffffff}%{F-}"
 click-left = firefox https://github.com/fffranks &
+
+[module/pacman]
+type = custom/script
+exec = pacman -Qq | wc -l
+label = "%{F#e78afe}%{F-} %output:0:37:...%"
+format-underline = #e78afe
+
+[module/kernel]
+type = custom/script
+exec = uname -r
+label = "%{F#fe8ac6}%{F-} %output:0:37:...%"
+format-underline = #fe8ac6
