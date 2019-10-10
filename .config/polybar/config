@@ -61,8 +61,8 @@ font-2 = Hack Nerd Font:pixelsize=13;2
 ;font-2 = feather:style=Regular:pixelsize=12;2
 
 modules-left = mpd
-modules-right = kernel alsa pacman  memory  cpu temperature filesystem filesystem2 date print refresh powermenu
-modules-center = linux
+modules-right = alsa pacman  memory  cpu temperature filesystem filesystem2 date print refresh powermenu
+modules-center = 
 ;tray-position = 
 ;tray-padding = 2
 ;tray-transparent = true
@@ -653,7 +653,7 @@ click-left = firefox https://github.com/fffranks &
 [module/pacman]
 type = custom/script
 exec = pacman -Qq | wc -l
-label = "%{F#e78afe}%{F-} %output:0:37:...%"
+label = "%{F#e78afe}%{F-} %output:0:37:...%"
 format-underline = #e78afe
 
 [module/kernel]
