@@ -60,6 +60,8 @@ font-2 = Hack Nerd Font:pixelsize=13;2
 ;font-2 = Typicons:pixelsize=15;2
 ;font-2 = feather:style=Regular:pixelsize=12;2
 
+;MÓDULOS TOP BAR
+
 modules-left = mpd
 modules-right = alsa pacman  memory  cpu temperature filesystem filesystem2 date print refresh powermenu
 modules-center = 
@@ -115,6 +117,8 @@ font-2 = Hack Nerd Font:pixelsize=13;2
 ;font-4 = Siji:pixelsize=10;1
 ;font-2 = Typicons:pixelsize=15;2
 ;font-2 = feather:style=Regular:pixelsize=12;2
+
+;MÓDULOS BOTTOM BAR
 
 modules-left = i3
 modules-center = terminal nautilus browser telegram vlc
