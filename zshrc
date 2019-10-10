@@ -149,6 +149,8 @@ source $ZSH/oh-my-zsh.sh
   alias br="setxkbmap -model abnt2 -layout br -variant abnt2"
   alias music="mpd && ncmpcpp"
   alias km="killall mpd"
+  alias pipes="$HOME/.pipes.sh"
+  alias pipes2="$HOME/.pipes.sh -t 2"
 
 
 
@@ -163,9 +165,8 @@ source $ZSH/oh-my-zsh.sh
 
 
 
-
-#source /usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
-#source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+source /usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
+source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 
 
 # neofetch
