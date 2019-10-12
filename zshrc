@@ -1,6 +1,9 @@
 # If you come from bash you might have to change your $PATH.
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
 
+# Export color terminal
+export TERM="xterm-256color"
+
 # Path to your oh-my-zsh installation.
 export ZSH="$HOME/.oh-my-zsh"
 
@@ -151,6 +154,8 @@ source $ZSH/oh-my-zsh.sh
   alias km="killall mpd"
   alias pipes="$HOME/.pipes.sh"
   alias pipes2="$HOME/.pipes.sh -t 2"
+  alias fso="sudo firehol stop "
+  alias fsa="sudo firehol start "
 
 
 
@@ -163,10 +168,8 @@ source $ZSH/oh-my-zsh.sh
 
 
 
-
-
-source /usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
-source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+#source /usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
+#source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 
 
 # neofetch
