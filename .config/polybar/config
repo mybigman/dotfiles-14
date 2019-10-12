@@ -64,7 +64,7 @@ font-2 = Hack Nerd Font:pixelsize=13;2
 
 modules-left = mpd
 modules-right = alsa pacman  memory  cpu temperature filesystem filesystem2 date print refresh powermenu
-modules-center = 
+modules-center = linux
 ;tray-position = 
 ;tray-padding = 2
 ;tray-transparent = true
@@ -121,7 +121,7 @@ font-2 = Hack Nerd Font:pixelsize=13;2
 ;MÓDULOS BOTTOM BAR
 
 modules-left = i3
-modules-center = terminal nautilus browser telegram vlc
+modules-center = terminal thunar browser telegram vlc
 modules-right = 
 
 tray-position =
@@ -478,16 +478,16 @@ type = internal/temperature
 interval = 0.5
 hwmon-path = /sys/devices/platform/coretemp.0/hwmon/hwmon2/temp1_input
 thermal-zone = 0
-warn-temperature = 60
+warn-temperature = 59
 
 format = <ramp> <label>
 format-underline = #8df88d
 format-warn = <ramp> <label-warn>
-format-warn-underline = ${self.format-underline}
+format-warn-underline = #ff0000
 
 label = %temperature-c%
 label-warn = %temperature-c%
-label-warn-foreground = ${colors.secondary}
+label-warn-foreground = #ff0000
 
 ramp-0 = 
 ramp-1 = 
@@ -580,17 +580,17 @@ format-suffix-foreground = #000000
 [module/telegram]
 type = custom/text
 content = "%{F#ffffff}%{F-}"
-click-left = exec Downloads/Telegram/Telegram/Telegram &
+click-left = exec telegram-desktop &
 
 [module/update]
 type = custom/text
 content = "%{F#ffffff}%{F-}"
 click-left = exec sudo pacman -Syu
 
-[module/nautilus]
+[module/thunar]
 type = custom/text
 content = "%{F#ffffff}%{F-}"
-click-left = nautilus &
+click-left = thunar &
 
 [module/vlc]
 type = custom/text
