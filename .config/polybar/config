@@ -63,7 +63,7 @@ font-2 = Hack Nerd Font:pixelsize=13;2
 ;MÓDULOS TOP BAR
 
 modules-left = mpd
-modules-right = alsa pacman memory cpu temperature filesystem date print refresh powermenu
+modules-right = alsa memory cpu filesystem date print refresh powermenu
 modules-center = weather
 ;tray-position = 
 ;tray-padding = 2
@@ -122,7 +122,7 @@ font-2 = Hack Nerd Font:pixelsize=13;2
 
 modules-left = i3
 modules-center = terminal thunar browser telegram vlc
-modules-right = 
+modules-right = uptime
 
 tray-position =
 tray-padding = 2
@@ -161,9 +161,9 @@ label-indicator-underline = #ff0000
 [module/uptime]
 type = custom/script
 interval = 30
-exec = ~/.config/polybar/script/uptime.sh
-label = %output%
-;format-suffix = " "
+exec = ~/.config/polybar/scripts/uptime.sh
+label = "%{F#ffffff}%{F-} %output:0:37:...%"
+;format-suffix = " "
 format = <label>
 format-suffix-foreground = #ffffff
 ;format-underline =  ${colors.uptime}
@@ -579,7 +579,7 @@ format-suffix-foreground = #000000
 
 [module/telegram]
 type = custom/text
-content = "%{F#ffffff}%{F-}"
+content = "%{F#ffffff}%{F-}"
 click-left = exec telegram-desktop &
 
 [module/update]
@@ -589,7 +589,7 @@ click-left = exec sudo pacman -Syu
 
 [module/thunar]
 type = custom/text
-content = "%{F#ffffff}%{F-}"
+content = "%{F#ffffff}%{F-}"
 click-left = thunar &
 
 [module/vlc]
@@ -668,8 +668,13 @@ format-underline = #fe8ac6
 
 [module/weather]
 type = custom/script
+interval = 0.5
 exec = $HOME/.config/polybar/scripts/weather.sh
-interval = 10
 label = "%{F#ffffff}%{F-} %output:0:37:...%"
 ;format-underline = ${colors.weather}
 format-foreground = #ffffff
+
+[module/spotify]
+type = custom/text
+content = "%{F#ffffff}%{F-}"
+click-left = exec spotify &
