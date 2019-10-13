@@ -52,4 +52,4 @@ wintypes :
 blur-background = false;
 blur-background-frame = false;
 no-fading-openclose = true;
-opacity-rule = [ "63:class_g = 'Bspwm' && class_i = 'presel_feedback'" ];
+opacity-rule = [ "63:class_g = 'i3wm' && class_i = 'presel_feedback'" ];
