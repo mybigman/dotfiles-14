@@ -1,0 +1,108 @@
+# Crédits: Franklin Souza
+# Telegram: @FranklinTech
+# Não me resposabilizo por nada, instala se quiser
+
+# Mudar o Layout do teclado para PT-BR
+loadkeys br-abnt2
+
+# Mudar o idioma da instalação
+nano /etc/locale.gen
+
+# Descomentar essa linha:
+#pt_BR.UTF-8 UTF-8
+
+# Execute os comandos
+locale-gen
+export LANG=pt_BR.UTF-8
+
+# Partições
+cfdisk
+
+# Formatar as partições
+mkfs.ext4 /dev/sdX
+
+# Formatar Swap (caso tenha)
+mkswap /dev/sdX
+
+# Montar as partições
+mount /dev/sdX
+
+# Montar Swap (Caso tenha)
+swapon /dev/sdX
+
+# Verificar partições montadas
+lsblk /dev/sdX
+
+# Verificar conexão com a internet
+ping -c3 archlinux.org
+
+# Instalar sistema base
+# OBS: base-devel é opcional
+# OBS1: Os kernels você escolhe (recomendo o linux que é kernel padrão)
+pacstar /mnt dhcpcd mkinitcpio nano less man-pages linux-firmware linux-zen-headers base-devel
+
+# Gerar FSTAB
+genfstab -U /mnt >> /mnt/etc/fstab
+
+# Entrar no chroot
+arch-chroot /mnt
+
+# Setar horario no sistema
+hwclock --systohc
+
+# Mudando o idioma do sistema (OPCIONAL)
+nano /etc/locale.gen
+
+# Descomentar a linha:
+#pt_BR.UTF-8 UTF-8
+
+# Executar os comandos
+locale-gen
+echo LANG=pt_BR.UTF-8 > /etc/locale.conf
+export LANG=Pt_BR.UTF-8
+
+# Configurar o teclado para subir em pt-br
+echo KEYMAP=br-abnt2 > /etc/vconsole.conf
+
+# colocar o nome do host
+echo LOCALHOST > /etc/hostname # (Troca LOCALHOST por qualquer outro nome)
+
+# Rodar o kernel
+mkinitcpio -P
+
+# Configurar os repo
+# Descomentar as linhas multilib e incluide (sem ser o testing)
+nano /etc/pacman.conf
+#multilib
+#incluide
+
+# Sincronizar o repo
+pacman -Syy
+
+# Senha root
+passwd # (insira sua senha root duas vezes)passwd USERNAME (digite sua senha user duas vezes)
+
+# Criar user
+# useradd -m -g users -G wheel,audio,video,daemon,dbus,disk,rfkill,games,power,lp,optical,scanner,storage,input -s /bin/bash USERNAME
+
+# Criar senha para user
+passwd USERNAME # (digite sua senha user duas vezes)
+
+# Editar prioridade sudo
+nano /etc/sudoers
+# Descomente:
+## Uncomment to allow members of group wheel to execute any command
+# %wheel ALL=(ALL) ALL
+
+# Baixar e instalar o GRUB
+pacman -S grub
+
+# Instalar o GRUB
+grub-install /dev/sdX
+
+# Caso tenha outro OS instalado:
+pacman -S os-prober ntfs-3g --noconfirm
+
+# Atualize o GRUB
+grub-mkconfig -o /boot/grub/grub.cfg
+
