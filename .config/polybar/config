@@ -63,7 +63,7 @@ font-2 = Hack Nerd Font:pixelsize=13;2
 ;MÓDULOS TOP BAR
 
 modules-left = mpd
-modules-right = alsa memory cpu filesystem date print refresh powermenu
+modules-right = alsa memory cpu temperature filesystem date print refresh powermenu
 modules-center = weather
 ;tray-position = 
 ;tray-padding = 2
@@ -122,7 +122,7 @@ font-2 = Hack Nerd Font:pixelsize=13;2
 
 modules-left = i3
 modules-center = terminal thunar browser telegram vlc
-modules-right = uptime
+modules-right = 
 
 tray-position =
 tray-padding = 2
@@ -476,6 +476,7 @@ bar-volume-empty-foreground = ${colors.foreground-alt}
 [module/temperature]
 type = internal/temperature
 interval = 0.5
+;hwmon-path = /sys/devices/platform/coretemp.0/hwmon/hwmon2/temp1_input
 hwmon-path = /sys/devices/platform/coretemp.0/hwmon/hwmon3/temp1_input
 thermal-zone = 0
 warn-temperature = 59
