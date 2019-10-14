@@ -84,10 +84,10 @@ pacman -Syy
 passwd # (insira sua senha root duas vezes)passwd USERNAME (digite sua senha user duas vezes)
 
 # Criar user
-# useradd -m -g users -G wheel,audio,video,daemon,dbus,disk,rfkill,games,power,lp,optical,scanner,storage,input -s /bin/bash USERNAME
+# useradd -m -g users -G wheel,audio,video,daemon,dbus,disk,rfkill,games,power,lp,optical,scanner,storage,input -s /bin/bash USER
 
 # Criar senha para user
-passwd USERNAME # (digite sua senha user duas vezes)
+passwd USER # (digite sua senha user duas vezes)
 
 # Editar prioridade sudo
 nano /etc/sudoers
