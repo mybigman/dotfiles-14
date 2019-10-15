@@ -1,8 +1,5 @@
 #!/usr/bin/env sh
 
-# Jogar na pasta: ~/.config/polybar/Scripts
-
-
 # Terminate already running bar instances
 killall -q polybar
 
