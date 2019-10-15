@@ -56,6 +56,9 @@ client.placeholder      #000000 #0c0c0c #ffffff #000000   #0c0c0c
 ################ A T A L H O S #####################################
 ####################################################################
 
+# Trocar de wallpaper
+bindsym $mod+Shift+w exec feh --bg-scale "$(find $HOME/Wallpapers/ -name "*[jJpP][nNpP][gG]" | shuf -n1)"
+
 #Chamar a polybar (caso ela não subir)
 #bindsym $mod+m exec polybar -r top
 #bindsym $mod+n exec polybar -r bottom
@@ -328,7 +331,7 @@ mode "$mode_gaps_outer" {
 # screen before suspend. Use loginctl lock-session to lock your screen.
 #exec --no-startup-id xss-lock --transfer-sleep-lock -- i3lock --nofork
 exec_always --no-startup-id $HOME/.config/polybar/scripts/launcher.sh
-exec_always --no-startup-id feh --bg-fill $HOME/Franks/Wallpapers/006.jpg
+exec_always --no-startup-id feh --bg-fill $HOME/Franks/Wallpapers/003.jpg
 #exec --no-startup-id compton -b --respect-prop-shadow
 #exec --no-startup-id compton --active-opacity 0.9 --blur-background
 exec --no-startup-id compton --config ~/.config/compton/compton.conf
