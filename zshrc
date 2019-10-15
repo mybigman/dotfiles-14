@@ -156,6 +156,9 @@ source $ZSH/oh-my-zsh.sh
   alias pipes2="$HOME/.pipes.sh -t 2"
   alias fso="sudo firehol stop "
   alias fsa="sudo firehol start "
+  alias vk="vkcube"
+  alias ref="sudo reflector -c Brazil --save /etc/pacman.d/mirrorlist"
+  alias wm=" pkill -9 compton ; pkill -9 i3"
 
 
 
@@ -166,10 +169,8 @@ source $ZSH/oh-my-zsh.sh
 
 
 
-
-
-#source /usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
-#source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+source /usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
+source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 
 
 # neofetch
