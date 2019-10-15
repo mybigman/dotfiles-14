@@ -63,7 +63,7 @@ font-2 = Hack Nerd Font:pixelsize=13;2
 ;MÓDULOS TOP BAR
 
 modules-left = mpd
-modules-right = alsa memory cpu temperature filesystem date print refresh powermenu
+modules-right = alsa memory pacman cpu temperature filesystem date print refresh powermenu
 modules-center = weather
 ;tray-position = 
 ;tray-padding = 2
@@ -121,8 +121,8 @@ font-2 = Hack Nerd Font:pixelsize=13;2
 ;MÓDULOS BOTTOM BAR
 
 modules-left = i3
-modules-center = terminal thunar browser telegram vlc
-modules-right = 
+modules-center = terminal nautilus browser telegram vlc
+modules-right =
 
 tray-position =
 tray-padding = 2
@@ -588,10 +588,10 @@ type = custom/text
 content = "%{F#ffffff}%{F-}"
 click-left = exec sudo pacman -Syu
 
-[module/thunar]
+[module/nautilus]
 type = custom/text
 content = "%{F#ffffff}%{F-}"
-click-left = thunar &
+click-left = nautilus &
 
 [module/vlc]
 type = custom/text
@@ -627,7 +627,7 @@ click-left = i3-msg restart &
 [module/print]
 type = custom/text
 content = "%{F#ffffff}%{F-}"
-click-left = bash -c 'scrot "$HOME/Imagens/Captura de tela de %d-%m-%Y %H:%M:%S.png"' &
+click-left = bash -c 'scrot "$HOME/Franks/PRINTS/Captura de tela de %d-%m-%Y %H:%M:%S.png"' &
 
 [module/torrent]
 type = custom/text
@@ -672,10 +672,21 @@ type = custom/script
 interval = 0.5
 exec = $HOME/.config/polybar/scripts/weather.sh
 label = "%{F#ffffff}%{F-} %output:0:37:...%"
-;format-underline = ${colors.weather}
-format-foreground = #ffffff
+;format-underline = #c380d8
+;format-foreground = #c380d8
 
 [module/spotify]
 type = custom/text
 content = "%{F#ffffff}%{F-}"
 click-left = exec spotify &
+
+[module/wallpaper]
+type = custom/text
+content = 
+content-foreground = #ffffff
+;click-left = ~/.config/polybar/scripts/wallpaper.sh x &
+;click-middle = ~/.config/polybar/scripts/wallpaper.sh dd &
+;click-middle = ~/.config/polybar/scripts/wallpaper.sh rr &
+;click-right = ~/.config/polybar/scripts/wallpaper.sh d &
+scroll-up = ~/.config/polybar/scripts/wallpaper.sh p &
+click-left = ~/.config/polybar/scripts/wallpaper.sh a &
