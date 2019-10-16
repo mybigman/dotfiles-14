@@ -53,7 +53,7 @@ statusbar_color = "white"
 
 # Others
 #execute_on_player_state_change = dunstify -i "$(mpc current -f %title%)" // $(mpc current -f %album%)"
-execute_on_song_change = notify-send -i "${HOME}/.local/share/icons/elementary/audio-speakers.png" "$(mpc current)"
+#execute_on_song_change = notify-send -i "${HOME}/.local/share/icons/elementary/audio-speakers.png" "$(mpc current)"
 empty_tag_marker=" -- NENHUMA TAG -- "
 song_window_title_format = "ncmpcpp: %a - %t"
 search_engine_display_mode = "columns"
