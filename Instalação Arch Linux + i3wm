@@ -9,6 +9,9 @@
 ➜ Layout teclado
 loadkeys br-abnt2
 
+➜ Mudar tamanho da fonte
+setfont lat4-19
+
 ➜ Mudar idioma da instalação
 nano /etc/locale.gen
 
