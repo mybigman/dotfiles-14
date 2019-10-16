@@ -1,6 +1,5 @@
 #!/bin/sh
 
-
 font="$HOME/.fonts/Hack Regular Nerd Font Complete.ttf"
 
 # TIRAR PRINT
