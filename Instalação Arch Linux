@@ -117,7 +117,7 @@ pacman -S i3 --noconfirm
 pacman -S dmenu termite feh viewnior git wget curl neofetch w3m imagemagick  firefox-firefox-i18n-pt-br mousepad vim scrot nautilus
 
 ➜ Configurar o .xinitrc
-su - user
+su - USER
 
 ➜ Adicionar parametro no .xinitrc
 exec i3
