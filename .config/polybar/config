@@ -29,7 +29,7 @@ alert = #ff0000
 ; Barra/TOPO
 
 [bar/top]
-monitor = ${env:MONITOR:VGA-0}
+monitor = ${env:MONITOR:VGA-1}
 dpi = 80
 width = 100%
 height = 20
@@ -63,7 +63,7 @@ font-2 = Hack Nerd Font:pixelsize=13;2
 ;MÓDULOS TOP BAR
 
 modules-left = mpd
-modules-right = alsa memory pacman cpu temperature filesystem date print refresh powermenu
+modules-right = alsa memory pacman cpu temperature filesystem filesystem2 date print refresh powermenu
 modules-center = weather
 ;tray-position = 
 ;tray-padding = 2
@@ -87,7 +87,7 @@ cursor-scroll = ns-resize
 ; Barra/Bottom
 
 [bar/bottom]
-monitor = ${env:MONITOR:VGA-0}
+monitor = ${env:MONITOR:VGA-1}
 dpi = 95
 width = 100%
 height = 20
@@ -179,7 +179,7 @@ mount-0 = /home
 ;fixed-values = true
 ;spacing = 2
 
-format-mounted-prefix = " "
+format-mounted-prefix = " "
 format-mounted-prefix-foreground = #7f90f9
 label-mounted-underline = #7f90f9
 format-mounted-prefix-underline = #7f90f9
@@ -202,7 +202,7 @@ mount-0 = /
 ;fixed-values = true
 ;spacing = 2
 
-format-mounted-prefix = " "
+format-mounted-prefix = "濫 "
 format-mounted-prefix-foreground = #f97f7f
 ;format-mounted-foreground = #f97f7f
 label-mounted-underline = #f97f7f
@@ -476,8 +476,8 @@ bar-volume-empty-foreground = ${colors.foreground-alt}
 [module/temperature]
 type = internal/temperature
 interval = 0.5
-;hwmon-path = /sys/devices/platform/coretemp.0/hwmon/hwmon2/temp1_input
-hwmon-path = /sys/devices/platform/coretemp.0/hwmon/hwmon3/temp1_input
+hwmon-path = /sys/devices/platform/coretemp.0/hwmon/hwmon2/temp1_input
+;hwmon-path = /sys/devices/platform/coretemp.0/hwmon/hwmon3/temp1_input
 thermal-zone = 0
 warn-temperature = 59
 
@@ -627,7 +627,7 @@ click-left = i3-msg restart &
 [module/print]
 type = custom/text
 content = "%{F#ffffff}%{F-}"
-click-left = bash -c 'scrot "$HOME/Franks/PRINTS/Captura de tela de %d-%m-%Y %H:%M:%S.png"' &
+click-left = bash -c 'scrot "$HOME/Imagens/Captura de tela de %d-%m-%Y %H:%M:%S.png"' &
 
 [module/torrent]
 type = custom/text
