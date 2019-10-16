@@ -63,7 +63,7 @@ font-2 = Hack Nerd Font:pixelsize=13;2
 ;MÓDULOS TOP BAR
 
 modules-left = mpd
-modules-right = alsa memory pacman cpu temperature filesystem filesystem2 date print refresh powermenu
+modules-right = alsa memory pacman cpu temperature filesystem date print refresh
 modules-center = weather
 ;tray-position = 
 ;tray-padding = 2
@@ -122,7 +122,7 @@ font-2 = Hack Nerd Font:pixelsize=13;2
 
 modules-left = i3
 modules-center = terminal nautilus browser telegram vlc
-modules-right =
+modules-right = lock powermenu
 
 tray-position =
 tray-padding = 2
@@ -399,7 +399,7 @@ type = internal/date
 interval = 5
 
 ;date = " %d/%m/%y"
-date-alt = " %d/%m/%y"
+date-alt = " %a %d/%m/%y"
 
 time = %H:%M
 ;time-alt = %H:%M
@@ -641,9 +641,9 @@ content = "%{F#ffffff}%{F-}"
 
 [module/lock]
 type = custom/text
-content = 
+content = 
 content-foreground = #ffffff
-click-left = $HOME/.local/lock/fortune &
+click-left = $HOME/.config/polybar/scripts/blurlock.sh &
 
 [module/twitch]
 type = custom/text
