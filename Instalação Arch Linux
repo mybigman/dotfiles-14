@@ -115,7 +115,7 @@ pacman -S xorg xorg-xinit ttf-dejavu pulseaudio-alsa pavucontrol
 pacman -S i3 --noconfirm
 
 ➜ Pacotes necessarios
-pacman -S dmenu termite feh viewnior git wget curl neofetch w3m imagemagick firefox-firefox-i18n-pt-br mousepad vim scrot nautilus
+pacman -S dmenu termite feh viewnior git wget curl neofetch w3m imagemagick firefox-i18n-pt-br mousepad vim scrot nautilus
 
 ➜ Configurar o .xinitrc
 su - USER
