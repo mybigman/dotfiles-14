@@ -5,18 +5,17 @@
 # Criador: Jairo Abreu, Telegram: @jairoabreeu
 #
 # Credits: Franklin Souza, Telegram: @FranklinTech
-#
 while true
 do
     mpc idle player
 
     NOTIFY_TITLE="Tocando Agora"
 
-    MUSIC=$(mpc current -f "%artist%[ (%album%)] - %date% \\n%title%")
+    MUSIC=$(mpc current)
 
     echo "$MUSIC"
 
-    ART="/home/jairo/Music/$(dirname "$(mpc status -f '%file%' | head -n1)")/cover.jpg"
+    ART="$HOME/Música/$(dirname "$(mpc status -f '%file%' | head -n1)")/cover.jpg"
     convert -resize 64x64 "$ART" /tmp/cover.png
 
     dunstify -u low -t 5000 -a MPD -r 1 -i "/tmp/cover.png" "$NOTIFY_TITLE"  "$MUSIC"
