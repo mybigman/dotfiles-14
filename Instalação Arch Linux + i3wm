@@ -31,7 +31,7 @@ mount # Montar as partições
 swapon # Montar swap (caso tenha)
 
 ➜ Instalar sistema base
-pacstrap /mnt dhcpcd nano less man-pages linux-firmware mkinitcpio
+pacstrap /mnt dhcpcd nano less man-pages linux-firmware mkinitcpio base-devel
 
 ➜ Gerar FSTAB
 genfstab -U /mnt >> /mnt/etc/fstab
