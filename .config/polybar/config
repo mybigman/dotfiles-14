@@ -53,7 +53,7 @@ module-margin-right = 2
 
 # FONTES DA BARRA TOPO
 
-font-0 = "FantasqueSansMono-Regular:style=Regular:pixelsize=10;1"
+font-0 = "Hack Regular Nerd Font Complete:style=Regular:pixelsize=9;1"
 font-1 = "xos4 Terminess Powerline:pixelsize=13;1"
 font-2 = Hack Nerd Font:pixelsize=13;2
 
@@ -108,9 +108,9 @@ module-margin-right = 1
 
 # FONTES DA BARRA BAIXO
 
-font-0 = "FantasqueSansMono-Regular:style=Regular:pixelsize=10;1"
+font-0 = "Hack Regular Nerd Font Complete:style=Regular:pixelsize=9;1"
 font-1 = "xos4 Terminess Powerline:pixelsize=13;1"
-font-2 = Hack Nerd Font:pixelsize=12;2
+font-2 = Hack Nerd Font:pixelsize=13;2
 
 ;MÓDULOS BOTTOM BAR
 
@@ -651,8 +651,8 @@ label = "%{F#ffffff}%{F-} %output:0:37:...%"
 
 [module/calendar]
 type = custom/script
-exec = date "+%a %d-%m" 
-label = "%{F#e78afe}%{F-} %output:0:37:...%"
-format-underline = #e78afe
+exec = date "+%a %d/%b" 
+label = "%{F#ff9ebb}%{F-} %output:0:37:...%"
+format-underline = #ff9ebb
 #click-left = gsimplecal &
 click-left = notify-send "$(cal)"
