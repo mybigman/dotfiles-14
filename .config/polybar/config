@@ -53,7 +53,7 @@ module-margin-right = 2
 
 # FONTES DA BARRA TOPO
 
-font-0 = "Hack Regular Nerd Font Complete:style=Regular:pixelsize=9;1"
+font-0 = "DejaVuSans:style=Regular:pixelsize=8;1"
 font-1 = "xos4 Terminess Powerline:pixelsize=13;1"
 font-2 = Hack Nerd Font:pixelsize=13;2
 
@@ -108,7 +108,7 @@ module-margin-right = 1
 
 # FONTES DA BARRA BAIXO
 
-font-0 = "Hack Regular Nerd Font Complete:style=Regular:pixelsize=9;1"
+font-0 = "DejaVuSans:style=Regular:pixelsize=9;1"
 font-1 = "xos4 Terminess Powerline:pixelsize=13;1"
 font-2 = Hack Nerd Font:pixelsize=13;2
 
@@ -656,3 +656,4 @@ label = "%{F#ff9ebb}%{F-} %output:0:37:...%"
 format-underline = #ff9ebb
 #click-left = gsimplecal &
 #click-left = notify-send "$(cal)"
+
