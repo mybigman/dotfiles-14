@@ -51,9 +51,9 @@ padding-right = 2
 module-margin-left = 1
 module-margin-right = 2
 
-# FONTES DA BARRA
+# FONTES DA BARRA TOPO
 
-font-0 = "Fantasque Sans Mono:style=Regular:pixelsize=10;1"
+font-0 = "FantasqueSansMono-Regular:style=Regular:pixelsize=10;1"
 font-1 = "xos4 Terminess Powerline:pixelsize=13;1"
 font-2 = Hack Nerd Font:pixelsize=13;2
 
@@ -106,11 +106,11 @@ padding-right = 1
 module-margin-left = 0
 module-margin-right = 1
 
-# FONTES DA BARRA
+# FONTES DA BARRA BAIXO
 
-font-0 = "Fantasque Sans Mono:style=Regular:pixelsize=10;1"
+font-0 = "FantasqueSansMono-Regular:style=Regular:pixelsize=10;1"
 font-1 = "xos4 Terminess Powerline:pixelsize=13;1"
-font-2 = Hack Nerd Font:pixelsize=13;2
+font-2 = Hack Nerd Font:pixelsize=12;2
 
 ;MÓDULOS BOTTOM BAR
 
@@ -319,7 +319,7 @@ type = internal/mpd
 ;format-online = <label-song> <toggle> <icon-repeatone> <label-time> <icon-stop>
 ;format-online = <label-song>  <icon-prev> <icon-stop> <toggle> <icon-next> <label-time>
 ;format-online = <label-song> <icon-prev> <icon-stop> <toggle> <icon-next> <label-time> <bar-progress>
-format-online = <label-song> <icon-stop> <toggle> <label-time>
+format-online = <label-song> <>
 
 icon-prev = 
 icon-stop = 
