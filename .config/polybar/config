@@ -106,14 +106,11 @@ padding-right = 1
 module-margin-left = 0
 module-margin-right = 1
 
-;font-0 = fixed:pixelsize=10;1
+# FONTES DA BARRA
+
 font-0 = "Fantasque Sans Mono:style=Regular:pixelsize=10;1"
 font-1 = "xos4 Terminess Powerline:pixelsize=13;1"
-;font-2 = unifont:fontformat=truetype:size=8:antialias=false;0
 font-2 = Hack Nerd Font:pixelsize=13;2
-;font-4 = Siji:pixelsize=10;1
-;font-2 = Typicons:pixelsize=15;2
-;font-2 = feather:style=Regular:pixelsize=12;2
 
 ;MÓDULOS BOTTOM BAR
 
