@@ -131,7 +131,7 @@ cursor-scroll = ns-resize
 [module/title]
 type = internal/xwindow
 
-format =  <label>
+format =  <label>
 format-foreground = #ffffff
 
 label = %title%
