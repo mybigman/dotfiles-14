@@ -1,20 +1,19 @@
 # Crédits: Franklin Souza
 # Telegram: @FranklinTech
 ##############################
+
+# Exportar cores no TERM
 export TERM='xterm-256color'
 
 # Caminho da instalação do oh-my-zsh.
-
 export ZSH="$HOME/.oh-my-zsh"
 
 # Temas para o zsh
-
 #ZSH_THEME="robbyrussell"
 ZSH_THEME="powerlevel9k/powerlevel9k"
 POWERLEVEL9K_MODE="nerdfont-complete"
 
 # Cores do Powerline
-
 POWERLEVEL9K_CONTEXT_DEFAULT_FOREGROUND='black'
 POWERLEVEL9K_CONTEXT_DEFAULT_BACKGROUND='dodgerblue1'
 POWERLEVEL9K_CONTEXT_SUDO_FOREGROUND='lightyellow'
@@ -40,7 +39,7 @@ POWERLEVEL9K_DATE_BACKGROUND='black'
 POWERLEVEL9K_TIME_FOREGROUND='green1'
 POWERLEVEL9K_TIME_BACKGROUND='black'
 
-# Time
+# HORA OU DATA
 POWERLEVEL9K_TIME_FORMAT="%T"
 
 # Lado Esquerdo
