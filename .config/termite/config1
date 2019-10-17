@@ -1,5 +1,12 @@
+# Crédits: Franklin Souza
+# Telegram: @FranklinTech
+
+########################
+# CONFIGURAÇÃO TERMITE #
+########################
+
 [options]
-font = LiterationMono Nerd Font 8
+font = LiterationMono Nerd Font 9
 scroll_on_output = false
 scroll_on_keystroke = true
 audible_bell = false
@@ -33,10 +40,11 @@ filter_unmatched_urls = true
 
 [colors]
 
-cursor = #00FF7F
-foreground = #ffffff
-foreground_bold = #dcdcdc
-background = rgba(38, 41, 39, 0.83)
+foreground      = #ffffff
+foreground_bold = #ffffff
+cursor          = #ffffff
+background      = #0f0e10
+#background = rgba(38, 41, 39, 0.83)
 
 # black
 color0  = #3f3f3f
