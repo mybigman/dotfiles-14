@@ -158,7 +158,7 @@ source $ZSH/oh-my-zsh.sh
   alias fsa="sudo firehol start "
   alias vk="vkcube"
   alias ref="sudo reflector -c Brazil --save /etc/pacman.d/mirrorlist"
-  alias wm=" pkill -9 compton ; pkill -9 i3"
+  alias kwm=" pkill -9 compton ; pkill -9 i3"
 
 
 
