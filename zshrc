@@ -1,3 +1,6 @@
+# Crédits: Franklin Souza
+# Telegram: @FranklinTech
+##############################
 export TERM='xterm-256color'
 
 # Path to your oh-my-zsh installation.
