@@ -656,4 +656,3 @@ label = "%{F#ff9ebb}%{F-} %output:0:37:...%"
 format-underline = #ff9ebb
 #click-left = gsimplecal &
 #click-left = notify-send "$(cal)"
-
