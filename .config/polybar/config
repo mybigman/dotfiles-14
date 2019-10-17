@@ -60,7 +60,7 @@ font-2 = Hack Nerd Font:pixelsize=13;2
 ;MÓDULOS TOP BAR
 
 modules-left = mpd
-modules-right = alsa memory pacman cpu temperature filesystem date print refresh
+modules-right = alsa memory pacman cpu temperature filesystem date calendar print refresh
 modules-center = weather
 ;tray-position = 
 ;tray-padding = 2
@@ -156,8 +156,8 @@ label-indicator-underline = #ff0000
 type = custom/script
 interval = 30
 exec = ~/.config/polybar/scripts/uptime.sh
-label = "%{F#ffffff}%{F-} %output:0:37:...%"
-;format-suffix = " "
+label = "%{F#ffffff}%{F-} %output:0:37:...%"
+;format-suffix = " "
 format = <label>
 format-suffix-foreground = #ffffff
 ;format-underline =  ${colors.uptime}
@@ -173,7 +173,7 @@ mount-0 = /home
 ;fixed-values = true
 ;spacing = 2
 
-format-mounted-prefix = " "
+format-mounted-prefix = " "
 format-mounted-prefix-foreground = #7f90f9
 label-mounted-underline = #7f90f9
 format-mounted-prefix-underline = #7f90f9
@@ -393,9 +393,9 @@ type = internal/date
 interval = 5
 
 ;date = " %d/%m/%y"
-date-alt = " %a %d/%m/%y"
+;date-alt = " %a %d/%m/%y"
 
-time = %H:%M
+time = %I:%M %p
 ;time-alt = %H:%M
 
 
@@ -648,3 +648,11 @@ exec = $HOME/.config/polybar/scripts/weather.sh
 label = "%{F#ffffff}%{F-} %output:0:37:...%"
 ;format-underline = #c380d8
 ;format-foreground = #c380d8
+
+[module/calendar]
+type = custom/script
+exec = date "+%a %d-%m" 
+label = "%{F#e78afe}%{F-} %output:0:37:...%"
+format-underline = #e78afe
+#click-left = gsimplecal &
+click-left = notify-send "$(cal)"
