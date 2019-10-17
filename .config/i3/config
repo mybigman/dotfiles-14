@@ -57,11 +57,14 @@ client.placeholder      #000000 #0c0c0c #ffffff #000000   #0c0c0c
 ####################################################################
 
 # Trocar de wallpaper
-bindsym $mod+Shift+w exec feh --bg-scale "$(find $HOME/Wallpapers/ -name "*[jJpP][nNpP][gG]" | shuf -n1)"
+bindsym $mod+Shift+w exec feh --bg-scale "$(find $HOME/Franks/Wallpapers/ -name "*[jJpP][nNpP][gG]" | shuf -n1)"
 
 #Chamar a polybar (caso ela não subir)
 #bindsym $mod+m exec polybar -r top
 #bindsym $mod+n exec polybar -r bottom
+
+# Bloquear tela
+#bindsym $mod+Shift+x exec --no-startup-id $HOME/.config/polybar/scripts/blurlock.sh &
 
 # Iniciar terminal
 #bindsym $mod+Return exec i3-sensible-terminal
@@ -195,6 +198,10 @@ for_window [class="(Sakura)"]floating enable, move position center
 # Termite (Terminal)
 
 for_window [class="(Termite)"]floating enable, move position center
+
+# Urxvt (Terminal)
+
+for_window [class="(URxvt)"] floating enable, move position center
 
 # Telegram (Desktop)
 
@@ -331,10 +338,14 @@ mode "$mode_gaps_outer" {
 # screen before suspend. Use loginctl lock-session to lock your screen.
 #exec --no-startup-id xss-lock --transfer-sleep-lock -- i3lock --nofork
 exec_always --no-startup-id $HOME/.config/polybar/scripts/launcher.sh
-exec_always --no-startup-id feh --bg-fill $HOME/Franks/Wallpapers/003.jpg
+#exec_always --no-startup-id feh --bg-fill $HOME/Franks/Wallpapers/093.jpg
+exec feh --bg-scale "$(find $HOME/Franks/Wallpapers/ -name "*[jJpP][nNpP][gG]" | shuf -n1)"
 #exec --no-startup-id compton -b --respect-prop-shadow
 #exec --no-startup-id compton --active-opacity 0.9 --blur-background
 exec --no-startup-id compton --config ~/.config/compton/compton.conf
+exec --no-startup-id dunst -b
+#exec --no-startup-id $HOME/Scripts/mpd_notify.sh &
+exec $HOME/Scripts/mpd_notify.sh &
 #exec polybar -r top &
 #exec polybar -r bottom &
 #exec compton &
