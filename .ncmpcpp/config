@@ -6,6 +6,7 @@ visualizer_output_name = mpd
 visualizer_type = spectrum
 visualizer_look = "∙▋"
  
+#execute_on_song_change = notify-send -i "${HOME}/.local/share/icons/elementary/audio-speakers.png" "$(mpc current)"
 song_list_format = "%l | {%a - %t}|{%f} $R %b"
 cyclic_scrolling = no
 lines_scrolled = 1
