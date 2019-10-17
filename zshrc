@@ -3,9 +3,13 @@
 ##############################
 export TERM='xterm-256color'
 
-# Path to your oh-my-zsh installation.
+# Caminho da instalação do oh-my-zsh.
+
 export ZSH="$HOME/.oh-my-zsh"
 
+# Temas para o zsh
+
+#ZSH_THEME="robbyrussell"
 ZSH_THEME="powerlevel9k/powerlevel9k"
 POWERLEVEL9K_MODE="nerdfont-complete"
 
@@ -40,17 +44,17 @@ POWERLEVEL9K_TIME_BACKGROUND='black'
 POWERLEVEL9K_TIME_FORMAT="%T"
 
 # Lado Esquerdo
-POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=(os_icon dir)
+POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=(dir)
 
 # Lado Direito
 POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS=(time)
 
 # Which plugins would you like to load?
-plugins=(git)
+#plugins=(git)
 
 source $ZSH/oh-my-zsh.sh
 
-#Aliases
+# My aliases
   
   alias x="startx"
   alias up="sudo pacman -Syu"
@@ -71,6 +75,11 @@ source $ZSH/oh-my-zsh.sh
   alias term="xrdb -merge ~/.Xresources"
 
 
+# Plugins do zsh
 
 #source /usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
 #source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+
+# Iniciar com o shell
+
+#neofetch
