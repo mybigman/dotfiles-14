@@ -60,7 +60,7 @@ font-2 = Hack Nerd Font:pixelsize=13;2
 ;MÓDULOS TOP BAR
 
 modules-left = mpd
-modules-right = alsa memory pacman cpu temperature filesystem date calendar print refresh
+modules-right = alsa memory pacman cpu filesystem date calendar print refresh
 modules-center = weather
 ;tray-position = 
 ;tray-padding = 2
@@ -106,7 +106,7 @@ padding-right = 1
 module-margin-left = 0
 module-margin-right = 1
 
-# FONTES DA BARRA BAIXO
+# FONTES DA BARRA BOTTOM
 
 font-0 = "DejaVuSans:style=Regular:pixelsize=9;1"
 font-1 = "xos4 Terminess Powerline:pixelsize=13;1"
