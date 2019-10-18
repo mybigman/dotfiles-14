@@ -1,0 +1,158 @@
+// vim:ft=json
+
+{
+	"layer": "top",
+	"position": "top",
+
+	"modules-left": [
+        "custom/rofi",
+        "custom/right-arrow-dark",
+		"custom/right-arrow-light",
+        "custom/firefox",
+        "custom/right-arrow-dark",
+		"custom/right-arrow-light",
+        "custom/telegram",
+        "custom/right-arrow-dark",
+		"custom/right-arrow-light",
+		"sway/workspaces",
+		"custom/right-arrow-dark"
+	],
+	"modules-center": [
+		"custom/left-arrow-dark",
+		"clock#1",
+		"custom/left-arrow-light",
+		"custom/left-arrow-dark",
+		"clock#2",
+		"custom/right-arrow-dark",
+		"custom/right-arrow-light",
+		"clock#3",
+		"custom/right-arrow-dark"
+	],
+	"modules-right": [
+		"custom/left-arrow-dark",
+		"pulseaudio",
+		"custom/left-arrow-light",
+		"custom/left-arrow-dark",
+		"memory",
+		"custom/left-arrow-light",
+		"custom/left-arrow-dark",
+		"cpu",
+		"custom/left-arrow-light",
+		"custom/left-arrow-dark",
+        "temperature",
+		"custom/left-arrow-light",
+		"custom/left-arrow-dark",
+		"battery",
+		"custom/left-arrow-light",
+		"custom/left-arrow-dark",
+		"tray",
+        "custom/desligar"
+	],
+	"custom/left-arrow-dark": {
+		"format": "",
+		"tooltip": false
+	},
+	"custom/left-arrow-light": {
+		"format": "",
+		"tooltip": false
+	},
+	"custom/right-arrow-dark": {
+		"format": "",
+		"tooltip": false
+	},
+	"custom/right-arrow-light": {
+		"format": " ",
+		"tooltip": false
+	},
+	"custom/rofi": {
+		"format": " Linux",
+        "on-click": "rofi -show drun -theme ~/.config/rofi/appmenu/drun.rasi",
+        "on-click-right": "rofi -show drun -theme ~/.config/rofi/appmenu/drun.rasi",
+        "on-click-middle": "pkill -9 rofi"
+    },
+    "custom/terminal": {
+		"format": "",
+        "on-click": "exec termite",
+        "on-click-right": "termite -s",
+        "on-click-middle": "pkill -9 termite"
+    },
+    "custom/arquivos": {
+		"format": "",
+        "on-click": "exec nautilus &",
+       "on-click-right": "",
+        "on-click-middle": "bash -c 'pkill -9 nautilus'"
+    },
+    "custom/firefox": {
+		"format": "",
+        "on-click": "firefox",
+        "on-click-right": "firefox --new-tab",
+        "on-click-middle": "firefox --private-window"
+    },
+    "custom/telegram": {
+		"format": "",
+       "on-click": "exec telegram-desktop &",
+        "on-click-right": "exec telegram-desktop &",
+        "on-click-middle": "exec telegram-desktop &"
+    },
+	"sway/workspaces": {
+		"disable-scroll": true,
+		"format": "{name}"
+	},
+	"clock#1": {
+		"format": "{:%a}",
+		"tooltip": false,
+        "on-click": "orage"
+	},
+	"clock#2": {
+		"format": "{:%d/%m}",
+		"tooltip": false,
+        "on-click": "orage"
+	},
+	"clock#3": {
+		"format": "{:%H:%M}",
+		"tooltip": false,
+        "on-click": "orage"
+	},
+	"pulseaudio": {
+		"format": "{icon}  {volume}%",
+		"format-bluetooth": "{icon}  {volume}%",
+		"format-muted": "Som MUTADO",
+		"format-icons": {
+			"headphones": "",
+			"default": [
+				"",
+				""
+			]
+		},
+		"scroll-step": 5,
+		"on-click": "pactl set-sink-mute 0 toggle",
+		"on-click-right": "pavucontrol"
+	},
+	"memory": {
+		"interval": 2,
+		"format": " Mem {}%",
+        "on-click": "termite -e htop"
+	},
+	"cpu": {
+		"interval": 2,
+		"format": " CPU {usage:2}%",
+        "on-click": "sakura -e watch cpupower frequency-info"
+    },
+    "temperature": {
+        "interval": 2,
+        // "thermal-zone": 2,
+        // "hwmon-path": "/sys/class/hwmon/hwmon2/temp1_input",
+        "critical-threshold": 50,
+        // "format-critical": " {temperatureC}°C",
+        "format": " {temperatureC}°C",
+        "on-click": "xsensors"
+	},
+	
+    "custom/desligar": {
+    "format": "",
+    "on-click": "swaynag -t warning -m 'Opções Sway' -b 'Sair' 'swaymsg exit' -b 'Reiniciar' 'swaymsg exec reboot' 'exec poweroff'"
+    },
+	"tray": {
+		"icon-size": 15
+	}
+}
