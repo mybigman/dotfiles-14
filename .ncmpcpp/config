@@ -1,6 +1,7 @@
 # NCMPCPP = RED
-
-
+# Crédits: Franklin Souza
+# Telegram: @FranklinTech
+###########################################
 mpd_music_dir = /home/ghost/Música
  
 # Visualizer
