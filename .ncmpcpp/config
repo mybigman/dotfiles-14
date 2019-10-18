@@ -1,4 +1,4 @@
-# NCMPCPP = RED
+# NCMPCPP = Red, White and Black
 # Crédits: Franklin Souza
 # Telegram: @FranklinTech
 ###########################################
@@ -36,17 +36,17 @@ header_visibility = "yes"
 # Browser
 browser_playlist_prefix = "$2plist »$9 "
 #(classic/columns)
-browser_display_mode = "columns" 
+#browser_display_mode = "columns" 
 
 # Colors
 header_window_color = "red"
 main_window_color = "red"
-main_window_highlight_color = "red"
-visualizer_color = "white, black, red"
+main_window_highlight_color = "white"
 active_column_color = "red"
 state_line_color = "red"
 state_flags_color = "black"
 progressbar_elapsed_color = "white"
-progressbar_color = "red"
+progressbar_color = "black"
 statusbar_color = "red"
 volume_color = "red"
+visualizer_color = "white, black, red"
