@@ -11,7 +11,7 @@ visualizer_output_name = mpd
 visualizer_type = spectrum
 visualizer_look = "∙▋"
  
-execute_on_song_change = $HOME/.ncmpcpp/album.sh
+#execute_on_song_change = $HOME/.ncmpcpp/album.sh
 song_list_format = "%l | {%a - %t}|{%f} $R %b"
 cyclic_scrolling = no
 lines_scrolled = 1
@@ -45,7 +45,7 @@ main_window_highlight_color = "white"
 active_column_color = "red"
 state_line_color = "red"
 state_flags_color = "black"
-progressbar_elapsed_color = "white"
+progressbar_elapsed_color = "red"
 progressbar_color = "black"
 statusbar_color = "red"
 volume_color = "red"
