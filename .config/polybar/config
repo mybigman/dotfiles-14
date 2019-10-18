@@ -402,12 +402,12 @@ label = %percentage_used%%
 
 [module/date]
 type = internal/date
-interval = 5
+interval = 1
 
 ;date = " %d/%m/%y"
 ;date-alt = " %a %d/%m/%y"
 
-time = %I:%M %p
+time = %I:%M:%S %p
 ;time-alt = %H:%M
 
 
