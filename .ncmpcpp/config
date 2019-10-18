@@ -2,7 +2,7 @@
 # Crédits: Franklin Souza
 # Telegram: @FranklinTech
 ###########################################
-mpd_music_dir = /home/ghost/Música
+mpd_music_dir = $HOME/Música
  
 # Visualizer
 visualizer_in_stereo = yes
