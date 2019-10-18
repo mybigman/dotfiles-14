@@ -11,7 +11,7 @@ visualizer_output_name = mpd
 visualizer_type = spectrum
 visualizer_look = "∙▋"
  
-#execute_on_song_change = $HOME/.ncmpcpp/album.sh
+#execute_on_song_change =$HOME/.ncmpcpp/album.sh
 song_list_format = "%l | {%a - %t}|{%f} $R %b"
 cyclic_scrolling = no
 lines_scrolled = 1
