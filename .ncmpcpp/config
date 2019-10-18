@@ -12,6 +12,7 @@ visualizer_type = spectrum
 visualizer_look = "∙▋"
  
 #execute_on_song_change =$HOME/.ncmpcpp/album.sh
+execute_on_song_change = ~/.ncmpcpp/album.sh && ~/.ncmpcpp/art.sh
 song_list_format = "%l | {%a - %t}|{%f} $R %b"
 cyclic_scrolling = no
 lines_scrolled = 1
@@ -41,7 +42,7 @@ browser_playlist_prefix = "$2plist »$9 "
 # Colors
 header_window_color = "red"
 main_window_color = "red"
-main_window_highlight_color = "white"
+main_window_highlight_color = "black"
 active_column_color = "red"
 state_line_color = "red"
 state_flags_color = "black"
