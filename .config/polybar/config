@@ -60,7 +60,7 @@ font-2 = Hack Nerd Font:pixelsize=13;2
 ;MÓDULOS TOP BAR
 
 modules-left = mpd
-modules-right = alsa memory pacman cpu filesystem calendar date print refresh lock powermenu
+modules-right = alsa memory cpu filesystem calendar date print refresh lock powermenu
 modules-center = weather
 ;tray-position = 
 ;tray-padding = 2
