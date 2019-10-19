@@ -88,13 +88,6 @@ default_border pixel 3
 # smart|urgent|focus|none
 focus_on_window_activation focus
 
-
-# Termite (Terminal)
-
-for_window [class="(Termite)"]floating enable, move position center
-
-
-
 ####################################################################
 ############################# B A R ################################
 ####################################################################
