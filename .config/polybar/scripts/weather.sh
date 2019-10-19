@@ -2,9 +2,9 @@
 # Telegram: @FranklinTech
 ###################################
 
-############
-# Weather###
-############
+##########
+# Weather#
+##########
 
 #!/bin/sh
 
@@ -94,7 +94,7 @@ fi
 
 # https://github.com/jaagr/polybar/wiki/Fonts
 #; Using raw formatting tags, you can mix fonts.
-#;%{T3} tells the bar to use Noto Sans and %{T-} resets it to default.
+#%{T3} tells the bar to use Noto Sans and %{T-} resets it to default.
 #label-inactive = %{T3}Inactive%{T-} %time%
 
     echo  "$weather_desc" "$weather_temp$SYMBOL"
