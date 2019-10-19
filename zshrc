@@ -134,8 +134,7 @@ POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS=(time)
 
 source $ZSH/oh-my-zsh.sh
 
-# My aliases
-  
+# My alias
   alias i="startx"
   alias up="$HOME/Scripts/upgrade.sh"
   alias upg="sudo pacman -Syy"
