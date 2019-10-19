@@ -53,7 +53,7 @@
     
     "custom/desligar": {
     "format": "",
-    "on-click": "swaynag -t warning -m 'Arch Linux Sway' -b 'Sair' 'swaymsg exit' -b 'Reiniciar' 'swaymsg exec reboot' -b r'Desligar' 'swaymsg exec poweroff'"
+    "on-click": "swaynag -t warning -m 'Arch Linux Sway' -b 'Sair' 'swaymsg exit' -b 'Reiniciar' 'swaymsg exec reboot' -b 'Desligar' 'swaymsg exec poweroff'"
     },
 
     "pulseaudio": {
