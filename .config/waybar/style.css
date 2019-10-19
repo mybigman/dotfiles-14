@@ -1,13 +1,13 @@
 * {
-	font-size: 14px;
-	font-family: monospace;
+	font-size: 11px;
+	font-family: DejaVuSans;
 }
 
 window#waybar {
-	background: #292b2e;
+	background: #1a1a1a;
 	color: #fdf6e3;
 }
-
+r
 #custom-right-arrow-dark,
 #custom-left-arrow-dark {
 	color: #1a1a1a;
@@ -17,7 +17,6 @@ window#waybar {
 	color: #292b2e;
 	background: #1a1a1a;
 }
-
 #custom-rofi,
 #custom-terminal,
 #custom-firefox,
@@ -47,17 +46,28 @@ window#waybar {
 	color: #ffa000;
 }
 #custom-arquivos {
-	color: #fff89d;
+	color: #ffffff;
 }
 #custom-telegram {
-	color: #9dfff5;
+	color: #ffffff;
 }
+
+#clock.1 {
+	color: #f8ce8d;
+	background: #1a1a1a;
+}
+
+#clock {
+	color: #ff9ebb;
+	background: #1a1a1a;
+}
+
 #workspaces button {
 	padding: 0 2px;
-	color: #fdf6e3;
+	color: #ffffff;
 }
 #workspaces button.focused {
-	color: #b600bd;
+	color: #ff0000;
 }
 #workspaces button:hover {
 	box-shadow: inherit;
@@ -69,25 +79,26 @@ window#waybar {
 	padding: 0 3px;
 }
 #pulseaudio {
-	color: #268bd2;
+	color: #ffffff;
+	background: #1a1a1a;
 }
-#backlight {
-	color: #b58900;
-}
+
 #memory {
-	color: #2aa198;
+	color: #f8f08d;
+	background: #1a1a1a;
 }
 #temperature {
-	color: #b58900;
+	color: #8df88d;
+	background: #1a1a1a;
 }
 #cpu {
-	color: #6c71c4;
+	color: #8dd3f8;
+	background: #1a1a1a;
 }
-#battery {
-	color: #859900;
-}
+
 #custom-desligar {
-	color: #ff0000;
+	color: #ffffff;
+	background: #1a1a1a;
 }
 
 #custom-rofi,
