@@ -1,5 +1,5 @@
 # $HOME/.config/polybar/config
-# Crédits: Franklin Souza
+# Credits: Franklin Souza
 # Telegram: @FranklinTech
 # Dúvidas: https://github.com/jaagr/polybar
 
@@ -53,7 +53,7 @@ module-margin-right = 2
 
 # FONTES DA BARRA TOPO
 
-font-0 = "Literation Mono Nerd Font Complete:style=Regular:pixelsize=8;1"
+font-0 = "DejaVuSans:style=Regular:pixelsize=8;1"
 font-1 = "xos4 Terminess Powerline:pixelsize=13;1"
 font-2 = Hack Nerd Font:pixelsize=13;2
 
@@ -108,15 +108,15 @@ module-margin-right = 1
 
 # FONTES DA BARRA BOTTOM
 
-font-0 = "Literation Mono Nerd Font Complete:style=Regular:pixelsize=8;1"
+font-0 = "Baumans-Regular:style=Regular:pixelsize=8;1"
 font-1 = "xos4 Terminess Powerline:pixelsize=13;1"
-font-2 = Hack Nerd Font:pixelsize=13;2
+font-2 = feather:pixelsize=13;2
 
 ;MÓDULOS BOTTOM BAR
 
 modules-left = i3
 modules-center = terminal nautilus browser telegram
-modules-right = music
+modules-right = deezer
 
 tray-position =
 tray-padding = 2
@@ -553,20 +553,20 @@ margin-bottom = 5
 
 [module/terminal]
 type = custom/text
-content = "%{F#ffffff}%{F-}"
+content = "%{F#ffffff}%{F-}"
 click-left = termite  &
 click-right = sakura &
 
 [module/browser]
 type = custom/text
-content = "%{F#ffffff}%{F-}"
+content = "%{F#ffffff}%{F-}"
 click-left = firefox &
 ;click-middle = qutebrowser &
 ;click-right = chromium &
 
 [module/telegram]
 type = custom/text
-content = "%{F#ffffff}%{F-}"
+content = "%{F#ffffff}%{F-}"
 click-left = exec telegram-desktop &
 
 [module/update]
@@ -576,7 +576,7 @@ click-left = exec termite && $HOME/Scripts/upgrade.sh
 
 [module/nautilus]
 type = custom/text
-content = "%{F#ffffff}%{F-}"
+content = "%{F#ffffff}%{F-}"
 click-left = nautilus &
 
 [module/vlc]
@@ -657,7 +657,7 @@ format-underline = #fe8ac6
 type = custom/script
 interval = 0.5
 exec = $HOME/.config/polybar/scripts/weather.sh
-label = "%{F#ffffff}%{F-} %output:0:37:...%"
+label = "%{F#ffffff}%{F-}  %output:0:37:...%"
 ;format-underline = #c380d8
 ;format-foreground = #c380d8
 
@@ -669,7 +669,7 @@ format-underline = #ff9ebb
 #click-left = gsimplecal &
 #click-left = notify-send "$(cal)"
 
-[module/music]
+[module/deezer]
 type = custom/text
-content = "%{F#ffffff}%{F-}"
+content = "%{F#ffffff}%{F-}"
 click-left = exec deezer &
