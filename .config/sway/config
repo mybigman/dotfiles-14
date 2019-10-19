@@ -88,6 +88,13 @@ default_border pixel 3
 # smart|urgent|focus|none
 focus_on_window_activation focus
 
+
+# Termite (Terminal)
+
+for_window [class="(Termite)"]floating enable, move position center
+
+
+
 ####################################################################
 ############################# B A R ################################
 ####################################################################
@@ -367,7 +374,7 @@ bindsym Mod1+Shift+e exit
 # Lançadores de programas
 bindsym Mod4+x exec rofi -show drun
 bindsym Mod1+F2 exec rofi -show drun -theme ~/.config/rofi/center.rasi
-bindsym Mod1+F3 exec rofi -show drun -theme ~/.config/rofi/appmenu/drun.rasi
+bindsym Mod4+F3 exec rofi -show drun -theme ~/.config/rofi/appmenu/drun.rasi
 bindsym Mod4+F1 exec rofi -show drun -theme ~/.config/rofi/sidebar/rofi.rasi
 bindsym Mod4+z exec ~/.config/rofi/rofimenu.sh
 bindsym Mod1+F1 exec ~/.config/rofi/rofimenu.sh
@@ -431,6 +438,58 @@ bindsym Mod4+Shift+9 move container to workspace number $ws9
 bindsym Mod4+Shift+0 move container to workspace number $ws10
 
 bindsym Mod4+d workspace back_and_forth
+
+####################################################################
+################ R E G R A S #######################################
+####################################################################
+
+# Sakura (Terminal
+
+for_window [class="(Sakura)"]floating enable, move position center
+
+# Termite (Terminal)
+
+for_window [class="(Termite)"]floating enable, move position center
+
+# Telegram (Desktop)
+
+for_window [class="(Telegram)"]floating enable, move position center
+
+# Thunar (Gerenciador de arquivos)
+
+for_window [class="(Thunar)"]floating enable, move position center
+
+# VLC (Player de música/Vídeo)
+
+for_window [class="(vlc)"]floating enable, move position center
+
+# Mousepad (Editor de texto)
+
+for_window [class="(Mousepad)"]floating enable, move position center
+
+# Gedit (Editor de texto)
+
+for_window [class="(Gedit)"]floating enable, move position center
+
+# Feh (Gerenciador de imagens)
+
+for_window [class="(Feh)"]floating enable, move position center
+
+# Viewnior (Gerenciador de imagens)
+
+for_window [class="(Viewnior)"]floating enable, move position center
+
+# Gucharmap (Mapa de caracteres)
+
+for_window [class="(Gucharmap)"]floating enable, move position center
+
+# Qbittorrent (Gerenciador torrent)
+
+for_window [class="(Qbittorrent)"]floating enable, move position center
+
+# PopcornTime (Streamer de filmes)
+
+for_window [class="(popcorntime)"]floating enable, move position center
 
 ####################################################################
 ################ G R U P O S #######################################
