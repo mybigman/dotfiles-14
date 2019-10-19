@@ -15,6 +15,13 @@
         "on-click-middle": "exec telegram-desktop &"
     },
 
+"custom/firefox": {
+		"format": "",
+        "on-click": "firefox",
+        "on-click-right": "",
+        "on-click-middle": ""
+    },
+
     "custom/terminal": {
 		"format": " ",
         "on-click": "termite",
