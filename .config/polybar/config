@@ -1,4 +1,3 @@
-# $HOME/.config/polybar/config
 # Credits: Franklin Souza
 # Telegram: @FranklinTech
 # Dúvidas: https://github.com/jaagr/polybar
@@ -408,7 +407,7 @@ interval = 1
 ;date-alt = " %a %d/%m/%y"
 
 time = %I:%M %p
-;time-alt = %H:%M
+time-alt = %H:%M:%S
 
 
 format-prefix = 
@@ -655,9 +654,9 @@ format-underline = #fe8ac6
 
 [module/weather]
 type = custom/script
-interval = 0.5
+interval = 60
 exec = $HOME/.config/polybar/scripts/weather.sh
-label = "%{F#ffffff}%{F-}  %output:0:37:...%"
+label = "%{F#ffffff}%{F-} %output:0:37:...%"
 ;format-underline = #c380d8
 ;format-foreground = #c380d8
 
