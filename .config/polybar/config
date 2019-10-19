@@ -654,7 +654,7 @@ format-underline = #fe8ac6
 
 [module/weather]
 type = custom/script
-interval = 60
+interval = 1
 exec = $HOME/.config/polybar/scripts/weather.sh
 label = "%{F#ffffff}%{F-} %output:0:37:...%"
 ;format-underline = #c380d8
