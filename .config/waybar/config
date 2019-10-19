@@ -1,145 +1,36 @@
-// vim:ft=json
-
 {
-	"layer": "top",
-	"position": "top",
+    "layer": "top", // Waybar at top layer
+    "modules-left": ["sway/workspaces"],
+    "modules-center": [""],
+    "modules-right": ["pulseaudio", "temperature", "memory", "cpu", "clock", "clock#1", "custom/desligar"],
+    
+    "clock": {
+        "format": " {: %a, %d.%m.%y}"
+    },
 
-	"modules-left": [
-        "custom/rofi",
-        "custom/right-arrow-dark",
-		"custom/right-arrow-light",
-        "custom/firefox",
-        "custom/right-arrow-dark",
-		"custom/right-arrow-light",
-        "custom/telegram",
-        "custom/right-arrow-dark",
-		"custom/right-arrow-light",
-		"sway/workspaces",
-		"custom/right-arrow-dark"
-	],
-	"modules-center": [
-		"custom/left-arrow-dark",
-		"clock#1",
-		"custom/left-arrow-light",
-		"custom/left-arrow-dark",
-		"clock#2",
-		"custom/right-arrow-dark",
-		"custom/right-arrow-light",
-		"clock#3",
-		"custom/right-arrow-dark"
-	],
-	"modules-right": [
-		"custom/left-arrow-dark",
-		"pulseaudio",
-		"custom/left-arrow-light",
-		"custom/left-arrow-dark",
-		"memory",
-		"custom/left-arrow-light",
-		"custom/left-arrow-dark",
-		"cpu",
-		"custom/left-arrow-light",
-		"custom/left-arrow-dark",
-        "temperature",
-		"custom/left-arrow-light",
-		"custom/left-arrow-dark",
-		"battery",
-		"custom/left-arrow-light",
-		"custom/left-arrow-dark",
-		"tray",
-        "custom/desligar"
-	],
-	"custom/left-arrow-dark": {
-		"format": "",
-		"tooltip": false
-	},
-	"custom/left-arrow-light": {
-		"format": "",
-		"tooltip": false
-	},
-	"custom/right-arrow-dark": {
-		"format": "",
-		"tooltip": false
-	},
-	"custom/right-arrow-light": {
-		"format": " ",
-		"tooltip": false
-	},
-	"custom/rofi": {
-		"format": " Linux",
-        "on-click": "rofi -show drun -theme ~/.config/rofi/appmenu/drun.rasi",
-        "on-click-right": "rofi -show drun -theme ~/.config/rofi/appmenu/drun.rasi",
-        "on-click-middle": "pkill -9 rofi"
-    },
-    "custom/terminal": {
-		"format": "",
-        "on-click": "exec termite",
-        "on-click-right": "termite -s",
-        "on-click-middle": "pkill -9 termite"
-    },
-    "custom/arquivos": {
-		"format": "",
-        "on-click": "exec nautilus &",
-       "on-click-right": "",
-        "on-click-middle": "bash -c 'pkill -9 nautilus'"
-    },
-    "custom/firefox": {
-		"format": "",
-        "on-click": "firefox",
-        "on-click-right": "firefox --new-tab",
-        "on-click-middle": "firefox --private-window"
-    },
     "custom/telegram": {
 		"format": "",
        "on-click": "exec telegram-desktop &",
         "on-click-right": "exec telegram-desktop &",
         "on-click-middle": "exec telegram-desktop &"
     },
-	"sway/workspaces": {
-		"disable-scroll": true,
-		"format": "{name}"
-	},
-	"clock#1": {
-		"format": "{:%a}",
-		"tooltip": false,
-        "on-click": "orage"
-	},
-	"clock#2": {
-		"format": "{:%d/%m}",
-		"tooltip": false,
-        "on-click": "orage"
-	},
-	"clock#3": {
-		"format": "{:%H:%M}",
-		"tooltip": false,
-        "on-click": "orage"
-	},
-	"pulseaudio": {
-		"format": "{icon}  {volume}%",
-		"format-bluetooth": "{icon}  {volume}%",
-		"format-muted": "Som MUTADO",
-		"format-icons": {
-			"headphones": "",
-			"default": [
-				"",
-				""
-			]
-		},
-		"scroll-step": 5,
-		"on-click": "pactl set-sink-mute 0 toggle",
-		"on-click-right": "pavucontrol"
-	},
-	"memory": {
-		"interval": 2,
-		"format": " Mem {}%",
-        "on-click": "termite -e htop"
-	},
-	"cpu": {
-		"interval": 2,
-		"format": " CPU {usage:2}%",
-        "on-click": "sakura -e watch cpupower frequency-info"
+
+    "custom/terminal": {
+		"format": " ",
+        "on-click": "termite",
+        "on-click-right": "",
+        "on-click-middle": ""
+    },    
+
+    "custom/arquivos": {
+		"format": " ",
+        "on-click": "nautilus",
+        "on-click-right": "",
+        "on-click-middle": ""
     },
+
     "temperature": {
-        "interval": 2,
+        "interval": 0.5,
         // "thermal-zone": 2,
         // "hwmon-path": "/sys/class/hwmon/hwmon2/temp1_input",
         "critical-threshold": 50,
@@ -147,12 +38,174 @@
         "format": " {temperatureC}°C",
         "on-click": "xsensors"
 	},
-	
+
+"clock#1": {
+	"interval": 1,
+        "format": " {: %H:%M:%S}"
+    },
+
+     "cpu": {
+        "format": "　{usage}%"
+    },
+    "memory": {
+        "format": "　{}%"
+    },
+    
     "custom/desligar": {
     "format": "",
-    "on-click": "swaynag -t warning -m 'Opções Sway' -b 'Sair' 'swaymsg exit' -b 'Reiniciar' 'swaymsg exec reboot' 'exec poweroff'"
+    "on-click": "swaynag -t warning -m 'Arch Linux Sway' -b 'Sair' 'swaymsg exit' -b 'Reiniciar' 'swaymsg exec reboot' -b r'Desligar' 'swaymsg exec poweroff'"
     },
-	"tray": {
-		"icon-size": 15
-	}
+
+    "pulseaudio": {
+        //"scroll-step": 5,
+        "format": "　{volume}%",
+        "format-bluetooth": "{volume}% {icon}",
+        "format-muted": "",
+        "format-icons": {
+            "headphones": "",
+            "handsfree": "",
+            "headset": "",
+            "phone": "",
+            "portable": "",
+            "car": "",
+            "default": ["", ""]
+        },
+        "on-click": ""
+    }
+}
+style.css
+* {
+    border: none;
+    border-radius: 0;
+    /*font-family: "Hack", "Noto Color Emoji", sans-serif;*/
+    font-size: 18px;
+    /*font-weight: bold;*/
+    min-height: 0;
+}
+
+window#waybar {
+    background: #000000;
+    /*border-bottom: 3px solid rgba(100, 114, 125, 0.5);*/
+    color: #e5e9f0;
+}
+
+/* https://github.com/Alexays/Waybar/wiki/FAQ#the-workspace-buttons-have-a-strange-hover-effect */
+#workspaces button {
+    padding: 0 5px;
+    background: transparent;
+    color: #ffffff;
+    border-bottom: 3px solid transparent;
+}
+
+#workspaces button.focused {
+    background: #4c566a;
+    border-bottom: 3px solid #e5e9f0;
+}
+
+#workspaces button.urgent {
+    background-color: #bf616a;
+}
+
+#mode {
+    background: #64727D;
+    border-bottom: 3px solid #ffffff;
+}
+
+#clock, #battery, #cpu, #memory, #temperature, #backlight, #network, #pulseaudio, #custom-media, #tray, #mode, #idle_inhibitor {
+    padding: 0 10px;
+    margin: 0 5px;
+}
+
+#clock {
+    /*background-color: #64727D;*/
+    color: #e5e9f0;
+    font-weight: bold;
+}
+
+#battery {
+    /*background-color: #000000;*/
+    color: #e5e9f0;
+}
+
+#battery.charging {
+    /*background-color: #000000;*/
+    color: #e5e9f0;
+}
+
+@keyframes blink {
+    to {
+        /*background-color: #ffffff;*/
+        color: #000000;
+    }
+}
+
+#battery.critical:not(.charging) {
+    background: #f53c3c;
+    color: #ffffff;
+    animation-name: blink;
+    animation-duration: 0.5s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+
+#cpu {
+    /*background: #2ecc71;*/
+    color: #e5e9f0;
+}
+
+#memory {
+    /*background: #9b59b6;*/
+    color: #e5e9f0;
+}
+
+#network {
+    /*background: #2980b9;*/
+    color: #e5e9f0;
+}
+
+#network.disconnected {
+    /*background: #f53c3c;*/
+    color: #e5e9f0;
+}
+
+#pulseaudio {
+    /*background: #000000;*/
+    color: #e5e9f0;
+}
+
+#pulseaudio.muted {
+    /*background: #000000;*/
+    color: #e5e9f0;
+}
+
+#custom-media {
+    background: #66cc99;
+    color: #2a5c45;
+}
+
+.custom-spotify {
+    background: #66cc99;
+}
+
+.custom-vlc {
+    background: #ffa000;
+}
+
+#temperature {
+    background: #f0932b;
+}
+
+#temperature.critical {
+    background: #eb4d4b;
+}
+
+
+#idle_inhibitor {
+    background-color: #2d3436;
+}
+
+#idle_inhibitor.activated {
+    background-color: #ecf0f1;
+    color: #2d3436;
 }
