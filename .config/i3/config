@@ -1,6 +1,4 @@
-# Criador: Jairo Abreu
-# Telegram: @jairoabreeu
-# Credits: Franklin Souza
+# Crédits: Franklin Souza
 # Telegram: @FranklinTech
 # Dúvidas: https://i3wm.org/docs/userguide.html
 
@@ -125,7 +123,7 @@ bindsym $mod+space focus mode_toggle
 bindsym $mod+Shift+c move position center
 
 # Restartar i3
- bindsym $mod+Shift+r restart
+# bindsym $mod+Shift+r restart
 
 # Launchers
 
@@ -193,7 +191,7 @@ bindsym $mod+Shift+0 move container to workspace number $ws10
 ################ R E G R A S #######################################
 ####################################################################
 
-# Sakura (Terminal
+# Sakura (Terminal)
 
 for_window [class="(Sakura)"]floating enable, move position center
 
@@ -204,6 +202,10 @@ for_window [class="(Termite)"]floating enable, move position center
 # Urxvt (Terminal)
 
 for_window [class="(URxvt)"] floating enable, move position center
+
+# Deezer (Streamer de música)
+
+for_window [class="(Deezer)"]floating enable, move position center
 
 # Telegram (Desktop)
 
@@ -341,6 +343,7 @@ mode "$mode_gaps_outer" {
 #exec --no-startup-id xss-lock --transfer-sleep-lock -- i3lock --nofork
 exec_always --no-startup-id $HOME/.config/polybar/scripts/launcher.sh
 exec_always --no-startup-id feh --bg-fill $HOME/Franks/Wallpapers/093.jpg
+#exec_always --no-startup-id feh --bg-fill $HOME/Franks/Wallpapers/022.jpg
 #exec feh --bg-scale "$(find $HOME/Franks/Wallpapers/ -name "*[jJpP][nNpP][gG]" | shuf -n1)"
 #exec --no-startup-id compton -b --respect-prop-shadow
 #exec --no-startup-id compton --active-opacity 0.9 --blur-background
