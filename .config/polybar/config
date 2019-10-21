@@ -52,7 +52,7 @@ module-margin-right = 2
 
 # FONTES DA BARRA TOPO
 
-font-0 = "Baumans-R:style=Regular:pixelsize=10;1"
+font-0 = "Poppins-R:style=Regular:pixelsize=10;1"
 font-1 = "xos4 Terminess Powerline:pixelsize=13;1"
 font-2 = "Hack Nerd Font:pixelsize=13;2"
 
