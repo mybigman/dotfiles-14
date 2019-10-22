@@ -380,7 +380,7 @@ card = intel_backlight
 
 [module/cpu]
 type = internal/cpu
-interval = 1.5
+interval = 0.5
 format-prefix = " "
 format-prefix-foreground = #8dd3f8
 format-underline = #8dd3f8
