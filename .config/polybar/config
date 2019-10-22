@@ -61,7 +61,7 @@ font-2 = "Hack Nerd Font:pixelsize=13;2"
 modules-left = mpd
 modules-right = alsa memory pacman cpu filesystem calendar date weather print lock powermenu
 modules-center = uptime
-;tray-position = 
+;tray-position =
 ;tray-padding = 2
 ;tray-transparent = true
 ;tray-background = #0063ff
@@ -117,8 +117,8 @@ modules-left = i3
 modules-center = terminal nautilus browser telegram deezer
 modules-right =
 
-tray-position =
-tray-padding = 2
+;tray-position = right
+;tray-padding = 1
 ;tray-transparent = true
 ;tray-background = #0063ff
 
