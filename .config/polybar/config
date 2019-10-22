@@ -407,7 +407,7 @@ interval = 1
 ;date-alt = " %a %d/%m/%y"
 
 time = %I:%M %p
-time-alt = %H:%M:%S
+;time-alt = %H:%M:%S
 
 
 format-prefix = 
@@ -668,7 +668,7 @@ exec = date "+%a %d/%b"
 label = "%{F#ff9ebb}%{F-} %output:0:37:...%"
 format-underline = #ff9ebb
 #click-left = gsimplecal &
-#click-left = notify-send "$(cal)"
+click-left = notify-send "$(cal)"
 
 [module/deezer]
 type = custom/text
