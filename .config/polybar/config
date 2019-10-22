@@ -60,7 +60,7 @@ font-2 = "Hack Nerd Font:pixelsize=13;2"
 
 modules-left = mpd
 modules-right = alsa memory pacman cpu filesystem calendar date weather print lock powermenu
-modules-center = linux
+modules-center = uptime
 ;tray-position = 
 ;tray-padding = 2
 ;tray-transparent = true
@@ -115,7 +115,7 @@ font-2 = feather:pixelsize=13;2
 
 modules-left = i3
 modules-center = terminal nautilus browser telegram deezer
-modules-right = uptime
+modules-right =
 
 tray-position =
 tray-padding = 2
@@ -160,8 +160,8 @@ label-indicator-underline = #ff0000
 type = custom/script
 interval = 30
 exec = ~/.config/polybar/scripts/uptime.sh
-label = "%{F#ffffff}%{F-} %output:0:37:...%"
-;format-suffix = " "
+label = "%{F#ffffff}%{F-} %output:0:37:...%"
+;format-suffix = " "
 format = <label>
 format-suffix-foreground = #ffffff
 ;format-underline =  ${colors.uptime}
