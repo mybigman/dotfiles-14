@@ -8,8 +8,8 @@ scr='/tmp/screenshot.png'
 #import -window root /tmp/screenshot.png
 
 # BLUR
-convert /tmp/screenshot.png -blur 0x5 /tmp/screenshotblur.png
-rm /tmp/screenshot.png
+convert $HOME/Franks/Wallpapers/039.jpg -blur 0x5 /tmp/screenshotblur.png
+#rm /tmp/screenshot.png
 
 
 #TEXTO
