@@ -91,7 +91,6 @@ passwd
 useradd -m -g users -G wheel,audio,video,daemon,dbus,disk,rfkill,games,power,lp,optical,scanner,storage,input -s /bin/bash USER
 
 ➜ Criar senha para o user
-
 passwd USER
 
 ➜ Editar prioridade SUDO
@@ -127,7 +126,7 @@ su - USER
 ➜ Adicionar parametro no .xinitrc
 exec i3
 
-➜ Da permissões ao xinitrc
+➜ Da permissões ao .xinitrc
 chmod +x $HOME/.xinitrc
 
 # FINALIZADA INSTALAÇÃO do Arch Linux + I3wm
