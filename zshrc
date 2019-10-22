@@ -9,7 +9,7 @@ export TERM='xterm-256color'
 export ZSH="$HOME/.oh-my-zsh"
 
 # Temas para o zsh
-#ZSH_THEME="robbyrussell"
+#ZSH_THEME="agnoster"
 ZSH_THEME="powerlevel9k/powerlevel9k"
 POWERLEVEL9K_MODE="nerdfont-complete"
 
@@ -43,10 +43,10 @@ POWERLEVEL9K_TIME_BACKGROUND='white'
 POWERLEVEL9K_TIME_FORMAT="%T"
 
 # Lado Esquerdo
-POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=(os_icon dir)
+POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=(dir)
 
 # Lado Direito
-POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS=(time)
+POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS=()
 
 # Which plugins would you like to load?
 #plugins=(git)
@@ -56,7 +56,7 @@ source $ZSH/oh-my-zsh.sh
 # My aliases
   
   alias x="startx"
-  alias up="sudo pacman -Syu"
+  alias up="$HOME/Scripts/upgrade.sh"
   alias upg="sudo pacman -Syy"
   alias edt="vim ~/.zshrc"
   alias del="rm -rf ~/.zsh_history"
@@ -72,11 +72,16 @@ source $ZSH/oh-my-zsh.sh
   alias ref="sudo reflector -c Brazil --save /etc/pacman.d/mirrorlist"
   alias kwm=" pkill -9 compton ; pkill -9 i3"
   alias term="xrdb -merge ~/.Xresources"
+  alias inf="free -h"
+  alias arch="ufetch"
+  alias br="setxkbmap -model abnt2 -layout br -variant abnt2"
+
 
 
 # Plugins do zsh
-#source /usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
-#source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+source /usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
+source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 
 # Iniciar com o shell
 # neofetch
+# ufetch
