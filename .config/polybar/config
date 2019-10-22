@@ -59,8 +59,8 @@ font-2 = "Hack Nerd Font:pixelsize=13;2"
 ;MÓDULOS TOP BAR
 
 modules-left = mpd
-modules-right = alsa memory cpu filesystem calendar date print lock powermenu
-modules-center = weather
+modules-right = alsa memory cpu filesystem calendar date weather print lock powermenu
+modules-center = linux
 ;tray-position = 
 ;tray-padding = 2
 ;tray-transparent = true
@@ -657,8 +657,8 @@ format-underline = #fe8ac6
 type = custom/script
 interval = 1
 exec = $HOME/.config/polybar/scripts/weather.sh
-label = "%{F#ffffff}%{F-} %output:0:37:...%"
-;format-underline = #c380d8
+label = "%{F#c380d8}%{F-} %output:0:37:...%"
+format-underline = #c380d8
 ;format-foreground = #c380d8
 
 [module/calendar]
