@@ -7,6 +7,7 @@
 # SE QUISER FAZER O TESTE, FAÇA EM UMA VM (VIRTUAL MACHINE)                                            #
 # Recomendo ler: https://wiki.archlinux.org/index.php/Installation_guide_(Portugu%C3%AAs)              #
 ########################################################################################################
+
 ➜ Layout teclado
 loadkeys br-abnt2
 
