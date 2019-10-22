@@ -1,5 +1,7 @@
 #!/bin/sh
 
+# Tela de bloqueio i3wm
+
 # FONTE
 font="$HOME/.fonts/Hack Regular Nerd Font Complete.ttf"
 
