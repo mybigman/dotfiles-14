@@ -43,7 +43,7 @@ POWERLEVEL9K_TIME_BACKGROUND='white'
 POWERLEVEL9K_TIME_FORMAT="%T"
 
 # Lado Esquerdo
-POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=(dir)
+POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=(os_icon dir)
 
 # Lado Direito
 POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS=()
@@ -75,12 +75,12 @@ source $ZSH/oh-my-zsh.sh
   alias inf="free -h"
   alias arch="ufetch"
   alias br="setxkbmap -model abnt2 -layout br -variant abnt2"
-
+  alias pkg="pacman -Qq | wc -l"
 
 
 # Plugins do zsh
-#source /usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
-#source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+source /usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
+source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 
 # Iniciar com o shell
 # neofetch
