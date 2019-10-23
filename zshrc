@@ -10,6 +10,7 @@ export ZSH="$HOME/.oh-my-zsh"
 
 # Temas para o zsh
 #ZSH_THEME="agnoster"
+#ZSH_THEME="robbyrussell"
 ZSH_THEME="powerlevel9k/powerlevel9k"
 POWERLEVEL9K_MODE="nerdfont-complete"
 
@@ -56,7 +57,7 @@ source $ZSH/oh-my-zsh.sh
 # My aliases
   
   alias x="startx"
-  alias up="$HOME/Scripts/upgrade.sh"
+  alias up="sudo pacman -Syy && yay -Syu"
   alias upg="sudo pacman -Syy"
   alias edt="vim ~/.zshrc"
   alias del="rm -rf ~/.zsh_history"
@@ -66,6 +67,12 @@ source $ZSH/oh-my-zsh.sh
   alias km="killall mpd"
   alias pipes="$HOME/Scripts/pipes.sh"
   alias pipes2="$HOME/Scripts/pipes.sh -t 2"
+  alias crunch="$HOME/Scripts/crunch.sh"
+  alias guns="$HOME/Scripts/guns.sh"
+  alias pac="$HOME/Scripts/pacman.sh"
+  alias big="$HOME/Scripts/big.sh"
+  alias game="$HOME/Scripts/game.sh"
+  alias ghost="$HOME/Scripts/ghost.sh"
   alias fso="sudo firehol stop "
   alias fsa="sudo firehol start "
   alias vk="vkcube"
@@ -85,3 +92,4 @@ source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zs
 # Iniciar com o shell
 # neofetch
 # ufetch
+
