@@ -302,7 +302,7 @@ label-mode-padding = 1
 
 label-focused = %name%
 label-focused-foreground = #000000
-label-focused-background = #f49448
+label-focused-background = #565858
 label-focused-padding = 1
 
 label-unfocused = %name%
