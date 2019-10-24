@@ -52,15 +52,15 @@ module-margin-right = 2
 
 # FONTES DA BARRA TOPO
 
-font-0 = "Poppins-R:style=Regular:pixelsize=10;1"
+font-0 = "Poppins:style=Regular:pixelsize=10;2"
 font-1 = "xos4 Terminess Powerline:pixelsize=13;1"
-font-2 = "Hack Nerd Font:pixelsize=13;2"
+font-2 = "Hack Nerd Font:pixelsize=13;1"
 
 ;MÓDULOS TOP BAR
 
 modules-left = mpd
-modules-right = alsa memory pacman cpu filesystem calendar date weather print lock powermenu
-modules-center = uptime
+modules-right = alsa memory cpu filesystem calendar date weather print lock powermenu
+modules-center = 
 ;tray-position =
 ;tray-padding = 2
 ;tray-transparent = true
@@ -107,15 +107,15 @@ module-margin-right = 1
 
 # FONTES DA BARRA BOTTOM
 
-font-0 = "Hack -R:style=Regular:pixelsize=8;1"
+font-0 = "Poppins:style=Regular:pixelsize=8;1"
 font-1 = "xos4 Terminess Powerline:pixelsize=13;1"
-font-2 = feather:pixelsize=13;2
+font-2 = "Hack Nerd Font:style=Regular:pixelsize=12;2"
 
 ;MÓDULOS BOTTOM BAR
 
 modules-left = i3
 modules-center = terminal nautilus browser telegram deezer
-modules-right =
+modules-right = uptime
 
 ;tray-position = right
 ;tray-padding = 1
@@ -158,7 +158,7 @@ label-indicator-underline = #ff0000
 
 [module/uptime]
 type = custom/script
-interval = 30
+interval = 1
 exec = ~/.config/polybar/scripts/uptime.sh
 label = "%{F#ffffff}%{F-} %output:0:37:...%"
 ;format-suffix = " "
@@ -553,20 +553,20 @@ margin-bottom = 5
 
 [module/terminal]
 type = custom/text
-content = "%{F#ffffff}%{F-}"
+content = "%{F#ffffff}%{F-}"
 click-left = termite  &
 click-right = sakura &
 
 [module/browser]
 type = custom/text
-content = "%{F#ffffff}%{F-}"
+content = "%{F#ffffff}%{F-}"
 click-left = firefox &
 ;click-middle = qutebrowser &
 ;click-right = chromium &
 
 [module/telegram]
 type = custom/text
-content = "%{F#ffffff}%{F-}"
+content = "%{F#ffffff}%{F-}"
 click-left = exec telegram-desktop &
 
 [module/update]
@@ -576,7 +576,7 @@ click-left = exec termite && $HOME/Scripts/upgrade.sh
 
 [module/nautilus]
 type = custom/text
-content = "%{F#ffffff}%{F-}"
+content = "%{F#ffffff}%{F-}"
 click-left = nautilus &
 
 [module/vlc]
@@ -665,12 +665,12 @@ format-underline = #c380d8
 [module/calendar]
 type = custom/script
 exec = date "+%a %d/%b" 
-label = "%{F#ff9ebb}%{F-} %output:0:37:...%"
+label = "%{F#ff9ebb}%{F-} %output:0:37:...%"
 format-underline = #ff9ebb
 #click-left = gsimplecal &
 click-left = notify-send "$(cal)"
 
 [module/deezer]
 type = custom/text
-content = "%{F#ffffff}%{F-}"
+content = "%{F#ffffff}%{F-}"
 click-left = exec deezer &
