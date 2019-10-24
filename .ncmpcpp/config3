@@ -1,4 +1,4 @@
-# NCMPCPP = Magenta, White and Cyan
+# NCMPCPP = Magenta, Cyan and White
 # Crédits: Franklin Souza
 # Telegram: @FranklinTech
 ###########################################
@@ -18,7 +18,6 @@ cyclic_scrolling = no
 lines_scrolled = 1
 playlist_display_mode = classic
  
-
 # Bars
 # progressbar_look = "⠒⠒⠐"
 # progressbar_look = "━━╸"
@@ -28,7 +27,7 @@ playlist_display_mode = classic
 # progressbar_look = "╼ "
 # progressbar_look = "─╼ "
 # progressbar_look = "─╼╌"
-# progressbar_look = ▬▬▬
+# progressbar_look = "▬▬▬"
 # progressbar_look = "⠒⠒⠒"
 progressbar_look = "─╼─"
 titles_visibility = "yes"
@@ -42,7 +41,7 @@ browser_playlist_prefix = "$2plist »$9 "
 # Colors
 header_window_color = "magenta"
 main_window_color = "white"
-main_window_highlight_color = "black"
+main_window_highlight_color = "white"
 active_column_color = "black"
 state_line_color = "black"
 state_flags_color = "white"
@@ -51,4 +50,4 @@ progressbar_elapsed_color = "cyan"
 progressbar_color = "magenta"
 statusbar_color = "white"
 volume_color = "magenta"
-visualizer_color = "white"
+visualizer_color = "magenta, white, cyan"
