@@ -47,8 +47,8 @@ hide_edge_borders smart
 set_from_resource $bg background
 
 # classe                borda   fundo   texto   ind.    borda filho
-client.focused          #ffffff #474747 #ffffff #ffffff   #ffffff
-client.focused_inactive #ffffff #ffffff #ffffff #ffffff   #ffffff
+client.focused          #ffffff #474747 #ffffff #ffffff   #f49448
+client.focused_inactive #ffffff #ffffff #ffffff #ffffff   #f49448
 client.unfocused        #ffffff #474747 #ffffff #ffffff   #ffffff
 client.urgent           #2f343a #900000 #ffffff #900000   #900000
 client.placeholder      #000000 #0c0c0c #ffffff #000000   #0c0c0c
@@ -352,7 +352,7 @@ mode "$mode_gaps_outer" {
 #exec --no-startup-id xss-lock --transfer-sleep-lock -- i3lock --nofork
 exec_always --no-startup-id $HOME/.config/polybar/scripts/launcher.sh
 #exec_always --no-startup-id feh --bg-fill $HOME/Franks/Wallpapers/035.png
-exec_always --no-startup-id feh --bg-fill $HOME/Franks/Wallpapers/119.jpg
+exec_always --no-startup-id feh --bg-fill $HOME/Franks/Wallpapers/021.png
 #exec_always --no-startup-id feh --bg-fill $HOME/Franks/Wallpapers/022.jpg
 #exec feh --bg-scale "$(find $HOME/Franks/Wallpapers/ -name "*[jJpP][nNpP][gG]" | shuf -n1)"
 #exec --no-startup-id compton -b --respect-prop-shadow
