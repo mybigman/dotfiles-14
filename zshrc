@@ -44,7 +44,7 @@ POWERLEVEL9K_TIME_BACKGROUND='white'
 POWERLEVEL9K_TIME_FORMAT="%T"
 
 # Lado Esquerdo
-POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=(os_icon dir)
+POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=(dir)
 
 # Lado Direito
 POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS=()
@@ -55,24 +55,14 @@ POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS=()
 source $ZSH/oh-my-zsh.sh
 
 # My aliases
-  
   alias x="startx"
   alias up="sudo pacman -Syy && yay -Syu"
-  alias upg="sudo pacman -Syy"
-  alias edt="vim ~/.zshrc"
+  alias edt="mousepad ~/.zshrc"
   alias del="rm -rf ~/.zsh_history"
-  alias off="poweroff"
-  alias rb="reboot"
+  #alias off="poweroff"
+  #alias rb="reboot"
   alias music="mpd && ncmpcpp"
   alias km="killall mpd"
-  alias pipes="$HOME/Scripts/pipes.sh"
-  alias pipes2="$HOME/Scripts/pipes.sh -t 2"
-  alias crunch="$HOME/Scripts/crunch.sh"
-  alias guns="$HOME/Scripts/guns.sh"
-  alias pac="$HOME/Scripts/pacman.sh"
-  alias big="$HOME/Scripts/big.sh"
-  alias game="$HOME/Scripts/game.sh"
-  alias ghost="$HOME/Scripts/ghost.sh"
   alias fso="sudo firehol stop "
   alias fsa="sudo firehol start "
   alias vk="vkcube"
@@ -83,6 +73,17 @@ source $ZSH/oh-my-zsh.sh
   alias arch="ufetch"
   alias br="setxkbmap -model abnt2 -layout br -variant abnt2"
   alias pkg="pacman -Qq | wc -l"
+  
+  #Aliase scripts
+  alias pipes="$HOME/Scripts/pipes.sh"
+  alias pipes2="$HOME/Scripts/pipes.sh -t 2"
+  alias crunch="$HOME/Scripts/crunch.sh"
+  alias guns="$HOME/Scripts/guns.sh"
+  alias pac="$HOME/Scripts/pacman.sh"
+  alias big="$HOME/Scripts/big.sh"
+  alias game="$HOME/Scripts/game.sh"
+  alias ghost="$HOME/Scripts/ghost.sh"
+  alias sy="$HOME/Scripts/brincadeira.sh"
 
 
 # Plugins do zsh
@@ -92,4 +93,3 @@ source $ZSH/oh-my-zsh.sh
 # Iniciar com o shell
 # neofetch
 # ufetch
-
