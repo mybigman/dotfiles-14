@@ -18,13 +18,14 @@ set $mod Mod4
 
 # Fonte
 
-font pango:DejaVu Sans Mono 8
+font pango:Poppins 8
+#font pango:DejaVu Sans Mono 8
 #font pango:Fantasque Sans Mono 9
 
 floating_modifier $mod
 
 new_window pixel 0
-default_border pixel 3
+default_border pixel 1
 
 # smart|urgent|focus|none
 focus_on_window_activation focus
@@ -33,8 +34,8 @@ focus_on_window_activation focus
 ################ TIRAR AS BORDAS ###################################
 ####################################################################
 
-default_border pixel 0
-default_floating_border pixel 0
+default_border pixel 1
+default_floating_border pixel 1
 
 hide_edge_borders smart
 
@@ -47,8 +48,8 @@ set_from_resource $bg background
 
 # classe                borda   fundo   texto   ind.    borda filho
 client.focused          #ffffff #474747 #ffffff #ffffff   #ffffff
-client.focused_inactive #f9a3a3 #212121 #fc5757 #ffffff   #f96a6a
-client.unfocused        #ffffff #474747 #ffffff #ff0000   #ffffff
+client.focused_inactive #ffffff #ffffff #ffffff #ffffff   #ffffff
+client.unfocused        #ffffff #474747 #ffffff #ffffff   #ffffff
 client.urgent           #2f343a #900000 #ffffff #900000   #900000
 client.placeholder      #000000 #0c0c0c #ffffff #000000   #0c0c0c
 
@@ -262,6 +263,10 @@ for_window [class="(Pavucontrol)"]floating enable, move position center
 # CPU-X (Monitor do Hardware)
 
 #for_window [class="(Cpu-x)"]floating enable, move position center
+
+# Minecraft (Game)
+
+for_window [class="(TLauncher-MCL.jar)"]floating enable, move position center
 
 ####################################################################
 ################ G R U P O S #######################################
