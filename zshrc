@@ -73,6 +73,7 @@ source $ZSH/oh-my-zsh.sh
   alias arch="ufetch"
   alias br="setxkbmap -model abnt2 -layout br -variant abnt2"
   alias pkg="pacman -Qq | wc -l"
+  alias arch1="neofetch --ascii $HOME/Ascii/rose.txt"
   
   #Aliase scripts
   alias pipes="$HOME/Scripts/pipes.sh"
@@ -87,9 +88,10 @@ source $ZSH/oh-my-zsh.sh
 
 
 # Plugins do zsh
-#source /usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
-#source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+source /usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
+source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 
 # Iniciar com o shell
 # neofetch
 # ufetch
+
