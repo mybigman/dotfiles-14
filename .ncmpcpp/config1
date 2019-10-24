@@ -1,3 +1,6 @@
+# Credits: Franklin
+# Telegram: @FranklinTech
+
 mpd_music_dir = "$HOME/Música"
 ncmpcpp_directory = "~/.ncmpcpp"
 mpd_host = "localhost"
