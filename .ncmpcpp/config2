@@ -1,3 +1,5 @@
+# Para albúm
+
 ncmpcpp_directory = ~/.ncmpcpp
 #lyrics_directory = ~/.lyrics
 mpd_host = localhost
