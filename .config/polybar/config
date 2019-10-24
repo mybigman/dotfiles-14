@@ -573,6 +573,8 @@ click-left = firefox &
 type = custom/text
 content = "%{F#ffffff}%{F-}"
 click-left = exec telegram-desktop &
+;click-left = exec $HOME/Downloads/Telegram/Telegram/Telegram &
+
 
 [module/update]
 type = custom/text
