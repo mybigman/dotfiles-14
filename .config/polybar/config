@@ -301,8 +301,8 @@ label-mode-foreground = ${colors.secondary}
 label-mode-padding = 1
 
 label-focused = %name%
-label-focused-foreground = #ffffff
-label-focused-background = #1c1c1c
+label-focused-foreground = #000000
+label-focused-background = #f49448
 label-focused-padding = 1
 
 label-unfocused = %name%
@@ -313,7 +313,7 @@ label-visible-background = ${colors.background-alt}
 label-visible-padding = 1
 
 label-urgent = %name%
-label-urgent-background = ${colors.alert}
+label-urgent-background = #f96a6a
 label-urgent-padding = 1
 
 ; Modulo mpd
