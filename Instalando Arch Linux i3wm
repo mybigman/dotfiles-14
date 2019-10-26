@@ -36,7 +36,7 @@ mount # Montar as partições
 swapon # Montar swap (caso tenha)
 
 ➜ Instalar sistema base
-pacstrap /mnt base dhcpcd nano less man-pages linux-firmware mkinitcpio base-devel
+pacstrap /mnt base dhcpcd vim less man-pages linux-firmware mkinitcpio base-devel
 
 ➜ Gerar FSTAB
 genfstab -U /mnt >> /mnt/etc/fstab
@@ -119,7 +119,7 @@ pacman -S xorg xorg-xinit ttf-dejavu pulseaudio-alsa pavucontrol
 pacman -S i3 --noconfirm
 
 ➜ Pacotes necessarios
-pacman -S dmenu termite feh viewnior git wget curl neofetch w3m imagemagick firefox-i18n-pt-br mousepad vim scrot nautilus
+pacman -S dmenu termite feh viewnior git wget neofetch w3m imagemagick firefox-i18n-pt-br howl scrot thunar flameshot
 
 ➜ Configurar o .xinitrc
 su - USER
