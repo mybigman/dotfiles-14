@@ -57,7 +57,7 @@ source $ZSH/oh-my-zsh.sh
 # My aliases
   alias x="startx"
   alias up="sudo pacman -Syy && yay -Syu"
-  alias edt="mousepad ~/.zshrc"
+  alias edt="howl ~/.zshrc"
   alias del="rm -rf ~/.zsh_history"
   #alias off="poweroff"
   #alias rb="reboot"
@@ -74,7 +74,7 @@ source $ZSH/oh-my-zsh.sh
   alias br="setxkbmap -model abnt2 -layout br -variant abnt2"
   alias pkg="pacman -Qq | wc -l"
   alias arch1="neofetch --ascii $HOME/Ascii/rose.txt"
-  
+
   #Aliase scripts
   alias pipes="$HOME/Scripts/pipes.sh"
   alias pipes2="$HOME/Scripts/pipes.sh -t 2"
@@ -94,4 +94,5 @@ source $ZSH/oh-my-zsh.sh
 # Iniciar com o shell
 # neofetch
 # ufetch
+
 
