@@ -260,13 +260,9 @@ for_window [class="(Galculator)"]floating enable, move position center
 
 for_window [class="(Pavucontrol)"]floating enable, move position center
 
-# CPU-X (Monitor do Hardware)
+# Howl (Editor de Texto)
 
-#for_window [class="(Cpu-x)"]floating enable, move position center
-
-# Minecraft (Game)
-
-for_window [title="MC-Launcher.com"] floating enable, move position center
+for_window [class="(Howl)"]floating enable, move position center
 
 ####################################################################
 ################ G R U P O S #######################################
@@ -352,7 +348,7 @@ mode "$mode_gaps_outer" {
 #exec --no-startup-id xss-lock --transfer-sleep-lock -- i3lock --nofork
 exec_always --no-startup-id $HOME/.config/polybar/scripts/launcher.sh
 #exec_always --no-startup-id feh --bg-fill $HOME/Franks/Wallpapers/035.png
-exec_always --no-startup-id feh --bg-fill $HOME/Franks/Wallpapers/107.png
+exec_always --no-startup-id feh --bg-fill $HOME/Franks/Wallpapers/129.png
 #exec_always --no-startup-id feh --bg-fill $HOME/Franks/Wallpapers/022.jpg
 #exec feh --bg-scale "$(find $HOME/Franks/Wallpapers/ -name "*[jJpP][nNpP][gG]" | shuf -n1)"
 #exec --no-startup-id compton -b --respect-prop-shadow
