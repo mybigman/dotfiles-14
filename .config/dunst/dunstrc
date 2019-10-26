@@ -265,17 +265,17 @@
 [urgency_low]
     # IMPORTANT: colors have to be defined in quotation marks.
     # Otherwise the "#" and following would be interpreted as a comment.
-    background = "#282a36"
-    foreground = "#888888"
-    frame_color = "#A3BE8C"
+    background = "#424346"
+    foreground = "#b1b5b1"
+    frame_color = "#7da957"
     timeout = 5
     # Icon for notifications with low urgency, uncomment to enable
     #icon = /path/to/icon
 
 [urgency_normal]
 	background = "#282a36"
-    foreground = "#ffffff"
-    frame_color = "#D08770"
+    foreground = "#fffffff"
+    frame_color = "#ffffff"
     timeout = 10
     # Icon for notifications with normal urgency, uncomment to enable
     #icon = /path/to/icon
@@ -418,4 +418,3 @@
 #    set_stack_tag = "volume"
 #
 # vim: ft=cfg
-
