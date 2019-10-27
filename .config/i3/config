@@ -356,7 +356,7 @@ exec_always --no-startup-id feh --bg-fill $HOME/Franks/Wallpapers/129.png
 exec --no-startup-id compton --config ~/.config/compton/compton.conf
 exec --no-startup-id dunst -b
 #exec --no-startup-id $HOME/Scripts/mpd_notify.sh &
-exec $HOME/Scripts/notify.sh &
+exec $HOME/Scripts/mpd-notify.sh &
 #exec polybar -r top &
 #exec polybar -r bottom &
 #exec compton &
