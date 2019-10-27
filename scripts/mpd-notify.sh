@@ -2,8 +2,6 @@
 #
 # Um script pra mostrar a notificação e capa do álbm da sua música 
 #
-# Criador: Jairo Abreu, Telegram: @jairoabreeu
-#
 # Credits: Franklin Souza, Telegram: @FranklinTech
 while true
 do
