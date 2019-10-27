@@ -101,25 +101,25 @@ nano /etc/sudoers
 # %wheel ALL=(ALL) ALL
 
 ➜ Baixar e instalar o GRUB
-pacman -S grub && grub-install /dev/sdX
+pacman -S grub --noconfirm && grub-install /dev/sdX
 
 ➜ Caso tenha outro OS instalado
-pacman -S os-prober ntfs-3g
+pacman -S os-prober ntfs-3g --noconfirm
 
 ➜ Atualize o GRUB
 grub-mkconfig -o /boot/grub/grub.cfg
 
 ➜ Baixar GPU
-pacman -S xf86-video-amdgpu
+pacman -S xf86-video-amdgpu --noconfirm
 
 ➜ Baixar alguns pacotes
-pacman -S xorg xorg-xinit ttf-dejavu pulseaudio pavucontrol
+pacman -S xorg xorg-xinit ttf-dejavu pulseaudio pavucontrol --noconfirm
 
 ➜ Baixando i3wm
 pacman -S i3 --noconfirm
 
 ➜ Pacotes necessarios
-pacman -S dmenu termite feh viewnior git wget neofetch w3m imagemagick firefox-i18n-pt-br howl scrot thunar flameshot
+pacman -S dmenu termite feh viewnior git wget howl thunar firefox-i18n-pt-br scrot --noconfirm
 
 ➜ Configurar o .xinitrc
 su - USER
