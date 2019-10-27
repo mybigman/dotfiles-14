@@ -113,7 +113,7 @@ grub-mkconfig -o /boot/grub/grub.cfg
 pacman -S xf86-video-amdgpu
 
 ➜ Baixar alguns pacotes
-pacman -S xorg xorg-xinit ttf-dejavu pulseaudio-alsa pavucontrol
+pacman -S xorg xorg-xinit ttf-dejavu pulseaudio pavucontrol
 
 ➜ Baixando i3wm
 pacman -S i3 --noconfirm
