@@ -1,14 +1,16 @@
 #!/bin/bash
 #
-# Um script pra mostrar a notificação e capa do álbm da sua música 
+# Um script pra mostrar a notificação e capa do albúm da sua música
 #
-# Credits: Franklin Souza, Telegram: @FranklinTech
+# Credits: Franklin Souza
+#
+#Telegram: @FranklinTech
 while true
 do
     mpc idle player
 
-    NOTIFY_TITLE="Tocando Agora"
-
+    NOTIFY_TITLE="Now Playing"
+    echo
     MUSIC=$(mpc current)
 
     echo "$MUSIC"
