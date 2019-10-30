@@ -9,8 +9,8 @@ while true
 do
     mpc idle player
 
-    NOTIFY_TITLE="Now Playing"
-    echo
+    NOTIFY_TITLE="Tocando Agora"
+
     MUSIC=$(mpc current)
 
     echo "$MUSIC"
