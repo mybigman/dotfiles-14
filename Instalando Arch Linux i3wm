@@ -51,7 +51,7 @@ hwclock --systohc
 systemctl enable dhcpcd
 
 ➜ Mudando o idioma do SISTEMA
-nano /etc/locale.gen
+vim /etc/locale.gen
 
 ➜ Descomentar linha:
 #pt_BR.UTF-8
@@ -76,7 +76,7 @@ pacman -S linux ➜ KERNEL PADRÃO
 mkinitcpio -P
 
 ➜ Configurar repositório
-nano /etc/pacman.conf
+vim /etc/pacman.conf
 
 ➜ Descomentar linha:
 #multilib
@@ -95,7 +95,7 @@ useradd -m -g users -G wheel,audio,video,daemon,dbus,disk,rfkill,games,power,lp,
 passwd USER
 
 ➜ Editar prioridade SUDO
-nano /etc/sudoers
+vim /etc/sudoers
 
 ➜ Descomentar linha:
 # %wheel ALL=(ALL) ALL
@@ -123,6 +123,7 @@ pacman -S dmenu termite feh viewnior git wget howl thunar firefox-i18n-pt-br scr
 
 ➜ Configurar o .xinitrc
 su - USER
+vim $HOME/.xinitrc
 
 ➜ Adicionar parametro no .xinitrc
 exec i3
