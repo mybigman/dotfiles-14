@@ -117,7 +117,7 @@ font-2 = "Hack Nerd Font:style=Regular:pixelsize=12;2"
 ;MÓDULOS BOTTOM BAR
 
 modules-left = i3
-modules-center = terminal nautilus browser telegram deezer
+modules-center = terminal thunar browser telegram deezer
 modules-right = uptime
 
 ;Icone-Background
@@ -559,10 +559,10 @@ type = custom/text
 content = "%{F#ffffff}%{F-}"
 click-left = exec termite && $HOME/Scripts/upgrade.sh
 
-[module/nautilus]
+[module/thunar]
 type = custom/text
 content = "%{F#b9b399}%{F-}"
-click-left = nautilus &
+click-left = thunar &
 
 [module/vlc]
 type = custom/text
