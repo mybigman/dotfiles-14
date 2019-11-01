@@ -44,32 +44,32 @@ color0  = #1a1819
 color8  = #1a1819
 
 # red
-color1  = #e27878
-color9  = #e98989
+color1  = #fa5454
+color9  = #e37171
 
 # green
-color2  = #54da5c
-color10 = #54da5c
+color2  = #118c19
+color10 = #79ff81
 
 # yellow
 color3  = #e2a478
 color11 = #e9b189
 
 # blue
-color4  = #84a0c6
-color12 = #91acd1
+color4  = #3991fa
+color12 = #69adfe
 
 # magenta
-color5  = #242424
-color13 = #232323
+color5  = #ba46f9
+color13 = #c970f9
 
 # cyan
-color6  = #89b8c2
-color14 = #95c4ce
+color6  = #2becf9
+color14 = #66f4fd
 
 # white
 color7  = #f8e3aa
-color15 = #f8e3aa
+color15 = #fef0c9
 
 
 #[hints]
