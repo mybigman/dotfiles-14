@@ -3,7 +3,7 @@
 
 ##########################################
 ########## CONFIGURAÇÃO TERMITE ##########
-########################################## 
+##########################################
 
 [options]
 scroll_on_output = false
@@ -33,22 +33,23 @@ filter_unmatched_urls = true
 [colors]
 
 # special
-foreground      = #ffffff
-foreground_bold = #ffffff
-cursor          = #ffffff
-background      = #0f0e10
+foreground      = #f8e3aa
+foreground_bold = #f8e3aa
+cursor          = #f8e3aa
+background      = #1a1819
+#background = rgba(38, 41, 39, 0.96)
 
 # black
-color0  = #161821
-color8  = #6b7089
+color0  = #1a1819
+color8  = #1a1819
 
 # red
 color1  = #e27878
 color9  = #e98989
 
 # green
-color2  = #b4be82
-color10 = #c0ca8e
+color2  = #54da5c
+color10 = #54da5c
 
 # yellow
 color3  = #e2a478
@@ -67,11 +68,11 @@ color6  = #89b8c2
 color14 = #95c4ce
 
 # white
-color7  = #c6c8d1
-color15 = #d2d4de
+color7  = #f8e3aa
+color15 = #f8e3aa
 
 
-[hints]
+#[hints]
 #font = Monospace 12
 #foreground = #dcdccc
 #background = #1c0c26
@@ -80,5 +81,5 @@ color15 = #d2d4de
 #padding = 2
 #border_width = 0.5
 #roundness = 2.0
- 
-# vim: ft=dosini cms=#%s
+
+ vim: ft=dosini cms=#%s
