@@ -27,7 +27,7 @@ cursor_blink = on
 cursor_shape = underline
 
 # $BROWSER is used by default if set, with xdg-open as a fallback
-browser = qutebrowser
+#browser = qutebrowser
 
 # set size hints for the window
 size_hints = false
@@ -41,22 +41,22 @@ filter_unmatched_urls = true
 [colors]
 
 foreground      = #f8e3aa
-foreground_bold = #ffffff
+foreground_bold = #f8e3aa
 cursor          = #f8e3aa
 background      = #1a1819
 #background = rgba(38, 41, 39, 0.96)
 
 # black
-color0  = #3f3f3f
-color8  = #6383A7
+color0  = #4f4e4e
+color8  = #4f4e4e
 
 # red
 color1  = #FF6C6C
 color9  = #F9546D
 
 # green
-color12  = #69C35C
-color4 = #5CB64F
+color12  = #05b25c
+color4 = #3bff9d
 
 # yellow
 color3  = #DBEE77
@@ -75,8 +75,8 @@ color2  = #6CECFF
 color10 = #4FDAEE
 
 # white
-color7  = #ffffff
-color15 = #ffffff
+color7  = #f8e3aa
+color15 = #f8e3aa
 
 [hints]
 #font = DejaVuSansMono 20
