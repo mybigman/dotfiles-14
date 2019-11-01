@@ -74,6 +74,8 @@ source $ZSH/oh-my-zsh.sh
   alias br="setxkbmap -model abnt2 -layout br -variant abnt2"
   alias pkg="pacman -Qq | wc -l"
   alias arch1="neofetch --ascii $HOME/Ascii/rose.txt"
+  alias rmy="rm -rf $HOME/.cache/yay"
+  alias rpac="sudo rm -rf /var/cache/pacman/pkg/*"
 
   #Aliase scripts
   alias pipes="$HOME/Scripts/pipes.sh"
@@ -94,5 +96,3 @@ source $ZSH/oh-my-zsh.sh
 # Iniciar com o shell
 # neofetch
 # ufetch
-
-
