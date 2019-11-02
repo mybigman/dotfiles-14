@@ -118,8 +118,11 @@ pacman -S xorg xorg-xinit ttf-dejavu pulseaudio-alsa pavucontrol --noconfirm
 ➜ Baixando i3wm
 pacman -S i3 --noconfirm
 
+➜ Removendo vim
+pacman -Rns vim --noconfirm
+
 ➜ Pacotes necessarios
-pacman -S dmenu termite feh git wget howl thunar firefox-i18n-pt-br scrot flameshot --noconfirm
+pacman -S dmenu termite feh neovim git wget howl thunar firefox-i18n-pt-br scrot flameshot --noconfirm
 
 ➜ Configurar o .xinitrc
 su - USER
