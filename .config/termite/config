@@ -49,12 +49,12 @@ color2  = #118c19
 color10 = #79ff81
 
 # yellow
-color3  = #e2a478
-color11 = #e9b189
+color3  = #f1fa23
+color11 = #f9ff79
 
 # blue
-color4  = #3991fa
-color12 = #69adfe
+color4  = #f8e3aa
+color12 = #f8e3aa
 
 # magenta
 color5  = #ba46f9
@@ -68,7 +68,6 @@ color14 = #66f4fd
 color7  = #f8e3aa
 color15 = #fef0c9
 
-
 #[hints]
 #font = Monospace 12
 #foreground = #dcdccc
@@ -78,5 +77,11 @@ color15 = #fef0c9
 #padding = 2
 #border_width = 0.5
 #roundness = 2.0
+
+# Ignore
+# blue
+#color4  = #3991fa
+#color12 = #69adfe
+
 
  vim: ft=dosini cms=#%s
