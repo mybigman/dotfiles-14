@@ -22,20 +22,22 @@ font pango:Poppins 8
 #font pango:DejaVu Sans Mono 8
 #font pango:Fantasque Sans Mono 9
 
-floating_modifier $mod
+####################################################################
+################ FLOATING MODE #####################################
+####################################################################
 
-new_window pixel 0
-default_border pixel 1
+floating_modifier $mod
 
 # smart|urgent|focus|none
 focus_on_window_activation focus
 
 ####################################################################
-################ TIRAR AS BORDAS ###################################
+########################## BORDAS ##################################
 ####################################################################
 
 default_border pixel 1
 default_floating_border pixel 1
+new_window pixel 1
 
 hide_edge_borders smart
 
@@ -47,8 +49,8 @@ hide_edge_borders smart
 set_from_resource $bg background
 
 # classe                borda   fundo   texto   ind.    borda filho
-client.focused          #ffffff #474747 #ffffff #ffffff   #f8e3aa
-client.focused_inactive #ffffff #ffffff #ffffff #ffffff   #f8e3aa
+client.focused          #ffffff #474747 #ffffff #ffffff   #95caa0
+client.focused_inactive #ffffff #ffffff #ffffff #ffffff   #95caa0
 client.unfocused        #ffffff #474747 #ffffff #ffffff   #ffffff
 client.urgent           #2f343a #900000 #ffffff #900000   #900000
 client.placeholder      #000000 #0c0c0c #ffffff #000000   #0c0c0c
@@ -128,8 +130,8 @@ bindsym $mod+Shift+c move position center
 
 # Launchers
 
-bindsym $mod+d exec dmenu_run
-#bindsym $mod+d exec --no-startup-id rofi -show drun -theme ~/.config/rofi/appmenu/drun.rasi
+#bindsym $mod+d exec dmenu_run
+bindsym $mod+d exec --no-startup-id rofi -show drun -theme ~/.config/rofi/appmenu/drun.rasi
 #bindsym $mod+d exec synapse
 
 # Lock
@@ -264,6 +266,10 @@ for_window [class="(Pavucontrol)"]floating enable, move position center
 
 for_window [class="(Howl)"]floating enable, move position center
 
+# Nomacs (Gerenciador de imagens)
+
+for_window [class="(Nomacs)"]floating enable, move position center
+
 ####################################################################
 ################ G R U P O S #######################################
 ####################################################################
@@ -271,7 +277,7 @@ for_window [class="(Howl)"]floating enable, move position center
 mode "resize" {
         # These bindings trigger as soon as you enter the resize mode
 
-        # Pressing left will shrink the window’s width.
+        # Pressing left Rwill shrink the window’s width.
         # Pressing right will grow the window’s width.
         # Pressing up will shrink the window’s height.
         # Pressing down will grow the window’s height.
@@ -348,7 +354,7 @@ mode "$mode_gaps_outer" {
 #exec --no-startup-id xss-lock --transfer-sleep-lock -- i3lock --nofork
 exec_always --no-startup-id $HOME/.config/polybar/scripts/launcher.sh
 #exec_always --no-startup-id feh --bg-fill $HOME/Franks/Wallpapers/035.png
-exec_always --no-startup-id feh --bg-fill $HOME/Franks/Wallpapers/110.jpg
+exec_always --no-startup-id feh --bg-fill $HOME/Franks/Wallpapers/149.jpg
 #exec_always --no-startup-id feh --bg-fill $HOME/Franks/Wallpapers/022.jpg
 #exec feh --bg-scale "$(find $HOME/Franks/Wallpapers/ -name "*[jJpP][nNpP][gG]" | shuf -n1)"
 #exec --no-startup-id compton -b --respect-prop-shadow
@@ -356,6 +362,7 @@ exec_always --no-startup-id feh --bg-fill $HOME/Franks/Wallpapers/110.jpg
 exec --no-startup-id compton --config ~/.config/compton/compton.conf
 exec --no-startup-id dunst -b
 #exec --no-startup-id $HOME/Scripts/mpd-notify.sh &
+exec --no-startup-id mpd &
 exec $HOME/Scripts/mpd-notify.sh &
 #exec polybar -r top &
 #exec polybar -r bottom &
