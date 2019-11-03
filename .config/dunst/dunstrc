@@ -53,7 +53,7 @@
 
     # Defines color of the frame around the notification window.
     #frame_color = "#282a36"
-    frame_color = "#4C566A"
+    frame_color = "#f8e3aa"
 
     # Define a color for the separator.
     # possible values are:
@@ -62,7 +62,7 @@
     #  * frame: use the same color as the frame;
     #  * anything else will be interpreted as a X color.
     #separator_color = frame
-    separator_color = "#f8e3aa"
+    separator_color = "#95caa0"
 
     # Sort messages by urgency.
     sort = yes
@@ -79,8 +79,8 @@
 
     #font = Monospace 8
     #font = Monospace 9
-    font = Poppins 9
-    #font = LiterationMono Nerd Font Book 9
+    #font = Poppins 9
+    font = LiterationMono Nerd Font Book 9
 
     # The spacing between lines.  If the height is smaller than the
     # font height, it will get raised to the font height.
@@ -177,7 +177,7 @@
     dmenu = /usr/bin/dmenu -p dunst:
 
     # Browser for opening urls in context menu.
-    browser = /usr/bin/firefox -new-tab
+    # browser = /usr/bin/firefox -new-tab
 
     # Always run rule-defined scripts, even if the notification is suppressed
     always_run_script = true
@@ -271,25 +271,25 @@
     # IMPORTANT: colors have to be defined in quotation marks.
     # Otherwise the "#" and following would be interpreted as a comment.
     background = "#1a1819"
-    foreground = "#f8e3aa"
-    frame_color = "#f8e3aa"
-    timeout = 15
+    foreground = "#95caa0"
+    frame_color = "#95caa0"
+    timeout = 6
     # Icon for notifications with low urgency, uncomment to enable
     #icon = /path/to/icon
 
 [urgency_normal]
 	background = "#1a1819"
-    foreground = "#f8e3aa"
-    frame_color = "#f8e3aa"
-    timeout = 15
+    foreground = "#95caa0"
+    frame_color = "#95caa0"
+    timeout = 6
     # Icon for notifications with normal urgency, uncomment to enable
     #icon = /path/to/icon
 
 [urgency_critical]
     background = "#1a1819"
-    foreground = "#f8e3aa"
-    frame_color = "#f8e3aa"
-    timeout = 15
+    foreground = "#95caa0"
+    frame_color = "#95caa0"
+    timeout = 6
     # Icon for notifications with critical urgency, uncomment to enable
     #icon = /path/to/icon
 
