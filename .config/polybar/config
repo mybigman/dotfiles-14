@@ -58,6 +58,9 @@ font-2 = "Hack Nerd Font:pixelsize=13;1"
 
 ;MÓDULOS TOP BAR
 
+; Separator
+separator = |
+
 modules-left = mpd
 modules-right = alsa pacman memory cpu filesystem calendar date print lock powermenu
 modules-center = weather
