@@ -36,7 +36,7 @@ mount # Montar as partições
 swapon # Montar swap (caso tenha)
 
 ➜ Instalar sistema base
-pacstrap /mnt base dhcpcd neovim less man-pages linux-firmware mkinitcpio base-devel
+pacstrap /mnt base dhcpcd vim less man-pages linux-firmware mkinitcpio base-devel
 
 ➜ Gerar FSTAB
 genfstab -U /mnt >> /mnt/etc/fstab
@@ -51,7 +51,7 @@ hwclock --systohc
 systemctl enable dhcpcd
 
 ➜ Mudando o idioma do SISTEMA
-nvim /etc/locale.gen
+vim /etc/locale.gen
 
 ➜ Descomentar linha:
 #pt_BR.UTF-8
@@ -76,7 +76,7 @@ pacman -S linux ➜ KERNEL PADRÃO
 mkinitcpio -P
 
 ➜ Configurar repositório
-nvim /etc/pacman.conf
+vim /etc/pacman.conf
 
 ➜ Descomentar linha:
 #multilib
@@ -95,7 +95,7 @@ useradd -m -g users -G wheel,audio,video,daemon,dbus,disk,rfkill,games,power,lp,
 passwd USER
 
 ➜ Editar prioridade SUDO
-nvim /etc/sudoers
+vim /etc/sudoers
 
 ➜ Descomentar linha:
 # %wheel ALL=(ALL) ALL
@@ -122,11 +122,11 @@ pacman -S i3 --noconfirm
 pacman-key --refresh-keys
 
 ➜ Pacotes necessarios
-pacman -S dmenu termite feh viewnior imagemagick git wget howl thunar firefox-i18n-pt-br scrot flameshot --noconfirm
+pacman -S dmenu termite feh viewnior imagemagick w3m lxappearance git wget howl thunar firefox-i18n-pt-br scrot flameshot --noconfirm
 
 ➜ Configurar o .xinitrc
 su - USER
-nvim $HOME/.xinitrc
+vim $HOME/.xinitrc
 
 ➜ Adicionar parametro no .xinitrc
 exec i3
