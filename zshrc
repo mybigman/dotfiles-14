@@ -73,9 +73,10 @@ source $ZSH/oh-my-zsh.sh
   alias arch="ufetch"
   alias br="setxkbmap -model abnt2 -layout br -variant abnt2"
   alias pkg="pacman -Qq | wc -l"
-  alias arch1="neofetch --ascii $HOME/Ascii/rose.txt"
+  alias arch1="neofetch --ascii $HOME/Ascii/Plants"
   alias rmy="rm -rf $HOME/.cache/yay"
   alias rpac="sudo rm -rf /var/cache/pacman/pkg/*"
+  alias pc="cat $HOME/Ascii/PC | lolcat"
 
   #Aliase scripts
   alias pipes="$HOME/Scripts/pipes.sh"
