@@ -19,7 +19,7 @@ window:
   # If both are `0`, this setting is ignored.
   dimensions:
     columns: 70
-    lines: 20
+    lines: 25
 
   # Window padding (changes require restart)
   #
@@ -169,7 +169,7 @@ colors:
     blue:    '0x5cb64f'
     magenta: '0xb981f4'
     cyan:    '0x27c3ff'
-    white:   '0xffffff'
+    white:   '0x95caa0'
 
   # Bright colors
   bright:
@@ -180,7 +180,7 @@ colors:
     blue:    '0x69c35c'
     magenta: '0xb981f4'
     cyan:    '0x7097ff'
-    white:   '0xffffff'
+    white:   '0x95caa0'
 
   # Dim colors
   #
