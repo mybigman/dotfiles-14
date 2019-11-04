@@ -35,9 +35,9 @@ focus_on_window_activation focus
 ########################## BORDAS ##################################
 ####################################################################
 
-default_border pixel 1
-default_floating_border pixel 1
-new_window pixel 1
+default_border pixel 2
+default_floating_border pixel 2
+new_window pixel 2
 
 hide_edge_borders smart
 
@@ -67,12 +67,13 @@ bindsym $mod+Shift+w exec feh --bg-scale "$(find $HOME/Franks/Wallpapers/ -name 
 #bindsym $mod+n exec polybar -r bottom
 
 # Bloquear tela
-#bindsym $mod+Shift+x exec --no-startup-id $HOME/.config/polybar/scripts/blurlock.sh &
+#bindsym $mod+Shift+x exec $HOME/.config/polybar/scripts/blurlock.sh &
 
 # Iniciar terminal
 #bindsym $mod+Return exec i3-sensible-terminal
 bindsym $mod+Return exec termite
 #bindsym $mod+Return exec sakura
+#bindsym $mod+Return exec kitty
 
 # Matar janela focada
 bindsym $mod+Shift+q kill
@@ -132,6 +133,7 @@ bindsym $mod+Shift+c move position center
 
 #bindsym $mod+d exec dmenu_run
 bindsym $mod+d exec --no-startup-id rofi -show drun -theme ~/.config/rofi/appmenu/drun.rasi
+#bindsym $mod+d exec --no-startup-id rofi -show drun -theme ~/.config/rofi/config
 #bindsym $mod+d exec synapse
 
 # Lock
@@ -232,7 +234,7 @@ for_window [class="(Gedit)"]floating enable, move position center
 
 # Feh (Gerenciador de imagens)
 
-for_window [class="(Feh)"]floating enable, move position center
+for_window [class="(feh)"]floating enable, move position center
 
 # Viewnior (Gerenciador de imagens)
 
@@ -244,7 +246,7 @@ for_window [class="(Gucharmap)"]floating enable, move position center
 
 # Qbittorrent (Gerenciador torrent)
 
-for_window [class="(Qbittorrent)"]floating enable, move position center
+for_window [class="(qbittorrent)"]floating enable, move position center
 
 # PopcornTime (Streamer de filmes)
 
@@ -269,6 +271,18 @@ for_window [class="(Howl)"]floating enable, move position center
 # Nomacs (Gerenciador de imagens)
 
 for_window [class="(Nomacs)"]floating enable, move position center
+
+# LxAppearance (Gerenciador de Temas)
+
+for_window [class="(Lxappearance)"]floating enable, move position center
+
+# Kitty (Terminal)
+
+for_window [class="(kitty)"]floating enable, move position center
+
+# Alacritty (Terminal)
+
+for_window [class="(Alacritty)"]floating enable, move position center
 
 ####################################################################
 ################ G R U P O S #######################################
