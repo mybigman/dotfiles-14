@@ -3,14 +3,14 @@
 # Tela de bloqueio i3wm
 
 # FONTE
-font="$HOME/.fonts/Hack Regular Nerd Font Complete.ttf"
+font="$HOME/.fonts/Hack Nerd Font.ttf"
 
 # TIRAR PRINT
 scr='/tmp/screenshot.png'
 #import -window root /tmp/screenshot.png
 
 # BLUR
-convert $HOME/Franks/Wallpapers/039.jpg -blur 0x5 /tmp/screenshotblur.png
+convert $HOME/Franks/Wallpapers/153.jpg -blur 0x5 /tmp/screenshotblur.png
 #rm /tmp/screenshot.png
 
 
