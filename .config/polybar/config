@@ -646,8 +646,8 @@ type = custom/script
 exec = date "+%a %d/%b"
 label = "%{F#95caa0}%{F-} %output:0:37:...%"
 ;format-underline = #cecece
-#click-left = gsimplecal &
-click-left = notify-send "$(cal)"
+click-left = gsimplecal &
+#click-left = notify-send "$(cal)"
 
 [module/deezer]
 type = custom/text
