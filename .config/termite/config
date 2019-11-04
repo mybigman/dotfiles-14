@@ -17,7 +17,7 @@ urgent_on_bell = true
 clickable_url = false
 
 # Outras configs
-font = LiterationMono Nerd Font Book 9
+font = LiterationMono Nerd Font Book 8
 scrollback_lines = 10000
 search_wrap = true
 icon_name = utilities-terminal
@@ -49,12 +49,12 @@ color2  = #118c19
 color10 = #79ff81
 
 # yellow
-color3  = #f1fa23
-color11 = #f9ff79
+color3  = #95caa0
+color11 = #95caa0
 
 # blue
-color4  = #95caa0
-color12 = #95caa0
+color4  = #3991fa
+color12 = #69adfe
 
 # magenta
 color5  = #ba46f9
@@ -83,5 +83,8 @@ color15 = #95caa0
 #color4  = #3991fa
 #color12 = #69adfe
 
+# cyan
+#color6  = #2becf9
+#color14 = #66f4fd
 
  vim: ft=dosini cms=#%s
