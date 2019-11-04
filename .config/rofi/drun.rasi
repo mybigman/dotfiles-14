@@ -23,8 +23,8 @@ window {
     width:                          900;
     location:                       northwest;
     anchor:                         northwest;
-    x-offset:                       300;
-    y-offset:                       260;
+    x-offset:                       340;
+    y-offset:                       250;
 }
 
 prompt {
