@@ -61,7 +61,7 @@ POWERLEVEL9K_TIME_FORMAT=%T
 POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=(os_icon dir)
 
 # Lado Direito
-POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS=()
+POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS=(date)
 
 # Which plugins would you like to load?
 #plugins=(git)
@@ -92,6 +92,8 @@ source $ZSH/oh-my-zsh.sh
   alias rpac="sudo rm -rf /var/cache/pacman/pkg/*"
   alias pc="cat $HOME/Ascii/PC | lolcat"
   alias cm="cmatrix -C white"
+  alias wm="figlet i3wm | lolcat"
+  alias fetch="pfetch"
 
   #Aliase scripts
   alias pipes="$HOME/Scripts/pipes.sh"
