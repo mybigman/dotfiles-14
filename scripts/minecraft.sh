@@ -69,7 +69,7 @@ export vblank_mode=0
 # Executar o instalador e depois o jogo
 cd ~/.jogos/linux/minecraft
 wget -nc "https://tlaun.ch/download.php?&package=mcl/jar" -O TLauncher-MCL.jar
-#notify-send "Para rodar esse jogo você precisará do jre8-openjdk (OpenJDK 1.8) e java-openjfx"
+notify-send "Para rodar esse jogo você precisará do jre8-openjdk (OpenJDK 1.8) e java-openjfx"
 ####################################################################################################
 cd "/home/$USER/.jogos/linux/minecraft/"
 java -jar TLauncher-MCL.jar
