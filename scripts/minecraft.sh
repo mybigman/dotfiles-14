@@ -80,11 +80,13 @@ java -jar TLauncher-MCL.jar
 
 ################################# Finalização
 echo "━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━"
-echo "Instalação FINALIZADA com SUCESSO"
+notify-sen "INSTALAÇÃO FINALIZADA COM SUCESSO"
 echo "━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━"
 pkill -9 .exe
 sleep 4
-notify-send "Pode fechar o terminal"
+echo "━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━"
+notify-send "PODE FECHAR O TERMINAL"
+echo "━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━"
 
 
 # ┏┓
