@@ -15,11 +15,11 @@
 
 [colors]
 ;background = ${xrdb:color0:#222}
-background = #222222
+background = #101010
 ;background = #222
 background-alt = #444
 ;foreground = ${xrdb:color7:#222}
-foreground = #95caa0
+foreground = #ffffff
 foreground-alt = #555
 primary = #ffb52a
 secondary = #000000
@@ -42,7 +42,7 @@ line-size = 2
 line-color = #f00
 
 ;border-size = 1
-;border-color = #95caa0
+;border-color = #ffffff
 
 padding-left = 0
 padding-right = 2
@@ -103,7 +103,7 @@ line-size = 1
 line-color = ${colors.alert}
 
 ;border-size = 1
-;border-color = #95caa0
+;border-color = #ffffff
 
 padding-left = 1
 padding-right = 1
@@ -120,7 +120,7 @@ font-2 = "Hack Nerd Font:style=Regular:pixelsize=12;2"
 ;MÓDULOS BOTTOM BAR
 
 modules-left = i3
-modules-center = browser thunar telegram
+modules-center = firefox thunar telegram
 modules-right = uptime
 
 ;Icone-Background
@@ -168,8 +168,8 @@ label-indicator-underline = #ff0000
 type = custom/script
 interval = 1
 exec = ~/.config/polybar/scripts/uptime.sh
-label = "%{F#95caa0}%{F-} %output:0:37:...%"
-;format-suffix = " "
+label = "%{F#ffffff}%{F-} %output:0:37:...%"
+;format-suffix = " "
 format = <label>
 format-suffix-foreground = #ffffff
 ;format-underline =  ${colors.uptime}
@@ -186,9 +186,9 @@ mount-0 = /home
 ;spacing = 2
 
 format-mounted-prefix = " "
-format-mounted-prefix-foreground = #95caa0
-;label-mounted-underline = #95caa0
-;format-mounted-prefix-underline = #95caa0
+format-mounted-prefix-foreground = #ffffff
+;label-mounted-underline = #ffffff
+;format-mounted-prefix-underline = #ffffff
 format = <label>
 
 format-mounted = <label-mounted>
@@ -209,10 +209,10 @@ mount-0 = /
 ;spacing = 2
 
 format-mounted-prefix = "濫 "
-format-mounted-prefix-foreground = #95caa0
-;format-mounted-foreground = #95caa0
-;label-mounted-underline = #95caa0
-;format-mounted-prefix-underline = #95caa0
+format-mounted-prefix-foreground = #ffffff
+;format-mounted-foreground = #ffffff
+;label-mounted-underline = #ffffff
+;format-mounted-prefix-underline = #ffffff
 
 format = <label>
 
@@ -256,29 +256,30 @@ index-sort = true
 wrapping-scroll = false
 pin-workspaces = true
 
-ws-icon-0 = 1;
-ws-icon-1 = 2;
-ws-icon-2 = 3;
-ws-icon-3 = 4;
-ws-icon-4 = 5;
-ws-icon-5 = 6;
-ws-icon-6 = 7;
-ws-icon-7 = 8;
-ws-icon-8 = 9;
-ws-icon-9 = 10;
+ws-icon-0 = I;
+ws-icon-1 = II;
+ws-icon-2 = III;
+ws-icon-3 = IV;
+ws-icon-4 = V;
+ws-icon-5 = VI;
+ws-icon-6 = VII;
+ws-icon-7 = VIII;
+ws-icon-8 = IX;
+ws-icon-9 = IX;
+ws-icon-10 = X;
 
-;set $ws1 "1:"
-;set $ws2 "2:"
-;set $ws3 "3:"
-;set $ws4 "4:"
-;set $ws5 "5:"
-;set $ws6 "6:"
-;set $ws7 "7:"
-;set $ws8 "8:"
-;set $ws9 "9:"
-;set $ws10 "10:"
+;set $ws1 "1:I"
+;set $ws2 "2:II"
+;set $ws3 "3:III"
+;set $ws4 "4:IV"
+;set $ws5 "5:V"
+;set $ws6 "6:VI"
+;set $ws7 "7:VII"
+;set $ws8 "8:VIII"
+;set $ws9 "9:IX"
+;set $ws10 "10:X"
 
-strip-wsnumbers = false
+strip-wsnumbers = true
 label-state-foreground = ${colors.principal}
 
 label-mode = %mode%
@@ -287,7 +288,7 @@ label-mode-padding = 1
 
 label-focused = %name%
 label-focused-foreground = #000000
-label-focused-background = #95caa0
+label-focused-background = #ffffff
 label-focused-padding = 1
 
 label-unfocused = %name%
@@ -333,7 +334,7 @@ bar-progress-empty = ""
 ;label-song =  %title%
 ;label-song-maxlen = 25
 ;label-song-ellipsis = true
-label-song = %{F#95caa0}%{F-} %title%%{F-}
+label-song = %{F#ffffff}%{F-} %title%%{F-}
 
 ; Modulo xbacklight
 
@@ -367,8 +368,8 @@ card = intel_backlight
 type = internal/cpu
 interval = 1.5
 format-prefix = " "
-format-prefix-foreground = #95caa0
-;format-underline = #95caa0
+format-prefix-foreground = #ffffff
+;format-underline = #ffffff
 label = %percentage:2%%
 
 ; Modulo memory
@@ -376,9 +377,9 @@ label = %percentage:2%%
 [module/memory]
 type = internal/memory
 interval = 2
-format-prefix = " "
-format-prefix-foreground = #95caa0
-;format-underline = #95caa0
+format-prefix = " "
+format-prefix-foreground = #ffffff
+;format-underline = #ffffff
 label = %percentage_used%%
 
 ; Modulo date
@@ -396,8 +397,8 @@ time = %I:%M %p
 
 
 format-prefix = 
-format-prefix-foreground = #95caa0
-;format-underline = #95caa0
+format-prefix-foreground = #ffffff
+;format-underline = #ffffff
 
 label = %date% %time%
 
@@ -437,12 +438,12 @@ type = internal/alsa
 
 format-volume = <label-volume>
 label-volume = 墳 %percentage%%
-label-volume-foreground = #95caa0
+label-volume-foreground = #ffffff
 
 format-muted-prefix = " "
 format-muted-foreground = #fc4141
 label-muted = Som MUTADO
-;format-volume-underline = #b9b399
+;format-volume-underline = #ffffff
 
 bar-volume-width = 10
 bar-volume-foreground-0 = #55aa55
@@ -473,7 +474,7 @@ thermal-zone = 0
 warn-temperature = 59
 
 format = <ramp> <label>
-;format-underline = #95caa0
+;format-underline = #ffffff
 format-warn = <ramp> <label-warn>
 format-warn-underline = #ff0000
 
@@ -484,7 +485,7 @@ label-warn-foreground = #ff0000
 ramp-0 = 
 ramp-1 = 
 ramp-2 = 
-ramp-foreground = #95caa0
+ramp-foreground = #ffffff
 
 
 ; Module powermenu
@@ -497,12 +498,12 @@ expand-right = true
 format-spacing = 1
 
 label-open = 
-label-open-foreground = #95caa0
+label-open-foreground = #ffffff
 ;label-open-foreground = ${colors.secondary}
 label-close = Cancelar
 label-close-foreground = #fc4141
 label-separator =|
-label-separator-foreground = #95caa0
+label-separator-foreground = #ffffff
 
 menu-0-0 = "Sair"
 menu-0-0-exec = menu-open-1
@@ -542,114 +543,119 @@ content = "%{F#95caa0}%{F-}"
 click-left = termite  &
 click-right = sakura &
 
-[module/browser]
+[module/firefox]
 type = custom/text
-content = "%{F#95caa0}%{F-}"
+content = "%{F#ffffff}%{F-}"
 click-left = firefox &
 
 [module/telegram]
 type = custom/text
-content = "%{F#95caa0}%{F-}"
+content = "%{F#ffffff}%{F-}"
 ;click-left = exec telegram-desktop &
 click-left = exec $HOME/.Telegram/Telegram &
 
 [module/thunar]
 type = custom/text
-content = "%{F#95caa0}%{F-}"
+content = "%{F#ffffff}%{F-}"
 click-left = thunar &
 
 [module/vlc]
 type = custom/text
-content = "%{F#95caa0}嗢%{F-}"
+content = "%{F#ffffff}嗢%{F-}"
 click-left = vlc &
 
 [module/user]
 type = custom/text
-content = "%{F#95caa0}%{F-} Frank"
+content = "%{F#ffffff}%{F-} Frank"
 content-underline = #8df8d8
 
 [module/linux]
 type = custom/text
-content = "%{F#95caa0}%{F-} Arch Linux"
+content = "%{F#ffffff}%{F-} Arch Linux"
 ;content-underline = #ff00d1
 
 [module/wall]
 type = custom/text
-content = "%{F#95caa0}%{F-}"
+content = "%{F#ffffff}%{F-}"
 click-left = thunar /home/frank/Frank/Wallpapers/ &
 
 [module/trash]
 type = custom/text
-content = "%{F#95caa0}%{F-}"
+content = "%{F#ffffff}%{F-}"
 click-left = thunar trash:/// &
 
 [module/refresh]
 type = custom/text
 content = 
-content-foreground = #95caa0
+content-foreground = #ffffff
 click-left = i3-msg restart &
 
 [module/print]
 type = custom/text
-content = "%{F#95caa0}%{F-}"
+content = "%{F#ffffff}%{F-}"
 click-left = bash -c 'scrot "$HOME/Imagens/Captura de tela de %d-%m-%Y %H:%M:%S.png"' &
 
 [module/torrent]
 type = custom/text
-content = "%{F#95caa0}%{F-}"
+content = "%{F#ffffff}%{F-}"
 click-left = qbittorrent
 
 [module/tux]
 type = custom/text
-content = "%{F#95caa0}%{F-}"
+content = "%{F#ffffff}%{F-}"
 ;content-underline = #ff00d1
 
 [module/lock]
 type = custom/text
 content = 
-content-foreground = #95caa0
+content-foreground = #ffffff
 click-left = $HOME/.config/polybar/scripts/blurlock.sh &
 
 [module/twitch]
 type = custom/text
-content = "%{F#95caa0}既%{F-}"
+content = "%{F#ffffff}既%{F-}"
 click-left = firefox https://www.twitch.tv/ &
 
 [module/github]
 type = custom/text
-content = "%{F#95caa0}%{F-}"
+content = "%{F#ffffff}%{F-}"
 click-left = firefox https://github.com/fffranks &
 
 [module/pacman]
 type = custom/script
 interval = 1
 exec = pacman -Qq | wc -l
-label = "%{F#95caa0}%{F-} %output:0:37:...%"
+label = "%{F#ffffff}%{F-} %output:0:37:...%"
 ;format-underline = #b9b399
 
 [module/kernel]
 type = custom/script
 exec = uname -r
-label = "%{F#95caa0}%{F-} %output:0:37:...%"
+label = "%{F#ffffff}%{F-} %output:0:37:...%"
 format-underline = #fe8ac6
 
 [module/weather]
 type = custom/script
 interval = 1
 exec = $HOME/.config/polybar/scripts/weather.sh
-label = "%{F#95caa0}%{F-} %output:0:37:...%"
+label = "%{F#ffffff}%{F-} %output:0:37:...%"
 ;format-underline = #cecece
 ;format-foreground = #cecece
 
 [module/calendar]
 type = custom/script
 exec = date "+%a %d/%b"
-label = "%{F#95caa0}%{F-} %output:0:37:...%"
+label = "%{F#ffffff}%{F-} %output:0:37:...%"
 ;format-underline = #cecece
-click-left = gsimplecal &
-#click-left = notify-send "$(cal)"
+#click-left = gsimplecal &
+click-left = notify-send "$(cal)"
 
 [module/deezer]
 type = custom/text
-content = "%{F#95caa0}%{F-}"
+content = "%{F#ffffff}%{F-}"
 click-left = exec deezer &
+
+[module/menu]
+type = custom/text
+content = "%{F#ffffff}%{F-}"
+click-left = exec rofi -show drun -theme ~/.config/rofi/appmenu/drun.rasi &
