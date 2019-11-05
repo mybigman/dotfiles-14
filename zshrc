@@ -1,4 +1,3 @@
-
 # Crédits: Franklin Souza
 # Telegram: @FranklinTech
 ##############################
