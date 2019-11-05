@@ -1,3 +1,4 @@
+
 # Crédits: Franklin Souza
 # Telegram: @FranklinTech
 ##############################
@@ -15,6 +16,10 @@ ZSH_THEME="powerlevel9k/powerlevel9k"
 POWERLEVEL9K_MODE="nerdfont-complete"
 
 # Cores do Powerline9k
+POWERLEVEL9K_HOME_ICON=''
+POWERLEVEL9K_HOME_SUB_ICON=''
+POWERLEVEL9K_FOLDER_ICON=''
+POWERLEVEL9K_ETC_ICON='⚙'
 POWERLEVEL9K_CONTEXT_DEFAULT_FOREGROUND='black'
 POWERLEVEL9K_CONTEXT_DEFAULT_BACKGROUND='dodgerblue1'
 POWERLEVEL9K_CONTEXT_SUDO_FOREGROUND='lightyellow'
@@ -54,7 +59,7 @@ POWERLEVEL9K_TIME_FORMAT="%T"
 POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=(os_icon dir)
 
 # Lado Direito
-POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS=()
+POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS=(time)
 
 # Which plugins would you like to load?
 #plugins=(git)
