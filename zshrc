@@ -54,7 +54,7 @@ POWERLEVEL9K_TIME_FORMAT="%T"
 POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=(os_icon dir)
 
 # Lado Direito
-POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS=(date)
+POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS=(status)
 
 # Which plugins would you like to load?
 #plugins=(git)
