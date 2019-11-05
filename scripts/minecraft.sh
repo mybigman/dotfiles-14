@@ -1,11 +1,11 @@
 #!/bin/bash
-# Criador: felipeFacundes
-# Telegra: @fefacundes
+# Criador: FelipeFacundes
+# Telegram: @fefacundes
 #
 #
 # Franklin Souza Telegram: @FranklinTech
 #
-3
+#
 # SCRIPT PARA INSTALAR Minecraft
 #
 #
@@ -22,8 +22,6 @@ wget -nc https://raw.githubusercontent.com/fffranks/dotfiles/master/scripts/mine
 chmod +x minecraft-run.sh
 cd ~/.jogos/icons/
 wget -nc https://raw.githubusercontent.com/felipefacundes/PS/master/icons/minecraft.png
-
-
 
 # Criando o atalho .desktop
 cd ~/.local/share/applications/
@@ -71,9 +69,9 @@ export vblank_mode=0
 # Executar o instalador e depois o jogo
 cd ~/.jogos/nativos/minecraft
 wget -nc "https://tlaun.ch/download.php?&package=mcl/jar" -O TLauncher-MCL.jar
-notify-send "Para rodar esse jogo você precisará do jre8-openjdk (OpenJDK 1.8) e java-openjfx"
+#notify-send "Para rodar esse jogo você precisará do jre8-openjdk (OpenJDK 1.8) e java-openjfx"
 ####################################################################################################
-cd "/home/$USER/.jogos/nativos/minecraft/"
+cd "/home/$USER/.jogos/linux/minecraft/"
 java -jar TLauncher-MCL.jar
 
 # Irá abrir a localização e o script de inicialização do jogo:
@@ -82,11 +80,9 @@ java -jar TLauncher-MCL.jar
 
 ################################# Finalização
 echo "━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━"
-echo "Para rodar esse jogo você precisará do jre8-openjdk (OpenJDK 1.8) e java-openjfx"
 echo "Instalação FINALIZADA com SUCESSO"
 echo "━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━"
 pkill -9 .exe
-notify-send "Instalação FINALIZADA com SUCESSO."
 sleep 4
 notify-send "Pode fechar o terminal"
 
