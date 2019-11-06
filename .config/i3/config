@@ -35,9 +35,9 @@ focus_on_window_activation focus
 ########################## BORDAS ##################################
 ####################################################################
 
-default_border pixel 2
-default_floating_border pixel 2
-new_window pixel 2
+default_border pixel 1
+default_floating_border pixel 1
+new_window pixel 1
 
 hide_edge_borders smart
 
@@ -49,8 +49,8 @@ hide_edge_borders smart
 set_from_resource $bg background
 
 # classe                borda   fundo   texto   ind.    borda filho
-client.focused          #ffffff #474747 #ffffff #ffffff   #95caa0
-client.focused_inactive #ffffff #ffffff #ffffff #ffffff   #95caa0
+client.focused          #ffffff #474747 #ffffff #ffffff   #cecdcb
+client.focused_inactive #ffffff #ffffff #ffffff #ffffff   #cecdcb
 client.unfocused        #ffffff #474747 #ffffff #ffffff   #ffffff
 client.urgent           #2f343a #900000 #ffffff #900000   #900000
 client.placeholder      #000000 #0c0c0c #ffffff #000000   #0c0c0c
@@ -69,11 +69,15 @@ bindsym $mod+Shift+w exec feh --bg-scale "$(find $HOME/Franks/Wallpapers/ -name 
 # Bloquear tela
 #bindsym $mod+Shift+x exec $HOME/.config/polybar/scripts/blurlock.sh &
 
+# Printar Tela
+#bindsym $mod+Shift+x exec bash -c 'scrot "$HOME/Imagens/Captura de tela de %d-%m-%Y %H:%M:%S.png"' &
+
 # Iniciar terminal
 #bindsym $mod+Return exec i3-sensible-terminal
-bindsym $mod+Return exec termite
+#bindsym $mod+Return exec termite
 #bindsym $mod+Return exec sakura
 #bindsym $mod+Return exec kitty
+bindsym $mod+Return exec alacritty
 
 # Matar janela focada
 bindsym $mod+Shift+q kill
@@ -157,16 +161,16 @@ set $ws8 "8"
 set $ws9 "9"
 set $ws10 "10"
 ################
-#set $ws1 ""
-#set $ws2 ""
-#set $ws3 ""
-#set $ws4 ""
-#set $ws5 ""
-#set $ws6 ""
-#set $ws7 ""
-#set $ws8 ""
-#set $ws9 ""
-#set $ws10 ""
+#set $ws1 "I"
+#set $ws2 "II"
+#set $ws3 "III"
+#set $ws4 "IV"
+#set $ws5 "V"
+#set $ws6 "VI"
+#set $ws7 "VII"
+#set $ws8 "VIII"
+#set $ws9 "IX"
+#set $ws10 "X"
 
 # Navegar pelas workspaces
 bindsym $mod+1 workspace number $ws1
@@ -368,7 +372,7 @@ mode "$mode_gaps_outer" {
 #exec --no-startup-id xss-lock --transfer-sleep-lock -- i3lock --nofork
 exec_always --no-startup-id $HOME/.config/polybar/scripts/launcher.sh
 #exec_always --no-startup-id feh --bg-fill $HOME/Franks/Wallpapers/035.png
-exec_always --no-startup-id feh --bg-fill $HOME/Franks/Wallpapers/149.jpg
+exec_always --no-startup-id feh --bg-fill $HOME/Franks/Wallpapers/166.jpg
 #exec_always --no-startup-id feh --bg-fill $HOME/Franks/Wallpapers/022.jpg
 #exec feh --bg-scale "$(find $HOME/Franks/Wallpapers/ -name "*[jJpP][nNpP][gG]" | shuf -n1)"
 #exec --no-startup-id compton -b --respect-prop-shadow
