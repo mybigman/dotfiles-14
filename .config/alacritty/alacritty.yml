@@ -19,7 +19,7 @@ window:
   # If both are `0`, this setting is ignored.
   dimensions:
     columns: 70
-    lines: 25
+    lines: 20
 
   # Window padding (changes require restart)
   #
@@ -34,7 +34,7 @@ window:
   # Values for `decorations`:
   #     - full: Borders and title bar
   #     - none: Neither borders nor title bar
-  decorations: none
+  decorations: full
 
 scrolling:
   # Maximum number of lines in the scrollback buffer.
@@ -141,8 +141,8 @@ draw_bold_text_with_bright_colors: true
 colors:
   # Default colors
   primary:
-    background: '0x222222'
-    foreground: '0x95caa0'
+    background: '0x101010'
+    foreground: '0xcecdcb'
 
     # Bright and dim foreground colors
     #
@@ -162,25 +162,25 @@ colors:
 
   # Normal colors
   normal:
-    black:   '0x3f3f3f'
-    red:     '0xff6c6c'
-    green:   '0xA3DF4C'
-    yellow:  '0xdbee77'
-    blue:    '0x5cb64f'
+    black:   '0x101010'
+    red:     '0xdf2020'
+    green:   '0x02760a'
+    yellow:  '0xffffff'
+    blue:    '0xffffff'
     magenta: '0xb981f4'
     cyan:    '0x27c3ff'
-    white:   '0x95caa0'
+    white:   '0xcecdcb'
 
   # Bright colors
   bright:
-    black:   '0x3f3f3f'
-    red:     '0xf9546d'
-    green:   '0x4fdaee'
-    yellow:  '0xdbee77'
-    blue:    '0x69c35c'
+    black:   '0x101010'
+    red:     '0xdf2020'
+    green:   '0x02760a'
+    yellow:  '0xffffff'
+    blue:    '0xffffff'
     magenta: '0xb981f4'
     cyan:    '0x7097ff'
-    white:   '0x95caa0'
+    white:   '0xcecdcb'
 
   # Dim colors
   #
