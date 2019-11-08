@@ -1,5 +1,11 @@
 #!/bin/bash
-
+#
+# Criador: FelipeFacundes
+# Telegram: @fefacundes
+# Script MODIFICADO
+#
+# Script original = https://github.com/felipefacundes/PlayOnGit#minecraft-windows
+#
 export TERM=xterm
 export ESYNC=0
 export vblank_mode=0
