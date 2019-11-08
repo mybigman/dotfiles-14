@@ -502,7 +502,7 @@ type = custom/menu
 
 expand-right = true
 
-format-spacing = 1
+format-spacing = 2
 
 label-open = "  "
 label-open-foreground = #f9f9f9
