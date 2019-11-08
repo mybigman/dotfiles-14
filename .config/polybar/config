@@ -62,7 +62,7 @@ font-2 = "Hack Nerd Font:pixelsize=13;1"
 separator = |
 
 modules-left = mpd
-modules-right = alsa memory cpu filesystem calendar date print lock
+modules-right = alsa pacman memory cpu filesystem calendar date print lock
 modules-center = weather
 
 ;Icone-Background
