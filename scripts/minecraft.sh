@@ -2,9 +2,9 @@
 # Criador: FelipeFacundes
 # Telegram: @fefacundes
 #
+# Script MODIFICADO#
 #
-# Franklin Souza Telegram: @FranklinTech
-#
+# Script original = https://github.com/felipefacundes/PlayOnGit#minecraft-windows
 #
 # SCRIPT PARA INSTALAR Minecraft
 #
