@@ -69,6 +69,9 @@ bindsym $mod+Shift+w exec feh --bg-scale "$(find $HOME/Franks/Wallpapers/ -name 
 # Bloquear tela
 #bindsym $mod+Shift+x exec $HOME/.config/polybar/scripts/blurlock.sh &
 
+## Glava
+bindsym $mod+Shift+x exec glava &
+
 # Printar Tela
 #bindsym $mod+Shift+x exec bash -c 'scrot "$HOME/Imagens/Captura de tela de %d-%m-%Y %H:%M:%S.png"' &
 
