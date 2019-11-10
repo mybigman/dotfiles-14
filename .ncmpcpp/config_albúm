@@ -16,7 +16,7 @@ visualizer_output_name = Visualizer feed
 visualizer_type = spectrum
 #visualizer_look = ●▮
 visualizer_look = █▋
-visualizer_color = red, white, black
+visualizer_color = white
 #visualizer_color = 41, 83, 119, 155, 185, 215, 209, 203, 197, 161
 system_encoding = ""
 #
@@ -98,7 +98,7 @@ system_encoding = ""
 ## Note: colors can be nested.
 ##
 #
-song_list_format = "                                      {%a - }{%t}|{%f}$R{%l} "
+song_list_format = " {%a - }{%t}|{%f}$R{%l} "
 #
 song_status_format = {{%a$2{ // $0%b{ (%y)}}: }{%t}}|{%f}
 #
@@ -187,7 +187,7 @@ song_window_title_format = {%a}
 ## Note: Custom command that will be executed each time song changes. Useful for
 ## notifications etc.
 ##
-#execute_on_song_change = ""
+#execute_on_song_change = "$HOME/Scripts/art-dark.sh"
 #
 ##
 ## Note: Custom command that will be executed each time player state
@@ -236,8 +236,8 @@ playlist_display_mode = classic
 ##
 ##progressbar_look = ->
 #progressbar_look = "▃▃▃"
-progressbar_look = "─● "
-#progressbar_look = "── "
+#progressbar_look = "─● "
+progressbar_look = "── "
 #
 ## Available values: database, playlist.
 ##
@@ -463,5 +463,5 @@ alternative_ui_separator_color = red:b
 #active_window_border = red
 #
 
-#execute_on_song_change = ~/.ncmpcpp/album.sh && ~/.ncmpcpp/art-dark.sh
-#execute_on_player_state_change = dunstify -r 1234 -i "/tmp/cover2.png" "$(mpc current -f %title%) ($(mpc current -f %artist%))" "$(mpc current -f %album%) ($(mpc current -f %date%))"
+#execute_on_song_change = $HOME/Scripts/art-dark.sh
+#execute_on_player_state_change = dunstify -r 1234 -i "/tmp/cover.jpg" "$(mpc current -f %title%) ($(mpc current -f %artist%))" "$(mpc current -f %album%) ($(mpc current -f %date%))"
