@@ -16,7 +16,7 @@ visualizer_output_name = Visualizer feed
 visualizer_type = spectrum
 #visualizer_look = ●▮
 visualizer_look = █▋
-visualizer_color = white
+visualizer_color = white, red
 #visualizer_color = 41, 83, 119, 155, 185, 215, 209, 203, 197, 161
 system_encoding = ""
 #
