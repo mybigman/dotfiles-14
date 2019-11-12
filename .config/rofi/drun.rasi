@@ -24,7 +24,7 @@ window {
     location:                       northwest;
     anchor:                         northwest;
     x-offset:                       340;
-    y-offset:                       250;
+    y-offset:                       270;
 }
 
 prompt {
