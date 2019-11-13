@@ -24,6 +24,9 @@ nano /etc/locale.gen
 locale-gen
 export LANG=pt_BR.UTF-8
 
+➜ Suporte para chaves
+pacman -S archlinux-keyring
+
 ➜ Separar as partições
 cfdisk
 
