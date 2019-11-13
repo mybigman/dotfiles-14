@@ -61,7 +61,7 @@ POWERLEVEL9K_TIME_FORMAT=%T
 POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=(os_icon dir)
 
 # Lado Direito
-POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS=(date)
+POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS=()
 
 # Which plugins would you like to load?
 #plugins=(git)
@@ -87,13 +87,10 @@ source $ZSH/oh-my-zsh.sh
   alias arch="ufetch"
   alias br="setxkbmap -model abnt2 -layout br -variant abnt2"
   alias pkg="pacman -Qq | wc -l"
-  alias arch1="neofetch --ascii $HOME/Ascii/Plants"
   alias rmy="rm -rf $HOME/.cache/yay"
   alias rpac="sudo rm -rf /var/cache/pacman/pkg/*"
-  alias pc="cat $HOME/Ascii/PC | lolcat"
   alias cm="cmatrix -C white"
-  alias wm="figlet i3wm | lolcat"
-  alias fetch="pfetch"
+  alias mine="wget https://raw.githubusercontent.com/fffranks/dotfiles/master/scripts/minecraft.sh"
 
   #Aliase scripts
   alias pipes="$HOME/Scripts/pipes.sh"
@@ -114,3 +111,4 @@ source $ZSH/oh-my-zsh.sh
 # Iniciar com o shell
 # neofetch
 # ufetch
+
