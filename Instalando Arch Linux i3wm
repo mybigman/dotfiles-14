@@ -121,7 +121,7 @@ pacman -S xorg xorg-xinit ttf-dejavu pulseaudio-alsa pavucontrol --noconfirm
 ➜ Baixando i3wm
 pacman -S i3 --noconfirm
 
-➜ Atualizar chaves (Recomendado)
+➜ Atualizar chaves (Opcional)
 pacman-key --refresh-keys
 
 ➜ Pacotes necessarios
