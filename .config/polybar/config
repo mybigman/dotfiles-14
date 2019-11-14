@@ -59,9 +59,9 @@ font-2 = "Hack Nerd Font:pixelsize=13;1"
 ;MÓDULOS TOP BAR
 
 ; Separator
-separator = |
+separator =|
 
-modules-left = mpd
+modules-left = firefox filemanager telegram
 modules-right = kernel alsa pacman memory cpu filesystem calendar date print lock
 modules-center = weather
 
@@ -123,7 +123,7 @@ font-2 = "Hack Nerd Font:style=Regular:pixelsize=12;2"
 ;MÓDULOS BOTTOM BAR
 
 modules-left = i3
-modules-center = uptime
+modules-center = mpd
 modules-right = powermenu
 
 ;Icone-Background
@@ -450,6 +450,7 @@ format-volume-underline = #e0ff33
 
 format-muted-prefix = " "
 format-muted-foreground = #fc4141
+format-muted-underline = #fc4141
 label-muted = Som MUTADO
 
 bar-volume-width = 10
@@ -506,7 +507,7 @@ format-spacing = 2
 
 label-open = "  "
 label-open-foreground = #7d7d7d
-format-underline = #ffffff
+;format-underline = #ffffff
 ;label-open-foreground = ${colors.secondary}
 label-close = Cancelar
 label-close-foreground = #fc4141
@@ -562,10 +563,11 @@ content = "%{F#7d7d7d}  %{F-}"
 ;click-left = exec telegram-desktop &
 click-left = exec $HOME/.Telegram/Telegram &
 
-[module/thunar]
+[module/filemanager]
 type = custom/text
 content = "%{F#7d7d7d}  %{F-}"
-click-left = thunar &
+click-left = nautilus &
+;click-left = thunar &
 
 [module/vlc]
 type = custom/text
