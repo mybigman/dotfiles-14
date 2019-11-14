@@ -70,7 +70,7 @@ source $ZSH/oh-my-zsh.sh
 
 # My aliases
   alias x="startx"
-  alias up="sudo pacman -Syy && yay -Syu"
+  alias up="yay -Syyu"
   alias edt="howl ~/.zshrc"
   alias del="rm -rf ~/.zsh_history"
   alias off="poweroff"
@@ -111,4 +111,3 @@ source $ZSH/oh-my-zsh.sh
 # Iniciar com o shell
 # neofetch
 # ufetch
-
