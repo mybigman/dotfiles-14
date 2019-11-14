@@ -24,6 +24,9 @@ nano /etc/locale.gen
 locale-gen
 export LANG=pt_BR.UTF-8
 
+➜ Atualizar base de dados
+pacman -Syy
+
 ➜ Suporte para chaves
 pacman -S archlinux-keyring
 
