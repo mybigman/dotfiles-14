@@ -91,7 +91,7 @@ source $ZSH/oh-my-zsh.sh
   alias rpac="sudo rm -rf /var/cache/pacman/pkg/*"
   alias cm="cmatrix -C white"
   alias mine="wget https://raw.githubusercontent.com/fffranks/dotfiles/master/scripts/minecraft.sh"
-alias minecraft="$HOME/Scripts/./minecraft.sh"
+  alias minecraft="$HOME/Scripts/./minecraft.sh"
 
   #Aliase scripts
   alias pipes="$HOME/Scripts/pipes.sh"
