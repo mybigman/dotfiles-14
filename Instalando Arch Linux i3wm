@@ -79,8 +79,9 @@ echo LOCALHOST > /etc/hostname
 ➜ Baixar kernels (sua preferência)
 pacman -S linux-zen linux-zen-headers ➜ KERNEL DE DESEMPENHO
 pacman -S linux-hardened linux-hardened-headers usbctl ➜ KERNEL DE SEGURANÇA
-pacman -S linux ➜ KERNEL PADRÃO
+pacman -S linux ➜ KERNEL PADRÃO DO ARCH LINUX
 pacman -S linux-lts-headers ➜ KERNEL LTS
+pacman -S linux-headers ➜ KERNEL ATUALIZADO
 
 ➜ Rodar o kernel
 mkinitcpio -P
