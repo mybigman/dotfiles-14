@@ -44,8 +44,8 @@ POWERLEVEL9K_OS_ICON_FOREGROUND='white'
 POWERLEVEL9K_OS_ICON_BACKGROUND='black'
 POWERLEVEL9K_DATE_FOREGROUND='white'
 POWERLEVEL9K_DATE_BACKGROUND='black'
-POWERLEVEL9K_TIME_FOREGROUND='white'
-POWERLEVEL9K_TIME_BACKGROUND='black'
+POWERLEVEL9K_TIME_FOREGROUND='black'
+POWERLEVEL9K_TIME_BACKGROUND='white'
 
 # Uso do POWELINE9K
 #disk_usage = Disco usado
@@ -58,7 +58,7 @@ POWERLEVEL9K_TIME_BACKGROUND='black'
 POWERLEVEL9K_TIME_FORMAT=%T
 
 # Lado Esquerdo
-POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=(os_icon dir)
+POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=(dir)
 
 # Lado Direito
 POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS=()
@@ -95,13 +95,13 @@ source $ZSH/oh-my-zsh.sh
   #Aliase scripts
   alias pipes="$HOME/Scripts/pipes.sh"
   alias pipes2="$HOME/Scripts/pipes.sh -t 2"
-  alias crunch="$HOME/Scripts/crunch.sh"
-  alias guns="$HOME/Scripts/guns.sh"
-  alias pac="$HOME/Scripts/pacman.sh"
-  alias big="$HOME/Scripts/big.sh"
-  alias game="$HOME/Scripts/game.sh"
-  alias ghost="$HOME/Scripts/ghost.sh"
-  alias sy="$HOME/Scripts/brincadeira.sh"
+  alias crunch="$HOME/Scripts/Ascii/crunch.sh"
+  alias guns="$HOME/Scripts/Ascii/guns.sh"
+  alias pac="$HOME/Scripts/Ascii/pacman.sh"
+  alias big="$HOME/Scripts/Ascii/big.sh"
+  alias game="$HOME/Scripts/Ascii/game.sh"
+  alias ghost="$HOME/Scripts/Ascii/ghost.sh"
+  # alias sy="$HOME/Scripts/brincadeira.sh"
 
 
 # Plugins do zsh
