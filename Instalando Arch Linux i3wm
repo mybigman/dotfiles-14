@@ -133,6 +133,10 @@ pacman-key --refresh-keys
 ➜ Pacotes necessarios
 pacman -S dmenu termite feh viewnior imagemagick w3m lxappearance git wget howl thunar firefox-i18n-pt-br scrot flameshot --noconfirm
 
+➜ Tele de login (Opcional)
+pacman -S lxdm --noconfirm
+systemctl enable lxdm.service
+
 ➜ Configurar o .xinitrc
 su - USER
 vim $HOME/.xinitrc
