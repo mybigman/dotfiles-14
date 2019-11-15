@@ -80,6 +80,7 @@ echo LOCALHOST > /etc/hostname
 pacman -S linux-zen linux-zen-headers ➜ KERNEL DE DESEMPENHO
 pacman -S linux-hardened linux-hardened-headers usbctl ➜ KERNEL DE SEGURANÇA
 pacman -S linux ➜ KERNEL PADRÃO
+pacman -S linux-lts-headers ➜ KERNEL LTS
 
 ➜ Rodar o kernel
 mkinitcpio -P
