@@ -50,6 +50,9 @@ genfstab -U /mnt >> /mnt/etc/fstab
 ➜ Entrar no chroot
 arch-chroot /mnt
 
+➜ Setar o fuso horário do sistema
+ln -sf /usr/share/zoneinfo/America/Recife /etc/localtime
+
 ➜ Setar o horário no sistema
 hwclock --systohc
 
