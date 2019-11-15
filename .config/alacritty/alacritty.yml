@@ -18,8 +18,8 @@ window:
   # Specified in number of columns/lines, not pixels.
   # If both are `0`, this setting is ignored.
   dimensions:
-    columns: 70
-    lines: 20
+    columns: 60
+    lines: 16
 
   # Window padding (changes require restart)
   #
@@ -103,7 +103,7 @@ font:
     style: Italic
 
   # Point size
-  size: 9.6
+  size: 8.6
   # 12.6
 
   # Offset is the extra space around each character. `offset.y` can be thought of
@@ -141,8 +141,8 @@ draw_bold_text_with_bright_colors: true
 colors:
   # Default colors
   primary:
-    background: '0x121212'
-    foreground: '0xf9f9f9'
+    background: '0x1c1a1a'
+    foreground: '0xcdae9c'
 
     # Bright and dim foreground colors
     #
@@ -165,22 +165,22 @@ colors:
     black:   '0x121212'
     red:     '0xdf2020'
     green:   '0x02760a'
-    yellow:  '0xffffff'
-    blue:    '0xffffff'
+    yellow:  '0xcdae9c'
+    blue:    '0xcdae9c'
     magenta: '0xb981f4'
     cyan:    '0x26f5ff'
-    white:   '0xf9f9f9'
+    white:   '0xcdae9c'
 
   # Bright colors
   bright:
     black:   '0x121212'
     red:     '0xdf2020'
     green:   '0x02760a'
-    yellow:  '0xffffff'
-    blue:    '0xffffff'
+    yellow:  '0xcdae9c'
+    blue:    '0xcdae9c'
     magenta: '0xb981f4'
     cyan:    '0x26f5ff'
-    white:   '0xf9f9f9'
+    white:   '0xcdae9c'
 
   # Dim colors
   #
@@ -232,7 +232,7 @@ visual_bell:
 #
 # Window opacity as a floating point number from `0.0` to `1.0`.
 # The value `0.0` is completely transparent and `1.0` is opaque.
-background_opacity: 1.0
+background_opacity: 2.0
 
 # Mouse bindings
 #
@@ -262,7 +262,7 @@ mouse:
   triple_click: { threshold: 300 }
 
   # If this is `true`, the cursor is temporarily hidden when typing.
-  hide_when_typing: false
+  hide_when_typing: true
 
 url:
     # URL launcher
