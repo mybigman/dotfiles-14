@@ -59,6 +59,9 @@ client.placeholder      #000000 #0c0c0c #ffffff #000000   #0c0c0c
 ################ A T A L H O S #####################################
 ####################################################################
 
+# Sair do i3wm
+bindsym $mod+Shift+e exec "i3-nagbar -t warning -m 'Você tem certeza que quer sair do i3wm?' -B 'Sim, sair do i3wm' 'i3-msg exit'"
+
 # Trocar de wallpaper
 bindsym $mod+Shift+w exec feh --bg-scale "$(find $HOME/Franks/Wallpapers/ -name "*[jJpP][nNpP][gG]" | shuf -n1)"
 
