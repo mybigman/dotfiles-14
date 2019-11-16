@@ -77,11 +77,10 @@ echo KEYMAP=br-abnt2 > /etc/vconsole.conf
 echo LOCALHOST > /etc/hostname
 
 ➜ Baixar kernels (sua preferência)
-pacman -S linux-zen linux-zen-headers ➜ KERNEL DE DESEMPENHO
-pacman -S linux-hardened linux-hardened-headers usbctl ➜ KERNEL DE SEGURANÇA
-pacman -S linux ➜ KERNEL PADRÃO DO ARCH LINUX
-pacman -S linux-lts linux-lts-headers ➜ KERNEL LTS
-pacman -S linux-headers ➜ KERNEL ATUALIZADO
+pacman -S linux ➜ Kernel Stable (default)
+pacman -S linux-hardened ➜ Kernel focado na segurança
+pacman -S linux-lts ➜ Kernel a longo prazo
+pacman -S linux-zen ➜ Kernel focado em desempenho
 
 ➜ Rodar o kernel
 mkinitcpio -P
