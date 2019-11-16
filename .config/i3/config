@@ -141,8 +141,8 @@ bindsym $mod+Shift+c move position center
 
 # Launchers
 
-#bindsym $mod+d exec dmenu_run
-bindsym $mod+d exec --no-startup-id rofi -show drun -theme ~/.config/rofi/appmenu/drun.rasi
+bindsym $mod+d exec dmenu_run
+#bindsym $mod+d exec --no-startup-id rofi -show drun -theme ~/.config/rofi/appmenu/drun.rasi
 #bindsym $mod+d exec --no-startup-id rofi -show drun -theme ~/.config/rofi/config
 #bindsym $mod+d exec synapse
 
@@ -378,7 +378,7 @@ mode "$mode_gaps_outer" {
 #exec --no-startup-id xss-lock --transfer-sleep-lock -- i3lock --nofork
 exec_always --no-startup-id $HOME/.config/polybar/scripts/launcher.sh
 #exec_always --no-startup-id feh --bg-fill $HOME/Franks/Wallpapers/035.png
-exec_always --no-startup-id feh --bg-fill $HOME/Franks/Wallpapers/Dark.png
+exec_always --no-startup-id feh --bg-fill $HOME/Franks/Wallpapers/154.png
 #exec_always --no-startup-id feh --bg-fill $HOME/Franks/Wallpapers/022.jpg
 #exec feh --bg-scale "$(find $HOME/Franks/Wallpapers/ -name "*[jJpP][nNpP][gG]" | shuf -n1)"
 #exec --no-startup-id compton -b --respect-prop-shadow
