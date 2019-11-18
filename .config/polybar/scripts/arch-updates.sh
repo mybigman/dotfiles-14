@@ -13,7 +13,7 @@ fi
 updates=$(("$updates_arch" + "$updates_aur"))
 
 if [ "$updates" -gt 0 ]; then
-    echo "# $updates"
+    echo "Updates: $updates"
 else
-    echo "Sem updates"
+    echo "No updates"
 fi
