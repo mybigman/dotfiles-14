@@ -683,6 +683,6 @@ click-left = $HOME/.config/polybar/scripts/info-trash.sh --clean
 
 [module/updates]
 type = custom/script
-interval = 100
+interval = 1
 label = "%{F#fbc958}  %{F-} %output:0:37:...%"
 exec = $HOME/.config/polybar/scripts/arch-updates.sh
