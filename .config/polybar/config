@@ -28,7 +28,7 @@ alert = #ff0000
 ; Barra/TOPO
 
 [bar/top]
-monitor = ${env:MONITOR:VGA-1}
+monitor = ${env:MONITOR:VGA-2}
 dpi = 80
 width = 100%
 height = 20
@@ -89,7 +89,7 @@ cursor-scroll = ns-resize
 ; Barra/Bottom
 
 [bar/bottom]
-monitor = ${env:MONITOR:VGA-1}
+monitor = ${env:MONITOR:VGA-2}
 dpi = 95
 width = 100%
 height = 20
@@ -123,8 +123,8 @@ font-2 = "Hack Nerd Font:style=Regular:pixelsize=12;2"
 ;MÓDULOS BOTTOM BAR
 
 modules-left = i3
-modules-center = uptime
-modules-right = powermenu
+modules-center = firefox filemanager telegram
+modules-right = powermenu updates
 
 ;Icone-Background
 
@@ -566,8 +566,8 @@ click-left = exec $HOME/.Telegram/Telegram &
 [module/filemanager]
 type = custom/text
 content = "%{F#cdae9c}  %{F-}"
-click-left = nautilus &
-;click-left = thunar &
+;click-left = nautilus &
+click-left = thunar &
 
 [module/vlc]
 type = custom/text
@@ -672,3 +672,16 @@ click-left = exec deezer &
 type = custom/text
 content = "%{F#cdae9c}  %{F-}"
 click-left = exec rofi -show drun -theme ~/.config/rofi/appmenu/drun.rasi &
+
+[module/info-trash]
+interval = 60
+type = custom/script
+label = "%{F#cdae9c}  %{F-} %output:0:37:...%"
+exec = $HOME/.config/polybar/scripts/info-trash.sh
+click-left = $HOME/.config/polybar/scripts/info-trash.sh --clean
+
+[module/updates]
+type = custom/script
+interval = 1
+label = "%{F#cdae9c}  %{F-} %output:0:37:...%"
+exec = $HOME/.config/polybar/scripts/arch-updates.sh
