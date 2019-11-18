@@ -9,8 +9,7 @@ fi
 updates=$(("$updates_arch"))
 
 if [ "$updates" -gt 0 ]; then
-    echo "Pacotes: $updates"
+    echo "Updates: $updates"
 else
-    echo "Sem atualizações"
+    echo "No updates"
 fi
-
