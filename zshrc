@@ -102,7 +102,9 @@ source $ZSH/oh-my-zsh.sh
   alias big="$HOME/Scripts/Ascii/big.sh"
   alias game="$HOME/Scripts/Ascii/game.sh"
   alias ghost="$HOME/Scripts/Ascii/ghost.sh"
-  # alias sy="$HOME/Scripts/brincadeira.sh"
+  alias sysinfo="$HOME/Scripts/sysinfo-cli.sh"
+  alias sysinfo1="$HOME/Scripts/sysinfo-natal.sh"
+  alias sysinfo2="$HOME/Scripts/sysinfo.py"
 
 
 # Plugins do zsh
