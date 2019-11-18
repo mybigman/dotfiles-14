@@ -124,7 +124,7 @@ font-2 = "Hack Nerd Font:style=Regular:pixelsize=12;2"
 
 modules-left = i3
 modules-center = firefox filemanager telegram
-modules-right = powermenu updates
+modules-right = updates powermenu
 
 ;Icone-Background
 
@@ -509,7 +509,7 @@ label-open = "  "
 label-open-foreground = #cdae9c
 ;format-underline = #ffffff
 ;label-open-foreground = ${colors.secondary}
-label-close = Cancelar
+label-close = | Cancelar
 label-close-foreground = #fc4141
 label-separator =|
 label-separator-foreground = #cdae9c
