@@ -661,7 +661,8 @@ exec = date "+%a %d/%b"
 label = "%{F#cdae9c}  %{F-} %output:0:37:...%"
 format-underline = #33fcff
 #click-left = gsimplecal &
-click-left = notify-send "$(cal)"
+click-left = exec $HOME/Scripts/calendario.sh
+#click-left = notify-send "$(cal)"
 
 [module/deezer]
 type = custom/text
