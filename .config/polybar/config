@@ -123,7 +123,7 @@ font-2 = "Hack Nerd Font:style=Regular:pixelsize=12;2"
 ;MÓDULOS BOTTOM BAR
 
 modules-left = i3
-modules-center = firefox filemanager telegram
+modules-center = terminal firefox filemanager telegram
 modules-right = updates
 
 ;Icone-Background
@@ -549,8 +549,9 @@ margin-bottom = 5
 [module/terminal]
 type = custom/text
 content = "%{F#fbc958}  %{F-}"
-click-left = termite  &
-click-right = sakura &
+click-left = alacritty  &
+;click-left = termite  &
+;click-right = sakura &
 
 [module/firefox]
 type = custom/text
