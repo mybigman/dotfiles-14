@@ -15,11 +15,11 @@
 
 [colors]
 ;background = ${xrdb:color0:#222}
-background = #1a1a1a
+background = #111111
 ;background = #222
 background-alt = #444
 ;foreground = ${xrdb:color7:#222}
-foreground = #b2b2b2
+foreground = #ffffff
 foreground-alt = #555
 primary = #ffb52a
 secondary = #000000
@@ -42,7 +42,7 @@ foreground = ${colors.foreground}
 ;line-color = #f00
 
 ;border-size = 1
-;border-color = #b2b2b2
+;border-color = #ffffff
 
 padding-left = 0
 padding-right = 2
@@ -54,15 +54,15 @@ module-margin-right = 2
 
 font-0 = "Poppins:style=Regular:pixelsize=10;2"
 font-1 = "xos4 Terminess Powerline:pixelsize=13;1"
-font-2 = "Hack Nerd Font:pixelsize=13;1"
+font-2 = "Hack Nerd Font:pixelsize=11;1"
 
 ;MÓDULOS TOP BAR
 
 ; Separator
-separator =|
+;separator =|
 
 modules-left = mpd
-modules-right = alsa pacman memory cpu filesystem calendar date print lock powermenu
+modules-right = alsa memory cpu calendar date
 modules-center = weather
 
 ;Icone-Background
@@ -103,7 +103,7 @@ line-size = 1
 line-color = ${colors.alert}
 
 ;border-size = 1
-;border-color = #b2b2b2
+;border-color = #ffffff
 
 padding-left = 1
 padding-right = 1
@@ -115,7 +115,7 @@ module-margin-right = 1
 
 font-0 = "Poppins:style=Regular:pixelsize=8;1"
 font-1 = "xos4 Terminess Powerline:pixelsize=13;1"
-font-2 = "Hack Nerd Font:style=Regular:pixelsize=12;2"
+font-2 = "Hack Nerd Font:style=Regular:pixelsize=10;2"
 
 ; Separator
 ;separator = |
@@ -123,8 +123,8 @@ font-2 = "Hack Nerd Font:style=Regular:pixelsize=12;2"
 ;MÓDULOS BOTTOM BAR
 
 modules-left = i3
-modules-center = terminal firefox filemanager telegram
-modules-right = updates
+modules-center = firefox filemanager telegram
+modules-right = powermenu lock
 
 ;Icone-Background
 
@@ -171,7 +171,7 @@ label-indicator-underline = #f9f9f9
 type = custom/script
 interval = 1
 exec = ~/.config/polybar/scripts/uptime.sh
-label = "%{F#b2b2b2}%{F-} %output:0:37:...%"
+label = "%{F#ffffff}%{F-} %output:0:37:...%"
 ;format-suffix = " "
 format = <label>
 format-suffix-foreground = #ffffff
@@ -189,9 +189,9 @@ mount-0 = /home
 ;spacing = 2
 
 format-mounted-prefix = "  "
-format-mounted-prefix-foreground = #b2b2b2
-label-mounted-underline = #b2b2b2
-;format-mounted-prefix-underline = #b2b2b2
+format-mounted-prefix-foreground = #ffffff
+label-mounted-underline = #ffffff
+;format-mounted-prefix-underline = #ffffff
 format = <label>
 
 format-mounted = <label-mounted>
@@ -212,10 +212,10 @@ mount-0 = /
 ;spacing = 2
 
 format-mounted-prefix = " 濫 "
-format-mounted-prefix-foreground = #b2b2b2
-;format-mounted-foreground = #b2b2b2
-;label-mounted-underline = #b2b2b2
-;format-mounted-prefix-underline = #b2b2b2
+format-mounted-prefix-foreground = #ffffff
+;format-mounted-foreground = #ffffff
+;label-mounted-underline = #ffffff
+;format-mounted-prefix-underline = #ffffff
 
 format = <label>
 
@@ -294,7 +294,7 @@ label-mode-padding = 1
 
 label-focused = %name%
 label-focused-foreground = #000000
-label-focused-background = #b2b2b2
+label-focused-background = #ffffff
 label-focused-padding = 1
 
 label-unfocused = %name%
@@ -340,7 +340,7 @@ bar-progress-empty = ""
 ;label-song =  %title%
 ;label-song-maxlen = 25
 ;label-song-ellipsis = true
-label-song = %{F#b2b2b2}%{F-} %title%%{F-}
+label-song = %{F#ffffff}%{F-} %title%%{F-}
 
 ; Modulo xbacklight
 
@@ -374,8 +374,8 @@ card = intel_backlight
 type = internal/cpu
 interval = 1.5
 format-prefix = "  "
-format-prefix-foreground = #b2b2b2
-;format-underline = #b2b2b2
+format-prefix-foreground = #ffffff
+;format-underline = #ffffff
 label = %percentage:2%%
 
 ; Modulo memory
@@ -384,8 +384,8 @@ label = %percentage:2%%
 type = internal/memory
 interval = 2
 format-prefix = "  "
-format-prefix-foreground = #b2b2b2
-;format-underline = #b2b2b2
+format-prefix-foreground = #ffffff
+;format-underline = #ffffff
 label = %percentage_used%%
 
 ; Modulo date
@@ -394,7 +394,7 @@ label = %percentage_used%%
 type = internal/date
 interval = 1
 
-;date = " %d/%m/%y"
+;date = "%a %d/%m/%y"
 ;date-alt = " %a %d/%m/%y"
 
 time = %I:%M %p
@@ -403,8 +403,8 @@ time = %I:%M %p
 
 
 format-prefix = "  "
-format-prefix-foreground = #b2b2b2
-;format-underline = #b2b2b2
+format-prefix-foreground = #ffffff
+;format-underline = #ffffff
 
 label = %date% %time%
 
@@ -444,9 +444,9 @@ type = internal/alsa
 
 format-volume = <label-volume>
 format-volume-prefix = " 墳 "
-format-volume-prefix-foreground = #b2b2b2
+format-volume-prefix-foreground = #ffffff
 label-volume = %percentage%%
-;format-volume-underline = #b2b2b2
+;format-volume-underline = #ffffff
 
 format-muted-prefix = " "
 format-muted-foreground = #fc4141
@@ -482,7 +482,7 @@ thermal-zone = 0
 warn-temperature = 59
 
 format = <ramp> <label>
-;format-underline = #b2b2b2
+;format-underline = #ffffff
 format-warn = <ramp> <label-warn>
 format-warn-underline = #ff0000
 
@@ -493,7 +493,7 @@ label-warn-foreground = #ff0000
 ramp-0 = 
 ramp-1 = 
 ramp-2 = 
-ramp-foreground = #b2b2b2
+ramp-foreground = #ffffff
 
 
 ; Module powermenu
@@ -506,13 +506,13 @@ expand-right = true
 format-spacing = 2
 
 label-open = "  "
-label-open-foreground = #b2b2b2
+label-open-foreground = #ffffff
 ;format-underline = #ffffff
 ;label-open-foreground = ${colors.secondary}
 label-close = | Cancelar
 label-close-foreground = #fc4141
 label-separator =|
-label-separator-foreground = #b2b2b2
+label-separator-foreground = #ffffff
 
 menu-0-0 = "Sair"
 menu-0-0-exec = menu-open-1
@@ -548,110 +548,110 @@ margin-bottom = 5
 
 [module/terminal]
 type = custom/text
-content = "%{F#b2b2b2}  %{F-}"
+content = "%{F#ffffff}  %{F-}"
 click-left = alacritty  &
 ;click-left = termite  &
 ;click-right = sakura &
 
 [module/firefox]
 type = custom/text
-content = "%{F#b2b2b2}  %{F-}"
+content = "%{F#ffffff}  %{F-}"
 click-left = firefox &
 
 [module/telegram]
 type = custom/text
-content = "%{F#b2b2b2}  %{F-}"
+content = "%{F#ffffff}  %{F-}"
 ;click-left = exec telegram-desktop &
 click-left = exec $HOME/.Telegram/Telegram &
 
 [module/filemanager]
 type = custom/text
-content = "%{F#b2b2b2}  %{F-}"
+content = "%{F#ffffff}  %{F-}"
 ;click-left = nautilus &
 click-left = thunar &
 
 [module/vlc]
 type = custom/text
-content = "%{F#b2b2b2} 嗢 %{F-}"
+content = "%{F#ffffff} 嗢 %{F-}"
 click-left = vlc &
 
 [module/user]
 type = custom/text
-content = "%{F#b2b2b2}  %{F-} Frank"
+content = "%{F#ffffff}  %{F-} Frank"
 content-underline = #8df8d8
 
 [module/linux]
 type = custom/text
-content = "%{F#b2b2b2}%{F-} Arch Linux"
+content = "%{F#ffffff}%{F-} Arch Linux"
 ;content-underline = #ff00d1
 
 [module/wall]
 type = custom/text
-content = "%{F#b2b2b2}  %{F-}"
+content = "%{F#ffffff}  %{F-}"
 click-left = thunar /home/frank/Frank/Wallpapers/ &
 
 [module/trash]
 type = custom/text
-content = "%{F#b2b2b2}  %{F-}"
+content = "%{F#ffffff}  %{F-}"
 click-left = thunar trash:/// &
 
 [module/refresh]
 type = custom/text
 content = "  "
-content-foreground = #b2b2b2
+content-foreground = #ffffff
 click-left = i3-msg restart &
 
 [module/print]
 type = custom/text
-content = "%{F#b2b2b2}  %{F-}"
+content = "%{F#ffffff}  %{F-}"
 content-underline = #ffffff
 click-left = bash -c 'scrot "$HOME/Imagens/Captura de tela de %d-%m-%Y %H:%M:%S.png"' &
 
 [module/torrent]
 type = custom/text
-content = "%{F#b2b2b2}  %{F-}"
+content = "%{F#ffffff}  %{F-}"
 click-left = qbittorrent
 
 [module/tux]
 type = custom/text
-content = "%{F#b2b2b2}%{F-}"
+content = "%{F#ffffff}%{F-}"
 ;content-underline = #ff00d1
 
 [module/lock]
 type = custom/text
 content = "  "
-content-foreground = #b2b2b2
-content-underline = #ffffff
+content-foreground = #ffffff
+;content-underline = #ffffff
 click-left = $HOME/.config/polybar/scripts/blurlock.sh &
 
 [module/twitch]
 type = custom/text
-content = "%{F#b2b2b2} 既 %{F-}"
+content = "%{F#ffffff} 既 %{F-}"
 click-left = firefox https://www.twitch.tv/ &
 
 [module/github]
 type = custom/text
-content = "%{F#b2b2b2}  %{F-}"
+content = "%{F#ffffff}  %{F-}"
 click-left = firefox https://github.com/fffranks &
 
 [module/pacman]
 type = custom/script
 interval = 1
 exec = pacman -Qq | wc -l
-label = "%{F#b2b2b2}  %{F-} %output:0:37:...%"
+label = "%{F#ffffff}  %{F-} %output:0:37:...%"
 format-underline = #7d33ff
 
 [module/kernel]
 type = custom/script
 exec = uname -r
-label = "%{F#b2b2b2}  %{F-} %output:0:37:...%"
+label = "%{F#ffffff}  %{F-} %output:0:37:...%"
 format-underline = #fe8ac6
 
 [module/weather]
 type = custom/script
 interval = 1
 exec = $HOME/.config/polybar/scripts/weather.sh
-label = "%{F#b2b2b2}  %{F-} %output:0:37:...%"
+label = "%{F#ffffff}  %{F-} %output:0:37:...%"
 ;click-left = firefox https://openweathermap.org/city/3387130
 ;format-underline = #cecece
 ;format-foreground = #cecece
@@ -659,33 +659,33 @@ label = "%{F#b2b2b2}  %{F-} %output:0:37:...%"
 [module/calendar]
 type = custom/script
 exec = date "+%a %d/%b"
-label = "%{F#b2b2b2}  %{F-} %output:0:37:...%"
+label = "%{F#ffffff}  %{F-} %output:0:37:...%"
 format-underline = #33fcff
 ;click-left = gsimplecal &
-click-left = exec $HOME/Scripts/calendario.sh
-;click-left = notify-send "$(cal)"
+;click-left = exec $HOME/Scripts/calendario.sh
+click-left = notify-send "$(cal)"
 
 [module/deezer]
 type = custom/text
-content = "%{F#b2b2b2}  %{F-}"
+content = "%{F#ffffff}  %{F-}"
 click-left = exec deezer &
 
 [module/menu]
 type = custom/text
-content = "%{F#b2b2b2}  %{F-}"
+content = "%{F#ffffff}  %{F-}"
 click-left = exec rofi -show drun -theme ~/.config/rofi/appmenu/drun.rasi &
 
 [module/info-trash]
 interval = 60
 type = custom/script
-label = "%{F#b2b2b2}  %{F-} %output:0:37:...%"
+label = "%{F#ffffff}  %{F-} %output:0:37:...%"
 exec = $HOME/.config/polybar/scripts/info-trash.sh
 click-left = $HOME/.config/polybar/scripts/info-trash.sh --clean
 
 [module/updates]
 type = custom/script
 interval = 1
-;label = "%{F#b2b2b2}  %{F-} %output:0:37:...%"
+;label = "%{F#ffffff}  %{F-} %output:0:37:...%"
 exec = $HOME/.config/polybar/scripts/arch-updates.sh
 
 [module/network-traffic]
