@@ -1,15 +1,17 @@
 #!/bin/sh
 
-# Script para Polybar mostrar atualizações do Arch Linux
+# Credit: Franklin Souza
+# Telegram: @FranklinTech
 
-if ! updates_arch=$(checkupdates 2> /dev/null | wc -l ); then
-    updates_arch=0
+# Script para verificar atualizações no Arch Linux
+
+
+if ! updates=$(checkupdates 2> /dev/null | wc -l ); then
+    updates=0
 fi
 
-updates=$(("$updates_arch"))
-
 if [ "$updates" -gt 0 ]; then
-    echo "Updates: $updates"
+    echo "# $updates"
 else
-    echo "No updates"
+    echo ""
 fi
