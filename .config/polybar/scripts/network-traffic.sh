@@ -1,4 +1,6 @@
 #!/bin/bash
+# Credit: Franklin Souza
+# Telegram: @FranklinTech
 
 print_bytes() {
     if [ "$1" -eq 0 ] || [ "$1" -lt 1000 ]; then
@@ -52,9 +54,10 @@ while true; do
 
         bytes[past_rx_$interface]=${bytes[now_rx_$interface]}
         bytes[past_tx_$interface]=${bytes[now_tx_$interface]}
+        bytes[past_tx_$interface]=${bytes[now_tx_$interface]}
     done
 
-    echo "Download: $(print_bytes $down) / Upload: $(print_bytes $up)"
+    echo "Down: $(print_bytes $down) / Up: $(print_bytes $up)"
     # echo "Download: $(print_bit $down) / Upload: $(print_bit $up)"
 
     sleep $INTERVAL
