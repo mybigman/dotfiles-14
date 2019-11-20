@@ -49,8 +49,8 @@ hide_edge_borders smart
 set_from_resource $bg background
 
 # classe                borda   fundo   texto   ind.    borda filho
-client.focused          #ffffff #474747 #ffffff #ffffff   #cdae9c
-client.focused_inactive #ffffff #ffffff #ffffff #ffffff   #cdae9c
+client.focused          #ffffff #474747 #ffffff #ffffff   #b2b2b2
+client.focused_inactive #ffffff #ffffff #ffffff #ffffff   #b2b2b2
 client.unfocused        #ffffff #474747 #ffffff #ffffff   #ffffff
 client.urgent           #2f343a #900000 #ffffff #900000   #900000
 client.placeholder      #000000 #0c0c0c #ffffff #000000   #0c0c0c
@@ -141,8 +141,8 @@ bindsym $mod+Shift+c move position center
 
 # Launchers
 
-bindsym $mod+d exec dmenu_run
-#bindsym $mod+d exec --no-startup-id rofi -show drun -theme ~/.config/rofi/appmenu/drun.rasi
+#bindsym $mod+d exec dmenu_run
+bindsym $mod+d exec --no-startup-id rofi -show drun -theme ~/.config/rofi/appmenu/drun.rasi
 #bindsym $mod+d exec --no-startup-id rofi -show drun -theme ~/.config/rofi/config
 #bindsym $mod+d exec synapse
 
@@ -234,6 +234,10 @@ for_window [class="(Thunar)"]floating enable, move position center
 
 for_window [class="(vlc)"]floating enable, move position center
 
+# MPV (Player de música/Vídeo)
+
+for_window [class="(mpv)"]floating enable, move position center
+
 # Mousepad (Editor de texto)
 
 for_window [class="(Mousepad)"]floating enable, move position center
@@ -293,6 +297,9 @@ for_window [class="(kitty)"]floating enable, move position center
 # Alacritty (Terminal)
 
 for_window [class="(Alacritty)"]floating enable, move position center
+
+# Calendario (CALENDÁRIO - POPUP)
+for_window [class="Yad" title="yad-calendar"] floating enable
 
 ####################################################################
 ################ G R U P O S #######################################
@@ -378,7 +385,7 @@ mode "$mode_gaps_outer" {
 #exec --no-startup-id xss-lock --transfer-sleep-lock -- i3lock --nofork
 exec_always --no-startup-id $HOME/.config/polybar/scripts/launcher.sh
 #exec_always --no-startup-id feh --bg-fill $HOME/Franks/Wallpapers/035.png
-exec_always --no-startup-id feh --bg-fill $HOME/Franks/Wallpapers/154.png
+exec_always --no-startup-id feh --bg-fill $HOME/Franks/Wallpapers/035.png
 #exec_always --no-startup-id feh --bg-fill $HOME/Franks/Wallpapers/022.jpg
 #exec feh --bg-scale "$(find $HOME/Franks/Wallpapers/ -name "*[jJpP][nNpP][gG]" | shuf -n1)"
 #exec --no-startup-id compton -b --respect-prop-shadow
