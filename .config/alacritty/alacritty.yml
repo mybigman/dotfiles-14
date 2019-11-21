@@ -1,3 +1,6 @@
+# Credi: Franklin Souza
+# Telegram: @FranklinTech
+
 # Configuration for Alacritty, the GPU enhanced terminal emulator.
 
 # Any items in the `env` entry below will be added as
@@ -141,8 +144,8 @@ draw_bold_text_with_bright_colors: true
 colors:
   # Default colors
   primary:
-    background: '0x1c1a1a'
-    foreground: '0xcdae9c'
+    background: '0x111111'
+    foreground: '0xffffff'
 
     # Bright and dim foreground colors
     #
@@ -162,25 +165,25 @@ colors:
 
   # Normal colors
   normal:
-    black:   '0x121212'
+    black:   '0x111111'
     red:     '0xdf2020'
     green:   '0x02760a'
-    yellow:  '0xcdae9c'
+    yellow:  '0xffffff'
     blue:    '0xcdae9c'
     magenta: '0xb981f4'
     cyan:    '0x26f5ff'
-    white:   '0xcdae9c'
+    white:   '0xffffff'
 
   # Bright colors
   bright:
-    black:   '0x121212'
+    black:   '0x111111'
     red:     '0xdf2020'
     green:   '0x02760a'
-    yellow:  '0xcdae9c'
+    yellow:  '0xffffff'
     blue:    '0xcdae9c'
     magenta: '0xb981f4'
     cyan:    '0x26f5ff'
-    white:   '0xcdae9c'
+    white:   '0xffffff'
 
   # Dim colors
   #
