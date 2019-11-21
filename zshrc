@@ -93,6 +93,7 @@ source $ZSH/oh-my-zsh.sh
   alias icon1="sudo pacman -S papirus-icon-theme"
   alias icon2="yay -S oranchelo-icon-theme"
   alias comp="yay -S compton-tryone-git"
+  alias jav8="yay -S jre8"
 
   #Aliase scripts
   alias pipes="$HOME/Scripts/pipes.sh"
