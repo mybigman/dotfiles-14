@@ -90,9 +90,8 @@ source $ZSH/oh-my-zsh.sh
   alias rmy="rm -rf $HOME/.cache/yay"
   alias rpac="sudo rm -rf /var/cache/pacman/pkg/*"
   alias cm="cmatrix -C white"
-  alias mine="wget https://raw.githubusercontent.com/fffranks/dotfiles/master/scripts/minecraft.sh"
-  alias minecraft="$HOME/Scripts/./minecraft.sh"
-  alias gravar="$HOME/Scripts/gravar.sh"
+  alias icon1="sudo pacman -S papirus-icon-theme"
+  alias icon2="yay -S oranchelo-icon-theme"
 
   #Aliase scripts
   alias pipes="$HOME/Scripts/pipes.sh"
@@ -106,6 +105,9 @@ source $ZSH/oh-my-zsh.sh
   alias sysinfo="$HOME/Scripts/sysinfo-cli.sh"
   alias sysinfo1="$HOME/Scripts/sysinfo-natal.sh"
   alias sysinfo2="$HOME/Scripts/sysinfo.py"
+  alias mine="wget https://raw.githubusercontent.com/fffranks/dotfiles/master/scripts/minecraft.sh"
+  alias minecraft="$HOME/Scripts/./minecraft.sh"
+  alias gravar="$HOME/Scripts/gravar.sh"
 
 
 # Plugins do zsh
