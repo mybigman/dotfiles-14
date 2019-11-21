@@ -92,6 +92,7 @@ source $ZSH/oh-my-zsh.sh
   alias cm="cmatrix -C white"
   alias icon1="sudo pacman -S papirus-icon-theme"
   alias icon2="yay -S oranchelo-icon-theme"
+  alias comp="yay -S compton-tryone-git"
 
   #Aliase scripts
   alias pipes="$HOME/Scripts/pipes.sh"
