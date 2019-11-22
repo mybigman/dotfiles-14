@@ -142,7 +142,7 @@ bindsym $mod+Shift+c move position center
 # Launchers
 
 #bindsym $mod+d exec dmenu_run
-bindsym $mod+d exec --no-startup-id rofi -show drun -theme ~/.config/rofi/appmenu/drun.rasi
+bindsym $mod+d exec --no-startup-id rofi -show drun -theme ~/.config/rofi/drun.rasi
 #bindsym $mod+d exec --no-startup-id rofi -show drun -theme ~/.config/rofi/config
 #bindsym $mod+d exec synapse
 
