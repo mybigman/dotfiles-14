@@ -10,7 +10,7 @@ scr='/tmp/screenshot.png'
 #import -window root /tmp/screenshot.png
 
 # BLUR
-convert $HOME/Franks/Wallpapers/153.jpg -blur 0x5 /tmp/screenshotblur.png
+convert $HOME/Franks/Wallpapers/128.png -blur 0x5 /tmp/screenshotblur.png
 #rm /tmp/screenshot.png
 
 
