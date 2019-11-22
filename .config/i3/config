@@ -141,8 +141,8 @@ bindsym $mod+Shift+c move position center
 
 # Launchers
 
-bindsym $mod+d exec dmenu_run
-#bindsym $mod+d exec --no-startup-id rofi -show drun -theme ~/.config/rofi/drun.rasi
+#bindsym $mod+d exec dmenu_run
+bindsym $mod+d exec --no-startup-id rofi -show drun -theme ~/.config/rofi/drun.rasi
 #bindsym $mod+d exec synapse
 
 # Lock
@@ -304,6 +304,10 @@ for_window [class="Yad" title="yad-calendar"] floating enable
 # Simplescreenrecorder (Gravador de vídeo)
 
 for_window [class="(SimpleScreenRecorder)"]floating enable, move position center
+
+# Discord (In-Game Chat)
+
+for_window [class="(discord)"]floating enable, move position center
 
 ####################################################################
 ################ G R U P O S #######################################
