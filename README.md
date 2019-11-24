@@ -1,4 +1,4 @@
-# Não copie minhas configs se não sabe o que estiver fazendo, depois não quero mimimi, qualquel dúvidas tire comigo
+# Não copie minhas configs se não sabe o que estiver fazendo, depois não quero mimimi, qualquel dúvidas tire comigo...
 # My Telegram: @FranklinTech
 # Screenshots
 
