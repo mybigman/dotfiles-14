@@ -107,7 +107,7 @@ source $ZSH/oh-my-zsh.sh
   alias ghost="$HOME/Scripts/Ascii/ghost.sh"
   alias sysinfo="$HOME/Scripts/sysinfo-cli.sh"
   alias sysinfo1="$HOME/Scripts/sysinfo-natal.sh"
-  alias sysinfo2="$HOME/Scripts/sysinfo.py"
+  alias fetch="$HOME/Scripts/sysinfo.py"
   alias mine="wget https://raw.githubusercontent.com/fffranks/dotfiles/master/scripts/minecraft.sh"
   alias minecraft="$HOME/Scripts/./minecraft.sh"
   alias gravar="$HOME/Scripts/gravar.sh"
