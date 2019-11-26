@@ -78,6 +78,7 @@ bindsym $mod+Shift+x exec glava &
 
 # Printar Tela
 bindsym $mod+c exec bash -c 'scrot "$HOME/Imagens/Captura de tela de %d-%m-%Y %H:%M:%S.png"' &
+bindsym $mod+z exec scrot -d 5 &
 
 # Iniciar terminal
 #bindsym $mod+Return exec i3-sensible-terminal
@@ -439,17 +440,17 @@ exec setxkbmap -model abnt2 -layout br -variant abnt2 &
 ####################################################################
 
 #Barra i3status
-#bar {
-#        colors {
-#         background #121212
-#         statusline #2f343f
-#         separator #121212
+bar {
+         colors {
+          background #121212
+          statusline #2f343f
+          separator #121212
 
         # Cores das bordas,     background, and text
-#        focused_workspace       #ffffff #121212 #ffffff
-#        active_workspace        #ffffff #2f343f #d8dee8
-#        inactive_workspace      #121212 #121212 #d8dee8
-#        urgent_workspacei       #2f343f #ebcb8b #2f343f
-#    }
-#        status_command i3status
-#}
+         focused_workspace       #ffffff #121212 #ffffff
+         active_workspace        #ffffff #2f343f #d8dee8
+         inactive_workspace      #121212 #121212 #d8dee8
+         urgent_workspacei       #2f343f #ebcb8b #2f343f
+     }
+         status_command i3status
+ }
