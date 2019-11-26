@@ -3,7 +3,7 @@
 # Telegram: @FranklinTech
 
 scr='/tmp/screenshot.png'
-icon="$HOME/.local/share/i3lock/archlinux.png"
+icon="$HOME/Lock/archlinux.png"
 font="$HOME/.fonts/Poppins.otf"
 
 #[ ! -d $HOME/.local/share/fonts ] && mkdir -p $HOME/.local/share/fonts
