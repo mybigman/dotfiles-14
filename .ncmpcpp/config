@@ -66,9 +66,10 @@ playlist_display_mode = classic
 #progressbar_look = "▪▪▫"
 #progressbar_look = "───"
 #progressbar_look = "▁▁▁"
-progressbar_look = "‒‒‒"
+#progressbar_look = "‒‒‒"
 #progressbar_look = "■◣ "
 #progressbar_look = "◈◆◇"
+progressbar_look = "── "
 titles_visibility = "yes"
 header_visibility = "yes"
 
