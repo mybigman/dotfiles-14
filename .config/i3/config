@@ -60,7 +60,7 @@ client.placeholder      #000000 #0c0c0c #ffffff #000000   #0c0c0c
 ####################################################################
 
 # Sair do i3wm
-bindsym $mod+Shift+e exec "i3-nagbar -t warning -m 'Você tem certeza que quer sair do i3wm?' -B 'Sim, sair do i3wm' 'i3-msg exit'"
+bindsym $mod+Shift+e exec "i3-nagbar -t warning -m 'Você deseja sair do i3wm?' -B 'Sim, desejo sair do i3wm' 'i3-msg exit'"
 
 # Trocar de wallpaper
 bindsym $mod+Shift+w exec feh --bg-scale "$(find $HOME/Franks/Wallpapers/ -name "*[jJpP][nNpP][gG]" | shuf -n1)"
@@ -70,7 +70,8 @@ bindsym $mod+Shift+w exec feh --bg-scale "$(find $HOME/Franks/Wallpapers/ -name 
 #bindsym $mod+n exec polybar -r bottom
 
 # Bloquear tela
-#bindsym $mod+Shift+x exec $HOME/.config/polybar/scripts/blurlock.sh &
+#bindsym $mod+Shift+t exec $HOME/.config/polybar/scripts/blurlock.sh &
+bindsym $mod+x exec --no-startup-id $HOME/Scripts/fortune.sh
 
 ## Glava
 bindsym $mod+Shift+x exec glava &
@@ -84,6 +85,17 @@ bindsym $mod+c exec bash -c 'scrot "$HOME/Imagens/Captura de tela de %d-%m-%Y %H
 #bindsym $mod+Return exec sakura
 #bindsym $mod+Return exec kitty
 bindsym $mod+Return exec alacritty
+
+# Iniciar APLICATIVOS
+
+# Firefox
+bindsym $mod+b exec firefox
+
+# Thunar
+bindsym $mod+g exec thunar
+
+# Telegram
+bindsym $mod+t exec $HOME/.Telegram/Telegram &
 
 # Matar janela focada
 bindsym $mod+Shift+q kill
@@ -146,7 +158,7 @@ bindsym $mod+d exec --no-startup-id rofi -show drun -theme ~/.config/rofi/drun.r
 #bindsym $mod+d exec synapse
 
 # Lock
-#bindsym $mod+Shift+x exec --no-startup-id $HOME/.local/lock/fortune
+#bindsym $mod+e exec $HOME/.config/polybar/scripts/blurlock.sh
 
 # Screenshot
 bindsym Print exec flameshot gui
@@ -396,14 +408,13 @@ bindsym XF86AudioPrev exec "mpc prev"
 bindsym XF86AudioRaiseVolume exec --no-startup-id pactl set-sink-volume 0 +5%
 bindsym XF86AudioLowerVolume exec --no-startup-id pactl set-sink-volume 0 -5%
 bindsym XF86AudioMute exec --no-startup-id pactl set-sink-mute 0 toggle
-
 ####################################################################
 ################ I N I T ###########################################
 ####################################################################
 # xss-lock grabs a logind suspend inhibit lock and will use i3lock to lock the
 # screen before suspend. Use loginctl lock-session to lock your screen.
 #exec --no-startup-id xss-lock --transfer-sleep-lock -- i3lock --nofork
-exec_always --no-startup-id $HOME/.config/polybar/scripts/launcher.sh
+#exec_always --no-startup-id $HOME/.config/polybar/scripts/launcher.sh
 #exec_always --no-startup-id feh --bg-fill $HOME/Franks/Wallpapers/035.png
 exec_always --no-startup-id feh --bg-fill $HOME/Franks/Wallpapers/174.jpg
 #exec_always --no-startup-id feh --bg-fill $HOME/Franks/Wallpapers/022.jpg
@@ -412,6 +423,7 @@ exec_always --no-startup-id feh --bg-fill $HOME/Franks/Wallpapers/174.jpg
 #exec --no-startup-id compton --active-opacity 0.9 --blur-background
 exec --no-startup-id compton --config ~/.config/compton/compton.conf
 exec --no-startup-id dunst -b
+exec --no-startup-id xautolock -time 3 -detectsleep -locker $HOME/Scripts/fortune.sh
 #exec --no-startup-id $HOME/Scripts/mpd-notify.sh &
 exec --no-startup-id mpd &
 exec $HOME/Scripts/mpd-notify.sh &
@@ -427,8 +439,8 @@ exec setxkbmap -model abnt2 -layout br -variant abnt2 &
 ####################################################################
 
 #Barra i3status
-#bar {
-#        colors {
+bar {
+         colors {
 #         background #121212
 #         statusline #2f343f
 #         separator #121212
