@@ -2,7 +2,7 @@
 
 ![Screenshot](https://github.com/fffranks/dotfiles/blob/master/imagens/Logo2.png)
 
-# i3wm + Polybabar
+# i3wm + Polybar
 ![Screenshot](https://github.com/fffranks/dotfiles/blob/master/imagens/Print1.png)
 
 # i3wm + i3status
