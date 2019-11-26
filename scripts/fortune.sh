@@ -29,5 +29,8 @@ convert "$scr" -scale 10% -scale 1000%\
 	gradient:none-"$gradientColor" -composite -matte \
 	"$icon" -gravity center -composite -matte \
 	-gravity center -pointsize 20 \
+    -font $font -fill "#EAE4D1" -annotate +0+200 "$fortune Não é a linguagem de programação que define o programador, mas sim sua lógica!
+
+    - David Ribeiro Guilherme" "$scr"
 	-font $font -fill "#EAE4D1" -annotate +0+200 "$fortune" "$scr"
 i3lock -ui "$scr"
