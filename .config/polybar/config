@@ -15,7 +15,7 @@
 
 [colors]
 ;background = ${xrdb:color0:#222}
-background = #111111
+background = #00000000
 ;background = #222
 background-alt = #444
 ;foreground = ${xrdb:color7:#222}
@@ -62,7 +62,7 @@ font-2 = "Hack Nerd Font:pixelsize=11;1"
 ;separator =|
 
 modules-left = mpd
-modules-right = alsa memory cpu calendar date
+modules-right = alsa memory filesystem cpu calendar date
 modules-center = weather
 
 ;Icone-Background
@@ -397,7 +397,7 @@ interval = 1
 ;date = "%a %d/%m/%y"
 ;date-alt = " %a %d/%m/%y"
 
-time = %I:%M %p
+time = %I:%M:%S %p
 ;time = %H:%M
 ;time-alt = %H:%M:%S
 
