@@ -325,6 +325,7 @@ for_window [class="(discord)"]floating enable, move position center
 ####################################################################
 ################ G R U P O S #######################################
 ####################################################################
+
 # resize window (you can also use the mouse for that)
 mode "resize" {
         # These bindings trigger as soon as you enter the resize mode
@@ -354,6 +355,7 @@ bindsym $mod+r mode "resize"
 ####################################################################
 ################ G A P S ###########################################
 ####################################################################
+
 set $mode_gaps Gaps: (o) outer, (i) inner
 set $mode_gaps_outer Outer Gaps: +|-|0|d (local), Shift + +|-|0|d (global)
 set $mode_gaps_inner Inner Gaps: +|-|0|d (local), Shift + +|-|0|d (global)
@@ -409,9 +411,11 @@ bindsym XF86AudioPrev exec "mpc prev"
 bindsym XF86AudioRaiseVolume exec --no-startup-id pactl set-sink-volume 0 +5%
 bindsym XF86AudioLowerVolume exec --no-startup-id pactl set-sink-volume 0 -5%
 bindsym XF86AudioMute exec --no-startup-id pactl set-sink-mute 0 toggle
+
 ####################################################################
 ################ I N I T ###########################################
 ####################################################################
+
 # xss-lock grabs a logind suspend inhibit lock and will use i3lock to lock the
 # screen before suspend. Use loginctl lock-session to lock your screen.
 #exec --no-startup-id xss-lock --transfer-sleep-lock -- i3lock --nofork
