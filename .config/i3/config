@@ -157,8 +157,8 @@ bindsym $mod+Shift+c move position center
 
 # Launchers
 
-#bindsym $mod+d exec dmenu_run
-bindsym $mod+d exec --no-startup-id rofi -show drun -theme ~/.config/rofi/drun.rasi
+bindsym $mod+d exec dmenu_run
+#bindsym $mod+d exec --no-startup-id rofi -show drun -theme ~/.config/rofi/drun.rasi
 #bindsym $mod+d exec synapse
 
 # Lock
@@ -418,7 +418,7 @@ bindsym XF86AudioMute exec --no-startup-id pactl set-sink-mute 0 toggle
 # xss-lock grabs a logind suspend inhibit lock and will use i3lock to lock the
 # screen before suspend. Use loginctl lock-session to lock your screen.
 #exec --no-startup-id xss-lock --transfer-sleep-lock -- i3lock --nofork
-#exec_always --no-startup-id $HOME/.config/polybar/scripts/launcher.sh
+exec_always --no-startup-id $HOME/.config/polybar/scripts/launcher.sh
 #exec_always --no-startup-id feh --bg-fill $HOME/Franks/Wallpapers/035.png
 exec_always --no-startup-id feh --bg-fill $HOME/Franks/Wallpapers/174.jpg
 #exec_always --no-startup-id feh --bg-fill $HOME/Franks/Wallpapers/022.jpg
@@ -443,17 +443,17 @@ exec setxkbmap -model abnt2 -layout br -variant abnt2 &
 ####################################################################
 
 #Barra i3status
-bar {
-         colors {
-          background #121212
-          statusline #2f343f
-          separator #121212
+#bar {
+#        colors {
+#         background #121212
+#         statusline #2f343f
+#         separator #121212
 
         # Cores das bordas,     background, and text
-         focused_workspace       #ffffff #121212 #ffffff
-         active_workspace        #ffffff #2f343f #d8dee8
-         inactive_workspace      #121212 #121212 #d8dee8
-         urgent_workspacei       #2f343f #ebcb8b #2f343f
-     }
-         status_command i3status
- }
+#        focused_workspace       #ffffff #121212 #ffffff
+#        active_workspace        #ffffff #2f343f #d8dee8
+#        inactive_workspace      #121212 #121212 #d8dee8
+#        urgent_workspacei       #2f343f #ebcb8b #2f343f
+#    }
+#        status_command i3status
+#}
