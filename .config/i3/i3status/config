@@ -13,14 +13,14 @@ general {
 }
 
 #order += "load"
-#order += "cpu_temperature 0"
 order += "disk /home"
 #order += "disk /"
 #order += "wireless wlan0"
 order += "ethernet enp3s0"
+order += "cpu_temperature 0"
 order += "volume master"
 #order += "battery 1"
-#order += "memory"
+order += "memory"
 order += "tztime local"
 
 load {
@@ -28,7 +28,7 @@ load {
 }
 
 cpu_temperature 0 {
-        format = "<span background='#bf616a'> %degrees °C </span>"
+        format = "<span background='#bf616a'>  %degrees °C </span>"
         path = "/sys/devices/platform/coretemp.0/hwmon/hwmon2/temp1_input"
 #hwmon-path = /sys/devices/platform/coretemp.0/hwmon/hwmon1/temp1_input
 #hwmon-path = /sys/devices/platform/coretemp.0/hwmon/hwmon2/temp1_input
@@ -36,20 +36,20 @@ cpu_temperature 0 {
 }
 
 disk "/" {
-        format = "<span background='#fec7cd'> 濫 %free Free </span>"
+        format = "<span background='#fec7cd'> 濫 %free Livre </span>"
 }
 
 disk "/home" {
-        format = "<span background='#a1d569'>  %free Free </span>"
+        format = "<span background='#a1d569'>  %free Livre </span>"
 }
 
 memory {
-       format = "<span background='#f496fa'>  %used Used </span>"
+       format = "<span background='#f496fa'>  %used Usado </span>"
 }
 
 
 ethernet enp3s0 {
-        format_up = "<span background='#88c0d0'>  Conectado (%speed) </span>"
+        format_up = "<span background='#88c0d0'>  Conectado </span>"
         format_down = "<span background='#88c0d0'>  Desconectado </span>"
 }
 
