@@ -20,6 +20,7 @@
     # will be ignored.
     follow = mouse
 	geometry = "300x5-10-40"
+	#geometry = "300x50-15+49"
     indicate_hidden = yes
 
     # Shrink window if it's smaller than the width.  Will be ignored if
