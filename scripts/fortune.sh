@@ -15,7 +15,7 @@ font="$HOME/.fonts/Poppins.otf"
 # Expand is used to convert the tabs to spaces which
 # are handled better by imageMagick
 fortune=$(expand -t 2 <(fortune -s brasil))
-gradientColor='#282a36'
+gradientColor='#1c1a1a'
 
 # take a screenshot
 maim "$scr"
@@ -30,7 +30,6 @@ convert "$scr" -scale 10% -scale 1000%\
 	"$icon" -gravity center -composite -matte \
 	-gravity center -pointsize 20 \
     -font $font -fill "#EAE4D1" -annotate +0+200 "$fortune Não é a linguagem de programação que define o programador, mas sim sua lógica!
-
     - David Ribeiro Guilherme" "$scr"
 	-font $font -fill "#EAE4D1" -annotate +0+200 "$fortune" "$scr"
 i3lock -ui "$scr"
