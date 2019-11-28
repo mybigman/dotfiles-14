@@ -418,7 +418,7 @@ bindsym XF86AudioMute exec --no-startup-id pactl set-sink-mute 0 toggle
 # xss-lock grabs a logind suspend inhibit lock and will use i3lock to lock the
 # screen before suspend. Use loginctl lock-session to lock your screen.
 #exec --no-startup-id xss-lock --transfer-sleep-lock -- i3lock --nofork
-#exec_always --no-startup-id $HOME/.config/polybar/scripts/launcher.sh
+exec_always --no-startup-id $HOME/.config/polybar/scripts/launcher.sh
 #exec_always --no-startup-id feh --bg-fill $HOME/Franks/Wallpapers/035.png
 exec_always --no-startup-id feh --bg-fill $HOME/Franks/Wallpapers/154.png
 #exec_always --no-startup-id feh --bg-fill $HOME/Franks/Wallpapers/022.jpg
@@ -443,17 +443,17 @@ exec setxkbmap -model abnt2 -layout br -variant abnt2 &
 ####################################################################
 
 #Barra i3status
-bar {
-         colors {
-         background #1c1a1a
-         statusline #2f343f
-         separator #1c1a1a
+#bar {
+#         colors {
+#         background #1c1a1a
+#         statusline #2f343f
+#         separator #1c1a1a
 
         # Cores das bordas,     background, and text
-        focused_workspace       #cdae9c #1c1a1a #cdae9c
-        active_workspace        #ffffff #2f343f #d8dee8
-        inactive_workspace      #1c1a1a #1c1a1a #d8dee8
-        urgent_workspacei       #2f343f #ebcb8b #2f343f
-    }
-        status_command i3status
-}
+#        focused_workspace       #cdae9c #1c1a1a #cdae9c
+#        active_workspace        #ffffff #2f343f #d8dee8
+#        inactive_workspace      #1c1a1a #1c1a1a #d8dee8
+#        urgent_workspacei       #2f343f #ebcb8b #2f343f
+#    }
+#        status_command i3status
+#}
