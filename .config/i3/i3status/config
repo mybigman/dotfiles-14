@@ -17,11 +17,12 @@ order += "disk /home"
 #order += "disk /"
 #order += "wireless wlan0"
 order += "ethernet enp3s0"
-order += "cpu_temperature 0"
+#order += "cpu_temperature 0"
 order += "volume master"
 #order += "battery 1"
-order += "memory"
+#order += "memory"
 order += "tztime local"
+#order += "read_file uptime"
 
 load {
         format = "<span background='#f59335'>  %5min Load </span>"
@@ -81,4 +82,8 @@ battery 1 {
 tztime local {
 		format = "<span background='#81a1c1'>  %time </span>"
 		format_time = "%a %-d %b %H:%M:%S"
+}
+
+read_file uptime {
+        path = "/proc/uptime"
 }
