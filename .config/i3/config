@@ -425,7 +425,7 @@ exec_always --no-startup-id feh --bg-fill $HOME/Franks/Wallpapers/154.png
 #exec feh --bg-scale "$(find $HOME/Franks/Wallpapers/ -name "*[jJpP][nNpP][gG]" | shuf -n1)"
 #exec --no-startup-id compton -b --respect-prop-shadow
 #exec --no-startup-id compton --active-opacity 0.9 --blur-background
-exec --no-startup-id compton --config ~/.config/compton/compton.conf
+exec --no-startup-id picom --config ~/.config/picom/picom.conf
 exec --no-startup-id dunst -b
 exec --no-startup-id xautolock -time 3 -detectsleep -locker $HOME/Scripts/fortune.sh
 #exec --no-startup-id $HOME/Scripts/mpd-notify.sh &
