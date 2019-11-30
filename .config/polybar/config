@@ -62,7 +62,7 @@ font-2 = "Hack Nerd Font:pixelsize=11;1"
 ;separator =|
 
 modules-left = weather
-modules-right = alsa memory filesystem cpu calendar date
+modules-right = alsa calendar date user
 modules-center = linux
 
 ;Icone-Background
@@ -577,7 +577,7 @@ click-left = vlc &
 
 [module/user]
 type = custom/text
-content = "%{F#cdae9c}  %{F-} Frank"
+content = "%{F#cdae9c}  %{F-} Frank"
 content-underline = #8df8d8
 
 [module/linux]
