@@ -9,7 +9,7 @@
 ![Screenshot](https://github.com/fffranks/dotfiles/blob/master/imagens/i3status.png)
 
 # Rofi Menu
-![Screenshot](https://github.com/fffranks/dotfiles/blob/master/imagens/Rofi.png)
+![Screenshot](https://github.com/fffranks/dotfiles/blob/master/imagens/Rofi1.png)
 
 # i3Lock
 ![Screenshot](https://github.com/fffranks/dotfiles/blob/master/imagens/i3Lock1.png)
