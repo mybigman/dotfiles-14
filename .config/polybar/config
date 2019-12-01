@@ -701,7 +701,8 @@ click-left = exec $HOME/Scripts/gravar.sh
 
 [module/bluetooth]
 type = custom/text
-content = "  "
+;content = "  "
+content = "  "
 content-foreground = #cdae9c
 ;content-underline = #cdae9c
 click-left = exec blueman-manager &
