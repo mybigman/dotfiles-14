@@ -15,7 +15,7 @@
 
 [colors]
 ;background = ${xrdb:color0:#222}
-background = #1c1a1a
+background = #1e1311
 ;background = #222
 background-alt = #444
 ;foreground = ${xrdb:color7:#222}
@@ -39,7 +39,7 @@ background = ${colors.background}
 foreground = ${colors.foreground}
 
 ;line-size = 1
-;line-color = #cdae9c
+;line-color = #938d8d
 
 ;border-size = 1
 ;border-color = #cdae9c
@@ -62,15 +62,15 @@ font-2 = "Hack Nerd Font:pixelsize=11;1"
 ;separator =|
 
 modules-left = weather
-modules-right = alsa calendar date user
+modules-right = alsa calendar date tux
 modules-center = linux
 
 ;Icone-Background
 
-;tray-position =
+;tray-position = left
 ;tray-padding = 2
 ;tray-transparent = true
-;tray-background = #0063ff
+;tray-background = #00000000
 
 ;wm-restack = bspwm
 ;wm-restack = i3
@@ -124,14 +124,14 @@ font-2 = "Hack Nerd Font:style=Regular:pixelsize=10;2"
 
 modules-left = i3
 modules-center = mpd
-modules-right = powermenu print lock
+modules-right = powermenu print lock bluetooth
 
 ;Icone-Background
 
 ;tray-position = right
 ;tray-padding = 1
 ;tray-transparent = true
-;tray-background = #0063ff
+;tray-background = #00000000
 
 cursor-click = pointer
 cursor-scroll = ns-resize
@@ -507,7 +507,7 @@ format-spacing = 2
 
 label-open = "  "
 label-open-foreground = #cdae9c
-;format-underline = #cdae9c
+;format-underline = #938d8d
 ;label-open-foreground = ${colors.secondary}
 label-close = | Cancelar
 label-close-foreground = #fc4141
@@ -548,31 +548,31 @@ margin-bottom = 5
 
 [module/terminal]
 type = custom/text
-content = "%{F#cdae9c}  %{F-}"
+content = "%{F#938d8d}  %{F-}"
 click-left = alacritty  &
 ;click-left = termite  &
 ;click-right = sakura &
 
 [module/firefox]
 type = custom/text
-content = "%{F#cdae9c}  %{F-}"
+content = "%{F#938d8d}  %{F-}"
 click-left = firefox &
 
 [module/telegram]
 type = custom/text
-content = "%{F#cdae9c}  %{F-}"
+content = "%{F#938d8d}  %{F-}"
 ;click-left = exec telegram-desktop &
 click-left = exec $HOME/.Telegram/Telegram &
 
 [module/filemanager]
 type = custom/text
-content = "%{F#cdae9c}  %{F-}"
+content = "%{F#938d8d}  %{F-}"
 ;click-left = nautilus &
 click-left = thunar &
 
 [module/vlc]
 type = custom/text
-content = "%{F#cdae9c} 嗢 %{F-}"
+content = "%{F#938d8d} 嗢 %{F-}"
 click-left = vlc &
 
 [module/user]
@@ -587,18 +587,18 @@ content = "%{F#cdae9c}%{F-} Arch Linux"
 
 [module/wall]
 type = custom/text
-content = "%{F#cdae9c}  %{F-}"
+content = "%{F#938d8d}  %{F-}"
 click-left = thunar /home/frank/Frank/Wallpapers/ &
 
 [module/trash]
 type = custom/text
-content = "%{F#cdae9c}  %{F-}"
+content = "%{F#938d8d}  %{F-}"
 click-left = thunar trash:/// &
 
 [module/refresh]
 type = custom/text
 content = "  "
-content-foreground = #cdae9c
+content-foreground = #938d8d
 click-left = i3-msg restart &
 
 [module/print]
@@ -626,25 +626,25 @@ click-left = $HOME/Scripts/fortune.sh &
 
 [module/twitch]
 type = custom/text
-content = "%{F#cdae9c} 既 %{F-}"
+content = "%{F#938d8d} 既 %{F-}"
 click-left = firefox https://www.twitch.tv/ &
 
 [module/github]
 type = custom/text
-content = "%{F#cdae9c}  %{F-}"
+content = "%{F#938d8d}  %{F-}"
 click-left = firefox https://github.com/fffranks &
 
 [module/pacman]
 type = custom/script
 interval = 1
 exec = pacman -Qq | wc -l
-label = "%{F#cdae9c}  %{F-} %output:0:37:...%"
+label = "%{F#938d8d}  %{F-} %output:0:37:...%"
 format-underline = #7d33ff
 
 [module/kernel]
 type = custom/script
 exec = uname -r
-label = "%{F#cdae9c}  %{F-} %output:0:37:...%"
+label = "%{F#938d8d}  %{F-} %output:0:37:...%"
 format-underline = #fe8ac6
 
 [module/weather]
@@ -667,25 +667,25 @@ click-left = notify-send "$(cal)"
 
 [module/deezer]
 type = custom/text
-content = "%{F#cdae9c}  %{F-}"
+content = "%{F#938d8d}  %{F-}"
 click-left = exec deezer &
 
 [module/menu]
 type = custom/text
-content = "%{F#cdae9c}  %{F-}"
+content = "%{F#938d8d}  %{F-}"
 click-left = exec rofi -show drun -theme ~/.config/rofi/appmenu/drun.rasi &
 
 [module/info-trash]
 interval = 60
 type = custom/script
-label = "%{F#cdae9c}  %{F-} %output:0:37:...%"
+label = "%{F#938d8d}  %{F-} %output:0:37:...%"
 exec = $HOME/.config/polybar/scripts/info-trash.sh
 click-left = $HOME/.config/polybar/scripts/info-trash.sh --clean
 
 [module/updates]
 type = custom/script
 interval = 1
-;label = "%{F#cdae9c}  %{F-} %output:0:37:...%"
+;label = "%{F#938d8d}  %{F-} %output:0:37:...%"
 exec = $HOME/.config/polybar/scripts/arch-updates.sh
 
 [module/network-traffic]
@@ -695,6 +695,13 @@ tail = true
 
 [module/screencast]
 type = custom/text
-content = "%{F#cdae9c}  %{F-}"
+content = "%{F#938d8d}  %{F-}"
 click-left = exec $HOME/Scripts/gravar.sh
 ;click-right = exec $HOME/Scripts/stopgravar.sh
+
+[module/bluetooth]
+type = custom/text
+content = "  "
+content-foreground = #cdae9c
+;content-underline = #cdae9c
+click-left = blueman-manager &
