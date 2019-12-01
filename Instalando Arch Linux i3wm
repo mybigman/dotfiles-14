@@ -126,13 +126,11 @@ pacman -S xf86-video-amdgpu --noconfirm
 pacman -S xorg xorg-xinit ttf-dejavu pulseaudio-alsa pavucontrol --noconfirm
 
 ➜ Baixando i3wm
-pacman -S i3 --noconfirm
-
-➜ Atualizar chaves (Opcional)
-pacman-key --refresh-keys
+pacman -S i3 
+#(Opções: 1,4)
 
 ➜ Pacotes necessarios
-pacman -S dmenu termite feh viewnior imagemagick w3m lxappearance git wget howl thunar firefox-i18n-pt-br scrot flameshot --noconfirm
+pacman -S dmenu alacritty feh viewnior imagemagick w3m lxappearance git wget howl thunar firefox-i18n-pt-br scrot flameshot blueman pulseaudio-bluetooth --noconfirm
 
 ➜ Tele de login (Opcional)
 pacman -S lxdm --noconfirm
@@ -140,12 +138,6 @@ systemctl enable lxdm.service
 
 ➜ Configurar o .xinitrc
 su - USER
-vim $HOME/.xinitrc
-
-➜ Adicionar parametro no .xinitrc
-exec i3
-
-➜ Da permissões ao .xinitrc
-chmod +x $HOME/.xinitrc
+vim echo exec i3 > ~/.xinitrc
 
 # FINALIZADA INSTALAÇÃO do Arch Linux + I3wm
