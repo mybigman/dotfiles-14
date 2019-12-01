@@ -440,6 +440,7 @@ exec $HOME/Scripts/mpd-notify.sh &
 #exec polybar -r bottom &
 #exec compton &
 exec numlockx on &
+exec blueman-applet
 exec flameshot &
 exec setxkbmap -model abnt2 -layout br -variant abnt2 &
 
