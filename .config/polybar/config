@@ -704,4 +704,6 @@ type = custom/text
 content = "  "
 content-foreground = #cdae9c
 ;content-underline = #cdae9c
-click-left = blueman-manager &
+click-left = exec blueman-manager &
+;click-left = exec blueman-applet &
+;click-right = exec blueman-manager &
