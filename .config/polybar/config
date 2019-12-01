@@ -62,7 +62,7 @@ font-2 = "Hack Nerd Font:pixelsize=11;1"
 ;separator =|
 
 modules-left = weather
-modules-right = alsa calendar date tux
+modules-right = alsa pacman calendar date tux
 modules-center = linux
 
 ;Icone-Background
@@ -638,7 +638,7 @@ click-left = firefox https://github.com/fffranks &
 type = custom/script
 interval = 1
 exec = pacman -Qq | wc -l
-label = "%{F#938d8d}  %{F-} %output:0:37:...%"
+label = "%{F#cdae9c}  %{F-} %output:0:37:...%"
 format-underline = #7d33ff
 
 [module/kernel]
@@ -707,3 +707,4 @@ content-foreground = #cdae9c
 click-left = exec blueman-manager &
 ;click-left = exec blueman-applet &
 ;click-right = exec blueman-manager &
+click-right = exec killall blueman-manager &
