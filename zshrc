@@ -58,7 +58,7 @@ POWERLEVEL9K_TIME_BACKGROUND='white'
 POWERLEVEL9K_TIME_FORMAT=%T
 
 # Lado Esquerdo
-POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=(dir)
+POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=(os_icon dir)
 
 # Lado Direito
 POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS=()
@@ -70,7 +70,7 @@ source $ZSH/oh-my-zsh.sh
 
 # My aliases
   alias x="startx"
-  alias up="yay -Syyu"
+  alias up="pikaur -Syu"
   alias edt="howl ~/.zshrc"
   alias del="rm -rf ~/.zsh_history"
   alias off="poweroff"
@@ -88,12 +88,13 @@ source $ZSH/oh-my-zsh.sh
   alias br="setxkbmap -model abnt2 -layout br -variant abnt2"
   alias pkg="pacman -Qq | wc -l"
   alias rmy="rm -rf $HOME/.cache/yay"
+  alias rmp="rm -rf $HOME/.cache/pikaur"
   alias rpac="sudo rm -rf /var/cache/pacman/pkg/*"
   alias cm="cmatrix -C white"
   alias icon1="sudo pacman -S papirus-icon-theme"
-  alias icon2="yay -S oranchelo-icon-theme"
-  alias comp="yay -S compton-tryone-git"
-  alias jav8="yay -S jre8"
+  alias icon2="pikaur -S oranchelo-icon-theme"
+  alias comp="pikaur -S compton-tryone-git"
+  alias jav8="pikaur -S jre8"
   alias inff="inxi -Fxxxz"
 
   #Aliase scripts
