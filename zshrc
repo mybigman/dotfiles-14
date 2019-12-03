@@ -58,7 +58,7 @@ POWERLEVEL9K_TIME_BACKGROUND='white'
 POWERLEVEL9K_TIME_FORMAT=%T
 
 # Lado Esquerdo
-POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=(os_icon dir)
+POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=(dir)
 
 # Lado Direito
 POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS=()
@@ -109,8 +109,9 @@ source $ZSH/oh-my-zsh.sh
   alias sysinfo="$HOME/Scripts/sysinfo-cli.sh"
   alias sysinfo1="$HOME/Scripts/sysinfo-natal.sh"
   alias fetch="$HOME/Scripts/sysinfo.py"
-  alias mine="wget https://raw.githubusercontent.com/fffranks/dotfiles/master/scripts/minecraft.sh"
-  alias minecraft="$HOME/Scripts/./minecraft.sh"
+# alias mine="wget https://raw.githubusercontent.com/fffranks/dotfiles/master/scripts/minecraft.sh"
+  alias mine="bash <(curl -s https://raw.githubusercontent.com/felipefacundes/PS/master/nativos/minecraft.sh)"
+# alias minecraft="$HOME/Scripts/./minecraft.sh"
   alias gravar="$HOME/Scripts/gravar.sh"
 
 
