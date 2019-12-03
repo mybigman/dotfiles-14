@@ -15,11 +15,11 @@
 
 [colors]
 ;background = ${xrdb:color0:#222}
-background = #1e1311
+background = #2c272d
 ;background = #222
 background-alt = #444
 ;foreground = ${xrdb:color7:#222}
-foreground = #cdae9c
+foreground = #f4f4f4
 foreground-alt = #555
 primary = #ffb52a
 secondary = #000000
@@ -42,7 +42,7 @@ foreground = ${colors.foreground}
 ;line-color = #938d8d
 
 ;border-size = 1
-;border-color = #cdae9c
+;border-color = #f4f4f4
 
 padding-left = 0
 padding-right = 2
@@ -62,7 +62,7 @@ font-2 = "Hack Nerd Font:pixelsize=11;1"
 ;separator =|
 
 modules-left = weather
-modules-right = alsa pacman calendar date tux
+modules-right = alsa pacman calendar date
 modules-center = linux
 
 ;Icone-Background
@@ -103,7 +103,7 @@ line-size = 1
 line-color = ${colors.alert}
 
 ;border-size = 1
-;border-color = #cdae9c
+;border-color = #f4f4f4
 
 padding-left = 1
 padding-right = 1
@@ -189,9 +189,9 @@ mount-0 = /home
 ;spacing = 2
 
 format-mounted-prefix = "  "
-format-mounted-prefix-foreground = #cdae9c
-label-mounted-underline = #cdae9c
-;format-mounted-prefix-underline = #cdae9c
+format-mounted-prefix-foreground = #f4f4f4
+label-mounted-underline = #f4f4f4
+;format-mounted-prefix-underline = #f4f4f4
 format = <label>
 
 format-mounted = <label-mounted>
@@ -212,10 +212,10 @@ mount-0 = /
 ;spacing = 2
 
 format-mounted-prefix = " 濫 "
-format-mounted-prefix-foreground = #cdae9c
-;format-mounted-foreground = #cdae9c
-;label-mounted-underline = #cdae9c
-;format-mounted-prefix-underline = #cdae9c
+format-mounted-prefix-foreground = #f4f4f4
+;format-mounted-foreground = #f4f4f4
+;label-mounted-underline = #f4f4f4
+;format-mounted-prefix-underline = #f4f4f4
 
 format = <label>
 
@@ -294,7 +294,7 @@ label-mode-padding = 1
 
 label-focused = %name%
 label-focused-foreground = #000000
-label-focused-background = #cdae9c
+label-focused-background = #f4f4f4
 label-focused-padding = 1
 
 label-unfocused = %name%
@@ -374,8 +374,8 @@ card = intel_backlight
 type = internal/cpu
 interval = 1.5
 format-prefix = "  "
-format-prefix-foreground = #cdae9c
-;format-underline = #cdae9c
+format-prefix-foreground = #f4f4f4
+;format-underline = #f4f4f4
 label = %percentage:2%%
 
 ; Modulo memory
@@ -384,8 +384,8 @@ label = %percentage:2%%
 type = internal/memory
 interval = 2
 format-prefix = "  "
-format-prefix-foreground = #cdae9c
-;format-underline = #cdae9c
+format-prefix-foreground = #f4f4f4
+;format-underline = #f4f4f4
 label = %percentage_used%%
 
 ; Modulo date
@@ -403,8 +403,8 @@ time = %I:%M:%S %p
 
 
 format-prefix = "  "
-format-prefix-foreground = #cdae9c
-;format-underline = #cdae9c
+format-prefix-foreground = #f4f4f4
+;format-underline = #f4f4f4
 
 label = %date% %time%
 
@@ -444,9 +444,9 @@ type = internal/alsa
 
 format-volume = <label-volume>
 format-volume-prefix = " 墳 "
-format-volume-prefix-foreground = #cdae9c
+format-volume-prefix-foreground = #f4f4f4
 label-volume = %percentage%%
-;format-volume-underline = #cdae9c
+;format-volume-underline = #f4f4f4
 
 format-muted-prefix = " "
 format-muted-foreground = #fc4141
@@ -506,13 +506,13 @@ expand-right = true
 format-spacing = 2
 
 label-open = "  "
-label-open-foreground = #cdae9c
+label-open-foreground = #f4f4f4
 ;format-underline = #938d8d
 ;label-open-foreground = ${colors.secondary}
 label-close = | Cancelar
 label-close-foreground = #fc4141
 label-separator =|
-label-separator-foreground = #cdae9c
+label-separator-foreground = #f4f4f4
 
 menu-0-0 = "Sair"
 menu-0-0-exec = menu-open-1
@@ -603,8 +603,8 @@ click-left = i3-msg restart &
 
 [module/print]
 type = custom/text
-content = "%{F#cdae9c}  %{F-}"
-;content-underline = #ffffff
+content = "%{F#f4f4f4}  %{F-}"
+;content-underline = #f4f4f4
 click-left = bash -c 'scrot "$HOME/Imagens/Captura de tela de %d-%m-%Y %H:%M:%S.png"' &
 
 [module/torrent]
@@ -620,8 +620,8 @@ content = "%{F#cdae9c}%{F-}"
 [module/lock]
 type = custom/text
 content = "  "
-content-foreground = #cdae9c
-;content-underline = #cdae9c
+content-foreground = #f4f4f4
+;content-underline = #f4f4f4
 click-left = $HOME/Scripts/fortune.sh &
 
 [module/twitch]
@@ -638,7 +638,7 @@ click-left = firefox https://github.com/fffranks &
 type = custom/script
 interval = 1
 exec = pacman -Qq | wc -l
-label = "%{F#cdae9c}  %{F-} %output:0:37:...%"
+label = "%{F#f4f4f4}  %{F-} %output:0:37:...%"
 format-underline = #7d33ff
 
 [module/kernel]
@@ -651,7 +651,7 @@ format-underline = #fe8ac6
 type = custom/script
 interval = 1
 exec = $HOME/.config/polybar/scripts/weather.sh
-label = "%{F#cdae9c}  %{F-} %output:0:37:...%"
+label = "%{F#f4f4f4}  %{F-} %output:0:37:...%"
 ;click-left = firefox https://openweathermap.org/city/3387130
 ;format-underline = #cecece
 ;format-foreground = #cecece
@@ -659,7 +659,7 @@ label = "%{F#cdae9c}  %{F-} %output:0:37:...%"
 [module/calendar]
 type = custom/script
 exec = date "+%a %d/%b"
-label = "%{F#cdae9c}  %{F-} %output:0:37:...%"
+label = "%{F#f4f4f4}  %{F-} %output:0:37:...%"
 format-underline = #33fcff
 ;click-left = gsimplecal &
 ;click-left = exec $HOME/Scripts/calendario.sh
@@ -701,10 +701,10 @@ click-left = exec $HOME/Scripts/gravar.sh
 
 [module/bluetooth]
 type = custom/text
-;content = "  "
-content = "  "
-content-foreground = #cdae9c
-;content-underline = #cdae9c
+content = "  "
+;content = "  "
+content-foreground = #f4f4f4
+;content-underline = #f4f4f4
 click-left = exec blueman-manager &
 ;click-left = exec blueman-applet &
 ;click-right = exec blueman-manager &
