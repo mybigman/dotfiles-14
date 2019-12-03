@@ -49,8 +49,8 @@ hide_edge_borders smart
 set_from_resource $bg background
 
 # classe                borda   fundo   texto   ind.    borda filho
-client.focused          #ffffff #474747 #ffffff #ffffff   #cdae9c
-client.focused_inactive #ffffff #ffffff #ffffff #ffffff   #373636
+client.focused          #ffffff #474747 #ffffff #ffffff   #f4f4f4
+client.focused_inactive #ffffff #ffffff #ffffff #ffffff   #2c272d
 client.unfocused        #ffffff #474747 #ffffff #ffffff   #333333
 client.urgent           #2f343a #900000 #ffffff #900000   #900000
 client.placeholder      #000000 #0c0c0c #ffffff #000000   #0c0c0c
@@ -425,7 +425,7 @@ bindsym XF86AudioMute exec --no-startup-id pactl set-sink-mute 0 toggle
 #exec --no-startup-id xss-lock --transfer-sleep-lock -- i3lock --nofork
 exec_always --no-startup-id $HOME/.config/polybar/scripts/launcher.sh
 #exec_always --no-startup-id feh --bg-fill $HOME/Franks/Wallpapers/035.png
-exec_always --no-startup-id feh --bg-fill $HOME/Franks/Wallpapers/160.jpg
+exec_always --no-startup-id feh --bg-fill $HOME/Franks/Wallpapers/169.png
 #exec_always --no-startup-id feh --bg-fill $HOME/Franks/Wallpapers/022.jpg
 #exec feh --bg-scale "$(find $HOME/Franks/Wallpapers/ -name "*[jJpP][nNpP][gG]" | shuf -n1)"
 #exec --no-startup-id compton -b --respect-prop-shadow
