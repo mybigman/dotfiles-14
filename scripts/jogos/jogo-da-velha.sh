@@ -3,7 +3,7 @@
 # Script: jv.sh    ( Release 1.0 )   #
 # Feito : Hertz S.                   #
 # Obs   : Jogo da Velha              #
-# Credits: Franklin Souza            #
+# Credit: Franklin Souza            #
 # Telegram: @FranklinTech            #
 ######################################
 
