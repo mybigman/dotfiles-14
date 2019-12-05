@@ -70,7 +70,7 @@ source $ZSH/oh-my-zsh.sh
 
 # My aliases
   alias x="startx"
-  alias up="pikaur -Syu"
+  alias up="pikaur -Syyu"
   alias edt="howl ~/.zshrc"
   alias del="rm -rf ~/.zsh_history"
   alias off="poweroff"
@@ -109,10 +109,11 @@ source $ZSH/oh-my-zsh.sh
   alias sysinfo="$HOME/Scripts/sysinfo-cli.sh"
   alias sysinfo1="$HOME/Scripts/sysinfo-natal.sh"
   alias fetch="$HOME/Scripts/sysinfo.py"
-# alias mine="wget https://raw.githubusercontent.com/fffranks/dotfiles/master/scripts/minecraft.sh"
   alias mine="bash <(curl -s https://raw.githubusercontent.com/felipefacundes/PS/master/nativos/minecraft.sh)"
-# alias minecraft="$HOME/Scripts/./minecraft.sh"
   alias gravar="$HOME/Scripts/gravar.sh"
+  alias instagram="$HOME/Scripts/insta.sh"
+  alias add="$HOME/Scripts/adduser.sh"
+  alias dell="$HOME/Scripts/userdel.sh"
 
 
 # Plugins do zsh
