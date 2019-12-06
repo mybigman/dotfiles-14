@@ -8,6 +8,8 @@
 cr(){
    # Exibir usuários existentes:
       clear
+         echo "Adicionar usuários"
+         echo""
          echo "Usuário(s) existente(s):"
          echo "▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁"
             egrep [1][0-9]{3} /etc/passwd | cut -d: -f1
