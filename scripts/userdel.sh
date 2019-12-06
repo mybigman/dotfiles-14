@@ -2,6 +2,8 @@
 # Credit: Franklin Souza
 # Telegram: @FranklinTech
 #
+# Um Script para deletar usuários.
+#
 # Deletar usuário:
 del(){
    # Exibir usuários existentes:
@@ -13,24 +15,24 @@ del(){
 
         # Nome:
       echo -en "\nDelete um usuário: "
-         read E
+         read U
 
 # Deletendo usuário:
         dele(){
-                if sudo userdel -r $E; then
+                if sudo userdel -r $U; then
                         clear
-                                echo "[Ok] usuário [$E] foi deletado"
+                                echo "Ok, usuário [$U] foi deletado com sucesso."
                                 echo "--------------------------------------------------"
                 else
                         clear
-                                echo "[Erro] ao deletar usuário [$E]"
+                                echo "Erro ao deletar usuário [$U], por favor tente novamente."
                                 echo "--------------------------------------------------"
                 fi
         }
 
    # Pergunta de segurança:
       opc(){
-            echo -en "\nVocê tem certeza que deseja deletar este usuário [$E] [s/n]: "
+            echo -en "\nVocê tem certeza que deseja deletar este usuário [$U]? [s/n]: "
             read F
                case $F in
                   s| S) dele;;
