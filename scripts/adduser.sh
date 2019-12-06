@@ -2,7 +2,6 @@
 # Credit: Franklin Souza
 # Telegram: @FranklinTech
 #
-#
 # Um script para adicionar novos usuários.
 #
 # Criar um novo usuário:
