@@ -2,7 +2,7 @@
 # Credit: Franklin Souza
 # Telgram: @FranklinTech
 #
-# Script para baixar vídeos do youtube, só copiando link
+# Script para baixar vídeos de sites e do youtube
 #
 ################################################################################
 
