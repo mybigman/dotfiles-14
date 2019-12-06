@@ -70,7 +70,7 @@ source $ZSH/oh-my-zsh.sh
 
 # My aliases
   alias x="startx"
-  alias up="pikaur -Syyu"
+  alias up="sudo pacman -Syyu"
   alias edt="howl ~/.zshrc"
   alias del="rm -rf ~/.zsh_history"
   alias off="poweroff"
@@ -96,6 +96,7 @@ source $ZSH/oh-my-zsh.sh
   alias comp="pikaur -S compton-tryone-git"
   alias jav8="pikaur -S jre8"
   alias inff="inxi -Fxxxz"
+  alias pull="git pull"
 
   #Aliase scripts
   alias pipes="$HOME/Scripts/pipes.sh"
