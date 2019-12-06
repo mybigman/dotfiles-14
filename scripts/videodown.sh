@@ -23,7 +23,7 @@ logs="${dir}/status.log"
 proc=$(pgrep -fc "bash $0")
 
 if [ ! -d $dir ]; then
-	dir="$HOME/VideoDow"
+	dir="$HOME/VideoDown"
 	if [ ! -d $dir ]; then
 		mkdir -p $dir
 	fi
@@ -142,4 +142,3 @@ else
     notify-send -i $icone "Video Downloader" "Erro na transferencia de: $titulo Instâncias: $proc"
     canberra-gtk-play -i $som
 fi
-
