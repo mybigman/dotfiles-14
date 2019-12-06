@@ -2,16 +2,19 @@
 # Credit: Franklin Souza
 # Telegram: @FranklinTech
 #
+#
 # Um Script para deletar usuários.
 #
 # Deletar usuário:
 del(){
    # Exibir usuários existentes:
                 clear
+                        echo "Remover usuários"
+                        echo""
                         echo "Usuário(s) existente(s):"
-                        echo "_____________________________"
+                        echo "▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁"
                                 egrep [1][0-9]{3} /etc/passwd | cut -d: -f1
-                        echo "_____________________________"
+                        echo "▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁"
 
         # Nome:
       echo -en "\nDelete um usuário: "
@@ -22,11 +25,11 @@ del(){
                 if sudo userdel -r $U; then
                         clear
                                 echo "Ok, usuário [$U] foi deletado com sucesso."
-                                echo "--------------------------------------------------"
+                                echo "▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁"
                 else
                         clear
                                 echo "Erro ao deletar usuário [$U], por favor tente novamente."
-                                echo "--------------------------------------------------"
+                                echo "▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁"
                 fi
         }
 
