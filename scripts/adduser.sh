@@ -1,15 +1,20 @@
 #!/bin/bash
 # Credit: Franklin Souza
 # Telegram: @FranklinTech
-
+#
+#
+# Um script para adicionar novos usuários.
+#
 # Criar um novo usuário:
 cr(){
    # Exibir usuários existentes:
       clear
          echo "Usuário(s) existente(s):"
-         echo "_____________________________"
+         echo "▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁"
+         echo ""
             egrep [1][0-9]{3} /etc/passwd | cut -d: -f1
-         echo "_____________________________"
+         echo ""
+         echo "▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁"
 
    # Nome:
       echo -e "\n(Dica: Não coloque espaço e alguns caracteres especiais)\n"
@@ -33,14 +38,14 @@ cr(){
       done
 
    # Criando o usuário:
-      if sudo useradd -m $novo_usuario -p $(openssl passwd -1 $senha1) -s /bin/bash; then
+      if sudo useradd -m -g users -G wheel,audio,video,daemon,dbus,disk,rfkill,games,lp,optical,power,scanner,storage,input -p $(openssl passwd -1 $senha1) -s /bin/bash $novo_usuario; then
          clear
-            echo "[Ok] usuário [$novo_usuario] foi criado"
-            echo "-------------------------------------------------------"
+            echo "Meus parabéns [$novo_usuario] foi criado"
+            echo "▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁"
       else
          clear
-            echo "[Erro] ao criar o usuário [$novo_usuario]"
-            echo "-------------------------------------------------------"
+            echo "Erro ao criar o usuário [$novo_usuario], por favor tente novamente"
+            echo "▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁"
       fi
 }
 cr
