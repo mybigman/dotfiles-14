@@ -89,7 +89,7 @@ source $ZSH/oh-my-zsh.sh
   alias pkg="pacman -Qq | wc -l"
   alias rmy="rm -rf $HOME/.cache/yay"
   alias rmp="rm -rf $HOME/.cache/pikaur"
-  alias rpac="sudo rm -rf /var/cache/pacman/pkg/*"
+  alias rc="sudo pacman -Scc"
   alias cm="cmatrix -C white"
   alias icon1="sudo pacman -S papirus-icon-theme"
   alias icon2="pikaur -S oranchelo-icon-theme"
@@ -115,6 +115,7 @@ source $ZSH/oh-my-zsh.sh
   alias instagram="$HOME/Scripts/insta.sh"
   alias add="$HOME/Scripts/adduser.sh"
   alias dell="$HOME/Scripts/userdel.sh"
+  alias down="$HOME/Scripts/videodown.sh"
 
 
 # Plugins do zsh
