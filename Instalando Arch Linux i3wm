@@ -8,6 +8,16 @@
 # Recomendo ler: https://wiki.archlinux.org/index.php/Installation_guide_(Portugu%C3%AAs) 
 ################################################################################################
 
+➜ UEFI - Formatação BOOT EFI
+mkfs.fat -F32 /dev/sdaX (BOOT EFI)
+
+➜ UEFI - MONTAGEM BOOT EFIT
+mkdir -p /mnt/boot/efi && mount /dev/sdaX /mnt/boot/efi
+
+➜ UEFI - GRUB UEFI
+grub-install --target=x86_64-efi --efi-directory=/boot/efi --bootloader-id=Franklin --recheck
+################################################################################################
+
 ➜ Layout teclado
 loadkeys br-abnt2
 
