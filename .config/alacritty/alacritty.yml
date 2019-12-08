@@ -21,8 +21,8 @@ window:
   # Specified in number of columns/lines, not pixels.
   # If both are `0`, this setting is ignored.
   dimensions:
-    columns: 67
-    lines: 20
+    columns: 62
+    lines: 17
 
   # Window padding (changes require restart)
   #
@@ -106,7 +106,7 @@ font:
     style: Italic
 
   # Point size
-  size: 8.6
+  size: 7.6
   # 12.6
 
   # Offset is the extra space around each character. `offset.y` can be thought of
@@ -145,7 +145,7 @@ colors:
   # Default colors
   primary:
     background: '0x292929'
-    foreground: '0xf1f1f1'
+    foreground: '0x7f7f7f'
 
     # Bright and dim foreground colors
     #
@@ -168,22 +168,22 @@ colors:
     black:   '0x292929'
     red:     '0xdf2020'
     green:   '0x02760a'
-    yellow:  '0xf1f1f1'
+    yellow:  '0x7f7f7f'
     blue:    '0xcdae9c'
     magenta: '0xb981f4'
     cyan:    '0x26f5ff'
-    white:   '0xf1f1f1'
+    white:   '0x7f7f7f'
 
   # Bright colors
   bright:
     black:   '0x292929'
     red:     '0xdf2020'
     green:   '0x02760a'
-    yellow:  '0xf1f1f1'
+    yellow:  '0x7f7f7f'
     blue:    '0xcdae9c'
     magenta: '0xb981f4'
     cyan:    '0x26f5ff'
-    white:   '0xf1f1f1'
+    white:   '0x7f7f7f'
 
   # Dim colors
   #
