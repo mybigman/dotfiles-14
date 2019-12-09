@@ -4,7 +4,7 @@ TAB=""
 PHOTO="$HOME/Franks/Wallpapers/136.png"
 COLOR="\e[1;38;05;32m"
 
-OS=$(uname -nm)
+OS=$(echo "Arch Linux")
 #KERNEL=$(uname -r | sed 's/-[[:alpha:]]*$//')
 KERNEL=$(uname -r)
 RESOLUTION=$(xrandr | awk '/*+/{print $1}')
