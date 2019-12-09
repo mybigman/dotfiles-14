@@ -144,8 +144,8 @@ draw_bold_text_with_bright_colors: true
 colors:
   # Default colors
   primary:
-    background: '0x292929'
-    foreground: '0x7f7f7f'
+    background: '0x1f2027'
+    foreground: '0xffffff'
 
     # Bright and dim foreground colors
     #
@@ -165,36 +165,58 @@ colors:
 
   # Normal colors
   normal:
-    black:   '0x292929'
+    black:   '0x1f2027'
     red:     '0xdf2020'
     green:   '0x02760a'
-    yellow:  '0x7f7f7f'
+    yellow:  '0xffffff'
     blue:    '0xcdae9c'
     magenta: '0xb981f4'
     cyan:    '0x26f5ff'
-    white:   '0x7f7f7f'
+    white:   '0xffffff'
 
   # Bright colors
   bright:
-    black:   '0x292929'
+    black:   '0x1f2027'
     red:     '0xdf2020'
     green:   '0x02760a'
-    yellow:  '0x7f7f7f'
+    yellow:  '0xffffff'
     blue:    '0xcdae9c'
     magenta: '0xb981f4'
     cyan:    '0x26f5ff'
-    white:   '0x7f7f7f'
+    white:   '0xffffff'
+
+    # Normal colors - Cores Originais
+ # normal:
+ #   black:   '0x000000'
+ #   red:     '0xdf2020'
+ #   green:   '0x02760a'
+ #   yellow:  '0xffffff'
+ #   blue:    '0xcdae9c'
+ #   magenta: '0xb981f4'
+ #   cyan:    '0x26f5ff'
+ #   white:   '0xffffff'
+
+  # Bright colors - Cores Originais
+ # bright:
+ #   black:   '0x000000'
+ #   red:     '0xdf2020'
+ #   green:   '0x02760a'
+ #   yellow:  '0xf3f71f'
+ #   blue:    '0x3760e2'
+ #   magenta: '0xb981f4'
+ #   cyan:    '0x26f5ff'
+ #   white:   '0xffffff'
 
   # Dim colors
   #
   # If the dim colors are not set, they will be calculated automatically based
   # on the `normal` colors.
   #dim:
-  #  black:   '0x333333'
+  #  black:   '0x000000'
   #  red:     '0xf2777a'
   #  green:   '0x99cc99'
-  #  yellow:  '0xffcc66'
-  #  blue:    '0x6699cc'
+  #  yellow:  '0xf3f71f'
+  #  blue:    '0x3760e2'
   #  magenta: '0xcc99cc'
   #  cyan:    '0x66cccc'
   #  white:   '0xdddddd'
