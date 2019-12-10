@@ -97,7 +97,7 @@ source $ZSH/oh-my-zsh.sh
   alias jav8="pikaur -S jre8"
   alias inff="inxi -Fxxxz"
   alias pull="git pull"
-  alias mine="java -jar $HOME/Franks/Minecraf.jar"
+  alias mine="java -jar $HOME/Franks/Minecraft.jar"
 
   #Aliase scripts
   alias pipes="$HOME/Scripts/pipes.sh"
