@@ -2,20 +2,11 @@
 # Criador: Franklin Souza
 # Telegram: @FranklinTech                                                                                                                                                             
 #
-# ESSE TUTORIAL FOI REALIZADO EM UM COMPUTADOR DESKTOP, UTILIZANDO REDE CABEADA E BIOS MBR
+# ESSE TUTORIAL FOI REALIZADO EM UM COMPUTADOR DESKTOP, UTILIZANDO REDE CABEADA EM LEGACY E UEFI
 # Não responsabilizo por danos, essa é MINHA INSTALAÇÃO, só estou salvando aqui caso eu precise 
 # SE QUISER FAZER O TESTE, FAÇA EM UMA VM (VIRTUAL MACHINE)
 # Recomendo ler: https://wiki.archlinux.org/index.php/Installation_guide_(Portugu%C3%AAs) 
 ################################################################################################
-
-➜ UEFI - Formatação BOOT EFI
-mkfs.fat -F32 /dev/sdaX (BOOT EFI)
-
-➜ UEFI - MONTAGEM BOOT EFIT
-mkdir -p /mnt/boot/efi && mount /dev/sdaX /mnt/boot/efi
-
-➜ UEFI - GRUB UEFI
-grub-install --target=x86_64-efi --efi-directory=/boot/efi --bootloader-id=Franklin --recheck
 ################################################################################################
 
 ➜ Layout teclado
@@ -44,12 +35,14 @@ pacman -S archlinux-keyring
 cfdisk
 
 ➜ Formatar as partições
+mkfs.vfat -F32 # Formatar BOOT UEFI
 mkfs.ext4 # Formatar partição
 mkswpap # Formatar swap (caso tenha)
 
 ➜ Montar partições
 mount # Montar as partições
 swapon # Montar swap (caso tenha)
+mkdir -p /mnt/boot/efi && mount /dev/sdaX /mnt/boot/efi
 
 ➜ Instalar sistema base
 pacstrap /mnt base dhcpcd vim less man-pages linux-firmware mkinitcpio base-devel
@@ -121,7 +114,12 @@ vim /etc/sudoers
 # %wheel ALL=(ALL) ALL
 
 ➜ Baixar e instalar o GRUB
-pacman -S grub --noconfirm && grub-install /dev/sdX
+pacman -S grub
+grub-install /dev/sdX # LEGACY
+
+pacman -S grub
+pacman -S efibootmgr
+grub-install --target=x86_64-efi --efi-directory=/ESP --bootloader-id=FranklinTech --recheck # UEFI
 
 ➜ Caso tenha outro OS instalado
 pacman -S os-prober ntfs-3g --noconfirm
