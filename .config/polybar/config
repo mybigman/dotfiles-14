@@ -492,10 +492,18 @@ label = %temperature-c%
 label-warn = %temperature-c%
 label-warn-foreground = #ff0000
 
-ramp-0 = 
-ramp-1 = 
-ramp-2 = 
-ramp-foreground = #ffffff
+ramp-0 = 
+ramp-0-foreground = #5eccfc
+ramp-1 = 
+ramp-1-foreground = #6ffc5e
+ramp-2 = 
+ramp-2-foreground = #e4fc5e
+ramp-3 = 
+ramp-3-foreground = #fca440
+ramp-4 = 
+ramp-4-foreground = #f84f0b
+ramp-5 = 
+ramp-5-foreground = #ff0000
 
 ; Modulo temperature GPU
 
@@ -515,10 +523,23 @@ label = %temperature-c%
 label-warn = %temperature-c%
 label-warn-foreground = #ff0000
 
-ramp-0 = 
-ramp-1 = 
-ramp-2 = 
-ramp-foreground = #ffffff
+ramp-0 = 
+ramp-0-foreground = #5eccfc
+ramp-1 = 
+ramp-1-foreground = #6ffc5e
+ramp-2 = 
+ramp-2-foreground = #e4fc5e
+ramp-3 = 
+ramp-3-foreground = #fca440
+ramp-4 = 
+ramp-4-foreground = #f84f0b
+ramp-5 = 
+ramp-5-foreground = #ff0000
+
+;ramp-0 = 
+;ramp-1 = 
+;ramp-2 = 
+;ramp-foreground = #ffffff
 
 ; Module powermenu
 
