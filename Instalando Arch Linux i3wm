@@ -114,12 +114,13 @@ vim /etc/sudoers
 # %wheel ALL=(ALL) ALL
 
 ➜ Baixar e instalar o GRUB
+# LEGACY
 pacman -S grub
-grub-install /dev/sdX # LEGACY
-
-pacman -S grub
-pacman -S efibootmgr
-grub-install --target=x86_64-efi --efi-directory=/ESP --bootloader-id=FranklinTech --recheck # UEFI
+grub-install /dev/sda
+#############################################################
+# UEFI
+pacman -S grub efibootmgr
+grub-install --target=x86_64-efi --efi-directory=/boot/efi --bootloader-id=FranklinTech --recheck
 
 ➜ Caso tenha outro OS instalado
 pacman -S os-prober ntfs-3g --noconfirm
