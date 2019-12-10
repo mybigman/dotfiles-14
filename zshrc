@@ -111,7 +111,6 @@ source $ZSH/oh-my-zsh.sh
   alias sysinfo1="$HOME/Scripts/sysinfo-natal.sh"
   alias fetch="$HOME/Scripts/sysinfo.py"
   alias fetch1="$HOME/Scripts/sysinfo-cli.sh"
-  alias mine="bash <(curl -s https://raw.githubusercontent.com/felipefacundes/PS/master/nativos/minecraft.sh)"
   alias gravar="$HOME/Scripts/gravar.sh"
   alias instagram="$HOME/Scripts/insta.sh"
   alias add="$HOME/Scripts/adduser.sh"
