@@ -15,7 +15,7 @@
 
 [colors]
 ;background = ${xrdb:color0:#222}
-background = #222225
+background = #1c1c1c
 ;background = #222
 background-alt = #444
 ;foreground = ${xrdb:color7:#222}
@@ -63,7 +63,7 @@ font-2 = "Hack Nerd Font:pixelsize=11;1"
 
 modules-left = weather
 modules-right =  alsa calendar date
-modules-center = linux
+modules-center = title
 
 ;Icone-Background
 
@@ -142,10 +142,10 @@ cursor-scroll = ns-resize
 type = internal/xwindow
 
 format =  <label>
-format-foreground = #c4e1b5
+format-foreground = #ffffff
 
 label = %title%
-label-foreground = #c4e1b5
+label-foreground = #ffffff
 
 ; Modulo xkeyboard
 
@@ -279,7 +279,7 @@ reverse-scroll = true
 ;wrapping-scroll = true
 
 ; Create click handler used to focus workspace
-enable-click = false
+enable-click = true
 
 strip-wsnumbers = true
 label-state-foreground = ${colors.principal}
