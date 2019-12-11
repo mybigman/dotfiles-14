@@ -257,32 +257,29 @@ label-empty-padding = 2
 [module/i3]
 type = internal/i3
 format = <label-state> <label-mode>
-index-sort = true
-wrapping-scroll = false
+index-sort = false
+wrapping-scroll = true
 pin-workspaces = true
 
-ws-icon-0 = 0;
-ws-icon-1 = 1;
-ws-icon-2 = 2;
-ws-icon-3 = 3;
-ws-icon-4 = 4;
-ws-icon-5 = 5;
-ws-icon-6 = 6;
-ws-icon-7 = 7;
-ws-icon-8 = 8;
-ws-icon-9 = 9;
-ws-icon-10 = 10;
+ws-icon-0 = 1;
+ws-icon-1 = 2;
+ws-icon-2 = 3;
+ws-icon-3 = 4;
+ws-icon-4 = 5;
+ws-icon-5 = 6;
+ws-icon-6 = 7;
+ws-icon-7 = 8;
+ws-icon-8 = 9;
+ws-icon-9 = 10;
 
-;set $ws1 "1:I"
-;set $ws2 "2:II"
-;set $ws3 "3:III"
-;set $ws4 "4:IV"
-;set $ws5 "5:V"
-;set $ws6 "6:VI"
-;set $ws7 "7:VII"
-;set $ws8 "8:VIII"
-;set $ws9 "9:IX"
-;set $ws10 "10:X"
+; Set the scroll cycle direction
+reverse-scroll = true
+
+; Wrap around when reaching the first/last workspace
+;wrapping-scroll = true
+
+; Create click handler used to focus workspace
+enable-click = false
 
 strip-wsnumbers = true
 label-state-foreground = ${colors.principal}
