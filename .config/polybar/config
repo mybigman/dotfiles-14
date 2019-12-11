@@ -61,9 +61,9 @@ font-2 = "Hack Nerd Font:pixelsize=11;1"
 ; Separator
 ;separator =|
 
-modules-left = weather
+modules-left = linux
 modules-right =  alsa calendar date
-modules-center = title
+modules-center = weather
 
 ;Icone-Background
 
