@@ -261,7 +261,7 @@ index-sort = false
 wrapping-scroll = true
 pin-workspaces = true
 
-ws-icon-0 = 1;
+ws-icon-0 = 1:
 ws-icon-1 = 2;
 ws-icon-2 = 3;
 ws-icon-3 = 4;
@@ -647,6 +647,7 @@ click-left = i3-msg restart &
 type = custom/text
 content = "%{F#ffffff}  %{F-}"
 ;content-underline = #f4f4f4
+;click-left = bash -c 'scrot "$HOME/Imagens/Captura de tela de %d-%m-%Y %H:%M:%S.png"' &
 click-left = bash -c 'scrot "$HOME/Imagens/Captura de tela de %d-%m-%Y %H:%M:%S.png"' &
 
 [module/torrent]
