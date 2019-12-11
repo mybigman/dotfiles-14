@@ -176,12 +176,12 @@ set $ws1 "1 :"
 set $ws2 "2:"
 set $ws3 "3:"
 set $ws4 "4:"
-set $ws5 "5"
+set $ws5 "5:"
 set $ws6 "6"
 set $ws7 "7"
 set $ws8 "8"
 set $ws9 "9"
-set $ws10 "10:"
+set $ws10 "10"
 
 #set $ws1 "1"
 #set $ws2 "2"
@@ -234,8 +234,8 @@ for_window [class="(Telegram)"] move to workspace $ws3, floating enable, move po
 # Telegram ws=4
 for_window [class="(Thunar)"] move to workspace $ws4, floating enable, move position center
 
-# Telegram ws=10
-for_window [class="(Deezer)"] move to workspace $ws10, floating enable, move position center
+# Telegram ws=5
+for_window [class="(Deezer)"] move to workspace $ws5, floating enable, move position center
 
 ####################################################################
 ################ R E G R A S #######################################
