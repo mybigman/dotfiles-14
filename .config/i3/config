@@ -172,27 +172,27 @@ bindsym Print exec flameshot gui
 ################ A R E A S #########################################
 ####################################################################
 
-set $ws1 "1"
-set $ws2 "2"
-set $ws3 "3"
-set $ws4 "4"
+set $ws1 "1 :"
+set $ws2 "2:"
+set $ws3 "3:"
+set $ws4 "4:"
 set $ws5 "5"
 set $ws6 "6"
 set $ws7 "7"
 set $ws8 "8"
 set $ws9 "9"
-set $ws10 "10"
-################
-#set $ws1 "I"
-#set $ws2 "II"
-#set $ws3 "III"
-#set $ws4 "IV"
-#set $ws5 "V"
-#set $ws6 "VI"
-#set $ws7 "VII"
-#set $ws8 "VIII"
-#set $ws9 "IX"
-#set $ws10 "X"
+set $ws10 "10:"
+
+#set $ws1 "1"
+#set $ws2 "2"
+#set $ws3 "3"
+#set $ws4 "4"
+#set $ws5 "5"
+#set $ws6 "6"
+#set $ws7 "7"
+#set $ws8 "8"
+#set $ws9 "9"
+#set $ws10 "10"
 
 # Navegar pelas workspaces
 bindsym $mod+1 workspace number $ws1
@@ -217,6 +217,25 @@ bindsym $mod+Shift+7 move container to workspace number $ws7
 bindsym $mod+Shift+8 move container to workspace number $ws8
 bindsym $mod+Shift+9 move container to workspace number $ws9
 bindsym $mod+Shift+0 move container to workspace number $ws10
+
+####################################################################
+################ APLICATIVOS ABERTOS NA WS CORRETA #################
+####################################################################
+
+# Browser ws=1
+assign [class="(firefox)"] $ws1
+
+# Terminal ws=2
+for_window [class="(Alacritty)"] move to workspace $ws2, floating enable, move position center
+
+# File Manager ws=3
+for_window [class="(Telegram)"] move to workspace $ws3, floating enable, move position center
+
+# Telegram ws=4
+for_window [class="(Thunar)"] move to workspace $ws4, floating enable, move position center
+
+# Telegram ws=10
+for_window [class="(Deezer)"] move to workspace $ws10, floating enable, move position center
 
 ####################################################################
 ################ R E G R A S #######################################
@@ -330,6 +349,10 @@ for_window [class="(discord)"]floating enable, move position center
 
 for_window [class="(Blueman-manager)"]floating enable, move position center
 
+###############################################################################
+
+
+
 ####################################################################
 ################ G R U P O S #######################################
 ####################################################################
@@ -425,7 +448,7 @@ bindsym XF86AudioMute exec --no-startup-id pactl set-sink-mute 0 toggle
 #exec --no-startup-id xss-lock --transfer-sleep-lock -- i3lock --nofork
 exec_always --no-startup-id $HOME/.config/polybar/scripts/launcher.sh
 #exec_always --no-startup-id feh --bg-fill $HOME/Franks/Wallpapers/035.png
-exec_always --no-startup-id feh --bg-fill $HOME/Franks/Wallpapers/174.png
+exec_always --no-startup-id feh --bg-fill $HOME/Franks/Wallpapers/176.jpg
 #exec_always --no-startup-id feh --bg-fill $HOME/Franks/Wallpapers/022.jpg
 #exec feh --bg-scale "$(find $HOME/Franks/Wallpapers/ -name "*[jJpP][nNpP][gG]" | shuf -n1)"
 #exec --no-startup-id compton -b --respect-prop-shadow
