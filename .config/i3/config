@@ -80,7 +80,8 @@ bindsym $mod+Shift+x exec glava &
 bindsym $mod+m exec $HOME/Scripts/gravar.sh
 
 # Printar Tela
-bindsym $mod+c exec bash -c 'scrot "$HOME/Imagens/Captura de tela de %d-%m-%Y %H:%M:%S.png"' &
+#bindsym $mod+c exec bash -c 'scrot "$HOME/Imagens/Captura de tela de %d-%m-%Y %H:%M:%S.png"' &
+bindsym $mod+c exec bash -c 'maim "$HOME/Imagens/Captura de tela de %d-%m-%Y %H:%M:%S.png"' &
 bindsym $mod+z exec scrot -d 5 &
 
 # Iniciar terminal
