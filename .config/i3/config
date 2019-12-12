@@ -173,16 +173,16 @@ bindsym Print exec flameshot gui
 ################ A R E A S #########################################
 ####################################################################
 
-set $ws1 "1 :"
-set $ws2 "2:"
-set $ws3 "3:"
-set $ws4 "4:"
-set $ws5 "5:"
-set $ws6 "6"
-set $ws7 "7"
-set $ws8 "8"
-set $ws9 "9"
-set $ws10 "10"
+set $ws1 "1: "
+set $ws2 "2: "
+set $ws3 "3: "
+set $ws4 "4: "
+set $ws5 "5: "
+set $ws6 "6: "
+set $ws7 "7: "
+set $ws8 "8:"
+set $ws9 "9:"
+set $ws10 "10:"
 
 #set $ws1 "1"
 #set $ws2 "2"
@@ -237,6 +237,15 @@ for_window [class="(Thunar)"] move to workspace $ws4, floating enable, move posi
 
 # Telegram ws=5
 for_window [class="(Deezer)"] move to workspace $ws5, floating enable, move position center
+
+# Gimp ws=6
+for_window [class="(Gimp)"] move to workspace $ws6, floating enable, move position center
+
+# Inkscape ws=6
+for_window [class="(Inkscape)"] move to workspace $ws6, floating enable, move position center
+
+# MPV ws=7
+for_window [class="(mpv)"] move to workspace $ws7, floating enable, move position center
 
 ####################################################################
 ################ R E G R A S #######################################
@@ -449,7 +458,7 @@ bindsym XF86AudioMute exec --no-startup-id pactl set-sink-mute 0 toggle
 #exec --no-startup-id xss-lock --transfer-sleep-lock -- i3lock --nofork
 exec_always --no-startup-id $HOME/.config/polybar/scripts/launcher.sh
 #exec_always --no-startup-id feh --bg-fill $HOME/Franks/Wallpapers/035.png
-exec_always --no-startup-id feh --bg-fill $HOME/Franks/Wallpapers/176.jpg
+exec_always --no-startup-id feh --bg-fill $HOME/Franks/Wallpapers/162.png
 #exec_always --no-startup-id feh --bg-fill $HOME/Franks/Wallpapers/022.jpg
 #exec feh --bg-scale "$(find $HOME/Franks/Wallpapers/ -name "*[jJpP][nNpP][gG]" | shuf -n1)"
 #exec --no-startup-id compton -b --respect-prop-shadow
@@ -458,16 +467,16 @@ exec --no-startup-id picom --config ~/.config/picom/picom.conf
 exec --no-startup-id dunst -b
 exec --no-startup-id xautolock -time 3 -detectsleep -locker $HOME/Scripts/fortune.sh
 #exec --no-startup-id $HOME/Scripts/mpd-notify.sh &
-exec --no-startup-id mpd &
-exec $HOME/Scripts/mpd-notify.sh &
-#exec polybar -r top &
-#exec polybar -r bottom &
-#exec compton &
-exec numlockx on &
-#exec systemctl enable bluetooth.service
-exec blueman-applet
-exec flameshot &
-exec setxkbmap -model abnt2 -layout br -variant abnt2 &
+#exec --no-startup-id mpd &
+#exec --no-startup-id $HOME/Scripts/mpd-notify.sh &
+#exec  --no-startup-id polybar -r top &
+#exec --no-startup-id polybar -r bottom &
+#exec --no-startup-id compton &
+exec --no-startup-id numlockx on &
+#exec --no-startup-id systemctl enable bluetooth.service
+exec --no-startup-id blueman-applet
+exec --no-startup-id flameshot &
+exec --no-startup-id setxkbmap -model abnt2 -layout br -variant abnt2 &
 
 ####################################################################
 ################ I3STATUS ##########################################
