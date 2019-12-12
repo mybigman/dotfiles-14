@@ -1,9 +1,9 @@
 * {
     selected-normal-foreground:  #000000;
     foreground:                  #ffffff;
-    background:                  #292929;
+    background:                  #0b0b0b;
     normal-foreground:           @foreground;
-    alternate-normal-background: #292929;
+    alternate-normal-background: #0b0b0b;
     red:                         rgba ( 220, 50, 47, 100 % );
     selected-urgent-foreground:  rgba ( 29, 32, 33, 100 % );
     blue:                        rgba ( 38, 139, 210, 100 % );
@@ -15,7 +15,7 @@
     alternate-active-background: #3b4252;
     bordercolor:                 #2e3440;
     alternate-normal-foreground: @foreground;
-    normal-background:           #292929;
+    normal-background:           #0b0b0b;
     lightfg:                     rgba ( 88, 104, 117, 100 % );
     selected-normal-background:  #ffffff;
     border-color:                #f1f1f1;
