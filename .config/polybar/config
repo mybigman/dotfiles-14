@@ -124,7 +124,7 @@ separator = |
 
 modules-left = i3
 modules-center = weather
-modules-right = powermenu alsa calendar
+modules-right = alsa calendar date
 
 ;Icone-Background
 
@@ -691,14 +691,15 @@ label = "%{F#ffffff}  %{F-} %output:0:37:...%"
 [module/calendar]
 type = custom/script
 interval = 1
-exec = date "+%a %d %b, %Y - %H:%M"
+exec = date "+%a %d %b, %Y"
+;exec = date "+%a %d %b, %Y - %H:%M"
 ;exec = date "+%a %d, %b"
 ;exec = date "+%a %d/%b %H:%M:%S"
 label = "%{F#ffffff}  %{F-} %output:0:37:...%"
 format-underline = #33fcff
 ;click-left = gsimplecal &
 ;click-left = exec $HOME/Scripts/calendario.sh
-click-left = notify-send "$(cal)"
+;click-left = notify-send "$(cal)"
 
 [module/deezer]
 type = custom/text
