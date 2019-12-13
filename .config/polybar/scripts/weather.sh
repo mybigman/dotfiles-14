@@ -97,6 +97,6 @@ fi
 #%{T3} tells the bar to use Noto Sans and %{T-} resets it to default.
 #label-inactive = %{T3}Inactive%{T-} %time%
 
-    echo "$weather_temp$SYMBOL"
+    echo "$weather_desc", "$weather_temp$SYMBOL"
 
 # Descrição do weather: "$weather_desc"
