@@ -129,6 +129,10 @@ pacman -S os-prober ntfs-3g --noconfirm
 grub-mkconfig -o /boot/grub/grub.cfg
 
 ➜ Baixar GPU
+Radeon
+pacman -S xf86-video-amdgpu --noconfirm
+
+➜ AMDGPU
 pacman -S xf86-video-amdgpu --noconfirm
 
 ➜ Baixar alguns pacotes
