@@ -15,11 +15,11 @@
 
 [colors]
 ;background = ${xrdb:color0:#222}
-background = #0b0b0b
+background = #191919
 ;background = #222
 background-alt = #444
 ;foreground = ${xrdb:color7:#222}
-foreground = #ffffff
+foreground = #cf112b
 foreground-alt = #555
 primary = #ffb52a
 secondary = #000000
@@ -42,7 +42,7 @@ foreground = ${colors.foreground}
 ;line-color = #938d8d
 
 ;border-size = 1
-;border-color = #ffffff
+;border-color = #cf112b
 
 padding-left = 0
 padding-right = 2
@@ -89,7 +89,7 @@ cursor-scroll = ns-resize
 ; Barra/Bottom
 
 [bar/bottom]
-monitor = ${env:MONITOR:VGA-1}
+monitor = ${env:MONITOR:VGA-0}
 dpi = 95
 width = 100%
 height = 20
@@ -103,7 +103,7 @@ foreground = ${colors.foreground}
 ;line-color = ${colors.alert}
 
 ;border-size = 1
-;border-color = #ffffff
+;border-color = #cf112b
 
 padding-left = 1
 padding-right = 1
@@ -118,13 +118,13 @@ font-1 = "xos4 Terminess Powerline:pixelsize=13;1"
 font-2 = "Hack Nerd Font:style=Regular:pixelsize=10;2"
 
 ; Separator
-separator = |
+; separator = |
 
 ;MÓDULOS BOTTOM BAR
 
 modules-left = i3
-modules-center = weather
-modules-right = alsa calendar date
+modules-center =
+modules-right = alsa calendar date powermenu
 
 ;Icone-Background
 
@@ -191,9 +191,9 @@ mount-0 = /home
 ;spacing = 2
 
 format-mounted-prefix = "  "
-format-mounted-prefix-foreground = #ffffff
-label-mounted-underline = #ffffff
-;format-mounted-prefix-underline = #ffffff
+format-mounted-prefix-foreground = #cf112b
+label-mounted-underline = #cf112b
+;format-mounted-prefix-underline = #cf112b
 format = <label>
 
 format-mounted = <label-mounted>
@@ -281,8 +281,8 @@ label-mode-foreground = ${colors.secondary}
 label-mode-padding = 1
 
 label-focused = %name%
-label-focused-foreground = #000000
-label-focused-background = #ffffff
+label-focused-foreground = #ffffff
+label-focused-background = #cf112b
 label-focused-padding = 1
 
 label-unfocused = %name%
@@ -293,7 +293,7 @@ label-visible-background = ${colors.background-alt}
 label-visible-padding = 1
 
 label-urgent = %name%
-label-urgent-background = #f96a6a
+label-urgent-background = #e8ff24
 label-urgent-padding = 1
 
 ; Modulo mpd
@@ -328,7 +328,7 @@ bar-progress-empty = ""
 ;label-song =  %title%
 ;label-song-maxlen = 25
 ;label-song-ellipsis = true
-label-song = %{F#ffffff}%{F-} %title%%{F-}
+label-song = %{F#cf112b}%{F-} %title%%{F-}
 
 ; Modulo xbacklight
 
@@ -391,8 +391,8 @@ time = %I:%M %p
 
 
 format-prefix = "  "
-format-prefix-foreground = #ffffff
-;format-underline = #ffffff
+format-prefix-foreground = #cf112b
+;format-underline = #cf112b
 
 label = %date% %time%
 
@@ -432,13 +432,15 @@ type = internal/alsa
 
 format-volume = <label-volume>
 format-volume-prefix = " 墳 "
-format-volume-prefix-foreground = #ffffff
+format-volume-prefix-foreground = #cf112b
 label-volume = %percentage%%
-;format-volume-underline = #ffffff
+;format-volume-underline = #cf112b
 
 format-muted-prefix = " "
-format-muted-foreground = #fc4141
-format-muted-underline = #fc4141
+;format-muted-foreground = #fc4141
+;format-muted-underline = #fc4141
+format-muted-foreground = #ffffff
+format-muted-underline = #ffffff
 label-muted = Muted
 
 bar-volume-width = 10
@@ -537,13 +539,13 @@ expand-right = true
 format-spacing = 2
 
 label-open = "  "
-label-open-foreground = #ffffff
+label-open-foreground = #cf112b
 ;format-underline = #938d8d
 ;label-open-foreground = ${colors.secondary}
 label-close = | Cancelar
 label-close-foreground = #fc4141
 label-separator =|
-label-separator-foreground = #ffffff
+label-separator-foreground = #cf112b
 
 menu-0-0 = "Sair"
 menu-0-0-exec = menu-open-1
@@ -695,7 +697,7 @@ exec = date "+%a %d %b, %Y"
 ;exec = date "+%a %d %b, %Y - %H:%M"
 ;exec = date "+%a %d, %b"
 ;exec = date "+%a %d/%b %H:%M:%S"
-label = "%{F#ffffff}  %{F-} %output:0:37:...%"
+label = "%{F#cf112b}  %{F-} %output:0:37:...%"
 format-underline = #33fcff
 ;click-left = gsimplecal &
 ;click-left = exec $HOME/Scripts/calendario.sh
