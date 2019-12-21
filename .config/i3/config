@@ -460,18 +460,15 @@ bindsym XF86AudioMute exec --no-startup-id pactl set-sink-mute 0 toggle
 # screen before suspend. Use loginctl lock-session to lock your screen.
 #exec --no-startup-id xss-lock --transfer-sleep-lock -- i3lock --nofork
 exec_always --no-startup-id $HOME/.config/polybar/scripts/launcher.sh
-#exec_always --no-startup-id feh --bg-fill $HOME/Franks/Wallpapers/035.png
-exec_always --no-startup-id feh --bg-fill $HOME/Franks/Wallpapers/093.jpg
-#exec_always --no-startup-id feh --bg-fill $HOME/Franks/Wallpapers/022.jpg
+exec_always --no-startup-id feh --bg-fill $HOME/Franks/Wallpapers/190.png
 #exec feh --bg-scale "$(find $HOME/Franks/Wallpapers/ -name "*[jJpP][nNpP][gG]" | shuf -n1)"
 #exec --no-startup-id compton -b --respect-prop-shadow
 #exec --no-startup-id compton --active-opacity 0.9 --blur-background
 exec --no-startup-id picom --config ~/.config/picom/picom.conf
 exec --no-startup-id dunst -b
 exec --no-startup-id xautolock -time 3 -detectsleep -locker $HOME/Scripts/fortune.sh
-#exec --no-startup-id $HOME/Scripts/mpd-notify.sh &
+exec --no-startup-id $HOME/Scripts/mpd-notify.sh &
 exec --no-startup-id mpd &
-#exec --no-startup-id $HOME/Scripts/mpd-notify.sh &
 #exec  --no-startup-id polybar -r top &
 #exec --no-startup-id polybar -r bottom &
 #exec --no-startup-id compton &
@@ -480,7 +477,6 @@ exec --no-startup-id numlockx on &
 exec --no-startup-id blueman-applet
 exec --no-startup-id flameshot &
 exec --no-startup-id setxkbmap -model abnt2 -layout br -variant abnt2 &
-exec --no-startup-id $HOME/Scripts/mpd-notify.sh
 ####################################################################
 ################ I3STATUS ##########################################
 ####################################################################
