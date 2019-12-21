@@ -470,7 +470,7 @@ exec --no-startup-id picom --config ~/.config/picom/picom.conf
 exec --no-startup-id dunst -b
 exec --no-startup-id xautolock -time 3 -detectsleep -locker $HOME/Scripts/fortune.sh
 #exec --no-startup-id $HOME/Scripts/mpd-notify.sh &
-#exec --no-startup-id mpd &
+exec --no-startup-id mpd &
 #exec --no-startup-id $HOME/Scripts/mpd-notify.sh &
 #exec  --no-startup-id polybar -r top &
 #exec --no-startup-id polybar -r bottom &
@@ -480,7 +480,7 @@ exec --no-startup-id numlockx on &
 exec --no-startup-id blueman-applet
 exec --no-startup-id flameshot &
 exec --no-startup-id setxkbmap -model abnt2 -layout br -variant abnt2 &
-
+exec --no-startup-id $HOME/Scripts/mpd-notify.sh
 ####################################################################
 ################ I3STATUS ##########################################
 ####################################################################
