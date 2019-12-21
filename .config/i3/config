@@ -49,7 +49,7 @@ hide_edge_borders smart
 set_from_resource $bg background
 
 # classe                borda   fundo   texto   ind.    borda filho
-client.focused          #ffffff #474747 #ffffff #ffffff   #ffffff
+client.focused          #ffffff #474747 #ffffff #ffffff   #cf112b
 client.focused_inactive #ffffff #ffffff #ffffff #ffffff   #1d1d1d
 client.unfocused        #ffffff #474747 #ffffff #ffffff   #333333
 client.urgent           #2f343a #900000 #ffffff #900000   #900000
@@ -159,8 +159,8 @@ bindsym $mod+Shift+c move position center
 
 # Launchers
 
-#bindsym $mod+d exec dmenu_run
-bindsym $mod+d exec --no-startup-id rofi -show drun -theme ~/.config/rofi/drun.rasi
+bindsym $mod+d exec dmenu_run
+#bindsym $mod+d exec --no-startup-id rofi -show drun -theme ~/.config/rofi/drun.rasi
 #bindsym $mod+d exec synapse
 
 # Lock
@@ -180,9 +180,9 @@ set $ws4 "4: "
 set $ws5 "5: "
 set $ws6 "6: "
 set $ws7 "7: "
-set $ws8 "8:
-set $ws9 "9:"
-set $ws10 "10:"
+set $ws8 "8: "
+set $ws9 "9: "
+set $ws10 "10: "
 
 #set $ws1 "1"
 #set $ws2 "2"
@@ -461,7 +461,7 @@ bindsym XF86AudioMute exec --no-startup-id pactl set-sink-mute 0 toggle
 #exec --no-startup-id xss-lock --transfer-sleep-lock -- i3lock --nofork
 exec_always --no-startup-id $HOME/.config/polybar/scripts/launcher.sh
 #exec_always --no-startup-id feh --bg-fill $HOME/Franks/Wallpapers/035.png
-exec_always --no-startup-id feh --bg-fill $HOME/Franks/Wallpapers/176.jpg
+exec_always --no-startup-id feh --bg-fill $HOME/Franks/Wallpapers/093.jpg
 #exec_always --no-startup-id feh --bg-fill $HOME/Franks/Wallpapers/022.jpg
 #exec feh --bg-scale "$(find $HOME/Franks/Wallpapers/ -name "*[jJpP][nNpP][gG]" | shuf -n1)"
 #exec --no-startup-id compton -b --respect-prop-shadow
