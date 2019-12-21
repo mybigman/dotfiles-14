@@ -159,8 +159,8 @@ bindsym $mod+Shift+c move position center
 
 # Launchers
 
-bindsym $mod+d exec dmenu_run
-#bindsym $mod+d exec --no-startup-id rofi -show drun -theme ~/.config/rofi/drun.rasi
+#bindsym $mod+d exec dmenu_run
+bindsym $mod+d exec --no-startup-id rofi -show drun -theme ~/.config/rofi/drun.rasi
 #bindsym $mod+d exec synapse
 
 # Lock
@@ -229,13 +229,16 @@ assign [class="(firefox)"] $ws1
 # Terminal ws=2
 for_window [class="(Alacritty)"] move to workspace $ws2, floating enable, move position center
 
-# File Manager ws=3
+# Telegram ws=4
 for_window [class="(Telegram)"] move to workspace $ws3, floating enable, move position center
 
-# Telegram ws=4
+# Thunar ws=3
 for_window [class="(Thunar)"] move to workspace $ws4, floating enable, move position center
 
-# Telegram ws=5
+# Nautilus ws=3
+for_window [class="(Nautilus)"] move to workspace $ws4, floating enable, move position center
+
+# Deezer ws=5
 for_window [class="(Deezer)"] move to workspace $ws5, floating enable, move position center
 
 # Gimp ws=6
@@ -273,7 +276,7 @@ for_window [class="(Telegram)"]floating enable, move position center
 
 # Thunar (Gerenciador de arquivos)
 
-for_window [class="(Thunar)"]floating enable, move position center
+for_window [class="(Thunar)"]floating enable, move position centerR
 
 # VLC (Player de música/Vídeo)
 
@@ -458,7 +461,7 @@ bindsym XF86AudioMute exec --no-startup-id pactl set-sink-mute 0 toggle
 #exec --no-startup-id xss-lock --transfer-sleep-lock -- i3lock --nofork
 exec_always --no-startup-id $HOME/.config/polybar/scripts/launcher.sh
 #exec_always --no-startup-id feh --bg-fill $HOME/Franks/Wallpapers/035.png
-exec_always --no-startup-id feh --bg-fill $HOME/Franks/Wallpapers/162.png
+exec_always --no-startup-id feh --bg-fill $HOME/Franks/Wallpapers/176.jpg
 #exec_always --no-startup-id feh --bg-fill $HOME/Franks/Wallpapers/022.jpg
 #exec feh --bg-scale "$(find $HOME/Franks/Wallpapers/ -name "*[jJpP][nNpP][gG]" | shuf -n1)"
 #exec --no-startup-id compton -b --respect-prop-shadow
