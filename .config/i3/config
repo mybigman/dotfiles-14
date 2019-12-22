@@ -49,7 +49,7 @@ hide_edge_borders smart
 set_from_resource $bg background
 
 # classe                borda   fundo   texto   ind.    borda filho
-client.focused          #ffffff #474747 #ffffff #ffffff   #cf112b
+client.focused          #ffffff #474747 #ffffff #ffffff   #f8f8f9
 client.focused_inactive #ffffff #ffffff #ffffff #ffffff   #1d1d1d
 client.unfocused        #ffffff #474747 #ffffff #ffffff   #333333
 client.urgent           #2f343a #900000 #ffffff #900000   #900000
@@ -80,8 +80,8 @@ bindsym $mod+Shift+x exec glava &
 bindsym $mod+m exec $HOME/Scripts/gravar.sh
 
 # Printar Tela
-#bindsym $mod+c exec bash -c 'scrot "$HOME/Imagens/Captura de tela de %d-%m-%Y %H:%M:%S.png"' &
-bindsym $mod+c exec bash -c 'maim "$HOME/Imagens/Captura de tela de %d-%m-%Y %H:%M:%S.png"' &
+bindsym $mod+c exec bash -c 'scrot "$HOME/Imagens/Captura de tela de %d-%m-%Y %H:%M:%S.png"' &
+#bindsym $mod+c exec bash -c 'maim "$HOME/Imagens/Captura de tela de %d-%m-%Y %H:%M:%S.png"' &
 bindsym $mod+z exec scrot -d 5 &
 
 # Iniciar terminal
@@ -159,8 +159,8 @@ bindsym $mod+Shift+c move position center
 
 # Launchers
 
-bindsym $mod+d exec dmenu_run
-#bindsym $mod+d exec --no-startup-id rofi -show drun -theme ~/.config/rofi/drun.rasi
+#bindsym $mod+d exec dmenu_run
+bindsym $mod+d exec --no-startup-id rofi -show drun -theme ~/.config/rofi/drun.rasi
 #bindsym $mod+d exec synapse
 
 # Lock
@@ -460,7 +460,7 @@ bindsym XF86AudioMute exec --no-startup-id pactl set-sink-mute 0 toggle
 # screen before suspend. Use loginctl lock-session to lock your screen.
 #exec --no-startup-id xss-lock --transfer-sleep-lock -- i3lock --nofork
 exec_always --no-startup-id $HOME/.config/polybar/scripts/launcher.sh
-exec_always --no-startup-id feh --bg-fill $HOME/Franks/Wallpapers/190.png
+exec_always --no-startup-id feh --bg-fill $HOME/Franks/Wallpapers/093.jpg
 #exec feh --bg-scale "$(find $HOME/Franks/Wallpapers/ -name "*[jJpP][nNpP][gG]" | shuf -n1)"
 #exec --no-startup-id compton -b --respect-prop-shadow
 #exec --no-startup-id compton --active-opacity 0.9 --blur-background
