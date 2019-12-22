@@ -145,7 +145,7 @@ colors:
   # Default colors
   primary:
     background: '0x141414'
-    foreground: '0xffffff'
+    foreground: '0xf8f8f9'
 
     # Bright and dim foreground colors
     #
@@ -168,22 +168,22 @@ colors:
     black:   '0x141414'
     red:     '0xdf2020'
     green:   '0x02760a'
-    yellow:  '0xffffff'
+    yellow:  '0xf8f8f9'
     blue:    '0xcdae9c'
     magenta: '0xb981f4'
     cyan:    '0x26f5ff'
-    white:   '0xffffff'
+    white:   '0xf8f8f9'
 
   # Bright colors
   bright:
     black:   '0x141414'
     red:     '0xdf2020'
     green:   '0x02760a'
-    yellow:  '0xffffff'
+    yellow:  '0xf8f8f9'
     blue:    '0xcdae9c'
     magenta: '0xb981f4'
     cyan:    '0x26f5ff'
-    white:   '0xffffff'
+    white:   '0xf8f8f9'
 
     # Normal colors - Cores Originais
  # normal:
