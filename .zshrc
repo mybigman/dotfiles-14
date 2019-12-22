@@ -109,6 +109,9 @@ source $ZSH/oh-my-zsh.sh
   alias pull="git pull"
   alias mine="java -jar $HOME/Franks/Minecraft.jar"
   alias 10k="git clone --depth=1 https://github.com/romkatv/powerlevel10k.git $ZSH_CUSTOM/themes/powerlevel10k"
+  alias 9k="git clone https://github.com/bhilburn/powerlevel9k.git ~/.oh-my-zsh/custom/themes/powerlevel9k"
+  alias d10k="rm -rf .oh-my-zsh/custom/themes/powerlevel10k/"
+  alias d9k="rm -rf .oh-my-zsh/custom/themes/powerlevel9k/"
 
   #Aliase scripts
   alias pipes="$HOME/Scripts/pipes.sh"
