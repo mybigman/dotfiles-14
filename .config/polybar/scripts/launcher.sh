@@ -1,6 +1,6 @@
 #!/usr/bin/env sh
 # Credit: Franklin Souza
-# Telegra: @FranklinTech
+# Telegram: @FranklinTech
 
 # Se quiser só a bar de baixo, comenta a (polybar -q top &) se quiser só a bar de cima comenta a (polybar -q bottom &)
 # E se quiser as duas, deixa ambas descomentas
