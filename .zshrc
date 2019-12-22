@@ -77,6 +77,8 @@ POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS=()
 #plugins=(git)
 
 source $ZSH/oh-my-zsh.sh
+#source ~/powerlevel10k/powerlevel10k.zsh-theme
+
 
 # My aliases
   alias x="startx"
