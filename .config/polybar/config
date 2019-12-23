@@ -15,11 +15,11 @@
 
 [colors]
 ;background = ${xrdb:color0:#222}
-background = #131313
+background = #0d1015
 ;background = #222
 background-alt = #444
 ;foreground = ${xrdb:color7:#222}
-foreground = #f8f8f9
+foreground = #fa7f18
 foreground-alt = #555
 primary = #ffb52a
 secondary = #000000
@@ -42,7 +42,7 @@ foreground = ${colors.foreground}
 ;line-color = #938d8d
 
 ;border-size = 1
-;border-color = #f8f8f9
+;border-color = #fa7f18
 
 padding-left = 0
 padding-right = 2
@@ -62,7 +62,7 @@ font-2 = "Hack Nerd Font:style=Regular:pixelsize=11;1"
 ;separator =|
 
 modules-left = weather
-modules-right =  alsa calendar date
+modules-right = user pacman alsa filesystem calendar date
 modules-center = linux
 
 ;Icone-Background
@@ -103,7 +103,7 @@ foreground = ${colors.foreground}
 ;line-color = ${colors.alert}
 
 ;border-size = 1
-;border-color = #f8f8f9
+;border-color = #fa7f18
 
 padding-left = 1
 padding-right = 1
@@ -124,7 +124,7 @@ font-2 = "Hack Nerd Font:style=Regular:pixelsize=10;2"
 
 modules-left = i3
 modules-center = uptime
-modules-right = powermenu lock print
+modules-right = powermenu lock print bluetooth
 
 ;Icone-Background
 
@@ -173,7 +173,7 @@ label-indicator-underline = #f9f9f9
 type = custom/script
 interval = 1
 exec = ~/.config/polybar/scripts/uptime.sh
-label = "%{F#f8f8f9}%{F-} %output:0:37:...%"
+label = "%{F#fa7f18}%{F-} %output:0:37:...%"
 ;format-suffix = " "
 format = <label>
 format-suffix-foreground = #ffffff
@@ -191,9 +191,9 @@ mount-0 = /home
 ;spacing = 2
 
 format-mounted-prefix = "  "
-format-mounted-prefix-foreground = #cf112b
-label-mounted-underline = #cf112b
-;format-mounted-prefix-underline = #cf112b
+format-mounted-prefix-foreground = #fa7f18
+label-mounted-underline = #fa7f18
+;format-mounted-prefix-underline = #fa7f18
 format = <label>
 
 format-mounted = <label-mounted>
@@ -282,7 +282,7 @@ label-mode-padding = 1
 
 label-focused = %name%
 label-focused-foreground = #000000
-label-focused-background = #f8f8f9
+label-focused-background = #fa7f18
 label-focused-padding = 1
 
 label-unfocused = %name%
@@ -328,7 +328,7 @@ bar-progress-empty = ""
 ;label-song =  %title%
 ;label-song-maxlen = 25
 ;label-song-ellipsis = true
-label-song = %{F#cf112b}%{F-} %title%%{F-}
+label-song = %{F#fa7f18}%{F-} %title%%{F-}
 
 ; Modulo xbacklight
 
@@ -391,8 +391,8 @@ time = %I:%M %p
 
 
 format-prefix = "  "
-format-prefix-foreground = #f8f8f9
-;format-underline = #f8f8f9
+format-prefix-foreground = #fa7f18
+;format-underline = #fa7f18
 
 label = %date% %time%
 
@@ -432,9 +432,9 @@ type = internal/alsa
 
 format-volume = <label-volume>
 format-volume-prefix = " 墳 "
-format-volume-prefix-foreground = #f8f8f9
+format-volume-prefix-foreground = #fa7f18
 label-volume = %percentage%%
-;format-volume-underline = #f8f8f9
+;format-volume-underline = #fa7f18
 
 format-muted-prefix = " "
 format-muted-foreground = #fc4141
@@ -539,13 +539,13 @@ expand-right = true
 format-spacing = 2
 
 label-open = "  "
-label-open-foreground = #f8f8f9
+label-open-foreground = #fa7f18
 ;format-underline = #938d8d
 ;label-open-foreground = ${colors.secondary}
 label-close = | Cancelar
 label-close-foreground = #fc4141
 label-separator =|
-label-separator-foreground = #f8f8f9
+label-separator-foreground = #fa7f18
 
 menu-0-0 = "Sair"
 menu-0-0-exec = menu-open-1
@@ -610,12 +610,12 @@ click-left = vlc &
 
 [module/user]
 type = custom/text
-content = "%{F#ffffff}  %{F-} Frank"
+content = "%{F#fa7f18}  %{F-} Frank"
 content-underline = #8df8d8
 
 [module/linux]
 type = custom/text
-content = "%{F#ffffff}%{F-} Arch Linux"
+content = "%{F#fa7f18}%{F-} Arch Linux"
 ;content-underline = #ff00d1
 
 [module/wall]
@@ -636,9 +636,9 @@ click-left = i3-msg restart &
 
 [module/print]
 type = custom/text
-content = "%{F#ffffff}  %{F-}"
+content = "%{F#fa7f18}  %{F-}"
 ;content-underline = #f4f4f4
-;click-left = bash -c 'scrot "$HOME/Imagens/Captura de tela de %d-%m-%Y %H:%M:%S.png"' &
+;click-left = bash -c 'maim "$HOME/Imagens/Captura de tela de %d-%m-%Y %H:%M:%S.png"' &
 click-left = bash -c 'scrot "$HOME/Imagens/Captura de tela de %d-%m-%Y %H:%M:%S.png"' &
 
 [module/torrent]
@@ -654,8 +654,8 @@ content = "%{F#cdae9c}%{F-}"
 [module/lock]
 type = custom/text
 content = "  "
-content-foreground = #ffffff
-;content-underline = #ffffff
+content-foreground = #fa7f18
+;content-underline = #fa7f18
 click-left = $HOME/Scripts/fortune.sh &
 
 [module/twitch]
@@ -672,7 +672,7 @@ click-left = firefox https://github.com/fffranks &
 type = custom/script
 interval = 1
 exec = pacman -Qq | wc -l
-label = "%{F#ffffff}  %{F-} %output:0:37:...%"
+label = "%{F#fa7f18}  %{F-} %output:0:37:...%"
 format-underline = #7d33ff
 
 [module/kernel]
@@ -685,7 +685,7 @@ format-underline = #fe8ac6
 type = custom/script
 interval = 1
 exec = $HOME/.config/polybar/scripts/weather.sh
-label = "%{F#f8f8f9}  %{F-} %output:0:37:...%"
+label = "%{F#fa7f18}  %{F-} %output:0:37:...%"
 ;click-left = firefox https://openweathermap.org/city/3387130
 ;format-underline = #cecece
 ;format-foreground = #cecece
@@ -697,7 +697,7 @@ exec = date "+%a %d %b, %Y"
 ;exec = date "+%a %d %b, %Y - %H:%M"
 ;exec = date "+%a %d, %b"
 ;exec = date "+%a %d/%b %H:%M:%S"
-label = "%{F#f8f8f9}  %{F-} %output:0:37:...%"
+label = "%{F#fa7f18}  %{F-} %output:0:37:...%"
 format-underline = #33fcff
 ;click-left = gsimplecal &
 ;click-left = exec $HOME/Scripts/calendario.sh
@@ -741,8 +741,8 @@ click-left = exec $HOME/Scripts/gravar.sh
 type = custom/text
 content = "  "
 ;content = "  "
-content-foreground = #ffffff
-;content-underline = #ffffff
+content-foreground = #fa7f18
+;content-underline = #fa7f18
 click-left = exec blueman-manager &
 ;click-left = exec blueman-applet &
 ;click-right = exec blueman-manager &
