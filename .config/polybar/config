@@ -751,7 +751,7 @@ click-right = exec killall blueman-manager &
 [module/ethernet]
 type = internal/network
 interface = enp3s0
-interval = 0.1
+interval = 1.0
 
 format-packetloss = <animation-packetloss>
 format-connected = <label-connected>
@@ -764,7 +764,7 @@ label-disconnected-foreground = #fe2020
 [module/wireless]
 type = internal/network
 interface = wlp3s0
-interval = 0.1
+interval = 1.0
 
 format-connected = <label-connected> <ramp-signal>
 format-packetloss = <animation-packetloss>
@@ -783,4 +783,3 @@ ramp-signal-4 = 
 ramp-signal-4-foreground = #BADE72
 ramp-signal-5 = 
 ramp-signal-5-foreground = #96DE72
-
