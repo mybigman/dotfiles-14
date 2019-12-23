@@ -124,7 +124,7 @@ font-2 = "Hack Nerd Font:style=Regular:pixelsize=10;2"
 
 modules-left = i3
 modules-center = uptime
-modules-right = powermenu lock print bluetooth
+modules-right = powermenu lock print bluetooth ethernet
 
 ;Icone-Background
 
@@ -747,3 +747,40 @@ click-left = exec blueman-manager &
 ;click-left = exec blueman-applet &
 ;click-right = exec blueman-manager &
 click-right = exec killall blueman-manager &
+
+[module/ethernet]
+type = internal/network
+interface = enp3s0
+interval = 0.1
+
+format-packetloss = <animation-packetloss>
+format-connected = <label-connected>
+format-disconnected = <label-disconnected>
+label-connected =  Conectado
+label-connected-foreground = #64ff33
+label-disconnected =  Desconectado
+label-disconnected-foreground = #fe2020
+
+[module/wireless]
+type = internal/network
+interface = wlp3s0
+interval = 0.1
+
+format-connected = <label-connected> <ramp-signal>
+format-packetloss = <animation-packetloss>
+label-connected = %upspeed%   %downspeed%  %essid%
+label-connected-foreground = #ffffff
+
+ramp-signal-0 = 
+ramp-signal-0-foreground = #BD574C
+ramp-signal-1 = 
+ramp-signal-1-foreground = #FF8066
+ramp-signal-2 = 
+ramp-signal-2-foreground = #F5DE72
+ramp-signal-3 = 
+ramp-signal-3-foreground = #D8DE72
+ramp-signal-4 = 
+ramp-signal-4-foreground = #BADE72
+ramp-signal-5 = 
+ramp-signal-5-foreground = #96DE72
+
