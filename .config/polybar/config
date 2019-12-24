@@ -124,7 +124,7 @@ font-2 = "Hack Nerd Font:style=Regular:pixelsize=10;2"
 
 modules-left = i3
 modules-center = uptime
-modules-right = powermenu lock print bluetooth ethernet
+modules-right = ethernet bluetooth lock print powermenu
 
 ;Icone-Background
 
