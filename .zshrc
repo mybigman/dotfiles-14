@@ -115,6 +115,9 @@ source $ZSH/oh-my-zsh.sh
   alias 9k="git clone https://github.com/bhilburn/powerlevel9k.git ~/.oh-my-zsh/custom/themes/powerlevel9k"
   alias d10k="rm -rf .oh-my-zsh/custom/themes/powerlevel10k/"
   alias d9k="rm -rf .oh-my-zsh/custom/themes/powerlevel9k/"
+  alias infoo="sudo cpu-x"
+
+
 
   #Aliase scripts
   alias pipes="$HOME/Scripts/pipes.sh"
