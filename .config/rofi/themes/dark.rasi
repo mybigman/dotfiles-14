@@ -35,6 +35,10 @@
     background-color: @background;
     border:           1;
     padding:          2;
+    height:           200px;
+    width:            400px;
+    x-offset:         0;
+    y-offset:         0;
 }
 
 #mainbox {
