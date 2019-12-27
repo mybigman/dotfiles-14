@@ -116,6 +116,8 @@ source $ZSH/oh-my-zsh.sh
   alias d10k="rm -rf .oh-my-zsh/custom/themes/powerlevel10k/"
   alias d9k="rm -rf .oh-my-zsh/custom/themes/powerlevel9k/"
   alias infoo="sudo cpu-x"
+  alias nup="sudo ip link set enp3s0 up"
+  alias ndow="sudo ip link set enp3s0 down"
 
 
 
