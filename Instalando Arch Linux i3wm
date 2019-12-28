@@ -151,6 +151,6 @@ systemctl enable lxdm.service
 
 ➜ Configurar o .xinitrc
 su - USER
-vim echo exec i3 > ~/.xinitrc
+echo exec i3 > ~/.xinitrc
 
 # FINALIZADA INSTALAÇÃO do Arch Linux + I3wm
