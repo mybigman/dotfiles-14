@@ -142,14 +142,26 @@ pacman -S xorg xorg-xinit ttf-dejavu pulseaudio-alsa pavucontrol --noconfirm
 pacman -S i3 
 #(Opções: 1,4)
 
-➜ Pacotes necessarios
+➜ Pacotes necessarios (OPCIONAL)
 pacman -S dmenu alacritty feh viewnior imagemagick w3m lxappearance git wget howl thunar firefox-i18n-pt-br scrot flameshot blueman pulseaudio-bluetooth --noconfirm
+
+➜ Baixando Plasma
+pacman -S plasma # Plasma Completo
+pacman -S plasma-desktop # Plasma Minimal
+
+➜ Baixando XFCE
+pacman -S xfce4 # XFCE minimal
+pacman -S xfce4-goodies # XFCE com alguns pacotes extras inclusos
+
+➜ Baixando Cinnamon
+pacman -S cinnamon # Interface do Cinnamon (OBS: ESSA INTERFACE VEM SEM TERMINAL BAIXE UM)
+pacman -S xfce4-terminal # Terminal
 
 ➜ Tele de login (Opcional)
 pacman -S lxdm --noconfirm
 systemctl enable lxdm.service
 
-➜ Configurar o .xinitrc
+➜ Configurar o .xinitrc (OPCIONAL, PARA INICIAR O I3WM PELO STARTX)
 su - USER
 echo exec i3 > ~/.xinitrc
 
