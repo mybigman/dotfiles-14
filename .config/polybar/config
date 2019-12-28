@@ -44,8 +44,8 @@ foreground = ${colors.foreground}
 ;border-size = 1
 ;border-color = #ffffff
 
-padding-left = 0
-padding-right = 1
+padding-left = 1
+padding-right = 2
 
 module-margin-left = 0
 module-margin-right = 2
@@ -106,8 +106,8 @@ foreground = ${colors.foreground}
 ;border-size = 1
 ;border-color = #ffffff
 
-padding-left = 0
-padding-right = 1
+padding-left = 1
+padding-right = 2
 
 module-margin-left = 0
 module-margin-right = 1
