@@ -31,7 +31,7 @@ alert = #ff0000
 monitor = ${env:MONITOR:VGA-0}
 dpi = 80
 width = 100%
-height = 20
+height = 25
 radius = 0
 fixed-center = true
 
@@ -45,7 +45,7 @@ foreground = ${colors.foreground}
 ;border-color = #ffffff
 
 padding-left = 0
-padding-right = 2
+padding-right = 1
 
 module-margin-left = 0
 module-margin-right = 2
@@ -61,9 +61,9 @@ font-2 = "Hack Nerd Font:style=Regular:pixelsize=11;1"
 ; Separator
 ;separator =|
 
-modules-left = weather
-modules-right = user pacman alsa filesystem calendar date
-modules-center = linux
+modules-left = kernel
+modules-right = alsa calendar date
+modules-center = weather
 
 ;Icone-Background
 
@@ -93,6 +93,7 @@ monitor = ${env:MONITOR:VGA-0}
 dpi = 95
 width = 100%
 height = 20
+radius = 0
 fixed-center = true
 bottom = true
 
@@ -100,12 +101,12 @@ background = ${colors.background}
 foreground = ${colors.foreground}
 
 ;line-size = 1
-;line-color = ${colors.alert}
+;line-color = #ffffff
 
 ;border-size = 1
 ;border-color = #ffffff
 
-padding-left = 1
+padding-left = 0
 padding-right = 1
 
 module-margin-left = 0
@@ -123,8 +124,8 @@ font-2 = "Hack Nerd Font:style=Regular:pixelsize=10;2"
 ;MÓDULOS BOTTOM BAR
 
 modules-left = i3
-modules-center = uptime
-modules-right = ethernet bluetooth lock print powermenu
+modules-center = linux
+modules-right = gravar bluetooth lock print ethernet powermenu
 
 ;Icone-Background
 
@@ -673,12 +674,13 @@ type = custom/script
 interval = 1
 exec = pacman -Qq | wc -l
 label = "%{F#ffffff}  %{F-} %output:0:37:...%"
-format-underline = #7d33ff
+;format-underline = #ff33e6
+;format-background = #ff33e6
 
 [module/kernel]
 type = custom/script
 exec = uname -r
-label = "%{F#938d8d}  %{F-} %output:0:37:...%"
+label = "%{F#ffffff}  %{F-} %output:0:37:...%"
 format-underline = #fe8ac6
 
 [module/weather]
@@ -731,11 +733,13 @@ type = custom/script
 exec = $HOME/.config/polybar/scripts/network-traffic.sh
 tail = true
 
-[module/screencast]
-type = custom/text
-content = "%{F#938d8d}  %{F-}"
-click-left = exec $HOME/Scripts/gravar.sh
-;click-right = exec $HOME/Scripts/stopgravar.sh
+[module/gravar]
+type = custom/script
+interval = 1
+label = %output%
+click-left = termite -e $HOME/Scripts/gravar.sh &
+exec = $HOME/Scripts/gravar.sh status
+tail = true
 
 [module/bluetooth]
 type = custom/text
@@ -756,9 +760,9 @@ interval = 1.0
 format-packetloss = <animation-packetloss>
 format-connected = <label-connected>
 format-disconnected = <label-disconnected>
-label-connected =  Conectado
+label-connected =  Online
 label-connected-foreground = #64ff33
-label-disconnected =  Desconectado
+label-disconnected =  Offline
 label-disconnected-foreground = #fe2020
 
 [module/wireless]
