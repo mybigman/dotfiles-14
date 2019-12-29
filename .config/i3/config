@@ -156,7 +156,6 @@ bindsym $mod+Shift+space floating toggle
   bindsym $mod+Shift+r restart
 
 # Launchers
-
 bindsym $mod+d exec dmenu_run
 #bindsym $mod+d exec --no-startup-id rofi -show drun -theme ~/.config/rofi/drun.rasi
 #bindsym $mod+d exec synapse
