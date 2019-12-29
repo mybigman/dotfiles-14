@@ -160,7 +160,31 @@ bindsym $mod+Shift+c move position center
 # Launchers
 
 #bindsym $mod+d exec dmenu_run
-bindsym $mod+d exec --no-startup-id rofi -show drun -theme ~/.config/rofi/drun.rasi
+bindsym $mod+d exec
+bindsym $mod+f fullscreen toggle
+
+# change container layout (stacked, tabbed, toggle split)
+bindsym $mod+s layout stacking
+bindsym $mod+w layout tabbed
+bindsym $mod+e layout toggle split
+
+# Tela maximizada/floating
+bindsym $mod+Shift+space floating toggle
+
+# change focus between tiling / floating windows
+bindsym $mod+space focus mode_toggle
+
+# Centro
+bindsym $mod+Shift+c move position center
+
+# Restartar i3
+  bindsym $mod+Shift+r restart
+
+# Launchers
+
+bindsym $mod+d exec dmenu_run
+#bindsym $mod+d exec --no-startup-id rofi -show drun -theme ~/.config/rofi/drun.rasi
+#bindsym $mod+d exec synapse --no-startup-id rofi -show drun -theme ~/.config/rofi/drun.rasi
 #bindsym $mod+d exec synapse
 
 # Lock
