@@ -1,0 +1,168 @@
+################################################################################################
+# Criador: Franklin Souza
+# Telegram: @FranklinTech                                                                                                                                                             
+#
+# ESSE TUTORIAL FOI REALIZADO EM UM COMPUTADOR DESKTOP, UTILIZANDO REDE CABEADA EM LEGACY E UEFI
+# Não responsabilizo por danos, essa é MINHA INSTALAÇÃO, só estou salvando aqui caso eu precise 
+# SE QUISER FAZER O TESTE, FAÇA EM UMA VM (VIRTUAL MACHINE)
+# Recomendo ler: https://wiki.archlinux.org/index.php/Installation_guide_(Portugu%C3%AAs) 
+################################################################################################
+################################################################################################
+
+➜ Layout teclado
+loadkeys br-abnt2
+
+➜ Mudar tamanho da fonte
+setfont lat4-19
+
+➜ Mudar idioma da instalação
+nano /etc/locale.gen
+
+➜ Descomentar a linha:
+#pt_BR.UTF-8
+
+➜ Execute os comandos:
+locale-gen
+export LANG=pt_BR.UTF-8
+
+➜ Atualizar base de dados
+pacman -Syy
+
+➜ Suporte para chaves
+pacman -S archlinux-keyring
+
+➜ Separar as partições
+cfdisk
+
+➜ Formatar as partições
+mkfs.vfat -F32 # Formatar BOOT UEFI
+mkfs.ext4 # Formatar partição
+mkswpap # Formatar swap (caso tenha)
+
+➜ Montar partições
+mount # Montar as partições
+swapon # Montar swap (caso tenha)
+mkdir -p /mnt/boot/efi && mount /dev/sdaX /mnt/boot/efi
+
+➜ Instalar sistema base
+pacstrap /mnt base dhcpcd vim less man-pages linux-firmware mkinitcpio base-devel
+
+➜ Gerar FSTAB
+genfstab -U /mnt >> /mnt/etc/fstab
+
+➜ Entrar no chroot
+arch-chroot /mnt
+
+➜ Setar o fuso horário do sistema
+ln -sf /usr/share/zoneinfo/America/Recife /etc/localtime
+
+➜ Setar o horário no sistema
+hwclock --systohc
+
+➜ Ativando rede cabeada
+systemctl enable dhcpcd
+
+➜ Mudando o idioma do SISTEMA
+vim /etc/locale.gen
+
+➜ Descomentar linha:
+#pt_BR.UTF-8
+
+➜ Executar comandos
+locale-gen
+echo LANG=pt_BR.UTF-8 > /etc/locale.conf
+export LANG=pt_BR.UTF-8
+
+➜ Configurar o teclado para subir em PT-BR
+echo KEYMAP=br-abnt2 > /etc/vconsole.conf
+
+➜ Colocar nome host
+echo LOCALHOST > /etc/hostname
+
+➜ Baixar kernels (sua preferência)
+pacman -S linux linux-headers ➜ Kernel Stable (default)
+pacman -S linux-hardened linux-hardened-headers ➜ Kernel focado na segurança
+pacman -S linux-lts linux-lts-headers ➜ Kernel a longo prazo
+pacman -S linux-zen linux-zen-headers ➜ Kernel focado em desempenho
+
+➜ Rodar o kernel
+mkinitcpio -P
+
+➜ Configurar repositório
+vim /etc/pacman.conf
+
+➜ Descomentar linha:
+#multilib
+#incluide
+
+➜ Sincronizar repositórios
+pacman -Syy
+
+➜ Senha root
+passwd
+
+➜ Criar user
+useradd -m -g users -G wheel,audio,video,daemon,dbus,disk,rfkill,games,power,lp,optical,scanner,storage,input -s /bin/bash USER
+
+➜ Criar senha para o user
+passwd USER
+
+➜ Editar prioridade SUDO
+vim /etc/sudoers
+
+➜ Descomentar linha:
+# %wheel ALL=(ALL) ALL
+
+➜ Baixar e instalar o GRUB
+# LEGACY
+pacman -S grub
+grub-install /dev/sda
+#############################################################
+# UEFI
+pacman -S grub efibootmgr
+grub-install --target=x86_64-efi --efi-directory=/boot/efi --bootloader-id=FranklinTech --recheck
+
+➜ Caso tenha outro OS instalado
+pacman -S os-prober ntfs-3g --noconfirm
+
+➜ Atualize o GRUB
+grub-mkconfig -o /boot/grub/grub.cfg
+
+➜ Baixar GPU
+Radeon
+pacman -S xf86-video-ati --noconfirm
+
+➜ AMDGPU
+pacman -S xf86-video-amdgpu --noconfirm
+
+➜ Baixar alguns pacotes
+pacman -S xorg xorg-xinit ttf-dejavu pulseaudio-alsa pavucontrol --noconfirm
+
+➜ Baixando i3wm
+pacman -S i3 
+#(Opções: 1,4)
+
+➜ Pacotes necessarios (OPCIONAL)
+pacman -S dmenu alacritty feh viewnior imagemagick w3m lxappearance git wget howl thunar firefox-i18n-pt-br scrot flameshot blueman pulseaudio-bluetooth --noconfirm
+
+➜ Baixando Plasma
+pacman -S plasma # Plasma Completo
+pacman -S plasma-desktop # Plasma Minimal
+
+➜ Baixando XFCE
+pacman -S xfce4 # XFCE minimal
+pacman -S xfce4-goodies # XFCE com alguns pacotes extras inclusos
+
+➜ Baixando Cinnamon
+pacman -S cinnamon # Interface do Cinnamon (OBS: ESSA INTERFACE VEM SEM TERMINAL BAIXE UM)
+pacman -S xfce4-terminal # Terminal
+
+➜ Tele de login (Opcional)
+pacman -S lxdm --noconfirm
+systemctl enable lxdm.service
+
+➜ Configurar o .xinitrc (OPCIONAL, PARA INICIAR O I3WM PELO STARTX)
+su - USER
+echo exec i3 > ~/.xinitrc
+
+# FINALIZADA INSTALAÇÃO do Arch Linux + I3wm
