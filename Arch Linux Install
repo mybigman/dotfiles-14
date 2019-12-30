@@ -12,10 +12,10 @@
 ➜ Layout teclado
 loadkeys br-abnt2
 
-➜ Mudar tamanho da fonte
+➜ Mudar tamanho da fonte (OPCIONAL)
 setfont lat4-19
 
-➜ Mudar idioma da instalação
+➜ Mudar idioma da instalação (OPCIONAL)
 nano /etc/locale.gen
 
 ➜ Descomentar a linha:
@@ -28,7 +28,7 @@ export LANG=pt_BR.UTF-8
 ➜ Atualizar base de dados
 pacman -Syy
 
-➜ Suporte para chaves
+➜ Suporte para chaves (OPCIONAL)
 pacman -S archlinux-keyring
 
 ➜ Separar as partições
@@ -45,24 +45,30 @@ swapon # Montar swap (caso tenha)
 mkdir -p /mnt/boot/efi && mount /dev/sdaX /mnt/boot/efi
 
 ➜ Instalar sistema base
-pacstrap /mnt base dhcpcd vim less man-pages linux-firmware mkinitcpio base-devel
+pacstrap /mnt base linux-firmware base-devel - (base-devel é opcional, mas eu recomendo instalar)
 
 ➜ Gerar FSTAB
-genfstab -U /mnt >> /mnt/etc/fstab
+genfstab -p /mnt >> /mnt/etc/fstab
 
 ➜ Entrar no chroot
 arch-chroot /mnt
 
-➜ Setar o fuso horário do sistema
+➜ Baixar o dhcpcd
+pacman -S dhcpcd
+
+➜ Ativar o dhcpcd
+systemctle enable dhcpcd
+
+➜ Baixando o vim 
+pacman -S vim
+
+➜ Setar o fuso horário do sistema (OPCIONAL)
 ln -sf /usr/share/zoneinfo/America/Recife /etc/localtime
 
 ➜ Setar o horário no sistema
 hwclock --systohc
 
-➜ Ativando rede cabeada
-systemctl enable dhcpcd
-
-➜ Mudando o idioma do SISTEMA
+➜ Mudando o idioma do SISTEMA (OPCIONAL)
 vim /etc/locale.gen
 
 ➜ Descomentar linha:
@@ -87,6 +93,8 @@ pacman -S linux-zen linux-zen-headers ➜ Kernel focado em desempenho
 
 ➜ Rodar o kernel
 mkinitcpio -P
+ou
+mkinitcpio -p (nome do kernel)
 
 ➜ Configurar repositório
 vim /etc/pacman.conf
@@ -129,10 +137,10 @@ pacman -S os-prober ntfs-3g --noconfirm
 grub-mkconfig -o /boot/grub/grub.cfg
 
 ➜ Baixar GPU
-Radeon
+➜ Radeon - GPUs mais antigas 
 pacman -S xf86-video-ati --noconfirm
 
-➜ AMDGPU
+➜ AMDGPU - GPUs mais novas
 pacman -S xf86-video-amdgpu --noconfirm
 
 ➜ Baixar alguns pacotes
