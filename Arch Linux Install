@@ -77,6 +77,9 @@ ln -sf /usr/share/zoneinfo/America/Recife /etc/localtime
 ➜ Setar o horário no sistema
 hwclock --systohc
 
+➜ Time Date
+timedatectl set-ntp true
+
 ➜ Mudando o idioma do SISTEMA (OPCIONAL)
 vim /etc/locale.gen
 
