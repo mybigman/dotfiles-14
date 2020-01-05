@@ -140,7 +140,7 @@ grub-install /dev/sda
 pacman -S grub efibootmgr
 grub-install --target=x86_64-efi --efi-directory=/boot/efi --bootloader-id=Grub_Arch --recheck
 
-➜ Caso tenha outro OS instalado
+➜ Caso tenha outro SO instalado (ntfs-3g é bom para reconhecer o windows)
 pacman -S os-prober ntfs-3g --noconfirm
 
 ➜ Atualize o GRUB
