@@ -56,11 +56,11 @@ arch-chroot /mnt
 # Escolha suas opções
 
 # INTERNET
-# OPÇÃO 1
+# OPÇÃO 1 (Recomenado para rede cabeada)
 pacman -S dhcpcd
 systemctl enable dhcpcd
 
-# Opção 2 (Recomandado para notebooks)
+# Opção 2 (Recomandado para notebooks - Wifi)
 pacman -S networkmanager
 systemctl enable NetworkManager
 
