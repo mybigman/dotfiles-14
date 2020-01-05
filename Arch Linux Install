@@ -60,9 +60,9 @@ arch-chroot /mnt
 pacman -S dhcpcd
 systemctl enable dhcpcd
 
-# Opção 2
+# Opção 2 (Recomandado para notebooks)
 pacman -S networkmanager
-systemctl enable NetworkManager (Recomandado para notebooks)
+systemctl enable NetworkManager
 
 # EDITORES
 # OPÇÃO 1
