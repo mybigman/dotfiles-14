@@ -62,7 +62,7 @@ systemctl enable dhcpcd
 
 # Opção 2
 pacman -S networkmanager
-systemctl enable NetworkManager
+systemctl enable NetworkManager (Recomandado para notebooks)
 
 # EDITORES
 # OPÇÃO 1
