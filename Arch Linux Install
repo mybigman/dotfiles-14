@@ -163,7 +163,7 @@ sudo pacman -S xf86-video-intel --noconfirm
 sudo pacman -S xf86-video-vesa --noconfirm
 
 ➜ GPU Nvidia
-sudo pacman -S f86-video-nouveau --noconfirm
+sudo pacman -S f86-video-nouveau --noconfirm (Nouveau com criticas negativas)
 
 ➜ GPU VB - Virtual Box
 sudo pacman -S virtualbox-guest-utils --noconfirm
