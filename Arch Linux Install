@@ -53,14 +53,23 @@ genfstab -p /mnt >> /mnt/etc/fstab
 ➜ Entrar no chroot
 arch-chroot /mnt
 
-➜ Baixar o dhcpcd
+# Escolha suas opções
+
+# INTERNET
+# OPÇÃO 1
 pacman -S dhcpcd
+systemctl enable dhcpcd
 
-➜ Ativar o dhcpcd
-systemctle enable dhcpcd
+# Opção 2
+pacman -S networkmanager
+systemctl enable NetworkManager
 
-➜ Baixando o vim 
+# EDITORES
+# OPÇÃO 1
 pacman -S vim
+
+# OPÇÃO 2
+pacman -S nano
 
 ➜ Setar o fuso horário do sistema (OPCIONAL)
 ln -sf /usr/share/zoneinfo/America/Recife /etc/localtime
@@ -92,9 +101,7 @@ pacman -S linux-lts linux-lts-headers ➜ Kernel a longo prazo
 pacman -S linux-zen linux-zen-headers ➜ Kernel focado em desempenho
 
 ➜ Rodar o kernel
-mkinitcpio -P
-ou
-mkinitcpio -p (nome do kernel)
+mkinitcpio -p (nome do kernel) # EX: mkinitcpio -p linux
 
 ➜ Configurar repositório
 vim /etc/pacman.conf
@@ -136,41 +143,73 @@ pacman -S os-prober ntfs-3g --noconfirm
 ➜ Atualize o GRUB
 grub-mkconfig -o /boot/grub/grub.cfg
 
+# REBOOTA O SISTEMA E TIRA A MIDIA
+
+# Notebooks para se conectar a internet via wifi usa o comando:
+nmtui
+
+➜ Identificar a VGA:
+lspci | grep VGA
+
 ➜ Baixar GPU
-➜ Radeon - GPUs mais antigas 
-pacman -S xf86-video-ati --noconfirm
+➜ Radeon - GPUs mais antigas (AMD)
+sudo pacman -S xf86-video-ati --noconfirm
 
-➜ AMDGPU - GPUs mais novas
-pacman -S xf86-video-amdgpu --noconfirm
+➜ AMDGPU - GPUs mais novas (AMD)
+sudo pacman -S xf86-video-amgpu --noconfirm
 
-➜ Baixar alguns pacotes
-pacman -S xorg xorg-xinit ttf-dejavu pulseaudio-alsa pavucontrol --noconfirm
+➜ GPU INTEL
+sudo pacman -S xf86-video-intel --noconfirm
+
+➜ GPU Genérico
+sudo pacman -S xf86-video-vesa --noconfirm
+
+➜ GPU Nvidia
+sudo pacman -S f86-video-nouveau --noconfirm
+
+➜ GPU VB - Virtual Box
+sudo pacman -S virtualbox-guest-utils --noconfirm
+
+➜ Baixar alguns pacotes (Xorg-xinit é necessario se quiser iniciar o sistema pelo o startx)
+sudo pacman -S xorg xorg-xinit ttf-dejavu pulseaudio-alsa pavucontrol --noconfirm
 
 ➜ Baixando i3wm
-pacman -S i3 
+sudo pacman -S i3
 #(Opções: 1,4)
 
 ➜ Pacotes necessarios (OPCIONAL)
-pacman -S dmenu alacritty feh viewnior imagemagick w3m lxappearance git wget howl thunar firefox-i18n-pt-br scrot flameshot blueman pulseaudio-bluetooth --noconfirm
+sudo pacman -S dmenu alacritty feh viewnior imagemagick w3m lxappearance git wget howl thunar firefox-i18n-pt-br scrot flameshot numlockx gnome-disk-utility --noconfirm
 
 ➜ Baixando Plasma
-pacman -S plasma # Plasma Completo
-pacman -S plasma-desktop # Plasma Minimal
+sudo pacman -S plasma # Plasma Completo
+sudo pacman -S plasma-desktop # Plasma Minimal
 
 ➜ Baixando XFCE
-pacman -S xfce4 # XFCE minimal
-pacman -S xfce4-goodies # XFCE com alguns pacotes extras inclusos
+sudo pacman -S xfce4 # XFCE minimal
+sudo pacman -S xfce4-goodies # XFCE com alguns pacotes integrados
+
+# NOTE: If you have an Intel GPU, make sure you are not using xf86-video-intel with Cinnamon 
+as it may freeze at random times otherwise, but you can still move the mouse. 
+Use the modesetting driver instead by removing xf86-video-intel (KDE also recommends this).
+
+# modesetting ➜ https://jlk.fjfi.cvut.cz/arch/manpages/man/modesetting.4
 
 ➜ Baixando Cinnamon
-pacman -S cinnamon # Interface do Cinnamon (OBS: ESSA INTERFACE VEM SEM TERMINAL BAIXE UM)
-pacman -S xfce4-terminal # Terminal
+sudo pacman -S cinnamon # Interface do Cinnamon (OBS: ESSA INTERFACE VEM SEM TERMINAL BAIXE UM)
+sudo pacman -S xfce4-terminal # Terminal
 
-➜ Tele de login (Opcional)
-pacman -S lxdm --noconfirm
+➜ Baixando Deepin
+sudo pacman -S deepin deepin-extra # Deepin com alguns pacotes integrados
+
+➜ Baixando Mate
+sudo pacman -S mate mate-extra # Mate com alguns pacotes integrados
+
+➜ Tela de login - DM (Display Manager) (Opcional)
+sudo pacman -S lxdm --noconfirm
 systemctl enable lxdm.service
 
 ➜ Configurar o .xinitrc (OPCIONAL, PARA INICIAR O I3WM PELO STARTX)
 su - USER
 echo exec i3 > ~/.xinitrc
 
-# FINALIZADA INSTALAÇÃO do Arch Linux + I3wm
+# FINALIZADA INSTALAÇÃO do Arch Linux
