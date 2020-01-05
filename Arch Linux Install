@@ -212,7 +212,6 @@ sudo pacman -S lxdm --noconfirm
 systemctl enable lxdm.service
 
 ➜ Configurar o .xinitrc (OPCIONAL, PARA INICIAR O I3WM PELO STARTX)
-su - USER
 echo exec i3 > ~/.xinitrc
 
 # FINALIZADA INSTALAÇÃO do Arch Linux
