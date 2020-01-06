@@ -118,7 +118,7 @@ source $ZSH/oh-my-zsh.sh
   alias infoo="sudo cpu-x"
   alias nup="sudo ip link set enp3s0 up"
   alias ndow="sudo ip link set enp3s0 down"
-  alias clock="tty-clock -c -C 3 -D"
+  alias clock="tty-clock -c -C 3"
 
 
 
