@@ -6,11 +6,7 @@ scr='/tmp/screenshot.png'
 icon="$HOME/.Lock/TuxLinux.png"
 font="$HOME/.fonts/Poppins.otf"
 
-#[ ! -d $HOME/.local/share/fonts ] && mkdir -p $HOME/.local/share/fonts
-#[ ! -f $font ] && curl -s -L 'https://www.dropbox.com/s/69ujvh8p7k8pah7/opensans.ttf?dl=1' > $font && fc-cache -v -f
-
 [ ! -d $HOME/.local/share/i3lock/ ] && mkdir -p $HOME/.local/share/i3lock/
-#[ ! -f $icon ] && curl -s -L 'https://ibb.co/9HjfPHK' > $icon
 
 # Expand is used to convert the tabs to spaces which
 # are handled better by imageMagick
