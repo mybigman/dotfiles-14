@@ -63,11 +63,7 @@ client.placeholder      #000000 #0c0c0c #ffffff #000000   #0c0c0c
 bindsym $mod+Shift+e exec "i3-nagbar -t warning -m 'Você deseja sair do i3wm?' -B 'Sim, desejo sair do i3wm' 'i3-msg exit'"
 
 # Trocar de wallpaper
-bindsym $mod+Shift+w exec feh --bg-scale "$(find $HOME/Franks/Wallpapers/ -name "*[jJpP][nNpP][gG]" | shuf -n1)"
-
-#Chamar a polybar (caso ela não subir)
-#bindsym $mod+m exec polybar -r top
-#bindsym $mod+n exec polybar -r bottom
+#bindsym $mod+Shift+w exec feh --bg-scale "$(find $HOME/Franks/Wallpapers/ -name "*[jJpP][nNpP][gG]" | shuf -n1)"
 
 # Bloquear tela
 bindsym $mod+x exec --no-startup-id $HOME/Scripts/fortune.sh
@@ -156,8 +152,8 @@ bindsym $mod+Shift+space floating toggle
   bindsym $mod+Shift+r restart
 
 # Launchers
-#bindsym $mod+d exec dmenu_run
-bindsym $mod+d exec --no-startup-id rofi -show drun -theme ~/.config/rofi/drun.rasi
+bindsym $mod+d exec dmenu_run
+#bindsym $mod+d exec --no-startup-id rofi -show drun -theme ~/.config/rofi/drun.rasi
 #bindsym $mod+d exec synapse
 
 # Screenshot
