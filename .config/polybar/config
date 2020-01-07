@@ -2,20 +2,20 @@
 # Telegram: @FranklinTech
 # Dúvidas: https://github.com/jaagr/polybar
 
-;============================================================
-;   ██████╗  ██████╗ ██╗  ██╗   ██╗██████╗  █████╗ ██████╗
-;   ██╔══██╗██╔═══██╗██║  ╚██╗ ██╔╝██╔══██╗██╔══██╗██╔══██╗
-;   ██████╔╝██║   ██║██║   ╚████╔╝ ██████╔╝███████║██████╔╝
-;   ██╔═══╝ ██║   ██║██║    ╚██╔╝  ██╔══██╗██╔══██║██╔══██╗
-;   ██║     ╚██████╔╝███████╗██║   ██████╔╝██║  ██║██║  ██║
-;   ╚═╝      ╚═════╝ ╚══════╝╚═╝   ╚═════╝ ╚═╝  ╚═╝╚═╝  ╚═╝
-;============================================================
+#############################################################
+#   ██████╗  ██████╗ ██╗  ██╗   ██╗██████╗  █████╗ ██████╗  #
+#   ██╔══██╗██╔═══██╗██║  ╚██╗ ██╔╝██╔══██╗██╔══██╗██╔══██╗ #
+#   ██████╔╝██║   ██║██║   ╚████╔╝ ██████╔╝███████║██████╔╝ #
+#   ██╔═══╝ ██║   ██║██║    ╚██╔╝  ██╔══██╗██╔══██║██╔══██╗ #
+#   ██║     ╚██████╔╝███████╗██║   ██████╔╝██║  ██║██║  ██║ #
+#   ╚═╝      ╚═════╝ ╚══════╝╚═╝   ╚═════╝ ╚═╝  ╚═╝╚═╝  ╚═╝ #
+#############################################################
 
 ; Cores
 
 [colors]
 ;background = ${xrdb:color0:#222}
-background = #0f0f0f
+background = #00000000
 ;background = #222
 background-alt = #444
 ;foreground = ${xrdb:color7:#222}
@@ -31,8 +31,11 @@ alert = #ff0000
 monitor = ${env:MONITOR:VGA-0}
 dpi = 80
 width = 100%
-height = 25
-radius = 0
+;width = 80%
+height = 18
+offset-x = 4%
+pffset-y = 6px
+;override-redirect = true
 fixed-center = true
 
 background = ${colors.background}
@@ -61,8 +64,8 @@ font-2 = "Hack Nerd Font:style=Regular:pixelsize=11;1"
 ; Separator
 ;separator =|
 
-modules-left = kernel
-modules-right = alsa calendar date
+modules-left =
+modules-right = alsa filesystem calendar date
 modules-center = weather
 
 ;Icone-Background
@@ -74,8 +77,6 @@ modules-center = weather
 
 ;wm-restack = bspwm
 ;wm-restack = i3
-
-override-redirect = false
 
 ;scroll-up = bspwm-desknext
 ;scroll-down = bspwm-deskprev
@@ -90,10 +91,13 @@ cursor-scroll = ns-resize
 
 [bar/bottom]
 monitor = ${env:MONITOR:VGA-0}
-dpi = 95
+dpi = 80
 width = 100%
-height = 20
-radius = 0
+;width = 80%
+height = 18
+offset-x = 4%
+pffset-y = 6px
+;override-redirect = true
 fixed-center = true
 bottom = true
 
@@ -125,7 +129,7 @@ font-2 = "Hack Nerd Font:style=Regular:pixelsize=10;2"
 
 modules-left = i3
 modules-center = linux
-modules-right = gravar bluetooth lock print ethernet powermenu
+modules-right = ethernet gravar bluetooth github twitch powermenu
 
 ;Icone-Background
 
@@ -269,9 +273,9 @@ ws-icon-3 = 4: 
 ws-icon-4 = 5: 
 ws-icon-5 = 6: 
 ws-icon-6 = 7: 
-ws-icon-7 = 8:
-ws-icon-8 = 9:
-ws-icon-9 = 10:
+ws-icon-7 = 8: 
+ws-icon-8 = 9: 
+ws-icon-9 = 10: 
 
 
 strip-wsnumbers = false
@@ -279,15 +283,17 @@ label-state-foreground = ${colors.secondary}
 
 label-mode = %mode%
 label-mode-foreground = ${colors.secondary}
+label-mode-background = ${colors.primary}
 label-mode-padding = 1
 
 label-focused = %name%
 label-focused-foreground = #000000
 label-focused-background = #ffffff
-label-focused-padding = 1
+label-focused-underline = #ff5733
+label-focused-padding = 2
 
 label-unfocused = %name%
-label-unfocused-padding = 1
+label-unfocused-padding = 2
 
 label-visible = %name%
 label-visible-background = ${colors.background-alt}
@@ -295,7 +301,7 @@ label-visible-padding = 1
 
 label-urgent = %name%
 label-urgent-background = #f84040
-label-urgent-padding = 1
+label-urgent-padding = 2
 
 ; Modulo mpd
 
@@ -386,7 +392,7 @@ interval = 1
 ;date = "%a %d/%m/%y"
 ;date-alt = " %a %d/%m/%y"
 
-time = %I:%M %p
+time = %I:%M:%S %p
 ;time = %H:%M
 ;time-alt = %H:%M:%S
 
@@ -589,7 +595,7 @@ click-left = alacritty  &
 
 [module/firefox]
 type = custom/text
-content = "%{F#938d8d}  %{F-}"
+content = "%{F#938d8d}  %{F-}"
 click-left = firefox &
 
 [module/telegram]
@@ -604,10 +610,12 @@ content = "%{F#938d8d}  %{F-}"
 ;click-left = nautilus &
 click-left = thunar &
 
-[module/vlc]
+[module/video]
 type = custom/text
 content = "%{F#938d8d} 嗢 %{F-}"
+;content = "%{F#938d8d}  %{F-}"
 click-left = vlc &
+;click-left = mpv &
 
 [module/user]
 type = custom/text
@@ -618,16 +626,6 @@ content-underline = #8df8d8
 type = custom/text
 content = "%{F#fa7f18}%{F-} Arch Linux"
 ;content-underline = #ff00d1
-
-[module/wall]
-type = custom/text
-content = "%{F#938d8d}  %{F-}"
-click-left = thunar /home/frank/Frank/Wallpapers/ &
-
-[module/trash]
-type = custom/text
-content = "%{F#938d8d}  %{F-}"
-click-left = thunar trash:/// &
 
 [module/refresh]
 type = custom/text
@@ -642,16 +640,6 @@ content = "%{F#ffffff}  %{F-}"
 ;click-left = bash -c 'maim "$HOME/Imagens/Captura de tela de %d-%m-%Y %H:%M:%S.png"' &
 click-left = bash -c 'scrot "$HOME/Imagens/Captura de tela de %d-%m-%Y %H:%M:%S.png"' &
 
-[module/torrent]
-type = custom/text
-content = "%{F#cdae9c}  %{F-}"
-click-left = qbittorrent
-
-[module/tux]
-type = custom/text
-content = "%{F#cdae9c}%{F-}"
-;content-underline = #ff00d1
-
 [module/lock]
 type = custom/text
 content = "  "
@@ -661,12 +649,12 @@ click-left = $HOME/Scripts/fortune.sh &
 
 [module/twitch]
 type = custom/text
-content = "%{F#938d8d} 既 %{F-}"
+content = "%{F#ffffff} 既 %{F-}"
 click-left = firefox https://www.twitch.tv/ &
 
 [module/github]
 type = custom/text
-content = "%{F#938d8d}  %{F-}"
+content = "%{F#ffffff}  %{F-}"
 click-left = firefox https://github.com/fffranks &
 
 [module/pacman]
@@ -696,9 +684,7 @@ label = "%{F#ffffff}  %{F-} %output:0:37:...%"
 type = custom/script
 interval = 1
 exec = date "+%a %d %b, %Y"
-;exec = date "+%a %d %b, %Y - %H:%M"
-;exec = date "+%a %d, %b"
-;exec = date "+%a %d/%b %H:%M:%S"
+;exec = date "+%a %d %b, %Y - %H:%M:%S"
 label = "%{F#ffffff}  %{F-} %output:0:37:...%"
 format-underline = #33fcff
 ;click-left = gsimplecal &
@@ -710,47 +696,22 @@ type = custom/text
 content = "%{F#938d8d}  %{F-}"
 click-left = exec deezer &
 
-[module/menu]
-type = custom/text
-content = "%{F#938d8d}  %{F-}"
-click-left = exec rofi -show drun -theme ~/.config/rofi/appmenu/drun.rasi &
-
-[module/info-trash]
-interval = 60
-type = custom/script
-label = "%{F#938d8d}  %{F-} %output:0:37:...%"
-exec = $HOME/.config/polybar/scripts/info-trash.sh
-click-left = $HOME/.config/polybar/scripts/info-trash.sh --clean
-
-[module/updates]
-type = custom/script
-interval = 1
-;label = "%{F#938d8d}  %{F-} %output:0:37:...%"
-exec = $HOME/.config/polybar/scripts/arch-updates.sh
-
-[module/network-traffic]
-type = custom/script
-exec = $HOME/.config/polybar/scripts/network-traffic.sh
-tail = true
-
 [module/gravar]
 type = custom/script
 interval = 1
 label = %output%
-click-left = termite -e $HOME/Scripts/gravar.sh &
+click-left = alacritty -e $HOME/Scripts/gravar.sh &
 exec = $HOME/Scripts/gravar.sh status
 tail = true
 
 [module/bluetooth]
 type = custom/text
-content = "  "
-;content = "  "
+;content = "  "
+content = "  "
 content-foreground = #ffffff
 ;content-underline = #ffffff
-click-left = exec blueman-manager &
-;click-left = exec blueman-applet &
-;click-right = exec blueman-manager &
-click-right = exec killall blueman-manager &
+click-left = exec blueman-applet &
+click-right = exec blueman-manager &
 
 [module/ethernet]
 type = internal/network
@@ -760,9 +721,9 @@ interval = 1.0
 format-packetloss = <animation-packetloss>
 format-connected = <label-connected>
 format-disconnected = <label-disconnected>
-label-connected =  Online
+label-connected =  Conectado
 label-connected-foreground = #64ff33
-label-disconnected =  Offline
+label-disconnected =  Desconectado
 label-disconnected-foreground = #fe2020
 
 [module/wireless]
