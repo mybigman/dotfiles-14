@@ -3,7 +3,7 @@
 # Telegram: @FranklinTech
 
 scr='/tmp/screenshot.png'
-icon="$HOME/Lock/archlinux.png"
+icon="$HOME/.Lock/TuxLinux.png"
 font="$HOME/.fonts/Poppins.otf"
 
 #[ ! -d $HOME/.local/share/fonts ] && mkdir -p $HOME/.local/share/fonts
@@ -15,7 +15,7 @@ font="$HOME/.fonts/Poppins.otf"
 # Expand is used to convert the tabs to spaces which
 # are handled better by imageMagick
 fortune=$(expand -t 2 <(fortune -s brasil))
-gradientColor='#1c1a1a'
+gradientColor='#000000'
 
 # take a screenshot
 maim "$scr"
@@ -29,7 +29,6 @@ convert "$scr" -scale 10% -scale 1000%\
 	gradient:none-"$gradientColor" -composite -matte \
 	"$icon" -gravity center -composite -matte \
 	-gravity center -pointsize 20 \
-    -font $font -fill "#EAE4D1" -annotate +0+200 "$fortune Não é a linguagem de programação que define o programador, mas sim sua lógica!
-    - David Ribeiro Guilherme" "$scr"
+    -font $font -fill "#EAE4D1" -annotate +0+200 "$fortune Seja livre, use Linux!" "$scr"
 	-font $font -fill "#EAE4D1" -annotate +0+200 "$fortune" "$scr"
 i3lock -ui "$scr"
