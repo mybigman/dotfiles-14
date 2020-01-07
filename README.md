@@ -12,4 +12,4 @@
 
 # i3-Lock
 
-![Screenshot](https://github.com/fffranks/dotfiles/blob/master/imagens/My%20i3wm.png)
+![Screenshot](https://github.com/fffranks/dotfiles/blob/master/imagens/My%20i3Lock.png)
