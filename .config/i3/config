@@ -70,8 +70,8 @@ bindsym $mod+Shift+w exec feh --bg-scale "$(find $HOME/Franks/Wallpapers/ -name 
 #bindsym $mod+n exec polybar -r bottom
 
 # Bloquear tela
-#bindsym $mod+Shift+t exec $HOME/.config/polybar/scripts/blurlock.sh &
 bindsym $mod+x exec --no-startup-id $HOME/Scripts/fortune.sh
+#bindsym $mod+x exec --no-startup-id $HOME/Scripts/blurlock.sh
 
 # Glava
 bindsym $mod+Shift+x exec glava &
