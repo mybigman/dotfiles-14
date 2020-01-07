@@ -34,19 +34,16 @@
     local LC_ALL=${${(@M)$(locale -a):#*.(utf|UTF)(-|)8}[1]:-en_US.UTF-8}
   fi
 
-  # The list of segments shown on the left. Fill it with the most important segments.
+ # Icones lado esquerdo
   typeset -g POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=(
       os_icon                 # os identifier
       dir                     # current directory
       #vcs                     # git status
       # prompt_char           # prompt symbol
   )
-
-  # The list of segments shown on the right. Fill it with less important segments.
-  # Right prompt on the last prompt line (where you are typing your commands) gets
-  # automatically hidden when the input line reaches it. Right prompt above the
-  # last prompt line gets hidden if it would overlap with left prompt.
+ # Icones lado direito
   typeset -g POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS=(
+      #os_icon                 # os identifier
       #status                  # exit code of the last command
       #command_execution_time  # duration of the last command
       #background_jobs         # presence of background jobs
