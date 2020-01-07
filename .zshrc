@@ -68,7 +68,7 @@ POWERLEVEL9K_TIME_BACKGROUND='white'
 POWERLEVEL9K_TIME_FORMAT=%T
 
 # Lado Esquerdo
-POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=(dir)
+POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=(os_icon dir)
 
 # Lado Direito
 POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS=()
@@ -80,7 +80,7 @@ source $ZSH/oh-my-zsh.sh
 #source ~/powerlevel10k/powerlevel10k.zsh-theme
 
 
-# My aliases
+#My aliases
   alias x="startx"
   alias up="sudo pacman -Syyu"
   alias edt="howl ~/.zshrc"
@@ -94,44 +94,31 @@ source $ZSH/oh-my-zsh.sh
   alias fsa="sudo firehol start "
   alias vk="VK_INSTANCE_LAYERS=VK_LAYER_MESA_overlay vkcube"
   alias ref="sudo reflector -c Brazil --save /etc/pacman.d/mirrorlist"
-  alias kwm="pkill -9 compton ; pkill -9 i3"
+  alias kwm="pkill -9 picom ; pkill -9 i3"
   alias term="xrdb -merge ~/.Xresources"
   alias inf="free -h"
   alias arch="ufetch"
-  alias br="setxkbmap -model abnt2 -layout br -variant abnt2"
-  alias pkg="pacman -Qq | wc -l"
-  alias rmy="rm -rf $HOME/.cache/yay"
-  alias rmp="rm -rf $HOME/.cache/pikaur"
+  alias br="setxkbmap br &"
   alias rc="sudo pacman -Scc"
   alias cm="cmatrix -C white"
   alias icon1="sudo pacman -S papirus-icon-theme"
-  alias icon2="pikaur -S oranchelo-icon-theme"
-  alias comp="pikaur -S compton-tryone-git"
-  alias jav8="pikaur -S jre8"
   alias inff="inxi -Fxxxz"
   alias pull="git pull"
-  alias mine="java -jar $HOME/Franks/Minecraft.jar"
-  alias 10k="git clone --depth=1 https://github.com/romkatv/powerlevel10k.git $ZSH_CUSTOM/themes/powerlevel10k"
-  alias 9k="git clone https://github.com/bhilburn/powerlevel9k.git ~/.oh-my-zsh/custom/themes/powerlevel9k"
-  alias d10k="rm -rf .oh-my-zsh/custom/themes/powerlevel10k/"
-  alias d9k="rm -rf .oh-my-zsh/custom/themes/powerlevel9k/"
   alias infoo="sudo cpu-x"
   alias nup="sudo ip link set enp3s0 up"
   alias ndow="sudo ip link set enp3s0 down"
   alias clock="tty-clock -c -C 3"
 
 
-
-  #Aliase scripts
+#Aliase scripts
   alias pipes="$HOME/Scripts/pipes.sh"
   alias pipes2="$HOME/Scripts/pipes.sh -t 2"
   alias crunch="$HOME/Scripts/Ascii/crunch.sh"
+  alias crunchm="$HOME/Scripts/Ascii/crunchbang-mini.sh"
   alias guns="$HOME/Scripts/Ascii/guns.sh"
   alias pac="$HOME/Scripts/Ascii/pacman.sh"
   alias game="$HOME/Scripts/Ascii/game.sh"
   alias ghost="$HOME/Scripts/Ascii/ghost.sh"
-  alias sysinfo="$HOME/Scripts/sysinfo-cli.sh"
-  alias sysinfo1="$HOME/Scripts/sysinfo-natal.sh"
   alias fetch="$HOME/Scripts/sysinfo.py"
   alias fetch1="$HOME/Scripts/sysinfo-cli.sh"
   alias gravar="$HOME/Scripts/gravar.sh"
@@ -141,7 +128,6 @@ source $ZSH/oh-my-zsh.sh
   alias down="$HOME/Scripts/videodown.sh"
   alias pcolor="$HOME/Scripts/Ascii/colorview.sh"
   alias colorpanes="$HOME/Scripts/Ascii/panes.sh"
-
 
 # Plugins do zsh
 #source /usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
@@ -153,7 +139,6 @@ source $ZSH/oh-my-zsh.sh
 
 #########################################################################################
 # POWERLEVEL10K
-
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 
