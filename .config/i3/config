@@ -3,7 +3,7 @@
 # Dúvidas: https://i3wm.org/docs/userguide.html
 
 ####################################################################
-################ P R I N C I P A L #################################
+#                         P R I N C I P A L                        #
 ####################################################################
 
 #set $gaps_inner_default 10
@@ -18,12 +18,12 @@ set $mod Mod4
 
 # Fonte
 
-font pango:Poppins 8
-#font pango:DejaVu Sans Mono 8
+#font pango:Poppins 8
+font pango:DejaVu Sans Mono 8
 #font pango:Fantasque Sans Mono 9
 
 ####################################################################
-################ FLOATING MODE #####################################
+#                          FLOATING MODE                           #
 ####################################################################
 
 floating_modifier $mod
@@ -32,7 +32,7 @@ floating_modifier $mod
 focus_on_window_activation focus
 
 ####################################################################
-########################## BORDAS ##################################
+#                             BORDAS                               #
 ####################################################################
 
 default_border pixel 1
@@ -43,20 +43,20 @@ hide_edge_borders smart
 
 
 ####################################################################
-################ C O R E S #########################################
+#                          C O R E S                               #
 ####################################################################
 
 set_from_resource $bg background
 
 # classe                borda   fundo   texto   ind.    borda filho
-client.focused          #ffffff #474747 #ffffff #ffffff   #d2b237
+client.focused          #ffffff #474747 #ffffff #ffffff   #ffffff
 client.focused_inactive #ffffff #ffffff #ffffff #ffffff   #1d1d1d
 client.unfocused        #ffffff #474747 #ffffff #ffffff   #333333
 client.urgent           #2f343a #900000 #ffffff #900000   #900000
 client.placeholder      #000000 #0c0c0c #ffffff #000000   #0c0c0c
 
 ####################################################################
-################ A T A L H O S #####################################
+#                          A T A L H O S                           #
 ####################################################################
 
 # Sair do i3wm
@@ -85,11 +85,11 @@ bindsym $mod+c exec bash -c 'scrot "$HOME/Imagens/Captura de tela de %d-%m-%Y %H
 bindsym $mod+z exec scrot -d 5 &
 
 # Iniciar terminal
-bindsym $mod+Return exec i3-sensible-terminal
+#bindsym $mod+Return exec i3-sensible-terminal
 #bindsym $mod+Return exec termite
 #bindsym $mod+Return exec sakura
 #bindsym $mod+Return exec kitty
-#bindsym $mod+Return exec alacritty
+bindsym $mod+Return exec alacritty
 
 # Iniciar APLICATIVOS
 
@@ -156,15 +156,15 @@ bindsym $mod+Shift+space floating toggle
   bindsym $mod+Shift+r restart
 
 # Launchers
-bindsym $mod+d exec dmenu_run
-#bindsym $mod+d exec --no-startup-id rofi -show drun -theme ~/.config/rofi/drun.rasi
+#bindsym $mod+d exec dmenu_run
+bindsym $mod+d exec --no-startup-id rofi -show drun -theme ~/.config/rofi/drun.rasi
 #bindsym $mod+d exec synapse
 
 # Screenshot
 bindsym Print exec flameshot gui
 
 ####################################################################
-################ A R E A S #########################################
+#                             A R E A S                            #
 ####################################################################
 
 set $ws1 "1: "
@@ -176,7 +176,7 @@ set $ws6 "6: "
 set $ws7 "7: "
 set $ws8 "8: "
 set $ws9 "9: "
-set $ws10 "10: "
+set $ws10 "10: "
 
 #set $ws1 "1"
 #set $ws2 "2"
@@ -214,7 +214,7 @@ bindsym $mod+Shift+9 move container to workspace number $ws9
 bindsym $mod+Shift+0 move container to workspace number $ws10
 
 ####################################################################
-################ APLICATIVOS ABERTOS NA WS CORRETA #################
+#              APLICATIVOS ABERTOS NA WS CORRETA                   #
 ####################################################################
 
 # Browser ws=1
@@ -226,13 +226,13 @@ for_window [class="(Alacritty)"] move to workspace $ws2, floating enable, move p
 # Terminal ws=2
 for_window [class="(Termite)"] move to workspace $ws2, floating enable, move position center
 
-# Telegram ws=4
+# Telegram ws=3
 for_window [class="(Telegram)"] move to workspace $ws3, floating enable, move position center
 
-# Thunar ws=3
+# Thunar ws=4
 for_window [class="(Thunar)"] move to workspace $ws4, floating enable, move position center
 
-# Nautilus ws=3
+# Nautilus ws=4
 for_window [class="(Nautilus)"] move to workspace $ws4, floating enable, move position center
 
 # Deezer ws=5
@@ -247,6 +247,9 @@ for_window [class="(Inkscape)"] move to workspace $ws6, floating enable, move po
 # MPV ws=7
 for_window [class="(mpv)"] move to workspace $ws7, floating enable, move position center
 
+# VLC ws=7
+for_window [class="(vlc)"] move to workspace $ws7, floating enable, move position center
+
 # Discord ws=8
 for_window [class="(discord)"] move to workspace $ws8, floating enable, move position center
 
@@ -259,21 +262,22 @@ for_window [class="(Steam)"] move to workspace $ws10, floating enable, move posi
 # Lutris ws=10
 for_window [class="(Lutris)"] move to workspace $ws10, floating enable, move position center
 
-####################################################################
-################ R E G R A S #######################################
-####################################################################
+# PlayOnLinux ws=10
+for_window [class="(PlayOnLinux)"] move to workspace $ws10, floating enable, move position center
 
-# Sakura (Terminal)
+# PPSSPP ws=10
+for_window [class="(PPSSPPSDL)"] move to workspace $ws10, floating enable, move position center
 
-for_window [class="(Sakura)"]floating enable, move position center
+####################################################################
+#                           R E G R A S                            #
+####################################################################
+# Alacritty (Terminal)
+
+for_window [class="(Alacritty)"]floating enable, move position center
 
 # Termite (Terminal)
 
 for_window [class="(Termite)"]floating enable, move position center
-
-# Urxvt (Terminal)
-
-for_window [class="(URxvt)"] floating enable, move position center
 
 # Deezer (Streamer de música)
 
@@ -294,18 +298,6 @@ for_window [class="(vlc)"]floating enable, move position center
 # MPV (Player de música/Vídeo)
 
 for_window [class="(mpv)"]floating enable, move position center
-
-# Mousepad (Editor de texto)
-
-for_window [class="(Mousepad)"]floating enable, move position center
-
-# Gedit (Editor de texto)
-
-for_window [class="(Gedit)"]floating enable, move position center
-
-# Feh (Gerenciador de imagens)
-
-for_window [class="(feh)"]floating enable, move position center
 
 # Viewnior (Gerenciador de imagens)
 
@@ -339,29 +331,9 @@ for_window [class="(Pavucontrol)"]floating enable, move position center
 
 for_window [class="(Howl)"]floating enable, move position center
 
-# Nomacs (Gerenciador de imagens)
-
-for_window [class="(Nomacs)"]floating enable, move position center
-
 # LxAppearance (Gerenciador de Temas)
 
 for_window [class="(Lxappearance)"]floating enable, move position center
-
-# Kitty (Terminal)
-
-for_window [class="(kitty)"]floating enable, move position center
-
-# Alacritty (Terminal)
-
-for_window [class="(Alacritty)"]floating enable, move position center
-
-# Calendario (CALENDÁRIO - POPUP)
-
-for_window [class="Yad" title="yad-calendar"] floating enable
-
-# Simplescreenrecorder (Gravador de vídeo)
-
-for_window [class="(SimpleScreenRecorder)"]floating enable, move position center
 
 # Discord (In-Game Chat)
 
@@ -379,16 +351,20 @@ for_window [class="(Steam)"]floating enable, move position center
 
 for_window [class="(Lutris)"]floating enable, move position center
 
-# Script
+# PPSSPP (Emulador de PSP)
+
+for_window [class="(PPSSPPSDL)"]floating enable, move position center
+
+# Stacer (Monitoriamento de sistema)
+
+for_window [class="(stacer)"]floating enable, move position center
+
+# Script para gravar a tela
 for_window [class="Termite" title="castnow"] move window to scratchpad
 for_window [title="(gravar.sh$)"] move window to scratchpad
 
-###############################################################################
-
-
-
 ####################################################################
-################ G R U P O S #######################################
+#                             RESIZE                               #
 ####################################################################
 # resize window (you can also use the mouse for that)
 mode "resize" {
@@ -414,10 +390,10 @@ mode "resize" {
         bindsym Escape mode "default"
         bindsym $mod+r mode "default"
 }
-bindsym $mod+r mode "resize"
+#bindsym $mod+r mode "resize"
 
 ####################################################################
-################ G A P S ###########################################
+#                           G A P S                                #
 ####################################################################
 set $mode_gaps Gaps: (o) outer, (i) inner
 set $mode_gaps_outer Outer Gaps: +|-|0|d (local), Shift + +|-|0|d (global)
@@ -463,10 +439,8 @@ mode "$mode_gaps_outer" {
         bindsym Escape mode "default"
 }
 ####################################################################
-################ AÚDIOS ############################################
+#                        CONTROLE DE AÚDIOS                        #
 ####################################################################
-
-#Controle dos aúdios
 bindsym XF86AudioPlay exec "mpc toggle"
 bindsym XF86AudioStop exec "mpc stop"
 bindsym XF86AudioNext exec "mpc next"
@@ -474,35 +448,44 @@ bindsym XF86AudioPrev exec "mpc prev"
 bindsym XF86AudioRaiseVolume exec --no-startup-id pactl set-sink-volume 0 +5%
 bindsym XF86AudioLowerVolume exec --no-startup-id pactl set-sink-volume 0 -5%
 bindsym XF86AudioMute exec --no-startup-id pactl set-sink-mute 0 toggle
-####################################################################
-################ I N I T ###########################################
-####################################################################
-# xss-lock grabs a logind suspend inhibit lock and will use i3lock to lock the
-# screen before suspend. Use loginctl lock-session to lock your screen.
-#exec --no-startup-id xss-lock --transfer-sleep-lock -- i3lock --nofork
-exec_always --no-startup-id $HOME/.config/polybar/scripts/launch.sh
-exec_always --no-startup-id feh --bg-fill $HOME/Franks/Wallpapers/197.jpg
-#exec feh --bg-scale "$(find $HOME/Franks/Wallpapers/ -name "*[jJpP][nNpP][gG]" | shuf -n1)"
-#exec --no-startup-id compton -b --respect-prop-shadow
-#exec --no-startup-id compton --active-opacity 0.9 --blur-background
-exec --no-startup-id picom --config ~/.config/picom/picom.conf
-exec --no-startup-id dunst -b
-exec --no-startup-id xautolock -time 3 -detectsleep -locker $HOME/Scripts/fortune.sh
-exec --no-startup-id $HOME/Scripts/mpd-notify.sh &
-exec --no-startup-id mpd &
-#exec  --no-startup-id polybar -r top &
-#exec --no-startup-id polybar -r bottom &
-#exec --no-startup-id compton &
-exec --no-startup-id numlockx on &
-#exec --no-startup-id systemctl enable bluetooth.service
-exec --no-startup-id blueman-applet &
-exec --no-startup-id flameshot &
-exec --no-startup-id setxkbmap -model abnt2 -layout br -variant abnt2 &
-####################################################################
-################ I3STATUS ##########################################
-####################################################################
 
-#Barra i3status
+####################################################################
+#                      INICIAR COM O I3                            #
+####################################################################
+# Polybar
+exec_always --no-startup-id $HOME/.config/polybar/scripts/launch.sh
+
+# Wallpapers
+exec_always --no-startup-id feh --bg-fill $HOME/Franks/Wallpapers/202.jpg
+
+# Compositor
+exec --no-startup-id picom --config ~/.config/picom/picom.conf
+
+# Dunst - Notificação
+exec --no-startup-id dunst -b
+
+# Bloqueio de Tela
+exec --no-startup-id xautolock -time 3 -detectsleep -locker $HOME/Scripts/fortune.sh
+
+# Num Lock
+exec --no-startup-id numlockx on &
+
+# Bluetooth
+exec --no-startup-id blueman-applet &
+
+# Flameshot
+exec --no-startup-id flameshot &
+
+# Layout do teclado
+exec --no-startup-id setxkbmap br &
+
+# Música
+#exec --no-startup-id $HOME/Scripts/mpd-notify.sh &
+#exec --no-startup-id mpd &
+
+####################################################################
+#                            I3STATUS                              #
+####################################################################
 #bar {
 #         colors {
 #         background #1c1a1a
