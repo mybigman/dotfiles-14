@@ -2,14 +2,14 @@
 # Telegram: @FranklinTech
 # Dúvidas: https://github.com/jaagr/polybar
 
-#############################################################
-#   ██████╗  ██████╗ ██╗  ██╗   ██╗██████╗  █████╗ ██████╗  #
-#   ██╔══██╗██╔═══██╗██║  ╚██╗ ██╔╝██╔══██╗██╔══██╗██╔══██╗ #
-#   ██████╔╝██║   ██║██║   ╚████╔╝ ██████╔╝███████║██████╔╝ #
-#   ██╔═══╝ ██║   ██║██║    ╚██╔╝  ██╔══██╗██╔══██║██╔══██╗ #
-#   ██║     ╚██████╔╝███████╗██║   ██████╔╝██║  ██║██║  ██║ #
-#   ╚═╝      ╚═════╝ ╚══════╝╚═╝   ╚═════╝ ╚═╝  ╚═╝╚═╝  ╚═╝ #
-#############################################################
+###########################################################
+# ██████╗  ██████╗ ██╗  ██╗   ██╗██████╗  █████╗ ██████╗  #
+# ██╔══██╗██╔═══██╗██║  ╚██╗ ██╔╝██╔══██╗██╔══██╗██╔══██╗ #
+# ██████╔╝██║   ██║██║   ╚████╔╝ ██████╔╝███████║██████╔╝ #
+# ██╔═══╝ ██║   ██║██║    ╚██╔╝  ██╔══██╗██╔══██║██╔══██╗ #
+# ██║     ╚██████╔╝███████╗██║   ██████╔╝██║  ██║██║  ██║ #
+# ╚═╝      ╚═════╝ ╚══════╝╚═╝   ╚═════╝ ╚═╝  ╚═╝╚═╝  ╚═╝ #
+###########################################################
 
 ; Cores
 
@@ -64,7 +64,7 @@ font-2 = "Hack Nerd Font:style=Regular:pixelsize=11;1"
 ; Separator
 ;separator =|
 
-modules-left =
+modules-left = menu
 modules-right = alsa filesystem calendar date
 modules-center = weather
 
@@ -129,7 +129,7 @@ font-2 = "Hack Nerd Font:style=Regular:pixelsize=10;2"
 
 modules-left = i3
 modules-center = linux
-modules-right = ethernet gravar bluetooth powermenu
+modules-right = gravar bluetooth rede powermenu
 
 ;Icone-Background
 
@@ -700,7 +700,7 @@ click-left = exec deezer &
 type = custom/script
 interval = 1
 label = %output%
-click-left = alacritty -e $HOME/Scripts/gravar.sh &
+;click-left = alacritty -e $HOME/Scripts/gravar.sh &
 exec = $HOME/Scripts/gravar.sh status
 tail = true
 
@@ -713,6 +713,13 @@ content-foreground = #ffffff
 click-left = exec blueman-applet &
 click-right = exec blueman-manager &
 
+[module/menu]
+type = custom/text
+content = "%{F#938d8d}%{F-} Aplicações"
+content-foreground = #ffffff
+;content-underline = #ffffff
+click-left = exec rofi -show drun -theme ~/.config/rofi/drun.rasi &
+
 [module/wifi]
 type = custom/text
 content = "  "
@@ -720,10 +727,18 @@ content-foreground = #ffffff
 ;content-underline = #ffffff
 click-left = alacritty -e nmtui  &
 
+[module/rede]
+type = custom/text
+content = "  "
+content-foreground = #ffffff
+;content-underline = #ffffff
+click-left = alacritty -e $HOME/.config/polybar/scripts/net-ping.sh
+tail = true
+
 [module/ethernet]
 type = internal/network
 interface = enp3s0
-interval = 1.0
+interval = 0.1
 
 format-packetloss = <animation-packetloss>
 format-connected = <label-connected>
@@ -735,8 +750,8 @@ label-disconnected-foreground = #fe2020
 
 [module/wireless]
 type = internal/network
-interface = wlp3s0
-interval = 1.0
+interface = wlan0
+interval = 0.1
 
 format-packetloss = <animation-packetloss>
 format-connected = <label-connected>
