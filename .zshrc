@@ -24,6 +24,8 @@ ZSH_THEME="powerlevel10k/powerlevel10k"
 #POWERLEVEL9K_MODE="nerdfont-complete"
 POWERLEVEL10K_MODE="nerdfont-complete"
 
+#POWERLEVEL9K_DISABLE_PROMPT=true
+
 # Cores do Powerline9k
 POWERLEVEL9K_HOME_ICON=''
 POWERLEVEL9K_HOME_SUB_ICON=''
@@ -128,6 +130,7 @@ source $ZSH/oh-my-zsh.sh
   alias down="$HOME/Scripts/videodown.sh"
   alias pcolor="$HOME/Scripts/Ascii/colorview.sh"
   alias colorpanes="$HOME/Scripts/Ascii/panes.sh"
+  alias speedt="$HOME/Scripts/speedtest-cli.sh"
 
 # Plugins do zsh
 #source /usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
