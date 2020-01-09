@@ -152,8 +152,8 @@ bindsym $mod+Shift+space floating toggle
   bindsym $mod+Shift+r restart
 
 # Launchers
-bindsym $mod+d exec dmenu_run
-#bindsym $mod+d exec --no-startup-id rofi -show drun -theme ~/.config/rofi/drun.rasi
+#bindsym $mod+d exec dmenu_run
+bindsym $mod+d exec --no-startup-id rofi -show drun -theme ~/.config/rofi/drun.rasi
 #bindsym $mod+d exec synapse
 
 # Screenshot
@@ -164,7 +164,7 @@ bindsym Print exec flameshot gui
 ####################################################################
 
 set $ws1 "1: "
-set $ws2 "2: "
+set $ws2 "2: "
 set $ws3 "3: 切"
 set $ws4 "4: "
 set $ws5 "5: "
