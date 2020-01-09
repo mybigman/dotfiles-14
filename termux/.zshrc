@@ -93,43 +93,4 @@ source $ZSH/oh-my-zsh.sh
   alias cm="cmatrix -C white"
   alias pull="git pull"
   alias clock="tty-clock -c -C 3"
-
-
-#Aliase scripts
-  alias pipes="$HOME/Scripts/pipes.sh"
-  alias pipes2="$HOME/Scripts/pipes.sh -t 2"
-  alias crunch="$HOME/Scripts/Ascii/crunch.sh"
-  alias crunchm="$HOME/Scripts/Ascii/crunchbang-mini.sh"
-  alias guns="$HOME/Scripts/Ascii/guns.sh"
-  alias pac="$HOME/Scripts/Ascii/pacman.sh"
-  alias game="$HOME/Scripts/Ascii/game.sh"
-  alias ghost="$HOME/Scripts/Ascii/ghost.sh"
-  alias fetch="$HOME/Scripts/sysinfo.py"
-  alias fetch1="$HOME/Scripts/sysinfo-cli.sh"
-  alias gravar="$HOME/Scripts/gravar.sh"
-  alias instagram="$HOME/Scripts/insta.sh"
-  alias add="$HOME/Scripts/adduser.sh"
-  alias dell="$HOME/Scripts/userdel.sh"
-  alias down="$HOME/Scripts/videodown.sh"
-  alias pcolor="$HOME/Scripts/Ascii/colorview.sh"
-  alias colorpanes="$HOME/Scripts/Ascii/panes.sh"
-
-# Plugins do zsh
-#source /usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
-#source /usr/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
-
-# Iniciar com o shell
-# neofetch
-# ufetch
-
-#########################################################################################
-# POWERLEVEL10K
-# To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
-[[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
-
-# Enable Powerlevel10k instant prompt. Should stay close to the top of ~/.zshrc.
-# Initialization code that may require console input (password prompts, [y/n]
-# confirmations, etc.) must go above this block, everything else may go below.
-if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]; then
-  source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
-fi
+  alias sarch="startarch"
