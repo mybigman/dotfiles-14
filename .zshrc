@@ -4,7 +4,6 @@
 #     /  /       \   \    |   __   | |      /     |  |
 # __ /  /----.----)   |   |  |  |  | |  |\  \----.|  `----.
 #(__)________|_______/    |__|  |__| | _| `._____| \______|
-#
 
 # Crédits: Franklin Souza
 # Telegram: @FranklinTech
@@ -111,6 +110,7 @@ source $ZSH/oh-my-zsh.sh
   alias ndow="sudo ip link set enp3s0 down"
   alias clock="tty-clock -c -C 3"
   alias help="cat ~/.zshrc | grep alias"
+  alias pin="ping 192.168.0.1"
 
 
 #Aliase scripts
