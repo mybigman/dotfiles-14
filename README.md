@@ -1,6 +1,6 @@
 # Dotfiles
 
-![Screenshot](https://github.com/fffranks/dotfiles/blob/master/imagens/Dotfiles.png)
+![Screenshot](https://github.com/fffranks/dotfiles/blob/master/imagens/DotFiles.png)
 
 # i3-Gaps
 
