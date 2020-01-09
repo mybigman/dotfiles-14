@@ -129,7 +129,7 @@ font-2 = "Hack Nerd Font:style=Regular:pixelsize=10;2"
 
 modules-left = i3
 modules-center = linux
-modules-right = ethernet gravar bluetooth github twitch powermenu
+modules-right = ethernet gravar bluetooth powermenu
 
 ;Icone-Background
 
@@ -675,7 +675,7 @@ format-underline = #fe8ac6
 type = custom/script
 interval = 1
 exec = $HOME/.config/polybar/scripts/weather.sh
-label = "%{F#ffffff}  %{F-} %output:0:37:...%"
+label = "%{F#ffffff}  %{F-} %output:0:37:...%"
 ;click-left = firefox https://openweathermap.org/city/3387130
 ;format-underline = #cecece
 ;format-foreground = #cecece
@@ -713,6 +713,13 @@ content-foreground = #ffffff
 click-left = exec blueman-applet &
 click-right = exec blueman-manager &
 
+[module/wifi]
+type = custom/text
+content = "  "
+content-foreground = #ffffff
+;content-underline = #ffffff
+click-left = alacritty -e nmtui  &
+
 [module/ethernet]
 type = internal/network
 interface = enp3s0
@@ -721,9 +728,9 @@ interval = 1.0
 format-packetloss = <animation-packetloss>
 format-connected = <label-connected>
 format-disconnected = <label-disconnected>
-label-connected =  Conectado
+label-connected = Conectado
 label-connected-foreground = #64ff33
-label-disconnected =  Desconectado
+label-disconnected = Desconectado
 label-disconnected-foreground = #fe2020
 
 [module/wireless]
@@ -731,10 +738,13 @@ type = internal/network
 interface = wlp3s0
 interval = 1.0
 
-format-connected = <label-connected> <ramp-signal>
 format-packetloss = <animation-packetloss>
-label-connected = %upspeed%   %downspeed%  %essid%
-label-connected-foreground = #ffffff
+format-connected = <label-connected>
+format-disconnected = <label-disconnected>
+label-connected = Conectado
+label-connected-foreground = #64ff33
+label-disconnected = Desconectado
+label-disconnected-foreground = #fe2020
 
 ramp-signal-0 = 
 ramp-signal-0-foreground = #BD574C
