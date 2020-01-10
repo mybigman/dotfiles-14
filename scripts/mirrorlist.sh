@@ -16,7 +16,7 @@ url="https://www.archlinux.org/mirrorlist/?country=CA&use_mirror_status=on"
   curl -so ${tmpfile} ${url}
   sed -i 's/^#Server/Server/g' ${tmpfile}
 
-  # Backup and replace current mirrorlist file (if new file is non-zero)
+  # Faça backup e substitua o arquivo atual da lista de espelhos (se o novo arquivo for diferente de zero)
   if [[ -s ${tmpfile} ]]; then
    { echo " Backup do Mirrorlist original..."
      mv -i /etc/pacman.d/mirrorlist /etc/pacman.d/mirrorlist.bkp; } &&
@@ -26,5 +26,6 @@ url="https://www.archlinux.org/mirrorlist/?country=CA&use_mirror_status=on"
     echo "Erro ao atualizar a lista de mirrorlist..."
   fi
 
+# Permissão no mirrorlist
 #chmod -r /etc/pacman.d/mirrorlist
 chmod 0644 /etc/pacman.d/mirrorlist
