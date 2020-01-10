@@ -132,6 +132,7 @@ source $ZSH/oh-my-zsh.sh
   alias pcolor="$HOME/Scripts/Ascii/colorview.sh"
   alias colorpanes="$HOME/Scripts/Ascii/panes.sh"
   alias speedt="$HOME/Scripts/speedtest-cli.sh"
+  alias mirror="sudo $HOME/Scripts/mirrorlist.sh"
 
 # Plugins do zsh
 #source /usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
