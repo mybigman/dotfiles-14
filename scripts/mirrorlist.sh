@@ -1,10 +1,9 @@
 #!/bin/bash
 # Credit: Franklin Souza
 # Telegram: @FranklinTech
+#
 # Script para pegar os melhores mirrorlist no archlinux
 #
-#
-
 # Mirrors Brasileiros
 #url="https://www.archlinux.org/mirrorlist/?country=BR&use_mirror_status=on"
 
@@ -27,4 +26,5 @@ url="https://www.archlinux.org/mirrorlist/?country=CA&use_mirror_status=on"
     echo "Erro ao atualizar a lista de mirrorlist..."
   fi
 
-chmod -r /etc/pacman.d/mirrorlist
+#chmod -r /etc/pacman.d/mirrorlist
+chmod 0644 /etc/pacman.d/mirrorlist
