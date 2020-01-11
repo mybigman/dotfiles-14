@@ -7,6 +7,7 @@ tar -xf linux
 cd Telegram
 mv Telegram telegram
 mv Updater telegram-updater
-sudo cp telegram /usr/local/bin/ && sudo cp telegram-updater /usr/local/bin/
-cd ~
-telegram
+mkdir $HOME/.local/bin
+cp telegram $HOME/.local/bin/ && cp telegram-updater $HOME/.local/bin/
+cd ~/.local/bin
+./telegram
