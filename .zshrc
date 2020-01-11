@@ -100,7 +100,8 @@ source $ZSH/oh-my-zsh.sh
   alias inf="free -h"
   alias arch="ufetch"
   alias br="setxkbmap br &"
-  alias rc="sudo pacman -Scc"
+  alias rct="sudo pacman -Scc"
+  alias rc="sudo pacman -Sc"
   alias cm="cmatrix -C white"
   alias icon1="sudo pacman -S papirus-icon-theme"
   alias inff="inxi -Fxxxz"
@@ -111,6 +112,9 @@ source $ZSH/oh-my-zsh.sh
   alias clock="tty-clock -c -C 3"
   alias help="cat ~/.zshrc | grep alias"
   alias pin="ping 192.168.0.1"
+# alias pmirror="sudo chmod 0644 /etc/pacman.d/mirrorlist"
+  alias cache="cd /var/cache/pacman/pkg"
+  alias clima="curl wttr.in"
 
 
 #Aliase scripts
@@ -133,6 +137,9 @@ source $ZSH/oh-my-zsh.sh
   alias colorpanes="$HOME/Scripts/Ascii/panes.sh"
   alias speedt="$HOME/Scripts/speedtest-cli.sh"
   alias mirror="sudo $HOME/Scripts/mirrorlist.sh"
+  alias tel="$HOME/Scripts/telegram_installer.sh"
+  alias em="howl Scripts/mirrorlist.sh"
+
 
 # Plugins do zsh
 #source /usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
