@@ -64,7 +64,7 @@ font-2 = "Hack Nerd Font:style=Regular:pixelsize=11;1"
 ; Separator
 ;separator =|
 
-modules-left = menu
+modules-left = ping
 modules-right = alsa filesystem calendar date
 modules-center = weather
 
@@ -704,6 +704,19 @@ label = %output%
 exec = $HOME/Scripts/gravar.sh status
 tail = true
 
+[module/ping]
+type = custom/script
+interval = 0.6
+label = %output%
+;click-left = alacritty -e $HOME/Scripts/gravar.sh &
+exec = $HOME/.config/polybar/scripts/ping.sh status
+tail = true
+
+[module/psp]
+type = custom/text
+content = "%{F#ffffff}  %{F-}"
+click-left = exec i3-sensible-terminal -e Franks/PPSSPP/PPSSPPSDL &
+
 [module/bluetooth]
 type = custom/text
 ;content = "  "
@@ -725,14 +738,14 @@ type = custom/text
 content = "  "
 content-foreground = #ffffff
 ;content-underline = #ffffff
-click-left = alacritty -e nmtui  &
+click-left = exec i3-sensible-terminal -e nmtui  &
 
 [module/rede]
 type = custom/text
 content = "  "
 content-foreground = #ffffff
 ;content-underline = #ffffff
-click-left = alacritty -e $HOME/.config/polybar/scripts/net-ping.sh
+click-left = exec i3-sensible-terminal -e $HOME/.config/polybar/scripts/net-ping.sh
 tail = true
 
 [module/ethernet]
@@ -750,7 +763,7 @@ label-disconnected-foreground = #fe2020
 
 [module/wireless]
 type = internal/network
-interface = wlan0
+interface = wlp2s0
 interval = 0.1
 
 format-packetloss = <animation-packetloss>
