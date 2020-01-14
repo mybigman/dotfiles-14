@@ -726,6 +726,13 @@ content-foreground = #ffffff
 click-left = exec blueman-applet &
 click-right = exec blueman-manager &
 
+[module/idle]
+type = custom/text
+content = "  "
+content-foreground = #ffffff
+;content-underline = #ffffff
+click-left = exec idle3.8 &
+
 [module/menu]
 type = custom/text
 content = "%{F#938d8d}%{F-} Aplicações"
