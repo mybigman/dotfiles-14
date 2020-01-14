@@ -64,7 +64,7 @@ font-2 = "Hack Nerd Font:style=Regular:pixelsize=11;1"
 ; Separator
 ;separator =|
 
-modules-left = ping
+modules-left =
 modules-right = alsa filesystem calendar date
 modules-center = weather
 
