@@ -115,6 +115,7 @@ source $ZSH/oh-my-zsh.sh
 # alias pmirror="sudo chmod 0644 /etc/pacman.d/mirrorlist"
   alias cache="cd /var/cache/pacman/pkg"
   alias clima="curl wttr.in"
+  alias mine="java -jar $HOME/Franks/Minecraft.jar"
 
 
 #Aliase scripts
@@ -139,6 +140,7 @@ source $ZSH/oh-my-zsh.sh
   alias mirror="sudo $HOME/Scripts/mirrorlist.sh"
   alias tel="$HOME/Scripts/telegram_installer.sh"
   alias em="howl Scripts/mirrorlist.sh"
+  alias elf="$HOME/Scripts/Ascii/elfman.sh"
 
 
 # Plugins do zsh
