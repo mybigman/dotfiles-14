@@ -14,12 +14,11 @@
 ; Cores
 
 [colors]
-;background = ${xrdb:color0:#222}
-background = #00000000
-;background = #222
+foreground = ${xrdb:color7:#222}
+background = ${xrdb:color0:#222}
+;background = #000000
 background-alt = #444
-;foreground = ${xrdb:color7:#222}
-foreground = #ffffff
+;foreground = #ffffff
 foreground-alt = #555
 primary = #ffb52a
 secondary = #000000
@@ -48,10 +47,10 @@ foreground = ${colors.foreground}
 ;border-color = #ffffff
 
 padding-left = 1
-padding-right = 2
+padding-right = 1
 
-module-margin-left = 0
-module-margin-right = 2
+module-margin-left = 1
+module-margin-right = 1
 
 ;FONTES DA BARRA TOPO
 
@@ -62,9 +61,9 @@ font-2 = "Hack Nerd Font:style=Regular:pixelsize=11;1"
 ;MÓDULOS TOP BAR
 
 ; Separator
-;separator =|
+separator =|
 
-modules-left =
+modules-left = pred pbrown pwhite pblack
 modules-right = alsa filesystem calendar date
 modules-center = weather
 
@@ -114,7 +113,7 @@ padding-left = 1
 padding-right = 2
 
 module-margin-left = 0
-module-margin-right = 1
+module-margin-right = 2
 
 ;FONTES DA BARRA BOTTOM
 
@@ -129,7 +128,7 @@ font-2 = "Hack Nerd Font:style=Regular:pixelsize=10;2"
 
 modules-left = i3
 modules-center = linux
-modules-right = gravar bluetooth rede powermenu
+modules-right = up gravar bluetooth rede idle  powermenu
 
 ;Icone-Background
 
@@ -196,8 +195,8 @@ mount-0 = /home
 ;spacing = 2
 
 format-mounted-prefix = "  "
-format-mounted-prefix-foreground = #ffffff
-label-mounted-underline = #ffffff
+format-mounted-prefix-foreground = ${xrdb:color7:#222}
+label-mounted-underline = ${xrdb:color7:#222
 ;format-mounted-prefix-underline = #ffffff
 format = <label>
 
@@ -288,7 +287,7 @@ label-mode-padding = 1
 
 label-focused = %name%
 label-focused-foreground = #000000
-label-focused-background = #ffffff
+label-focused-background = ${xrdb:color7:#222}
 label-focused-underline = #ff5733
 label-focused-padding = 2
 
@@ -335,7 +334,7 @@ bar-progress-empty = ""
 ;label-song =  %title%
 ;label-song-maxlen = 25
 ;label-song-ellipsis = true
-label-song = %{F#ffffff}%{F-} %title%%{F-}
+label-song = %{F${xrdb:color7:#222}%{F-} %title%%{F-}
 
 ; Modulo xbacklight
 
@@ -379,8 +378,8 @@ label = %percentage:2%%
 type = internal/memory
 interval = 2
 format-prefix = "  "
-format-prefix-foreground = #ffffff
-;format-underline = #ffffff
+format-prefix-foreground = ${xrdb:color7:#222
+;format-underline = ${xrdb:color7:#222
 label = %percentage_used%%
 
 ; Modulo date
@@ -398,8 +397,8 @@ time = %I:%M:%S %p
 
 
 format-prefix = "  "
-format-prefix-foreground = #ffffff
-;format-underline = #ffffff
+format-prefix-foreground = ${xrdb:color7:#222
+;format-underline = ${xrdb:color7:#222
 
 label = %date% %time%
 
@@ -439,9 +438,9 @@ type = internal/alsa
 
 format-volume = <label-volume>
 format-volume-prefix = " 墳 "
-format-volume-prefix-foreground = #ffffff
+format-volume-prefix-foreground = ${xrdb:color7:#222
 label-volume = %percentage%%
-;format-volume-underline = #ffffff
+;format-volume-underline = ${xrdb:color7:#222
 
 format-muted-prefix = " "
 format-muted-foreground = #fc4141
@@ -546,13 +545,13 @@ expand-right = true
 format-spacing = 2
 
 label-open = "  "
-label-open-foreground = #ffffff
+label-open-foreground = ${xrdb:color7:#222
 ;format-underline = #938d8d
 ;label-open-foreground = ${colors.secondary}
 label-close = | Cancelar
 label-close-foreground = #fc4141
 label-separator =|
-label-separator-foreground = #ffffff
+label-separator-foreground = ${xrdb:color7:#222
 
 menu-0-0 = "Sair"
 menu-0-0-exec = menu-open-1
@@ -624,7 +623,7 @@ content-underline = #8df8d8
 
 [module/linux]
 type = custom/text
-content = "%{F#fa7f18}%{F-} Arch Linux"
+content = "%{F${xrdb:color7:#222}%{F-} Arch Linux"
 ;content-underline = #ff00d1
 
 [module/refresh]
@@ -635,7 +634,7 @@ click-left = i3-msg restart &
 
 [module/print]
 type = custom/text
-content = "%{F#ffffff}  %{F-}"
+content = "%{F${xrdb:color7:#222}  %{F-}"
 ;content-underline = #f4f4f4
 ;click-left = bash -c 'maim "$HOME/Imagens/Captura de tela de %d-%m-%Y %H:%M:%S.png"' &
 click-left = bash -c 'scrot "$HOME/Imagens/Captura de tela de %d-%m-%Y %H:%M:%S.png"' &
@@ -651,6 +650,11 @@ click-left = $HOME/Scripts/fortune.sh &
 type = custom/text
 content = "%{F#ffffff} 既 %{F-}"
 click-left = firefox https://www.twitch.tv/ &
+
+[module/up]
+type = custom/script
+interval = 600
+exec = $HOME/.config/polybar/scripts/updates-arch.sh
 
 [module/github]
 type = custom/text
@@ -675,7 +679,7 @@ format-underline = #fe8ac6
 type = custom/script
 interval = 1
 exec = $HOME/.config/polybar/scripts/weather.sh
-label = "%{F#ffffff}  %{F-} %output:0:37:...%"
+label = "%{F#${xrdb:color7:#222}  %{F-} %output:0:37:...%"
 ;click-left = firefox https://openweathermap.org/city/3387130
 ;format-underline = #cecece
 ;format-foreground = #cecece
@@ -685,7 +689,7 @@ type = custom/script
 interval = 1
 exec = date "+%a %d %b, %Y"
 ;exec = date "+%a %d %b, %Y - %H:%M:%S"
-label = "%{F#ffffff}  %{F-} %output:0:37:...%"
+label = "%{F${xrdb:color7:#222}  %{F-} %output:0:36:...%"
 format-underline = #33fcff
 ;click-left = gsimplecal &
 ;click-left = exec $HOME/Scripts/calendario.sh
@@ -721,16 +725,36 @@ click-left = exec i3-sensible-terminal -e Franks/PPSSPP/PPSSPPSDL &
 type = custom/text
 ;content = "  "
 content = "  "
-content-foreground = #ffffff
-;content-underline = #ffffff
+content-foreground = ${xrdb:color7:#222
+;content-underline = ${xrdb:color7:#222
 click-left = exec blueman-applet &
 click-right = exec blueman-manager &
+
+[module/pred]
+type = custom/text
+content = "%{F${xrdb:color7:#222}  %{F-}"
+click-left = exec wal -i ~/Franks/Wallpapers/197.jpg &
+
+[module/pbrown]
+type = custom/text
+content = "%{F${xrdb:color7:#222}  %{F-}"
+click-left = exec wal -i ~/Franks/Wallpapers/154.png &
+
+[module/pwhite]
+type = custom/text
+content = "%{F${xrdb:color7:#222}  %{F-}"
+click-left = exec wal -i ~/Franks/Wallpapers/129.png &
+
+[module/pblack]
+type = custom/text
+content = "%{F${xrdb:color7:#222}  %{F-}"
+click-left = exec wal -i ~/Franks/Wallpapers/090.jpg &
 
 [module/idle]
 type = custom/text
 content = "  "
-content-foreground = #ffffff
-;content-underline = #ffffff
+content-foreground = ${xrdb:color7:#222
+;content-underline = ${xrdb:color7:#222
 click-left = exec idle3.8 &
 
 [module/menu]
@@ -750,8 +774,8 @@ click-left = exec i3-sensible-terminal -e nmtui  &
 [module/rede]
 type = custom/text
 content = "  "
-content-foreground = #ffffff
-;content-underline = #ffffff
+content-foreground = ${xrdb:color7:#222
+;content-underline = ${xrdb:color7:#222
 click-left = exec i3-sensible-terminal -e $HOME/.config/polybar/scripts/net-ping.sh
 tail = true
 
