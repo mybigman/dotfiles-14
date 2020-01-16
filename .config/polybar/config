@@ -63,7 +63,7 @@ font-2 = "Hack Nerd Font:style=Regular:pixelsize=11;1"
 ; Separator
 separator =|
 
-modules-left = pywall1 pywall2 pywall3 pywall4
+modules-left = pywall1 pywall2 pywall3 pywall4 pywall5 pywall6 pywall7
 modules-right = alsa filesystem calendar date
 modules-center = weather
 
@@ -702,9 +702,9 @@ click-left = exec deezer &
 
 [module/gravar]
 type = custom/script
-interval = 1
+interval = 0.1
 label = %output%
-;click-left = alacritty -e $HOME/Scripts/gravar.sh &
+click-left = alacritty -e $HOME/Scripts/gravar.sh &
 exec = $HOME/Scripts/gravar.sh status
 tail = true
 
@@ -733,22 +733,37 @@ click-right = exec blueman-manager &
 [module/pywall1]
 type = custom/text
 content = "%{F${xrdb:color7:#222}  %{F-}"
-click-left = exec wal -i ~/Franks/Wallpapers/197.jpg &
+click-left = exec wal -i ~/Franks/Wallpapers/150.jpg &
 
 [module/pywall2]
 type = custom/text
 content = "%{F${xrdb:color7:#222}  %{F-}"
-click-left = exec wal -i ~/Franks/Wallpapers/154.png &
+click-left = exec wal -i ~/Franks/Wallpapers/177.jpg &
 
 [module/pywall3]
 type = custom/text
 content = "%{F${xrdb:color7:#222}  %{F-}"
-click-left = exec wal -i ~/Franks/Wallpapers/129.png &
+click-left = exec wal -i ~/Franks/Wallpapers/182.jpg &
 
 [module/pywall4]
 type = custom/text
 content = "%{F${xrdb:color7:#222}  %{F-}"
-click-left = exec wal -i ~/Franks/Wallpapers/090.jpg &
+click-left = exec wal -i ~/Franks/Wallpapers/164.jpg &
+
+[module/pywall5]
+type = custom/text
+content = "%{F${xrdb:color7:#222}  %{F-}"
+click-left = exec wal -i ~/Franks/Wallpapers/149.jpg &
+
+[module/pywall6]
+type = custom/text
+content = "%{F${xrdb:color7:#222}  %{F-}"
+click-left = exec wal -i ~/Franks/Wallpapers/021.png &
+
+[module/pywall7]
+type = custom/text
+content = "%{F${xrdb:color7:#222}  %{F-}"
+click-left = exec wal -i ~/Franks/Wallpapers/129.png &
 
 [module/idle]
 type = custom/text
