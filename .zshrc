@@ -153,6 +153,7 @@ source $ZSH/oh-my-zsh.sh
   alias em="howl Scripts/mirrorlist.sh"
   alias elf="$HOME/Scripts/Ascii/elfman.sh"
   alias casar="echo Franklin, eu Linux aceito seu pedido de casamento"
+  alias gravar="sh $HOME/Scripts/gravar.sh"
 
 # Plugins do zsh
 #source /usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
