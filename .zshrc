@@ -9,6 +9,17 @@
 # Telegram: @FranklinTech
 ##############################
 
+# Import colorscheme from 'wal' asynchronously
+# &   # Run the process in the background.
+# ( ) # Hide shell job control messages.
+(cat ~/.cache/wal/sequences &)
+
+# Alternative (blocks terminal for 0-3ms)
+cat ~/.cache/wal/sequences
+
+# To add support for TTYs this line can be optionally added.
+source ~/.cache/wal/colors-tty.sh
+
 # Exportar cores no TERM
 export TERM='xterm-256color'
 
@@ -141,7 +152,7 @@ source $ZSH/oh-my-zsh.sh
   alias tel="$HOME/Scripts/telegram_installer.sh"
   alias em="howl Scripts/mirrorlist.sh"
   alias elf="$HOME/Scripts/Ascii/elfman.sh"
-
+  alias casar="echo Franklin, eu Linux aceito seu pedido de casamento"
 
 # Plugins do zsh
 #source /usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
