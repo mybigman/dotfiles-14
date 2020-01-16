@@ -46,7 +46,9 @@ hide_edge_borders smart
 #                          C O R E S                               #
 ####################################################################
 
-set_from_resource $bg background
+#set_from_resource $bg background
+set_from_resource $ fg i3wm.color7 #f0f0f0
+set_from_resource $ bg i3wm.color2 #f0f0f0
 
 # classe                borda   fundo   texto   ind.    borda filho
 client.focused          #ffffff #474747 #ffffff #ffffff   #ffffff
@@ -367,6 +369,10 @@ for_window [class="(PPSSPPSDL)"]floating enable, move position center
 # Stacer (Monitoriamento de sistema)
 
 for_window [class="(stacer)"]floating enable, move position center
+
+# Haguichi (Client do Hamachi)
+
+for_window [class="(Haguichi)"]floating enable, move position center
 
 # Script para gravar a tela
 for_window [class="Termite" title="castnow"] move window to scratchpad
