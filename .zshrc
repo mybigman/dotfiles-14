@@ -132,6 +132,7 @@ source $ZSH/oh-my-zsh.sh
 #Aliase scripts
   alias pipes="$HOME/Scripts/pipes.sh"
   alias pipes2="$HOME/Scripts/pipes.sh -t 2"
+  alias pipes3="$HOME/Scripts/pipes.sh -t 3"
   alias crunch="$HOME/Scripts/Ascii/crunch.sh"
   alias crunchm="$HOME/Scripts/Ascii/crunchbang-mini.sh"
   alias guns="$HOME/Scripts/Ascii/guns.sh"
