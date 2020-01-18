@@ -391,7 +391,7 @@ for_window [class="(Haguichi)"]floating enable, move position center
 
 # Script para gravar a tela
 for_window [class="Termite" title="castnow"] move window to scratchpad
-for_window [title="(gravar.sh$)"] move window to scratchpad
+for_window [title="(gravar$)"] move window to scratchpad
 
 ####################################################################
 #                             RESIZE                               #
