@@ -63,7 +63,7 @@ font-2 = "Hack Nerd Font:style=Regular:pixelsize=11;1"
 ; Separator
 separator =|
 
-modules-left = pywall1 pywall2 pywall3
+modules-left = pywall1 pywall2 pywall3 pywall4
 modules-right = alsa filesystem calendar date
 modules-center = weather
 
@@ -744,6 +744,11 @@ click-left = exec wal -i ~/Franks/Wallpapers/182.jpg &
 type = custom/text
 content = "%{F${xrdb:color7:#222}  %{F-}"
 click-left = exec wal -i ~/Franks/Wallpapers/129.png &
+
+[module/pywall4]
+type = custom/text
+content = "%{F${xrdb:color7:#222}  %{F-}"
+click-left = exec wal -i ~/Franks/Wallpapers/205.png &
 
 [module/idle]
 type = custom/text
