@@ -19,15 +19,15 @@ background = ${xrdb:color0:#222}
 ;background = #000000
 background-alt = #444
 ;foreground = #ffffff
-foreground-alt = #555
-primary = #ffb52a
-secondary = #000000
-alert = #ff0000
+foreground-alt = ${xrdb:color7:#222}
+primary = ${xrdb:color1:#222}
+secondary = ${xrdb:color2:#222}
+alert = ${xrdb:color3:#222}
 
 ; Barra/TOPO
 
 [bar/top]
-monitor = ${env:MONITOR:VGA-0}
+monitor = ${env:MONITOR:VGA-1}
 dpi = 80
 width = 100%
 ;width = 80%
@@ -89,7 +89,7 @@ cursor-scroll = ns-resize
 ; Barra/Bottom
 
 [bar/bottom]
-monitor = ${env:MONITOR:VGA-0}
+monitor = ${env:MONITOR:VGA-1}
 dpi = 80
 width = 100%
 ;width = 80%
@@ -299,7 +299,7 @@ label-visible-background = ${colors.background-alt}
 label-visible-padding = 1
 
 label-urgent = %name%
-label-urgent-background = #f84040
+label-urgent-background = ${xrdb:color3:#222}
 label-urgent-padding = 2
 
 ; Modulo mpd
