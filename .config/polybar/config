@@ -128,7 +128,7 @@ font-2 = "Hack Nerd Font:style=Regular:pixelsize=10;2"
 
 modules-left = i3
 modules-center = linux
-modules-right = gravar bluetooth rede idle  powermenu
+modules-right = up gravar bluetooth lock rede idle  powermenu
 
 ;Icone-Background
 
@@ -642,8 +642,8 @@ click-left = bash -c 'scrot "$HOME/Imagens/Captura de tela de %d-%m-%Y %H:%M:%S.
 [module/lock]
 type = custom/text
 content = "  "
-content-foreground = #ffffff
-;content-underline = #ffffff
+content-foreground = ${xrdb:color7:#222}
+;content-underline = ${xrdb:color7:#222}
 click-left = $HOME/Scripts/fortune.sh &
 
 [module/twitch]
