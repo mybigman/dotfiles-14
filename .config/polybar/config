@@ -128,7 +128,7 @@ font-2 = "Hack Nerd Font:style=Regular:pixelsize=10;2"
 
 modules-left = i3
 modules-center = linux
-modules-right = up gravar bluetooth rede idle  powermenu
+modules-right = gravar bluetooth rede idle  powermenu
 
 ;Icone-Background
 
