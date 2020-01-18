@@ -99,7 +99,7 @@ source $ZSH/oh-my-zsh.sh
   alias edtt="howl ~/.p10k.zsh"
   alias del="rm -rf ~/.zsh_history"
   alias off="poweroff"
-  alias rb="reboot"
+  alias rb="sleep 4 && reboot"
   alias music="mpd && ncmpcpp"
   alias km="killall mpd"
   alias fso="sudo firehol stop "
