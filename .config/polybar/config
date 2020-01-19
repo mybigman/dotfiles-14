@@ -27,7 +27,7 @@ alert = ${xrdb:color3:#222}
 ; Barra/TOPO
 
 [bar/top]
-monitor = ${env:MONITOR:VGA-0}
+monitor = ${env:MONITOR:VGA-1}
 dpi = 80
 width = 100%
 ;width = 80%
@@ -63,7 +63,7 @@ font-2 = "Hack Nerd Font:style=Regular:pixelsize=11;1"
 ; Separator
 separator =|
 
-modules-left = pywall1 pywall2 pywall3 pywall4
+modules-left = pywall1 pywall2
 modules-right = alsa filesystem calendar date
 modules-center = weather
 
@@ -89,7 +89,7 @@ cursor-scroll = ns-resize
 ; Barra/Bottom
 
 [bar/bottom]
-monitor = ${env:MONITOR:VGA-0}
+monitor = ${env:MONITOR:VGA-1}
 dpi = 80
 width = 100%
 ;width = 80%
@@ -599,8 +599,7 @@ content = "%{F${xrdb:color7:#222}%{F-} Arch Linux"
 type = custom/text
 content = "  "
 content-foreground = ${xrdb:color7:#222}
-;click-left = i3-msg restart &
-click-left = exec polybar -r top && bottom &
+click-left = i3-msg restart &
 
 [module/print]
 type = custom/text
@@ -688,7 +687,7 @@ click-left = exec wal -i ~/Franks/Wallpapers/004.jpg &
 [module/pywall2]
 type = custom/text
 content = "%{F${xrdb:color7:#222}  %{F-}"
-click-left = exec wal -i ~/Franks/Wallpapers/001.jpg &
+click-left = exec wal -i ~/Franks/Wallpapers/000.jpg &
 
 [module/wifi]
 type = custom/text
