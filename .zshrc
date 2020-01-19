@@ -12,13 +12,13 @@
 # Import colorscheme from 'wal' asynchronously
 # &   # Run the process in the background.
 # ( ) # Hide shell job control messages.
-#(cat ~/.cache/wal/sequences &)
+(cat ~/.cache/wal/sequences &)
 
 # Alternative (blocks terminal for 0-3ms)
-#cat ~/.cache/wal/sequences
+cat ~/.cache/wal/sequences
 
 # To add support for TTYs this line can be optionally added.
-#source ~/.cache/wal/colors-tty.sh
+source ~/.cache/wal/colors-tty.sh
 
 # Exportar cores no TERM
 export TERM='xterm-256color'
@@ -95,19 +95,19 @@ source $ZSH/oh-my-zsh.sh
 #My aliases
   alias x="startx"
   alias up="sudo pacman -Syyu"
-  alias edt="howl ~/.zshrc"
-  alias edtt="howl ~/.p10k.zsh"
+  alias edt="vim ~/.zshrc"
+  alias edtt="vim ~/.p10k.zsh"
   alias del="rm -rf ~/.zsh_history"
-  alias off="poweroff"
+  alias off="sleep 4 && poweroff"
   alias rb="sleep 4 && reboot"
   alias music="mpd && ncmpcpp"
   alias km="killall mpd"
   alias fso="sudo firehol stop "
   alias fsa="sudo firehol start "
   alias vk="VK_INSTANCE_LAYERS=VK_LAYER_MESA_overlay vkcube"
-  alias ref="sudo reflector -c Brazil --save /etc/pacman.d/mirrorlist"
+# alias ref="sudo reflector -c Brazil --save /etc/pacman.d/mirrorlist"
   alias kwm="pkill -9 picom ; pkill -9 i3"
-  alias term="xrdb -merge ~/.Xresources"
+# alias term="xrdb -merge ~/.Xresources"
   alias inf="free -h"
   alias arch="ufetch"
   alias br="setxkbmap br &"
@@ -155,6 +155,7 @@ source $ZSH/oh-my-zsh.sh
   alias elf="$HOME/Scripts/Ascii/elfman.sh"
   alias casar="echo Franklin, eu Linux aceito seu pedido de casamento"
   alias gravar="sh $HOME/Scripts/gravar.sh"
+# alias rp="$HOME/.config/polybar/scripts/launch.sh"
 
 # Plugins do zsh
 #source /usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
