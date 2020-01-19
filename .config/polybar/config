@@ -127,8 +127,8 @@ font-2 = "Hack Nerd Font:style=Regular:pixelsize=10;2"
 ;MÓDULOS BOTTOM BAR
 
 modules-left = i3
-modules-center = linux
-modules-right = up gravar bluetooth lock rede idle  powermenu
+modules-center = uptime
+modules-right = up gravar bluetooth lock powermenu
 
 ;Icone-Background
 
@@ -368,8 +368,8 @@ card = intel_backlight
 type = internal/cpu
 interval = 1.5
 format-prefix = "  "
-format-prefix-foreground = #ffffff
-;format-underline = #ffffff
+format-prefix-foreground = ${xrdb:color7:#222}
+;format-underline = ${xrdb:color7:#222}
 label = %percentage:2%%
 
 ; Modulo memory
@@ -585,40 +585,9 @@ margin-bottom = 5
 
 ; vim:ft=dosini
 
-[module/terminal]
-type = custom/text
-content = "%{F#938d8d}  %{F-}"
-click-left = alacritty  &
-;click-left = termite  &
-;click-right = sakura &
-
-[module/firefox]
-type = custom/text
-content = "%{F#938d8d}  %{F-}"
-click-left = firefox &
-
-[module/telegram]
-type = custom/text
-content = "%{F#938d8d}  %{F-}"
-;click-left = exec telegram-desktop &
-click-left = exec $HOME/.Telegram/Telegram &
-
-[module/filemanager]
-type = custom/text
-content = "%{F#938d8d}  %{F-}"
-;click-left = nautilus &
-click-left = thunar &
-
-[module/video]
-type = custom/text
-content = "%{F#938d8d} 嗢 %{F-}"
-;content = "%{F#938d8d}  %{F-}"
-click-left = vlc &
-;click-left = mpv &
-
 [module/user]
 type = custom/text
-content = "%{F#ffffff}  %{F-} Frank"
+content = "%{F${xrdb:color7:#222}}  %{F-} Frank"
 content-underline = #8df8d8
 
 [module/linux]
@@ -629,8 +598,9 @@ content = "%{F${xrdb:color7:#222}%{F-} Arch Linux"
 [module/refresh]
 type = custom/text
 content = "  "
-content-foreground = #938d8d
-click-left = i3-msg restart &
+content-foreground = ${xrdb:color7:#222}
+;click-left = i3-msg restart &
+click-left = exec polybar -r top && bottom &
 
 [module/print]
 type = custom/text
@@ -646,20 +616,10 @@ content-foreground = ${xrdb:color7:#222}
 ;content-underline = ${xrdb:color7:#222}
 click-left = $HOME/Scripts/fortune.sh &
 
-[module/twitch]
-type = custom/text
-content = "%{F#ffffff} 既 %{F-}"
-click-left = firefox https://www.twitch.tv/ &
-
 [module/up]
 type = custom/script
 interval = 600
 exec = $HOME/.config/polybar/scripts/updates-arch.sh
-
-[module/github]
-type = custom/text
-content = "%{F#ffffff}  %{F-}"
-click-left = firefox https://github.com/fffranks &
 
 [module/pacman]
 type = custom/script
@@ -695,11 +655,6 @@ format-underline = #33fcff
 ;click-left = exec $HOME/Scripts/calendario.sh
 ;click-left = notify-send "$(cal)"
 
-[module/deezer]
-type = custom/text
-content = "%{F#938d8d}  %{F-}"
-click-left = exec deezer &
-
 [module/gravar]
 type = custom/script
 interval = 0.1
@@ -715,11 +670,6 @@ label = %output%
 ;click-left = alacritty -e $HOME/Scripts/gravar.sh &
 exec = $HOME/.config/polybar/scripts/ping.sh status
 tail = true
-
-[module/psp]
-type = custom/text
-content = "%{F#ffffff}  %{F-}"
-click-left = exec i3-sensible-terminal -e Franks/PPSSPP/PPSSPPSDL &
 
 [module/bluetooth]
 type = custom/text
@@ -740,44 +690,12 @@ type = custom/text
 content = "%{F${xrdb:color7:#222}  %{F-}"
 click-left = exec wal -i ~/Franks/Wallpapers/182.jpg &
 
-[module/pywall3]
-type = custom/text
-content = "%{F${xrdb:color7:#222}  %{F-}"
-click-left = exec wal -i ~/Franks/Wallpapers/129.png &
-
-[module/pywall4]
-type = custom/text
-content = "%{F${xrdb:color7:#222}  %{F-}"
-click-left = exec wal -i ~/Franks/Wallpapers/205.png &
-
-[module/idle]
-type = custom/text
-content = "  "
-content-foreground = ${xrdb:color7:#222
-;content-underline = ${xrdb:color7:#222
-click-left = exec idle3.8 &
-
-[module/menu]
-type = custom/text
-content = "%{F#938d8d}%{F-} Aplicações"
-content-foreground = #ffffff
-;content-underline = #ffffff
-click-left = exec rofi -show drun -theme ~/.config/rofi/drun.rasi &
-
 [module/wifi]
 type = custom/text
 content = "  "
 content-foreground = #ffffff
 ;content-underline = #ffffff
 click-left = exec i3-sensible-terminal -e nmtui  &
-
-[module/rede]
-type = custom/text
-content = "  "
-content-foreground = ${xrdb:color7:#222
-;content-underline = ${xrdb:color7:#222
-click-left = exec i3-sensible-terminal -e $HOME/.config/polybar/scripts/net-ping.sh
-tail = true
 
 [module/ethernet]
 type = internal/network
