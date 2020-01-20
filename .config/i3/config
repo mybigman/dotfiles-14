@@ -486,10 +486,10 @@ bindsym XF86AudioMute exec --no-startup-id pactl set-sink-mute 0 toggle
 #                      INICIAR COM O I3                            #
 ####################################################################
 # Polybar
-exec_always --no-startup-id $HOME/.config/polybar/scripts/launch.sh
+exec_always --no-startup-id ~/.config/polybar/scripts/launch.sh
 
 # Wallpapers
-#exec_always --no-startup-id feh --bg-fill $HOME/Franks/Wallpapers/093.jpg
+#exec_always --no-startup-id feh --bg-fill ~/Franks/Wallpapers/093.jpg
 
 # Compositor
 exec --no-startup-id picom --config ~/.config/picom/picom.conf
@@ -498,7 +498,7 @@ exec --no-startup-id picom --config ~/.config/picom/picom.conf
 exec --no-startup-id dunst -b
 
 # Bloqueio de Tela
-exec --no-startup-id xautolock -time 3 -detectsleep -locker $HOME/Scripts/fortune.sh
+exec --no-startup-id xautolock -time 3 -detectsleep -locker ~/Scripts/fortune.sh
 
 # Num Lock
 exec --no-startup-id numlockx on &
