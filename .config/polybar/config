@@ -27,7 +27,7 @@ alert = ${xrdb:color3:#222}
 ; Barra/TOPO
 
 [bar/top]
-monitor = ${env:MONITOR:VGA-1}
+monitor = ${env:MONITOR:VGA-0}
 dpi = 80
 width = 100%
 ;width = 80%
@@ -56,7 +56,7 @@ module-margin-right = 1
 
 font-0 = "Poppins:style=Regular:pixelsize=9;1"
 font-1 = "xos4 Terminess Powerline:pixelsize=13;1"
-font-2 = "Hack Nerd Font:style=Regular:pixelsize=11;1"
+font-2 = "Hack Nerd Font:style=Regular:pixelsize=11;2"
 
 ;MÓDULOS TOP BAR
 
@@ -89,7 +89,7 @@ cursor-scroll = ns-resize
 ; Barra/Bottom
 
 [bar/bottom]
-monitor = ${env:MONITOR:VGA-1}
+monitor = ${env:MONITOR:VGA-0}
 dpi = 80
 width = 100%
 ;width = 80%
@@ -618,7 +618,7 @@ click-left = $HOME/Scripts/fortune.sh &
 [module/up]
 type = custom/script
 interval = 600
-exec = $HOME/.config/polybar/scripts/updates-arch.sh
+exec = ~/.config/polybar/scripts/updates-arch.sh
 
 [module/pacman]
 type = custom/script
@@ -682,7 +682,7 @@ click-right = exec blueman-manager &
 [module/pywall1]
 type = custom/text
 content = "%{F${xrdb:color7:#222}  %{F-}"
-click-left = exec wal -i ~/Franks/Wallpapers/004.jpg &
+click-left = exec wal -i ~/Franks/Wallpapers/003.jpg &
 
 [module/pywall2]
 type = custom/text
