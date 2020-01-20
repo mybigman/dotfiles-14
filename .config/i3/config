@@ -94,7 +94,7 @@ bindsym $mod+x exec --no-startup-id $HOME/Scripts/fortune.sh
 bindsym $mod+Shift+x exec glava &
 
 # Gravar Tela
-bindsym $mod+m exec sh $HOME/Scripts/gravar.sh
+bindsym $mod+m exec ~/Scripts/gravar
 
 # Printar Tela
 bindsym $mod+c exec bash -c 'scrot "$HOME/Imagens/Captura de tela de %d-%m-%Y %H:%M:%S.png"' &
