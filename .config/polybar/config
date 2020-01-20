@@ -658,16 +658,8 @@ format-underline = #33fcff
 type = custom/script
 interval = 0.1
 label = %output%
-click-left = alacritty -e $HOME/Scripts/gravar &
-exec = $HOME/Scripts/gravar status
-tail = true
-
-[module/ping]
-type = custom/script
-interval = 0.6
-label = %output%
-;click-left = alacritty -e $HOME/Scripts/gravar.sh &
-exec = $HOME/.config/polybar/scripts/ping.sh status
+;click-left = alacritty -e ~/Scripts/gravar &
+exec = ~/Scripts/gravar status
 tail = true
 
 [module/bluetooth]
