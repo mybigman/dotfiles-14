@@ -658,8 +658,8 @@ format-underline = #33fcff
 type = custom/script
 interval = 0.1
 label = %output%
-;click-left = alacritty -e ~/Scripts/gravar &
-exec = ~/Scripts/gravar status
+;click-left = alacritty -e ~/Scripts/gravar.sh &
+exec = ~/Scripts/gravar.sh status
 tail = true
 
 [module/bluetooth]
