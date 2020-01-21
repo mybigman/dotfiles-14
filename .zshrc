@@ -12,13 +12,13 @@
 # Import colorscheme from 'wal' asynchronously
 # &   # Run the process in the background.
 # ( ) # Hide shell job control messages.
-(cat ~/.cache/wal/sequences &)
+#(cat ~/.cache/wal/sequences &)
 
 # Alternative (blocks terminal for 0-3ms)
-cat ~/.cache/wal/sequences
+#cat ~/.cache/wal/sequences
 
 # To add support for TTYs this line can be optionally added.
-source ~/.cache/wal/colors-tty.sh
+#source ~/.cache/wal/colors-tty.sh
 
 # Exportar cores no TERM
 export TERM='xterm-256color'
@@ -94,7 +94,7 @@ source $ZSH/oh-my-zsh.sh
 
 #My aliases
   alias x="startx"
-  alias up="sudo pacman -Syyu"
+  alias up="sudo pacman -Syu"
   alias edt="vim ~/.zshrc"
   alias edtt="vim ~/.p10k.zsh"
   alias del="rm -rf ~/.zsh_history"
@@ -127,6 +127,7 @@ source $ZSH/oh-my-zsh.sh
   alias cache="cd /var/cache/pacman/pkg"
   alias clima="curl wttr.in"
   alias mine="java -jar $HOME/Franks/Minecraft.jar"
+  alias neo="neofetch --ascii ~/Ascii/rose.txt"
 
 
 #Aliase scripts
