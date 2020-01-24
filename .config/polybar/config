@@ -64,7 +64,7 @@ font-2 = "Hack Nerd Font:style=Regular:pixelsize=11;2"
 separator =|
 
 modules-left = pywall1 pywall2
-modules-right = alsa filesystem calendar date
+modules-right = alsa calendar date
 modules-center = weather
 
 ;Icone-Background
@@ -107,7 +107,7 @@ foreground = ${colors.foreground}
 ;line-color = #ffffff
 
 ;border-size = 1
-;border-color = ${xrdb:color7:#222}
+;\border-color = ${xrdb:color7:#222}
 
 padding-left = 1
 padding-right = 2
@@ -127,7 +127,7 @@ font-2 = "Hack Nerd Font:style=Regular:pixelsize=10;2"
 ;MÓDULOS BOTTOM BAR
 
 modules-left = i3
-modules-center = uptime
+modules-center = linux
 modules-right = up gravar bluetooth lock powermenu
 
 ;Icone-Background
@@ -218,10 +218,10 @@ mount-0 = /
 ;spacing = 2
 
 format-mounted-prefix = " 濫 "
-format-mounted-prefix-foreground = #ffffff
-;format-mounted-foreground = #ffffff
-;label-mounted-underline = #ffffff
-;format-mounted-prefix-underline = #ffffff
+format-mounted-prefix-foreground = ${xrdb:color7:#222}
+;format-mounted-foreground = ${xrdb:color7:#222}
+;label-mounted-underline = ${xrdb:color7:#222}
+;format-mounted-prefix-underline = ${xrdb:color7:#222}
 
 format = <label>
 
@@ -587,7 +587,7 @@ margin-bottom = 5
 
 [module/user]
 type = custom/text
-content = "%{F${xrdb:color7:#222}}  %{F-} Frank"
+content = "%{F${xrdb:color7:#222}  %{F-} Frank"
 content-underline = #8df8d8
 
 [module/linux]
@@ -624,14 +624,14 @@ exec = ~/.config/polybar/scripts/updates-arch.sh
 type = custom/script
 interval = 1
 exec = pacman -Qq | wc -l
-label = "%{F#ffffff}  %{F-} %output:0:37:...%"
+label = "%{F${xrdb:color7:#222}  %{F-} %output:0:37:...%"
 ;format-underline = #ff33e6
 ;format-background = #ff33e6
 
 [module/kernel]
 type = custom/script
 exec = uname -r
-label = "%{F#ffffff}  %{F-} %output:0:37:...%"
+label = "%{F#${xrdb:color7:#222}  %{F-} %output:0:37:...%"
 format-underline = #fe8ac6
 
 [module/weather]
@@ -674,7 +674,7 @@ click-right = exec blueman-manager &
 [module/pywall1]
 type = custom/text
 content = "%{F${xrdb:color7:#222}  %{F-}"
-click-left = exec wal -i ~/Franks/Wallpapers/004.jpg &
+click-left = exec wal -i ~/Franks/Wallpapers/003.png &
 
 [module/pywall2]
 type = custom/text
