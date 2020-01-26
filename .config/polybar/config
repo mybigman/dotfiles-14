@@ -64,7 +64,7 @@ font-2 = "Hack Nerd Font:style=Regular:pixelsize=11;2"
 separator =|
 
 modules-left = pywall1 pywall2
-modules-right = alsa calendar date
+modules-right = alsa pacman calendar date
 modules-center = weather
 
 ;Icone-Background
@@ -127,7 +127,7 @@ font-2 = "Hack Nerd Font:style=Regular:pixelsize=10;2"
 ;MÓDULOS BOTTOM BAR
 
 modules-left = i3
-modules-center = linux
+modules-center = frase
 modules-right = up gravar bluetooth lock powermenu
 
 ;Icone-Background
@@ -595,6 +595,11 @@ type = custom/text
 content = "%{F${xrdb:color7:#222}%{F-} Arch Linux"
 ;content-underline = #ff00d1
 
+[module/frase]
+type = custom/text
+content = "%{F${xrdb:color7:#222}%{F-}  Seja livre, use Linux!!!"
+;content-underline = #ff00d1
+
 [module/refresh]
 type = custom/text
 content = "  "
@@ -674,12 +679,12 @@ click-right = exec blueman-manager &
 [module/pywall1]
 type = custom/text
 content = "%{F${xrdb:color7:#222}  %{F-}"
-click-left = exec wal -i ~/Franks/Wallpapers/003.png &
+click-left = exec wal -i ~/Franks/Wallpapers/004.png &
 
 [module/pywall2]
 type = custom/text
 content = "%{F${xrdb:color7:#222}  %{F-}"
-click-left = exec wal -i ~/Franks/Wallpapers/000.jpg &
+click-left = exec wal -i ~/Franks/Wallpapers/005.png &
 
 [module/wifi]
 type = custom/text
