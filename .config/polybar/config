@@ -16,7 +16,7 @@
 [colors]
 foreground = ${xrdb:color7:#222}
 background = ${xrdb:color0:#222}
-;background = #000000
+;background = #00000000
 background-alt = #444
 ;foreground = #ffffff
 foreground-alt = ${xrdb:color7:#222}
@@ -657,7 +657,7 @@ label = "%{F${xrdb:color7:#222}  %{F-} %output:0:36:...%"
 format-underline = #33fcff
 ;click-left = gsimplecal &
 ;click-left = exec $HOME/Scripts/calendario.sh
-;click-left = notify-send "$(cal)"
+click-left = notify-send "$(cal)"
 
 [module/gravar]
 type = custom/script
@@ -679,7 +679,7 @@ click-right = exec blueman-manager &
 [module/pywall1]
 type = custom/text
 content = "%{F${xrdb:color7:#222}  %{F-}"
-click-left = exec wal -i ~/Franks/Wallpapers/004.png &
+click-left = exec wal -i ~/Franks/Wallpapers/006.jpg &
 
 [module/pywall2]
 type = custom/text
