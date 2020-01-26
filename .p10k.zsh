@@ -2,6 +2,10 @@
 # Telegram: @FranklinTech
 #
 # Temporarily change options.
+
+# Pywall
+~/.cache/wal/colors.sh
+
 'builtin' 'local' '-a' 'p10k_config_opts'
 [[ ! -o 'aliases'         ]] || p10k_config_opts+=('aliases')
 [[ ! -o 'sh_glob'         ]] || p10k_config_opts+=('sh_glob')
@@ -71,7 +75,7 @@
       # public_ip             # public IP address
       # proxy                 # system-wide http/https/ftp proxy
       # battery               # internal battery
-       example               # example user-defined segment (see prompt_example function below)
+      # example               # example user-defined segment (see prompt_example function below)
   )
 
   # To disable default icons for all segments, set POWERLEVEL9K_VISUAL_IDENTIFIER_EXPANSION=''.
@@ -214,6 +218,7 @@
 
   ##################################[ dir: current directory ]##################################
   # Current directory background color.
+    #typeset -g POWERLEVEL9K_DIR_BACKGROUND=${xrdb:color7:#222}
     typeset -g POWERLEVEL9K_DIR_BACKGROUND=255
   # Default current directory foreground color.
   typeset -g POWERLEVEL9K_DIR_FOREGROUND=0
@@ -223,7 +228,7 @@
   # Replace removed segment suffixes with this symbol.
   typeset -g POWERLEVEL9K_SHORTEN_DELIMITER=0
   # Color of the shortened directory segments.
-  typeset -g POWERLEVEL9K_DIR_SHORTENED_FOREGROUND=250
+  typeset -g POWERLEVEL9K_DIR_SHORTENED_FOREGROUND=0
   # Color of the anchor directory segments. Anchor segments are never shortened. The first
   # segment is always an anchor.
   typeset -g POWERLEVEL9K_DIR_ANCHOR_FOREGROUND=0
