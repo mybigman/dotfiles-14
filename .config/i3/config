@@ -76,6 +76,9 @@ client.background       $bg
 # Restartar Polybar
 bindsym $mod+o exec ~/.config/polybar/scripts/launch.sh
 
+# Iniciar PPSSPP
+bindsym $mod+Shift+t exec ~/Franks/Jogos/PPSSPP/PPSSPPSDL
+
 # Iniciar polybar
 #bindsym $mod+p exec polybar -r top &
 #bindsym $mod+u exec polybar -r bottom &
