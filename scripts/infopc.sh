@@ -8,7 +8,7 @@
 # @FranklinTech
 #
 KERNEL=$(uname -r)
-
+PACKAGES=$(pacman -Qq | wc -l)
 PROCESSADOR_NOME=$(grep 'model name' /proc/cpuinfo | tail -n 1 | cut -d':' -f 2 | sed 's/^ //g')
 PROCESSADOR_CORES=$(grep 'cpu cores' /proc/cpuinfo | tail -n 1 | cut -d':' -f 2 | sed 's/^ //g')
 
@@ -25,7 +25,10 @@ echo -e "+----------------------------------------------------------+"
 echo -e "|                  INFORMAÇÕES DO SISTEMA                  |"
 echo -e "+----------------------------------------------------------+"
 echo -e
-echo -e "  Distribuição.......: "Arch Linux"\n"
+echo -e "  Distribuição.......: "Arch Linux""
+echo -e "  Pacotes.......: "$PACKAGES ""
+echo -e "  Uptime.......: "$UPTIME_MIN" minutos"
+echo -e "  Shell.......: "$SHELL""
 echo -e "  Kernel.......: "$KERNEL"\n"
 echo -e "  Processador..: "$PROCESSADOR_NOME
 echo -e "  Cores.........: "$PROCESSADOR_CORES"\n"
@@ -33,5 +36,4 @@ echo -e "  Memória......: "$MEMORIA_TOTAL_KB" KB"
 #echo -e "  Memória......: "$MEMORIA_TOTAL_MB" MB"
 echo -e "  Memória Swap.: "$SWAP_TOTAL_KB" KB"
 #echo -e "  Memória Swap.: "$SWAP_TOTAL_MB" MB\n"
-echo -e "  Uptime.......: "$UPTIME_MIN" minutos"
 echo -e "+----------------------------------------------------------+"
