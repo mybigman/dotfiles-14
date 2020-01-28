@@ -43,8 +43,8 @@ foreground = ${colors.foreground}
 ;line-size = 1
 ;line-color = #938d8d
 
-;border-size = 1
-;border-color = ${xrdb:color7:#222}
+border-size = 1
+border-color = ${xrdb:color7:#222}
 
 padding-left = 1
 padding-right = 1
@@ -64,7 +64,7 @@ font-2 = "Hack Nerd Font:style=Regular:pixelsize=11;2"
 separator =|
 
 modules-left = pywall1 pywall2
-modules-right = alsa pacman calendar date
+modules-right = alsa calendar date
 modules-center = weather
 
 ;Icone-Background
@@ -106,8 +106,8 @@ foreground = ${colors.foreground}
 ;line-size = 1
 ;line-color = #ffffff
 
-;border-size = 1
-;\border-color = ${xrdb:color7:#222}
+border-size = 1
+border-color = ${xrdb:color7:#222}
 
 padding-left = 1
 padding-right = 2
@@ -679,12 +679,12 @@ click-right = exec blueman-manager &
 [module/pywall1]
 type = custom/text
 content = "%{F${xrdb:color7:#222}  %{F-}"
-click-left = exec wal -i ~/Franks/Wallpapers/006.jpg &
+click-left = exec wal -i ~/Franks/Wallpapers/033.jpg &
 
 [module/pywall2]
 type = custom/text
 content = "%{F${xrdb:color7:#222}  %{F-}"
-click-left = exec wal -i ~/Franks/Wallpapers/005.png &
+click-left = exec wal -i ~/Franks/Wallpapers/013.jpg &
 
 [module/wifi]
 type = custom/text
