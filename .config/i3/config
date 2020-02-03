@@ -198,8 +198,8 @@ set $ws4 "4: "
 set $ws5 "5: "
 set $ws6 "6: "
 set $ws7 "7: "
-set $ws8 "8: "
-#set $ws8 "8: "
+#set $ws8 "8: "
+set $ws8 "8: "
 set $ws9 "9: "
 set $ws10 "10: "
 
@@ -279,10 +279,10 @@ for_window [class="(mpv)"] move to workspace $ws7, floating enable, move positio
 for_window [class="(vlc)"] move to workspace $ws7, floating enable, move position center
 
 # Discord ws=8
-#for_window [class="(discord)"] move to workspace $ws8, floating enable, move position center
+for_window [class="(discord)"] move to workspace $ws8, floating enable, move position center
 
 # PyCharm ws=8
-for_window [class="(jetbrains-pycharm-ce)"] move to workspace $ws8, floating enable, move position center
+#for_window [class="(jetbrains-pycharm-ce)"] move to workspace $ws8, floating enable, move position center
 
 # Qbittorrent ws=9
 for_window [class="(qBittorrent)"] move to workspace $ws9, floating enable, move position center
@@ -402,6 +402,10 @@ for_window [class="(Haguichi)"]floating enable, move position center
 
 for_window [class="(Mousepad)"]floating enable, move position center
 
+# Rambox (Multiplas redes sociais)
+
+for_window [class="(Rambox)"]floating enable, move position center
+
 # Script para gravar a tela
 for_window [class="Termite" title="castnow"] move window to scratchpad
 for_window [title="(gravar$)"] move window to scratchpad
@@ -508,7 +512,7 @@ exec --no-startup-id picom --config ~/.config/picom/picom.conf
 exec --no-startup-id dunst -b
 
 # Bloqueio de Tela
-exec --no-startup-id xautolock -time 3 -detectsleep -locker ~/Scripts/fortune.sh
+exec --no-startup-id xautolock -time 3 -detectsleep -locker $HOME/Scripts/fortune.sh
 
 # Num Lock
 exec --no-startup-id numlockx on &
@@ -526,6 +530,9 @@ exec --no-startup-id setxkbmap br &
 exec polybar -r top
 exec polybar -r bottom
 
+# Pywall
+exec --no-startup-id $HOME/.cache/wal/colors.sh &
+
 # Música
 #exec --no-startup-id $HOME/Scripts/mpd-notify.sh &
 #exec --no-startup-id mpd &
@@ -539,11 +546,11 @@ exec polybar -r bottom
 #         statusline #2f343f
 #         separator #1c1a1a
 
-        # Cores das bordas,     background, and text
-#        focused_workspace       #cdae9c #1c1a1a #cdae9c
-#        active_workspace        #ffffff #2f343f #d8dee8
-#        inactive_workspace      #1c1a1a #1c1a1a #d8dee8
-#        urgent_workspacei       #2f343f #ebcb8b #2f343f
+        #                         Cores das bordas, background, text
+#        focused_workspace       #cdae9c            #1c1a1a    #cdae9c
+#        active_workspace        #ffffff               #2f343f    #d8dee8
+#        inactive_workspace      #1c1a1a            #1c1a1a    #d8dee8
+#        urgent_workspacei       #2f343f            #ebcb8b    #2f343f
 #    }
 #        status_command i3status
 #}
