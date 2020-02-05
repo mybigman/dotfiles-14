@@ -406,6 +406,10 @@ for_window [class="(Mousepad)"]floating enable, move position center
 
 for_window [class="(Rambox)"]floating enable, move position center
 
+# Evince (Leitor de PDF)
+
+for_window [class="(Evince)"]floating enable, move position center
+
 # Script para gravar a tela
 for_window [class="Termite" title="castnow"] move window to scratchpad
 for_window [title="(gravar$)"] move window to scratchpad
