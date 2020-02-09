@@ -127,7 +127,7 @@ font-2 = "Hack Nerd Font:style=Regular:pixelsize=10;2"
 ;MÓDULOS BOTTOM BAR
 
 modules-left = i3
-modules-center = frase
+modules-center = linux
 modules-right = up gravar bluetooth lock powermenu
 
 ;Icone-Background
@@ -679,12 +679,12 @@ click-right = exec blueman-manager &
 [module/pywall1]
 type = custom/text
 content = "%{F${xrdb:color7:#222}  %{F-}"
-click-left = exec wal -i ~/Franks/Wallpapers/041.png &
+click-left = exec wal -i ~/Franks/Wallpapers/007.jpg &
 
 [module/pywall2]
 type = custom/text
 content = "%{F${xrdb:color7:#222}  %{F-}"
-click-left = exec wal -i ~/Franks/Wallpapers/040.jpg &
+click-left = exec wal -i ~/Franks/Wallpapers/006.jpg &
 
 [module/wifi]
 type = custom/text
