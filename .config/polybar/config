@@ -63,7 +63,7 @@ font-2 = "Hack Nerd Font:style=Regular:pixelsize=11;2"
 ; Separator
 separator =|
 
-modules-left = pywall1 pywall2
+modules-left = pywall1 pywall2 pywall3
 modules-right = alsa filesystem calendar date
 modules-center = weather
 
@@ -600,6 +600,16 @@ type = custom/text
 content = "%{F${xrdb:color7:#222}%{F-}  Seja livre, use Linux!!!"
 ;content-underline = #ff00d1
 
+[module/frase1]
+type = custom/text
+content = "%{F${xrdb:color7:#222}%{F-}  Nessa casa, só entra Linux!!!"
+;content-underline = #ff00d1
+
+[module/frase2]
+type = custom/text
+content = "%{F${xrdb:color7:#222}%{F-}  FranklinTech"
+;content-underline = #ff00d1
+
 [module/refresh]
 type = custom/text
 content = "  "
@@ -679,12 +689,17 @@ click-right = exec blueman-manager &
 [module/pywall1]
 type = custom/text
 content = "%{F${xrdb:color7:#222}  %{F-}"
-click-left = exec wal -i ~/Franks/Wallpapers/007.jpg &
+click-left = exec wal -i ~/Franks/Wallpapers/019.jpg &
 
 [module/pywall2]
 type = custom/text
 content = "%{F${xrdb:color7:#222}  %{F-}"
-click-left = exec wal -i ~/Franks/Wallpapers/006.jpg &
+click-left = exec wal -i ~/Franks/Wallpapers/002.jpg &
+
+[module/pywall3]
+type = custom/text
+content = "%{F${xrdb:color7:#222}  %{F-}"
+click-left = exec wal -i ~/Franks/Wallpapers/021.png &
 
 [module/wifi]
 type = custom/text
