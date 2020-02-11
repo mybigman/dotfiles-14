@@ -410,6 +410,10 @@ for_window [class="(Rambox)"]floating enable, move position center
 
 for_window [class="(Evince)"]floating enable, move position center
 
+# VB (VirtualBox)
+
+for_window [class="(VirtualBox Manager)"]floating enable, move position center
+
 # Script para gravar a tela
 for_window [class="Termite" title="castnow"] move window to scratchpad
 for_window [title="(gravar$)"] move window to scratchpad
