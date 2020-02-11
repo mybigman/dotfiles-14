@@ -8,7 +8,10 @@
 #url="https://www.archlinux.org/mirrorlist/?country=BR&use_mirror_status=on"
 
 # Mirrors Canadenses
-url="https://www.archlinux.org/mirrorlist/?country=CA&use_mirror_status=on"
+#url="https://www.archlinux.org/mirrorlist/?country=CA&use_mirror_status=on"
+
+# Todos os Mirrors
+url="https://www.archlinux.org/mirrorlist/?country=all&protocol=http&protocol=https&ip_version=4&ip_version=6&use_mirror_status=on"
 
   tmpfile=$(mktemp --suffix=-mirrorlist)
 
