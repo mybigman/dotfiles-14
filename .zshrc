@@ -128,6 +128,7 @@ source $ZSH/oh-my-zsh.sh
   alias clima="curl wttr.in"
   alias mine="java -jar $HOME/Franks/Minecraft.jar"
   alias neo="neofetch --ascii ~/Ascii/rose.txt"
+  alias torr="torrenter"
 
 
 #Aliase scripts
