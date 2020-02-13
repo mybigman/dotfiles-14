@@ -73,6 +73,13 @@ client.background       $bg
 ####################################################################
 #                          A T A L H O S                           #
 ####################################################################
+
+# Iniciar Compositor
+bindsym $mod+p exec picom -c &
+
+# Matar Compositor
+bindsym $mod+shift+p exec killall picom &
+
 # Restartar Polybar
 bindsym $mod+o exec ~/.config/polybar/scripts/launch.sh
 
