@@ -126,9 +126,15 @@ source $ZSH/oh-my-zsh.sh
 # alias pmirror="sudo chmod 0644 /etc/pacman.d/mirrorlist"
   alias cache="cd /var/cache/pacman/pkg"
   alias clima="curl wttr.in"
-  alias mine="java -jar $HOME/Franks/Minecraft.jar"
+  alias mine="java -jar $HOME/Franks/Jogos/Minecraft/Minecraft.jar"
   alias neo="neofetch --ascii ~/Ascii/rose.txt"
   alias torr="torrenter"
+# alias kp="killall picom"
+# alias sp="picom -c &"
+  alias 1="exec wal -i ~/Franks/Wallpapers/000.jpg &"
+  alias 2="exec wal -i ~/Franks/Wallpapers/002.jpg &"
+  alias 3="exec wal -i ~/Franks/Wallpapers/019.jpg &"
+
 
 
 #Aliase scripts
@@ -159,6 +165,7 @@ source $ZSH/oh-my-zsh.sh
   alias gravar="sh $HOME/Scripts/gravar.sh"
 # alias rp="$HOME/.config/polybar/scripts/launch.sh"
   alias delwal="wal -c"
+
 
 # Plugins do zsh
 #source /usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
