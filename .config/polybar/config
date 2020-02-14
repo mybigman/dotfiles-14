@@ -127,8 +127,8 @@ font-2 = "Hack Nerd Font:style=Regular:pixelsize=10;2"
 ;MÓDULOS BOTTOM BAR
 
 modules-left = i3
-modules-center = linux
-modules-right = up gravar bluetooth lock powermenu
+modules-center = weather
+modules-right = alsa up calendar date powermenu
 
 ;Icone-Background
 
@@ -391,7 +391,8 @@ interval = 1
 ;date = "%a %d/%m/%y"
 ;date-alt = " %a %d/%m/%y"
 
-time = %I:%M:%S %p
+;time = %I:%M:%S %p
+time = %I:%M %p
 ;time = %H:%M
 ;time-alt = %H:%M:%S
 
@@ -661,7 +662,9 @@ label = "%{F#${xrdb:color7:#222}  %{F-} %output:0:37:...%"
 [module/calendar]
 type = custom/script
 interval = 1
-exec = date "+%a %d %b, %Y"
+;exec = date "+%a %d %b, %Y"
+;exec = date "+%a %d %b, %y"
+exec = date "+%a, %d %b"
 ;exec = date "+%a %d %b, %Y - %H:%M:%S"
 label = "%{F${xrdb:color7:#222}  %{F-} %output:0:36:...%"
 format-underline = #33fcff
@@ -689,7 +692,7 @@ click-right = exec blueman-manager &
 [module/pywall1]
 type = custom/text
 content = "%{F${xrdb:color7:#222}  %{F-}"
-click-left = exec wal -i ~/Franks/Wallpapers/019.jpg &
+click-left = exec wal -i ~/Franks/Wallpapers/000.jpg &
 
 [module/pywall2]
 type = custom/text
