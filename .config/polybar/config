@@ -56,16 +56,16 @@ module-margin-right = 1
 
 font-0 = "Poppins:style=Regular:pixelsize=9;1"
 font-1 = "xos4 Terminess Powerline:pixelsize=13;1"
-font-2 = "Hack Nerd Font:style=Regular:pixelsize=11;2"
+font-2 = "Hack Nerd Font:style=Regular:pixelsize=9;2"
 
 ;MÓDULOS TOP BAR
 
 ; Separator
 separator =|
 
-modules-left = pywall1 pywall2 pywall3
-modules-right = alsa filesystem calendar date
+modules-left = frase2
 modules-center = weather
+modules-right = alsa calendar date
 
 ;Icone-Background
 
@@ -109,7 +109,7 @@ foreground = ${colors.foreground}
 ;border-size = 1
 ;border-color = ${xrdb:color7:#222}
 
-padding-left = 1
+padding-left = 2
 padding-right = 2
 
 module-margin-left = 0
@@ -122,13 +122,13 @@ font-1 = "xos4 Terminess Powerline:pixelsize=13;1"
 font-2 = "Hack Nerd Font:style=Regular:pixelsize=10;2"
 
 ; Separator
-; separator = |
+ separator = |
 
 ;MÓDULOS BOTTOM BAR
 
 modules-left = i3
-modules-center = weather
-modules-right = alsa up calendar date powermenu
+modules-center = linux
+modules-right = gravar up bluetooth lock powermenu
 
 ;Icone-Background
 
@@ -286,9 +286,9 @@ label-mode-background = ${colors.primary}
 label-mode-padding = 1
 
 label-focused = %name%
-label-focused-foreground = #000000
+label-focused-foreground = ${xrdb:color0:#222}
 label-focused-background = ${xrdb:color7:#222}
-label-focused-underline = #ff5733
+label-focused-underline = ${xrdb:color0:#222}
 label-focused-padding = 2
 
 label-unfocused = %name%
@@ -391,8 +391,8 @@ interval = 1
 ;date = "%a %d/%m/%y"
 ;date-alt = " %a %d/%m/%y"
 
-;time = %I:%M:%S %p
-time = %I:%M %p
+time = %I:%M:%S %p
+;time = %I:%M %p
 ;time = %H:%M
 ;time-alt = %H:%M:%S
 
@@ -448,7 +448,7 @@ format-muted-foreground = #fc4141
 format-muted-underline = #fc4141
 ;format-muted-foreground = #ffffff
 ;format-muted-underline = #ffffff
-label-muted = Muted
+label-muted = Sem som
 
 bar-volume-width = 10
 bar-volume-foreground-0 = #55aa55
@@ -665,6 +665,7 @@ interval = 1
 ;exec = date "+%a %d %b, %Y"
 ;exec = date "+%a %d %b, %y"
 exec = date "+%a, %d %b"
+;exec = date "+%d / %y"
 ;exec = date "+%a %d %b, %Y - %H:%M:%S"
 label = "%{F${xrdb:color7:#222}  %{F-} %output:0:36:...%"
 format-underline = #33fcff
@@ -702,7 +703,7 @@ click-left = exec wal -i ~/Franks/Wallpapers/002.jpg &
 [module/pywall3]
 type = custom/text
 content = "%{F${xrdb:color7:#222}  %{F-}"
-click-left = exec wal -i ~/Franks/Wallpapers/021.png &
+click-left = exec wal -i ~/Franks/Wallpapers/001.jpg &
 
 [module/wifi]
 type = custom/text
