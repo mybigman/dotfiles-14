@@ -119,7 +119,7 @@ bindsym $mod+z exec scrot -d 5 &
 #bindsym $mod+Return exec termite
 #bindsym $mod+Return exec sakura
 #bindsym $mod+Return exec kitty
-bindsym $mod+Return exec alacritty
+bindsym $mod+Return exec alacritty &
 
 # Iniciar APLICATIVOS
 
