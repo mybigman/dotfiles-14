@@ -26,6 +26,9 @@ export TERM='xterm-256color'
 # Caminho da instalação do oh-my-zsh.
 export ZSH="$HOME/.oh-my-zsh"
 
+# Uncomment the following line to change how often to auto-update (in days).
+export UPDATE_ZSH_DAYS=1
+
 # Temas para o zsh
 #ZSH_THEME="agnoster"
 #ZSH_THEME="robbyrussell"
@@ -86,7 +89,7 @@ POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=(os_icon dir)
 POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS=()
 
 # Which plugins would you like to load?
-#plugins=(git)
+plugins=(autoupdate)
 
 source $ZSH/oh-my-zsh.sh
 #source ~/powerlevel10k/powerlevel10k.zsh-theme
@@ -95,7 +98,7 @@ source $ZSH/oh-my-zsh.sh
 #My aliases
   alias x="startx"
   alias up="sudo pacman -Syu"
-  alias edt="vim ~/.zshrc"
+  alias edt="howl ~/.zshrc"
   alias edtt="vim ~/.p10k.zsh"
   alias del="rm -rf ~/.zsh_history"
   alias off="sleep 4 && poweroff"
@@ -131,9 +134,9 @@ source $ZSH/oh-my-zsh.sh
   alias torr="torrenter"
 # alias kp="killall picom"
 # alias sp="picom -c &"
-  alias 1="exec wal -i ~/Franks/Wallpapers/000.jpg &"
-  alias 2="exec wal -i ~/Franks/Wallpapers/002.jpg &"
-  alias 3="exec wal -i ~/Franks/Wallpapers/019.jpg &"
+  alias 1="exec wal -i ~/Franks/Wallpapers/028.png &"
+  alias 2="exec wal -i ~/Franks/Wallpapers/015.png &"
+  alias 3="exec wal -i ~/Franks/Wallpapers/028.jpg &"
 
 
 
@@ -168,8 +171,8 @@ source $ZSH/oh-my-zsh.sh
 
 
 # Plugins do zsh
-#source /usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
-#source /usr/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+source /usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
+source /usr/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 
 # Iniciar com o shell
 # neofetch
