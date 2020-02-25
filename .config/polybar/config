@@ -107,8 +107,8 @@ foreground = ${colors.foreground}
 ;line-size = 1
 ;line-color = #ffffff
 
-border-size = 1
-border-color = ${xrdb:color7:#222}
+;border-size = 1
+;border-color = ${xrdb:color7:#222}
 
 padding-left = 2
 padding-right = 2
