@@ -14,5 +14,5 @@ killall -q polybar
 # Aguarde até que os processos sejam encerrados
 while pgrep -u $UID -x polybar >/dev/null; do sleep 1; done
 
-polybar -q top &
+#polybar -q top &
 polybar -q bottom &
