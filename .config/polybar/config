@@ -61,11 +61,12 @@ font-2 = "Hack Nerd Font:style=Regular:pixelsize=9;2"
 ;MÓDULOS TOP BAR
 
 ; Separator
-separator =|
+ separator = |
+; separator = /
 
-modules-left = frase2
+modules-left =
 modules-center = weather
-modules-right = alsa calendar date
+modules-right = alsa pacman calendar date
 
 ;Icone-Background
 
@@ -106,14 +107,14 @@ foreground = ${colors.foreground}
 ;line-size = 1
 ;line-color = #ffffff
 
-;border-size = 1
-;border-color = ${xrdb:color7:#222}
+border-size = 1
+border-color = ${xrdb:color7:#222}
 
 padding-left = 2
 padding-right = 2
 
-module-margin-left = 0
-module-margin-right = 2
+module-margin-left = 1
+module-margin-right = 1
 
 ;FONTES DA BARRA BOTTOM
 
@@ -123,12 +124,13 @@ font-2 = "Hack Nerd Font:style=Regular:pixelsize=10;2"
 
 ; Separator
  separator = |
+; separator = /
 
 ;MÓDULOS BOTTOM BAR
 
 modules-left = i3
-modules-center = linux
-modules-right = gravar up bluetooth lock powermenu
+modules-center = weather
+modules-right = alsa pacman calendar date gravar up bluetooth lock powermenu
 
 ;Icone-Background
 
