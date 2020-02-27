@@ -134,9 +134,9 @@ source $ZSH/oh-my-zsh.sh
   alias torr="torrenter"
 # alias kp="killall picom"
 # alias sp="picom -c &"
-  alias 1="exec wal -i ~/Franks/Wallpapers/028.png &"
-  alias 2="exec wal -i ~/Franks/Wallpapers/015.png &"
-  alias 3="exec wal -i ~/Franks/Wallpapers/028.jpg &"
+  alias 1="exec wal -i ~/Franks/Wallpapers/030.png &"
+  alias 2="exec wal -i ~/Franks/Wallpapers/002.jpg &"
+  alias 3="exec wal -i ~/Franks/Wallpapers/029.png &"
 
 
 
@@ -172,6 +172,7 @@ source $ZSH/oh-my-zsh.sh
 
 # Plugins do zsh
 source /usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
+#source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 source /usr/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 
 # Iniciar com o shell
