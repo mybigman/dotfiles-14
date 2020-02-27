@@ -74,6 +74,9 @@ client.background       $bg
 #                          A T A L H O S                           #
 ####################################################################
 
+
+# Inicar Calendário
+bindsym $mod+shift+v exec ~/Scripts/calendario.sh &
 # Iniciar Compositor
 bindsym $mod+p exec picom -c &
 
