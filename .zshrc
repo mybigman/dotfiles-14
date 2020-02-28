@@ -33,15 +33,15 @@ export UPDATE_ZSH_DAYS=1
 #eval "$(starship init zsh)"
 
 #Pretzo
-#source "${ZDOTDIR:-$HOME}/.zprezto/init.zsh"
+source "${ZDOTDIR:-$HOME}/.zprezto/init.zsh"
 
 # Temas para o zsh
 #ZSH_THEME="agnoster"
 #ZSH_THEME="robbyrussell"
 #ZSH_THEME="powerlevel9k/powerlevel9k"
-ZSH_THEME="powerlevel10k/powerlevel10k"
+#ZSH_THEME="powerlevel10k/powerlevel10k"
 #POWERLEVEL9K_MODE="nerdfont-complete"
-POWERLEVEL10K_MODE="nerdfont-complete"
+#POWERLEVEL10K_MODE="nerdfont-complete"
 
 #POWERLEVEL9K_DISABLE_PROMPT=true
 
@@ -107,6 +107,7 @@ source $ZSH/oh-my-zsh.sh
   alias edt="howl ~/.zshrc"
   alias edtt="vim ~/.p10k.zsh"
   alias del="rm -rf ~/.zsh_history"
+  alias deel="rm -rf ~/.zhistory"
   alias off="sleep 4 && poweroff"
   alias rb="sleep 4 && reboot"
   alias music="mpd && ncmpcpp"
