@@ -24,7 +24,7 @@ window:
     #columns: 73
     #lines: 23
 
-    columns: 60
+    columns: 62
     lines: 17
 
   # Window padding (changes require restart)
@@ -92,19 +92,22 @@ tabspaces: 8
 font:
   # Normal (roman) font face
   normal:
-    family: Hack Nerd Font
+    #family: Hack Nerd Font
+    family: FiraCode
     # The `style` can be specified to pick a specific face.
     style: Medium
 
   # Bold font face
   bold:
-    family: Hack Nerd Font
+    #family: Hack Nerd Font
+    family: FiraCode
     # The `style` can be specified to pick a specific face.
     style: Bold
 
   # Italic font face
   italic:
-    family: Hack Nerd Font
+    #family: Hack Nerd Font
+    family: FiraCode
     # The `style` can be specified to pick a specific face.
     style: Italic
 
