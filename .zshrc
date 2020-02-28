@@ -29,6 +29,12 @@ export ZSH="$HOME/.oh-my-zsh"
 # Uncomment the following line to change how often to auto-update (in days).
 export UPDATE_ZSH_DAYS=1
 
+#Starship
+#eval "$(starship init zsh)"
+
+#Pretzo
+#source "${ZDOTDIR:-$HOME}/.zprezto/init.zsh"
+
 # Temas para o zsh
 #ZSH_THEME="agnoster"
 #ZSH_THEME="robbyrussell"
