@@ -166,7 +166,9 @@ sudo pacman -S xf86-video-vesa --noconfirm
 sudo pacman -S virtualbox-guest-utils --noconfirm
 
 ➜ Baixar alguns pacotes (Xorg-xinit é necessario se quiser iniciar o sistema pelo o startx)
-sudo pacman -S xorg xorg-xinit ttf-dejavu pulseaudio-alsa pavucontrol --noconfirm
+sudo pacman -S xorg xorg-xinit ttf-fira-code ttf-dejavu pulseaudio-alsa pavucontrol --noconfirm
+
+#OBS: Você pode escolher em baixar a font Fira-Code ou a Dejavu, se quiser pode ter baixar as duas também
 
 ➜ Baixando i3wm
 sudo pacman -S i3
