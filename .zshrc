@@ -139,13 +139,10 @@ source $ZSH/oh-my-zsh.sh
   alias mine="java -jar $HOME/Franks/Jogos/Minecraft/Minecraft.jar"
   alias neo="neofetch --ascii ~/Ascii/rose.txt"
   alias torr="torrenter"
-# alias kp="killall picom"
-# alias sp="picom -c &"
+  alias gpu="inxi -G"
   alias 1="exec wal -i ~/Franks/Wallpapers/030.png &"
   alias 2="exec wal -i ~/Franks/Wallpapers/002.jpg &"
   alias 3="exec wal -i ~/Franks/Wallpapers/029.png &"
-
-
 
 #Aliase scripts
   alias pipes="$HOME/Scripts/pipes.sh"
