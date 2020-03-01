@@ -6,20 +6,27 @@
 #                         P R I N C I P A L                        #
 ####################################################################
 
-#set $gaps_inner_default 10
+#set $gaps_inner_default 9
 #set $gaps_outer_default 0
-#gaps inner $gaps_inner_default
-#gaps outer $gaps_outer_default
+#gaps inner $gaps_inner_default 9
+#gaps outer $gaps_outer_default 0
 
+gaps inner 9
+gaps outer 0
+
+# Bordas Arrendondadas
+# OBS: Tem que ter o pacote:
+# https://aur.archlinux.org/packages/i3-gaps-rounded-git
+border_radius 5
 
 # $mod = Windows
 # Mod4 = Alt
 set $mod Mod4
 
-# Fonte
-
+# Fonts
+font pango:FiraCode 8
 #font pango:Poppins 8
-font pango:DejaVu Sans Mono 8
+#font pango:DejaVu Sans Mono 8
 #font pango:Fantasque Sans Mono 9
 
 ####################################################################
@@ -35,11 +42,12 @@ focus_on_window_activation focus
 #                             BORDAS                               #
 ####################################################################
 
-default_border pixel 1
-default_floating_border pixel 1
-new_window pixel 1
+default_border pixel 0
+default_floating_border pixel 0
+new_window pixel 0
 
-hide_edge_borders smart
+#hide_edge_borders smart
+hide_edge_borders both
 
 
 ####################################################################
