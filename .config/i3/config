@@ -3,7 +3,7 @@
 # Dúvidas: https://i3wm.org/docs/userguide.html
 
 ####################################################################
-#                         P R I N C I P A L                        #
+#                       P R I N C I P A L                          #
 ####################################################################
 
 #set $gaps_inner_default 9
@@ -11,13 +11,13 @@
 #gaps inner $gaps_inner_default 9
 #gaps outer $gaps_outer_default 0
 
-gaps inner 9
-gaps outer 0
+#gaps inner 9
+#gaps outer 0
 
 # Bordas Arrendondadas
 # OBS: Tem que ter o pacote:
 # https://aur.archlinux.org/packages/i3-gaps-rounded-git
-border_radius 5
+#border_radius 5
 
 # $mod = Windows
 # Mod4 = Alt
@@ -30,7 +30,7 @@ font pango:FiraCode 8
 #font pango:Fantasque Sans Mono 9
 
 ####################################################################
-#                          FLOATING MODE                           #
+#                         FLOATING MODE                            #
 ####################################################################
 
 floating_modifier $mod
@@ -39,7 +39,7 @@ floating_modifier $mod
 focus_on_window_activation focus
 
 ####################################################################
-#                             BORDAS                               #
+#                           B O R D A S                            #
 ####################################################################
 
 default_border pixel 0
@@ -437,7 +437,7 @@ for_window [class="Termite" title="castnow"] move window to scratchpad
 for_window [title="(gravar$)"] move window to scratchpad
 
 ####################################################################
-#                             RESIZE                               #
+#                           R E S I Z E                          #
 ####################################################################
 # resize window (you can also use the mouse for that)
 mode "resize" {
@@ -564,7 +564,7 @@ exec --no-startup-id $HOME/.cache/wal/colors.sh &
 #exec --no-startup-id mpd &
 
 ####################################################################
-#                            I3STATUS                              #
+#                           I3 STATUS                              #
 ####################################################################
 #bar {
 #         colors {
