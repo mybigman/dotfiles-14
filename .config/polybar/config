@@ -114,7 +114,7 @@ foreground = ${colors.foreground}
 padding-left = 2
 padding-right = 2
 
-module-margin-left = 2
+module-margin-left = 1
 module-margin-right = 1
 
 ;FONTES DA BARRA BOTTOM
