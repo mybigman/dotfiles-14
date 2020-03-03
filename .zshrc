@@ -140,9 +140,9 @@ source $ZSH/oh-my-zsh.sh
   alias neo="neofetch --ascii ~/Ascii/rose.txt"
   alias torr="torrenter"
   alias gpu="inxi -G"
-  alias 1="exec wal -i ~/Franks/Wallpapers/030.png &"
-  alias 2="exec wal -i ~/Franks/Wallpapers/002.jpg &"
-  alias 3="exec wal -i ~/Franks/Wallpapers/029.png &"
+  alias 1="exec wal -i ~/Franks/Wallpapers/032.jpg &"
+  alias 2="exec wal -i ~/Franks/Wallpapers/033.jpg &"
+  alias 3="exec wal -i ~/Franks/Wallpapers/034.png &"
 
 #Aliase scripts
   alias pipes="$HOME/Scripts/pipes.sh"
@@ -168,16 +168,15 @@ source $ZSH/oh-my-zsh.sh
   alias tel="$HOME/Scripts/telegram_installer.sh"
   alias em="howl Scripts/mirrorlist.sh"
   alias elf="$HOME/Scripts/Ascii/elfman.sh"
-  alias casar="echo Franklin, eu Linux aceito seu pedido de casamento"
   alias gravar="sh $HOME/Scripts/gravar.sh"
 # alias rp="$HOME/.config/polybar/scripts/launch.sh"
   alias delwal="wal -c"
+  alias bot="$HOME/Scripts/userbot.sh"
 
 
 # Plugins do zsh
 source /usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
-#source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
-#source /usr/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 
 # Iniciar com o shell
 # neofetch
