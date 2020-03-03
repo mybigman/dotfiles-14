@@ -54,7 +54,8 @@ module-margin-right = 1
 
 ;FONTES DA BARRA TOPO
 
-font-0 = "Poppins:style=Regular:pixelsize=9;1"
+;font-0 = "Poppins:style=Regular:pixelsize=9;1"
+font-0 = "FireCode:style=Regular:pixelsize=8;1"
 font-1 = "xos4 Terminess Powerline:pixelsize=13;1"
 font-2 = "Hack Nerd Font:style=Regular:pixelsize=9;2"
 
@@ -113,12 +114,13 @@ foreground = ${colors.foreground}
 padding-left = 2
 padding-right = 2
 
-module-margin-left = 1
+module-margin-left = 2
 module-margin-right = 1
 
 ;FONTES DA BARRA BOTTOM
 
-font-0 = "Poppins:style=Regular:pixelsize=8;1"
+;font-0 = "Poppins:style=Regular:pixelsize=8;1"
+font-0 = "FireCode:style=Regular:pixelsize=8;3"
 font-1 = "xos4 Terminess Powerline:pixelsize=13;1"
 font-2 = "Hack Nerd Font:style=Regular:pixelsize=10;2"
 
@@ -664,9 +666,9 @@ label = "%{F#${xrdb:color7:#222}  %{F-} %output:0:37:...%"
 [module/calendar]
 type = custom/script
 interval = 1
-;exec = date "+%a %d %b, %Y"
+exec = date "+%a, %d %b %Y"
 ;exec = date "+%a %d %b, %y"
-exec = date "+%a, %d %b"
+;exec = date "+%a, %d %b"
 ;exec = date "+%d / %y"
 ;exec = date "+%a %d %b, %Y - %H:%M:%S"
 label = "%{F${xrdb:color7:#222}  %{F-} %output:0:36:...%"
