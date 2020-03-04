@@ -82,10 +82,6 @@ client.background       $bg
 #                          A T A L H O S                           #
 ####################################################################
 
-
-
-# Iniciar TimeShift
-bindsym $mod+Shift+f exec sudo timeshift-gtk &
 # Inicar Calendário
 bindsym $mod+shift+v exec ~/Scripts/calendario.sh &
 # Iniciar Compositor
