@@ -11,13 +11,13 @@
 #gaps inner $gaps_inner_default 9
 #gaps outer $gaps_outer_default 0
 
-#gaps inner 9
-#gaps outer 0
+gaps inner 9
+gaps outer 0
 
 # Bordas Arrendondadas
 # OBS: Tem que ter o pacote:
 # https://aur.archlinux.org/packages/i3-gaps-rounded-git
-#border_radius 5
+border_radius 5
 
 # $mod = Windows
 # Mod4 = Alt
@@ -83,6 +83,9 @@ client.background       $bg
 ####################################################################
 
 
+
+# Iniciar TimeShift
+bindsym $mod+Shift+f exec sudo timeshift-gtk &
 # Inicar Calendário
 bindsym $mod+shift+v exec ~/Scripts/calendario.sh &
 # Iniciar Compositor
