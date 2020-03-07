@@ -178,7 +178,8 @@ sudo pacman -S i3
 sudo pacman -S dmenu alacritty feh viewnior imagemagick w3m lxappearance git wget howl thunar firefox-i18n-pt-br scrot flameshot numlockx gnome-disk-utility python-pip --noconfirm
 
 ➜ Baixar e instalar Pywall
- sudo pip3 install pywal
+pip install --user pywal
+export PATH="${PATH}:${HOME}/.local/bin/" # Jogar no bashrc ou zshrc
 
 ➜ Baixando Plasma
 sudo pacman -S plasma # Plasma Completo
