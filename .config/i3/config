@@ -11,13 +11,13 @@
 #gaps inner $gaps_inner_default 9
 #gaps outer $gaps_outer_default 0
 
-gaps inner 9
-gaps outer 0
+#gaps inner 9
+#gaps outer 0
 
 # Bordas Arrendondadas
 # OBS: Tem que ter o pacote:
 # https://aur.archlinux.org/packages/i3-gaps-rounded-git
-border_radius 5
+#border_radius 5
 
 # $mod = Windows
 # Mod4 = Alt
@@ -42,9 +42,9 @@ focus_on_window_activation focus
 #                           B O R D A S                            #
 ####################################################################
 
-default_border pixel 0
-default_floating_border pixel 0
-new_window pixel 0
+default_border pixel 1
+default_floating_border pixel 1
+new_window pixel 1
 
 #hide_edge_borders smart
 hide_edge_borders both
@@ -82,6 +82,12 @@ client.background       $bg
 #                          A T A L H O S                           #
 ####################################################################
 
+# Restart OS
+bindsym $mod+r exec reboot
+
+# Desligar OS
+bindsym $mod+Shift+o exec poweroff
+
 # Inicar Calendário
 bindsym $mod+shift+v exec ~/Scripts/calendario.sh &
 
@@ -96,16 +102,12 @@ bindsym $mod+o exec ~/.config/polybar/scripts/launch.sh
 
 # Iniciar PPSSPP
 bindsym $mod+Shift+t exec ~/Franks/Jogos/PPSSPP/PPSSPPSDL
-
-# Iniciar polybar
-#bindsym $mod+p exec polybar -r top &
-#bindsym $mod+u exec polybar -r bottom &
 #
 # Abrir idle
 bindsym $mod+i exec idle3.8 &
 
 # Sair do i3wm
-bindsym $mod+Shift+e exec "i3-nagbar -t warning -m 'Você deseja sair do i3wm?' -B 'Sim, desejo sair do i3wm' 'i3-msg exit'"
+bindsym $mod+Shift+e exec "i3-nagbar -t warning -m 'Você deseja sair do i3gaps?' -B 'Sim, desejo sair do i3gaps' 'i3-msg exit'"
 
 # Trocar de wallpaper
 #bindsym $mod+Shift+w exec feh --bg-scale "$(find $HOME/Franks/Wallpapers/ -name "*[jJpP][nNpP][gG]" | shuf -n1)"
@@ -198,8 +200,8 @@ bindsym $mod+Shift+space floating toggle
 
 # Launchers
 #bindsym $mod+d exec dmenu_run
-#bindsym $mod+d exec --no-startup-id rofi -show drun -theme ~/.config/rofi/drun.rasi
-bindsym $mod+d exec rofi -show drun -theme "~/.cache/wal/colors-rofi-dark.rasi" $fg" -nf "$bg" -sb "$bg" -sf "$fg"
+bindsym $mod+d exec --no-startup-id rofi -show drun -theme ~/.config/rofi/drun.rasi
+#bindsym $mod+d exec rofi -show drun -theme "~/.cache/wal/colors-rofi-dark.rasi" $fg" -nf "$bg" -sb "$bg" -sf "$fg"
 #bindsym $mod+d exec synapse
 
 # Screenshot
@@ -529,7 +531,7 @@ bindsym XF86AudioMute exec --no-startup-id pactl set-sink-mute 0 toggle
 exec_always --no-startup-id ~/.config/polybar/scripts/launch.sh
 
 # Wallpapers
-#exec_always --no-startup-id feh --bg-fill ~/Franks/Wallpapers/093.jpg
+#exec_always --no-startup-id feh --bg-fill ~/Franks/Wallpapers/015.png
 
 # Compositor
 exec --no-startup-id picom --config ~/.config/picom/picom.conf
@@ -553,8 +555,8 @@ exec --no-startup-id flameshot &
 exec --no-startup-id setxkbmap br &
 
 # Iniciar a polybar
-exec polybar -r top
-exec polybar -r bottom
+#exec polybar -r top
+#exec polybar -r bottom
 
 # Pywall
 exec --no-startup-id $HOME/.cache/wal/colors.sh &
@@ -568,15 +570,15 @@ exec --no-startup-id $HOME/.cache/wal/colors.sh &
 ####################################################################
 #bar {
 #         colors {
-#         background #1c1a1a
+#         background #141414
 #         statusline #2f343f
 #         separator #1c1a1a
 
         #                         Cores das bordas, background, text
-#        focused_workspace       #cdae9c            #1c1a1a    #cdae9c
+#        focused_workspace       #ffffff               #ffffff       #000000
 #        active_workspace        #ffffff               #2f343f    #d8dee8
-#        inactive_workspace      #1c1a1a            #1c1a1a    #d8dee8
-#        urgent_workspacei       #2f343f            #ebcb8b    #2f343f
+#        inactive_workspace      #141414            #1c1a1a    #ffffff
+#        urgent_workspace        #2f343f            #eb928b    #000000
 #    }
 #        status_command i3status
 #}
