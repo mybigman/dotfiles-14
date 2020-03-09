@@ -7,8 +7,17 @@
 # Mirrors Brasileiros
 #url="https://www.archlinux.org/mirrorlist/?country=BR&use_mirror_status=on"
 
+# Lithuania
+#url="https://www.archlinux.org/mirrorlist/?country=LT&protocol=http&protocol=https&ip_version=4&ip_version=6&use_mirror_status=on"
+
+# Germany
+#url="https://www.archlinux.org/mirrorlist/?country=DE&protocol=http&protocol=https&ip_version=4&ip_version=6&use_mirror_status=on"
+
 # Mirrors Canadenses
 #url="https://www.archlinux.org/mirrorlist/?country=CA&use_mirror_status=on"
+
+# Croatia
+#url="https://www.archlinux.org/mirrorlist/?country=HR&protocol=http&protocol=https&ip_version=4&ip_version=6&use_mirror_status=on"
 
 # Todos os Mirrors
 url="https://www.archlinux.org/mirrorlist/?country=all&protocol=http&protocol=https&ip_version=4&ip_version=6&use_mirror_status=on"
