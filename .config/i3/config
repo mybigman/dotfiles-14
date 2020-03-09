@@ -110,7 +110,7 @@ bindsym $mod+i exec idle3.8 &
 bindsym $mod+Shift+e exec "i3-nagbar -t warning -m 'Você deseja sair do i3gaps?' -B 'Sim, desejo sair do i3gaps' 'i3-msg exit'"
 
 # Trocar de wallpaper
-#bindsym $mod+Shift+w exec feh --bg-scale "$(find $HOME/Franks/Wallpapers/ -name "*[jJpP][nNpP][gG]" | shuf -n1)"
+bindsym $mod+Shift+w exec feh --bg-scale "$(find $HOME/Franks/Wallpapers/ -name "*[jJpP][nNpP][gG]" | shuf -n1)"
 
 # Bloquear tela
 bindsym $mod+x exec --no-startup-id ~/Scripts/fortune.sh
