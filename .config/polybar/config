@@ -54,8 +54,8 @@ module-margin-right = 1
 
 ;FONTES DA BARRA TOPO
 
-;font-0 = "Poppins:style=Regular:pixelsize=9;1"
-font-0 = "FireCode:style=Regular:pixelsize=8;2"
+font-0 = "Poppins:style=Regular:pixelsize=9;1"
+;font-0 = "FireCode:style=Regular:pixelsize=8;2"
 font-1 = "xos4 Terminess Powerline:pixelsize=13;1"
 font-2 = "Hack Nerd Font:style=Regular:pixelsize=9;2"
 
@@ -119,8 +119,8 @@ module-margin-right = 2
 
 ;FONTES DA BARRA BOTTOM
 
-;font-0 = "Poppins:style=Regular:pixelsize=8;1"
-font-0 = "FireCode:style=Regular:pixelsize=8;2"
+font-0 = "Poppins:style=Regular:pixelsize=8;1"
+;font-0 = "FireCode:style=Regular:pixelsize=8;2"
 font-1 = "xos4 Terminess Powerline:pixelsize=13;1"
 font-2 = "Hack Nerd Font:style=Regular:pixelsize=10;2"
 
@@ -151,9 +151,14 @@ type = internal/xwindow
 
 ;format =  <label>
 format-foreground = ${xrdb:color7:#222}
+format-background = ${xrdb:color0:#222
 
 label = %title%
 label-foreground = ${xrdb:color7:#222}
+label-maxlen = 50
+
+label-empty = Empty
+label-empty-foreground = ${xrdb:color7:#222}
 
 ; Modulo xkeyboard
 
@@ -607,12 +612,12 @@ margin-bottom = 5
 [module/user]
 type = custom/text
 content = "%{F${xrdb:color7:#222}  %{F-} Frank"
-content-underline = #8df8d8
+content-underline = ${xrdb:color7:#222}
 
 [module/linux]
 type = custom/text
 content = "%{F${xrdb:color7:#222}%{F-} Arch Linux"
-;content-underline = #ff00d1
+content-underline = ${xrdb:color7:#222}
 
 [module/frase]
 type = custom/text
@@ -673,7 +678,7 @@ click-left = firefox https://www.archlinux.org/ &
 type = custom/script
 exec = uname -r
 label = "%{F#${xrdb:color7:#222}  %{F-} %output:0:37:...%"
-format-underline = #fe8ac6
+;format-underline = #fe8ac6
 
 [module/weather]
 type = custom/script
