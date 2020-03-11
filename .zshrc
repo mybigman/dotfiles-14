@@ -14,6 +14,9 @@
 # ( ) # Hide shell job control messages.
 (cat ~/.cache/wal/sequences &)
 
+# Pywal Export
+export PATH="${PATH}:${HOME}/.local/bin/"
+
 # Alternative (blocks terminal for 0-3ms)
 cat ~/.cache/wal/sequences
 
@@ -140,9 +143,10 @@ source $ZSH/oh-my-zsh.sh
   alias neo="neofetch --ascii ~/Ascii/rose.txt"
   alias torr="torrenter"
   alias gpu="inxi -G"
-  alias 1="exec wal -i ~/Franks/Wallpapers/032.jpg &"
-  alias 2="exec wal -i ~/Franks/Wallpapers/033.jpg &"
-  alias 3="exec wal -i ~/Franks/Wallpapers/034.png &"
+  alias 1="exec wal -i ~/Franks/Wallpapers/000.jpg &"
+  alias 2="exec wal -i ~/Franks/Wallpapers/002.jpg &"
+  alias 3="exec wal -i ~/Franks/Wallpapers/009.jpg &"
+  alias 4="exec wal -i ~/Franks/Wallpapers/015.png &"
 
 #Aliase scripts
   alias pipes="$HOME/Scripts/pipes.sh"
@@ -172,10 +176,14 @@ source $ZSH/oh-my-zsh.sh
 # alias rp="$HOME/.config/polybar/scripts/launch.sh"
   alias delwal="wal -c"
   alias bot="$HOME/Scripts/userbot.sh"
+  alias pt="polybar top 2>~/Franks/logfile &"
+  alias h="howl ~/Franks/logfile"
+  alias pb="polybar bottom 2>~/Franks/logfile &"
+  alias rl="rm -rf ~/Franks/logfile"
 
 
 # Plugins do zsh
-source /usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
+#source /usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
 source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 
 # Iniciar com o shell
