@@ -54,8 +54,8 @@ module-margin-right = 1
 
 ;FONTES DA BARRA TOPO
 
-font-0 = "Poppins:style=Regular:pixelsize=9;1"
-;font-0 = "FireCode:style=Regular:pixelsize=8;2"
+;font-0 = "Poppins:style=Regular:pixelsize=9;1"
+font-0 = "FireCode:style=Regular:pixelsize=8;2"
 font-1 = "xos4 Terminess Powerline:pixelsize=13;1"
 font-2 = "Hack Nerd Font:style=Regular:pixelsize=9;2"
 
@@ -72,9 +72,14 @@ modules-right = alsa pacman filesystem memory calendar date
 ;Icone-Background
 
 ;tray-position = left
-;tray-padding = 2
-;tray-transparent = true
-;tray-background = #00000000
+;tray-detached = true
+;tray-maxsize = 16
+;tray-padding = 0
+;tray-scale = 1.0
+;tray-transparent = false
+;tray-offset-x = 0
+;tray-offset-y = 0
+;tray-background = ${xrdb:color7:#222}
 
 ;wm-restack = bspwm
 ;wm-restack = i3
@@ -119,8 +124,8 @@ module-margin-right = 2
 
 ;FONTES DA BARRA BOTTOM
 
-font-0 = "Poppins:style=Regular:pixelsize=8;1"
-;font-0 = "FireCode:style=Regular:pixelsize=8;2"
+;font-0 = "Poppins:style=Regular:pixelsize=8;1"
+font-0 = "FireCode:style=Regular:pixelsize=8;2"
 font-1 = "xos4 Terminess Powerline:pixelsize=13;1"
 font-2 = "Hack Nerd Font:style=Regular:pixelsize=10;2"
 
@@ -132,14 +137,19 @@ font-2 = "Hack Nerd Font:style=Regular:pixelsize=10;2"
 
 modules-left = i3
 modules-center = news-archlinux
-modules-right = gravar up lock xkeyboard powermenu
+modules-right = xkeyboard gravar lock up net powermenu
 
 ;Icone-Background
 
-;tray-position = left
-;tray-padding = 2
-;tray-transparent = true
-;tray-background = #000000
+;tray-position = right
+;tray-detached = false
+;tray-maxsize = 10
+;tray-padding = 1
+;tray-scale = 1.0
+;tray-transparent = false
+;tray-offset-x = 1
+;tray-offset-y = 1
+;tray-background = ${xrdb:color7:#222}
 
 cursor-click = pointer
 cursor-scroll = ns-resize
@@ -270,7 +280,7 @@ format = <label-state> <label-mode>
 index-sort = false
 wrapping-scroll = false
 pin-workspaces = true
-enable-click = false
+enable-click = true
 enable-scroll = false
 reverse-scroll = false
 fuzzy-match = true
@@ -707,8 +717,8 @@ click-left = notify-send "$(cal)"
 type = custom/script
 interval = 0.1
 label = %output%
-;click-left = alacritty -e ~/Scripts/gravar.sh &
-exec = ~/Scripts/gravar.sh status
+;click-left = alacritty -e ~/.config/polybar/scripts/gravar.sh &
+exec = ~/.config/polybar/scripts/gravar.sh status
 tail = true
 
 [module/bluetooth]
@@ -719,6 +729,13 @@ content-foreground = ${xrdb:color7:#222
 ;content-underline = ${xrdb:color7:#222
 click-left = exec blueman-applet &
 click-right = exec blueman-manager &
+
+[module/net]
+type = custom/script
+interval = 0.1
+label = %output%
+exec = ~/.config/polybar/scripts/check-network
+tail = true
 
 [module/pywall1]
 type = custom/text
@@ -742,7 +759,7 @@ content-foreground = #ffffff
 ;content-underline = #ffffff
 click-left = exec i3-sensible-terminal -e nmtui  &
 
-[module/ethernet]
+[module/rede]
 type = internal/network
 interface = enp3s0
 interval = 0.1
