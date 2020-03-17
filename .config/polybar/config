@@ -734,7 +734,7 @@ click-right = exec blueman-manager &
 type = custom/script
 interval = 0.1
 label = %output%
-exec = ~/.config/polybar/scripts/check-network
+exec = ~/.config/polybar/scripts/checknet.sh
 tail = true
 
 [module/pywall1]
