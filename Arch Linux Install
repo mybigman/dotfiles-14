@@ -1,6 +1,7 @@
 # Criador: Franklin Souza
 # Telegram: @FranklinTech                                                                                                                                                             
 #
+# EU USO ESSE GUIA PARA MEU USO PRÓPRIO (SEI O QUE ESTOU FAZENDO) NÃO ME RESPONSABILIZO POR NADA.
 # UM GUIA DE INSTALAÇÃO DO ARCH, RECOMENDO LER A WIKI OFICIAL DA DISTRO, NÃO ME RESPONSABILIZO POR DANDOS
 # WIKI: https://wiki.archlinux.org/index.php/Installation_guide_(Portugu%C3%AAs)
 
@@ -99,7 +100,7 @@ pacman -S linux-lts linux-lts-headers ➜ Kernel a longo prazo
 pacman -S linux-zen linux-zen-headers ➜ Kernel focado em desempenho
 
 ➜ Rodar o kernel
-mkinitcpio -p (nome do kernel) # EX: mkinitcpio -p linux
+mkinitcpio -P
 
 ➜ Configurar repositório
 vim /etc/pacman.conf
