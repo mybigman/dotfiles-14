@@ -1,4 +1,3 @@
-# PATH: .config/torrenter-nodejs/config.json
 {
   "sources": {
     "kickass": {
@@ -58,5 +57,5 @@
       "url": "https://torrentz2.eu"
     }
   },
-  "path": "Torrenter"
+  "path": "downloads"
 }
