@@ -137,7 +137,7 @@ font-2 = "Hack Nerd Font:style=Regular:pixelsize=10;2"
 
 modules-left = i3
 modules-center =
-modules-right = xkeyboard gravar lock up corona powermenu
+modules-right = xkeyboard gravar lock up corona github powermenu
 
 ;Icone-Background
 
@@ -670,6 +670,11 @@ type = custom/text
 content = "  "
 content-foreground = ${xrdb:color7:#222}
 click-left = i3-msg restart &
+
+[module/github]
+type = custom/text
+content = 
+click-left = ~/Scripts/github.sh
 
 [module/print]
 type = custom/text
