@@ -18,12 +18,12 @@
 
 | Tipos               | Programas                                                                                                                           |
 | :------------------ | :---------------------------------------------------------------------------------------------------------------------------------- |
-| Linux Distro        | [Arch Linux](https://aur.archlinux.org/)                                                                                            |                                                                                       
+| Linux Distro        | [Arch Linux](https://www.archlinux.org/)                                                                                            |                                                                                       
 | Gerenc. de Janelas  | [i3-gaps](https://github.com/Airblader/i3)                                                                                          |                                                                                             
 | Navegador           | [Firefox](https://www.mozilla.org/pt-BR/firefox/new/)                                                                                |
 | Iniciador Programas | [Rofi](https://github.com/DaveDavenport/rofi)                                                                                         |
 | Barra de Status     | [Polybar](https://github.com/jaagr/polybar)                                                                                         |
-| Player de Música    | [Deezer](https://aur.archlinux.org/deezer.git)                                        							    |
+| Player de Música    | [Deezer](https://aur.archlinux.org/packages/deezer)                                        							    |
 | Vídeo Player        | [MPV](https://mpv.io/)                                                                     					    |
 | Visualizador de Som | [Cava](https://github.com/karlstav/cava)                                                                                            |
 | Geren. de Arquivos  | [Ranger](https://github.com/ranger/ranger)                    									    |
