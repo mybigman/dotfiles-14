@@ -42,9 +42,9 @@ focus_on_window_activation focus
 #                           B O R D A S                            #
 ####################################################################
 
-default_border pixel
-default_floating_border pixel 0
-new_window pixel 0
+default_border pixel 1
+default_floating_border pixel 1
+new_window pixel 1
 
 #hide_edge_borders smart
 hide_edge_borders both
@@ -81,6 +81,9 @@ client.background       $bg
 ####################################################################
 #                          A T A L H O S                           #
 ####################################################################
+
+# GitHub.sh
+bindsym $mod+Shift+n exec ~/Scripts/github.sh
 
 # OS update
 bindsym $mod+u exec i3-sensible-terminal -e sudo pacman -Syu  &
@@ -123,12 +126,13 @@ bindsym $mod+x exec --no-startup-id ~/Scripts/fortune.sh
 bindsym $mod+Shift+x exec glava &
 
 # Gravar Tela
-bindsym $mod+m  exec ~/Scripts/gravar.sh &
+bindsym $mod+m  exec ~/.config/polybar/scripts/gravar.sh &
 
 # Printar Tela
-bindsym $mod+c exec bash -c 'scrot "$HOME/Imagens/Captura de tela de %d-%m-%Y %H:%M:%S.png"' &
+#bindsym $mod+c exec bash -c 'scrot "$HOME/Imagens/Captura de tela de %d-%m-%Y %H:%M:%S.png"' &
 #bindsym $mod+c exec bash -c 'maim "$HOME/Imagens/Captura de tela de %d-%m-%Y %H:%M:%S.png"' &
 bindsym $mod+z exec scrot -d 5 &
+bindsym $mod+c exec ~/Scripts/screenshot.sh &
 
 # Iniciar terminal
 #bindsym $mod+Return exec i3-sensible-terminal
@@ -441,7 +445,7 @@ for_window [class="(VirtualBox Manager)"]floating enable, move position center
 for_window [instance="origin.exe"] floating enable
 
 # Script para gravar a tela
-for_window [class="Termite" title="castnow"] move window to scratchpad
+for_window [class="alacritty" title="castnow"] move window to scratchpad
 for_window [title="(gravar$)"] move window to scratchpad
 
 ####################################################################
@@ -570,6 +574,9 @@ exec --no-startup-id $HOME/.cache/wal/colors.sh &
 # Música
 #exec --no-startup-id $HOME/Scripts/mpd-notify.sh &
 #exec --no-startup-id mpd &
+
+# Github.sh
+exec_always --no-startup-id $HOME/.local/bin/github
 
 ####################################################################
 #                           I3 STATUS                              #
