@@ -37,4 +37,4 @@
 | Tela de Bloqueio    | [i3lock](https://i3wm.org/i3lock/)                                                                                                  |
 | Daemon Notificação   | [Dunst](https://github.com/dunst-project/dunst)                                                                                     |
 | Tema GTK            | [Sierra-Dark](https://github.com/horst3180/arc-theme)                                                                               |
-| Tema Cursor         | Breeze-Black (https://www.xfce-look.org/p/999353/)                                                                                  |
+| Tema Cursor         | Breeze-Black(https://www.xfce-look.org/p/999353/)                                                                                  |
