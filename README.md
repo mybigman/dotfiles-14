@@ -23,7 +23,8 @@
 | Navegador           | [Firefox](https://www.mozilla.org/pt-BR/firefox/new/)                                                                                |
 | Iniciador Programas | [Rofi](https://github.com/DaveDavenport/rofi)                                                                                         |
 | Barra de Status     | [Polybar](https://github.com/jaagr/polybar)                                                                                         |
-| Player de Música    | [Deezer](https://www.deezer.com/br/) [Ncmpcpp](https://rybczak.net/ncmpcpp/) + [Mpd](https://github.com/MusicPlayerDaemon/MPD)                                           |
+| Player de Música    | [Deezer](https://www.deezer.com/br/)
+|
 | Vídeo Player        | [MPV](https://mpv.io/)                                                                     					    |
 | Visualizador de Som | [Cava](https://github.com/karlstav/cava)                                                                                            |
 | Geren. de Arquivos  | [Ranger](https://github.com/ranger/ranger)                    									    
