@@ -576,7 +576,7 @@ exec --no-startup-id $HOME/.cache/wal/colors.sh &
 #exec --no-startup-id mpd &
 
 # Github.sh
-exec_always --no-startup-id $HOME/.local/bin/github
+exec_always --no-startup-id $HOME/Scripts/github.sh
 
 ####################################################################
 #                           I3 STATUS                              #
