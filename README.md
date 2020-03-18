@@ -25,10 +25,10 @@
 | Barra de Status     | [Polybar](https://github.com/jaagr/polybar)                                                                                         |
 | Player de Música    | [Deezer](https://aur.archlinux.org/packages/deezer)       									    |
 | Paleta de Cores     | [Pywal](https://github.com/dylanaraps/pywal)                                					     	 	    |
-| Vídeo Player        | [MPV](https://mpv.io/)
-| Compositor	      | [Picom](https://github.com/yshui/picom)                                                                    					    |
+| Vídeo Player        | [MPV](https://mpv.io/)														    |
+| Compositor	      | [Picom](https://github.com/yshui/picom)                                                                    			    |
 | Visualizador de Som | [Cava](https://github.com/karlstav/cava)                                                                                            |
-| Geren. de Arquivos  | [Ranger](https://github.com/ranger/ranger)                    									    |
+| Geren. de Arquivos  | [Thunar](https://docs.xfce.org/xfce/thunar/start)                    								    |
 | Visualizador Imagens| [Feh](http://feh.finalrewind.org/)                                                                                                   |                                                                                          
 | Captura de Tela     | [Flameshot](https://github.com/lupoDharkael/flameshot)                                                                               |
 | Gravador de Tela    | [FFmpeg](https://www.ffmpeg.org/)                                                                                                    |
