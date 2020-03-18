@@ -1,10 +1,4 @@
 #!/usr/bin/env node
-#
-#PATH: /usr/lib/node_modules/torrenter
-#
-# Franklin Souza
-# @FranklinTech
-#
 const cloudscraper = require("cloudscraper");
 const download = require("./download");
 const isUrl = require("url-regex");
