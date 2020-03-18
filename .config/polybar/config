@@ -46,10 +46,10 @@ foreground = ${colors.foreground}
 ;border-size = 1
 ;border-color = ${xrdb:color7:#222}
 
-padding-left = 1
+padding-left = 0
 padding-right = 1
 
-module-margin-left = 1
+module-margin-left = 3
 module-margin-right = 1
 
 ;FONTES DA BARRA TOPO
@@ -65,9 +65,9 @@ font-2 = "Hack Nerd Font:style=Regular:pixelsize=9;2"
  separator = |
 ; separator = /
 
-modules-left = linux
+modules-left = coronabar
 modules-center = weather
-modules-right = alsa pacman filesystem memory calendar date
+modules-right = alsa pacman filesystem cpu memory calendar date
 
 ;Icone-Background
 
@@ -136,8 +136,8 @@ font-2 = "Hack Nerd Font:style=Regular:pixelsize=10;2"
 ;MÓDULOS BOTTOM BAR
 
 modules-left = i3
-modules-center = news-archlinux
-modules-right = xkeyboard gravar lock up net powermenu
+modules-center =
+modules-right = xkeyboard gravar lock up corona powermenu
 
 ;Icone-Background
 
@@ -410,7 +410,7 @@ label = %percentage:2%%
 [module/memory]
 type = internal/memory
 interval = 2
-format-prefix = "  "
+format-prefix = "  "
 format-prefix-foreground = ${xrdb:color7:#222
 ;format-underline = ${xrdb:color7:#222
 label = %percentage_used%%
@@ -619,6 +619,27 @@ margin-bottom = 5
 
 ; vim:ft=dosini
 
+[module/firefox]
+type = custom/text
+content = "  "
+content-foreground = ${xrdb:color7:#222
+;content-underline = ${xrdb:color7:#222
+click-left = exec firefox &
+
+[module/telegram]
+type = custom/text
+content = "  "
+content-foreground = ${xrdb:color7:#222
+;content-underline = ${xrdb:color7:#222
+click-left = exec $HOME/.local/bin/telegram &
+
+[module/alacritty]
+type = custom/text
+content = "  "
+content-foreground = ${xrdb:color7:#222
+;content-underline = ${xrdb:color7:#222
+click-left = exec alacritty &
+
 [module/user]
 type = custom/text
 content = "%{F${xrdb:color7:#222}  %{F-} Frank"
@@ -670,7 +691,7 @@ interval = 600
 exec = ~/.config/polybar/scripts/updates-arch.sh
 click-left = exec i3-sensible-terminal -e sudo pacman -Syu  &
 
-[module/pacman]
+[module/screenshot]
 type = custom/script
 interval = 1
 exec = pacman -Qq | wc -l
@@ -737,6 +758,14 @@ label = %output%
 exec = ~/.config/polybar/scripts/checknet.sh
 tail = true
 
+[module/coronabar]
+type = custom/script
+interval = 1
+exec = ~/Scripts/coronabar.sh
+label = "%{F${xrdb:color7:#222}  %{F-} %output:0:37:...%"
+;format-underline = #ff33e6
+;format-background = #ff33e6
+
 [module/pywall1]
 type = custom/text
 content = "%{F${xrdb:color7:#222}  %{F-}"
@@ -758,6 +787,13 @@ content = "  "
 content-foreground = #ffffff
 ;content-underline = #ffffff
 click-left = exec i3-sensible-terminal -e nmtui  &
+
+[module/corona]
+type = custom/text
+content = "  "
+content-foreground = ${xrdb:color7:#222
+;content-underline = ${xrdb:color7:#222
+click-left = exec ~/Scripts/corona.sh &
 
 [module/rede]
 type = internal/network

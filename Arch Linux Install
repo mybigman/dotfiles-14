@@ -1,5 +1,5 @@
 # Criador: Franklin Souza
-# Telegram: @FranklinTech                                                                                                                                                             
+# Telegram: @FranklinTech
 #
 # EU USO ESSE GUIA PARA MEU USO PRÓPRIO (SEI O QUE ESTOU FAZENDO) NÃO ME RESPONSABILIZO POR NADA.
 # UM GUIA DE INSTALAÇÃO DO ARCH, RECOMENDO LER A WIKI OFICIAL DA DISTRO, NÃO ME RESPONSABILIZO POR DANDOS
@@ -99,9 +99,6 @@ pacman -S linux-hardened linux-hardened-headers ➜ Kernel focado na segurança
 pacman -S linux-lts linux-lts-headers ➜ Kernel a longo prazo
 pacman -S linux-zen linux-zen-headers ➜ Kernel focado em desempenho
 
-➜ Rodar o kernel
-mkinitcpio -P
-
 ➜ Configurar repositório
 vim /etc/pacman.conf
 
@@ -190,8 +187,8 @@ sudo pacman -S plasma-desktop # Plasma Minimal
 sudo pacman -S xfce4 # XFCE minimal
 sudo pacman -S xfce4-goodies # XFCE com alguns pacotes integrados
 
-# NOTE: If you have an Intel GPU, make sure you are not using xf86-video-intel with Cinnamon 
-as it may freeze at random times otherwise, but you can still move the mouse. 
+# NOTE: If you have an Intel GPU, make sure you are not using xf86-video-intel with Cinnamon
+as it may freeze at random times otherwise, but you can still move the mouse.
 Use the modesetting driver instead by removing xf86-video-intel (KDE also recommends this).
 
 # modesetting ➜ https://jlk.fjfi.cvut.cz/arch/manpages/man/modesetting.4
