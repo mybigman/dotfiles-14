@@ -65,7 +65,7 @@ font-2 = "Hack Nerd Font:style=Regular:pixelsize=9;2"
  separator = |
 ; separator = /
 
-modules-left = coronabar
+modules-left =
 modules-center = weather
 modules-right = alsa pacman filesystem cpu memory calendar date
 
