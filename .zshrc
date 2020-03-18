@@ -143,10 +143,10 @@ source $ZSH/oh-my-zsh.sh
   alias neo="neofetch --ascii ~/Ascii/rose.txt"
   alias torr="torrenter"
   alias gpu="inxi -G"
-  alias 1="exec wal -i ~/Franks/Wallpapers/003.jpg &"
-  alias 2="exec wal -i ~/Franks/Wallpapers/006.jpg &"
-  alias 3="exec wal -i ~/Franks/Wallpapers/007.png &"
-  alias tor="sudo howl /usr/lib/node_modules/torrenter/torrenter.js"
+  alias 1="exec wal -i ~/Franks/Wallpapers/000.jpg &"
+  alias 2="exec wal -i ~/Franks/Wallpapers/001.jpg &"
+  alias 3="exec wal -i ~/Franks/Wallpapers/002.jpg &"
+  alias toor="sudo howl /usr/lib/node_modules/torrenter/torrenter.js"
   alias dot="howl .config/torrenter-nodejs/config.json"
 
 #Aliase scripts
@@ -181,6 +181,7 @@ source $ZSH/oh-my-zsh.sh
   alias h="howl ~/Franks/logfile"
   alias pb="polybar bottom 2>~/Franks/logfile &"
   alias rl="rm -rf ~/Franks/logfile"
+  alias imdb="~/Scripts/imdb.sh"
 
 
 # Plugins do zsh
