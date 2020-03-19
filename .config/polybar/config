@@ -678,6 +678,7 @@ click-left = i3-msg restart &
 [module/github]
 type = custom/text
 content = 
+;content = 
 click-left = ~/Scripts/github.sh
 
 [module/print]
