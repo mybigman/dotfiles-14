@@ -140,7 +140,7 @@ font-2 = "Hack Nerd Font:style=Regular:pixelsize=10;2"
 
 modules-left = i3
 modules-center = news-archlinux
-modules-right = xkeyboard gravar github lock trash up powermenu
+modules-right = xkeyboard gravar github lock up powermenu
 
 ;Icone-Background
 
