@@ -772,12 +772,12 @@ exec = ~/Scripts/covid.sh
 [module/pywall1]
 type = custom/text
 content = "%{F${xrdb:color7:#222}  %{F-}"
-click-left = exec wal -i ~/Franks/Wallpapers/000.jpg &
+click-left = exec wal -i ~/Franks/Wallpapers/000.png &
 
 [module/pywall2]
 type = custom/text
 content = "%{F${xrdb:color7:#222}  %{F-}"
-click-left = exec wal -i ~/Franks/Wallpapers/002.jpg &
+click-left = exec wal -i ~/Franks/Wallpapers/003.jpg &
 
 [module/pywall3]
 type = custom/text
