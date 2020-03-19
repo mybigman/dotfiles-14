@@ -113,7 +113,7 @@ bindsym $mod+Shift+t exec --no-startup-id ~/Franks/Jogos/PPSSPP/PPSSPPSDL
 bindsym $mod+i exec --no-startup-id idle3.8 &
 
 # Sair do i3wm
-bindsym $mod+Shift+e exec "i3-nagbar -t warning -m 'Você deseja sair do i3gaps?' -B 'Sim, desejo sair do i3gaps' 'i3-msg exit'"
+bindsym $mod+Shift+e exec --no-startup-id "i3-nagbar -t warning -m 'Você deseja sair do i3gaps?' -B 'Sim, desejo sair do i3gaps' 'i3-msg exit'"
 
 # Trocar de wallpaper
 #bindsym $mod+Shift+w exec feh --bg-scale "$(find $HOME/Franks/Wallpapers/ -name "*[jJpP][nNpP][gG]" | shuf -n1)"
