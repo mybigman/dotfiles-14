@@ -203,7 +203,7 @@ bindsym $mod+Shift+space floating toggle
 
 
 # Restartar i3
-  bindsym $mod+Shift+r restart
+bindsym $mod+Shift+r restart
 
 # Launchers
 #bindsym $mod+d exec --no-startup-id dmenu_run
