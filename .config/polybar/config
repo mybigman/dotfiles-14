@@ -696,7 +696,7 @@ interval = 600
 exec = ~/.config/polybar/scripts/updates-arch.sh
 click-left = exec i3-sensible-terminal -e sudo pacman -Syu  &
 
-[module/screenshot]
+[module/pacman]
 type = custom/script
 interval = 1
 exec = pacman -Qq | wc -l
