@@ -763,13 +763,10 @@ label = %output%
 exec = ~/.config/polybar/scripts/checknet.sh
 tail = true
 
-[module/coronabar]
+[module/covid]
 type = custom/script
 interval = 1
-exec = ~/Scripts/coronabar.sh
-label = "%{F${xrdb:color7:#222}  %{F-} %output:0:37:...%"
-;format-underline = #ff33e6
-;format-background = #ff33e6
+exec = ~/Scripts/covid.sh
 
 [module/pywall1]
 type = custom/text
