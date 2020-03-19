@@ -120,7 +120,6 @@ source $ZSH/oh-my-zsh.sh
   alias vk="VK_INSTANCE_LAYERS=VK_LAYER_MESA_overlay vkcube"
 # alias ref="sudo reflector -c Brazil --save /etc/pacman.d/mirrorlist"
   alias kwm="pkill -9 picom ; pkill -9 i3"
-# alias term="xrdb -merge ~/.Xresources"
   alias inf="free -h"
   alias arch="ufetch"
   alias br="setxkbmap br &"
