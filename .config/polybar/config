@@ -187,7 +187,7 @@ label-layout = %layout%
 
 label-indicator-padding = 2
 label-indicator-margin = 1
-label-indicator-background = ${xrdb:color0:#222}
+;label-indicator-background = ${xrdb:color0:#222}
 label-indicator-underline = ${xrdb:color0:#222}
 
 ; Modulo uptime
