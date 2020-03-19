@@ -140,7 +140,7 @@ font-2 = "Hack Nerd Font:style=Regular:pixelsize=10;2"
 
 modules-left = i3
 modules-center = news-archlinux
-modules-right = xkeyboard gravar github lock up powermenu
+modules-right = xkeyboard gravar github lock gmail up powermenu
 
 ;Icone-Background
 
@@ -713,6 +713,13 @@ type = custom/script
 exec = ~/.config/polybar/scripts/news-archlinux.py
 interval = 600
 click-left = firefox https://www.archlinux.org/ &
+
+[module/gmail]
+type = custom/script
+exec = ~/.config/polybar/gmail/launch.py
+;label = "%{F${xrdb:color7:#222}  %{F-} %output:0:37:...%"
+tail = true
+click-left = xdg-open https://mail.google.com
 
 [module/kernel]
 type = custom/script
