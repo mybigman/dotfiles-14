@@ -4,15 +4,15 @@
 
 # i3-Gaps
 
-![Screenshot](https://github.com/fffranks/dotfiles/blob/master/imagens/My%20i3wm.png)
+![Screenshot](https://github.com/fffranks/dotfiles/blob/master/imagens/i3gaps.png)
 
 # Rofi - Menu
 
-![Screenshot](https://github.com/fffranks/dotfiles/blob/master/imagens/My%20Rofi%20-%20Menu.png)
+![Screenshot](https://github.com/fffranks/dotfiles/blob/master/imagens/ROFI.png)
 
 # i3-Lock
 
-![Screenshot](https://github.com/fffranks/dotfiles/blob/master/imagens/My%20i3Lock.png)
+![Screenshot](https://github.com/fffranks/dotfiles/blob/master/imagens/i3Lock.png)
 
 ## Descrição:
 
