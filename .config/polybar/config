@@ -784,13 +784,6 @@ type = custom/text
 content = "%{F${xrdb:color7:#222}  %{F-}"
 click-left = exec wal -i ~/Franks/Wallpapers/001.jpg &
 
-[module/trash]
-type = custom/script
-exec = ~/.config/polybar/scripts/trash.sh
-interval = 60
-label = "%{F${xrdb:color7:#222}  %{F-} %output:0:37:...%"
-click-left = ~/.config/polybar/scripts/trash.sh --clean &
-
 [module/wifi]
 type = custom/text
 content = "  "
