@@ -98,19 +98,19 @@ bindsym $mod+u exec i3-sensible-terminal -e sudo pacman -Syu  &
 #bindsym $mod+shift+v exec ~/Scripts/calendario.sh &
 
 # Iniciar Compositor
-bindsym $mod+p exec picom -c &
+bindsym $mod+p exec --no-startup-id picom -c &
 
 # Matar Compositor
-bindsym $mod+shift+p exec killall picom &
+bindsym $mod+shift+p exec --no-startup-id killall picom &
 
 # Restartar Polybar
-bindsym $mod+o exec ~/.config/polybar/scripts/launch.sh
+bindsym $mod+o exec --no-startup-id ~/.config/polybar/scripts/launch.sh
 
 # Iniciar PPSSPP
-bindsym $mod+Shift+t exec ~/Franks/Jogos/PPSSPP/PPSSPPSDL
+bindsym $mod+Shift+t exec --no-startup-id ~/Franks/Jogos/PPSSPP/PPSSPPSDL
 
 # Abrir idle
-bindsym $mod+i exec idle3.8 &
+bindsym $mod+i exec --no-startup-id idle3.8 &
 
 # Sair do i3wm
 bindsym $mod+Shift+e exec "i3-nagbar -t warning -m 'Você deseja sair do i3gaps?' -B 'Sim, desejo sair do i3gaps' 'i3-msg exit'"
@@ -206,10 +206,10 @@ bindsym $mod+Shift+space floating toggle
   bindsym $mod+Shift+r restart
 
 # Launchers
-#bindsym $mod+d exec dmenu_run
+#bindsym $mod+d exec --no-startup-id dmenu_run
 #bindsym $mod+d exec --no-startup-id rofi -show drun -theme ~/.config/rofi/drun.rasi
 bindsym $mod+d exec --no-startup-id rofi -show drun -theme "~/.cache/wal/colors-rofi-dark.rasi" $fg" -nf "$bg" -sb "$bg" -sf "$fg"
-#bindsym $mod+d exec synapse
+#bindsym $mod+d exec --no-startup-id synapse
 
 # Screenshot
 bindsym Print exec --no-startup-id flameshot gui
