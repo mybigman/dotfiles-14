@@ -169,18 +169,18 @@ if (require.main === module) {
     colors.cyan("╠══════════════════════════════════════════════════════════╣")
   );
   console.log(
-    colors.brightRed(" ♥  REPO   ") +
+    colors.brightRed("   TRADUÇÃO   ") +
       colors.cyan("║") +
-      " https://github.com/fffranks                   " +
+      "             Franklin Souza                " +
       colors.cyan("║")
   );
   console.log(
     colors.cyan("╠══════════════════════════════════════════════════════════╣")
   );
   console.log(
-    colors.brightRed(" ♥  DOAÇÃO ") +
+    colors.brightRed("   DOAÇÃO     ") +
       colors.cyan("║") +
-      " https://sayem.eu.org/donate                   " +
+      " https://sayem.eu.org/donate               " +
       colors.cyan("║")
   );
   console.log(
