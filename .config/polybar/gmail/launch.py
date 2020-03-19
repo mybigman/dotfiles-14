@@ -12,14 +12,14 @@ from httplib2 import ServerNotFoundError
 parser = argparse.ArgumentParser()
 parser.add_argument('-l', '--label', default='INBOX')
 parser.add_argument('-p', '--prefix', default='\uf0e0')
-parser.add_argument('-c', '--color', default='#e06c75')
+parser.add_argument('-c', '--color', default='${xrdb:color7:#222}')
 parser.add_argument('-ns', '--nosound', action='store_true')
 args = parser.parse_args()
 
 DIR = os.path.dirname(os.path.realpath(__file__))
 CREDENTIALS_PATH = os.path.join(DIR, 'credentials.json')
 
-unread_prefix = '%{F' + args.color + '}' + args.prefix + ' %{F-}'
+unread_prefix = '%{F' + args.color + '' + args.prefix + ' %{F-}'
 error_prefix = '%{F' + args.color + '}\uf06a %{F-}'
 count_was = 0
 
