@@ -717,7 +717,6 @@ click-left = firefox https://www.archlinux.org/ &
 [module/gmail]
 type = custom/script
 exec = ~/.config/polybar/gmail/launch.py
-;label = "%{F${xrdb:color7:#222}  %{F-} %output:0:37:...%"
 tail = true
 click-left = xdg-open https://mail.google.com
 
