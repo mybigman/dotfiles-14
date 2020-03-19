@@ -15,8 +15,8 @@
 
 [colors]
 foreground = ${xrdb:color7:#222}
-;background = ${xrdb:color0:#222}
-background = #00000000
+background = ${xrdb:color0:#222}
+;background = #00000000
 background-alt = #444
 ;foreground = #ffffff
 foreground-alt = ${xrdb:color7:#222}
@@ -43,8 +43,8 @@ foreground = ${colors.foreground}
 ;line-size = 1
 ;line-color = #938d8d
 
-;border-size = 1
-;border-color = ${xrdb:color7:#222}
+border-size = 1
+border-color = ${xrdb:color7:#222}
 
 padding-left = 0
 padding-right = 1
@@ -54,8 +54,8 @@ module-margin-right = 1
 
 ;FONTES DA BARRA TOPO
 
-;font-0 = "Poppins:style=Regular:pixelsize=9;1"
-font-0 = "FireCode:style=Regular:pixelsize=8;2"
+font-0 = "Poppins:style=Regular:pixelsize=9;1"
+;font-0 = "FireCode:style=Regular:pixelsize=8;2"
 font-1 = "xos4 Terminess Powerline:pixelsize=13;1"
 font-2 = "Hack Nerd Font:style=Regular:pixelsize=9;2"
 
@@ -67,7 +67,7 @@ font-2 = "Hack Nerd Font:style=Regular:pixelsize=9;2"
 
 modules-left =
 modules-center = weather
-modules-right = alsa pacman filesystem cpu memory calendar date
+modules-right = alsa pacman filesystem calendar date
 
 ;Icone-Background
 
@@ -113,8 +113,8 @@ foreground = ${colors.foreground}
 ;line-size = 1
 ;line-color = #ffffff
 
-;border-size = 1
-;border-color = ${xrdb:color7:#222}
+border-size = 1
+border-color = ${xrdb:color7:#222}
 
 padding-left = 0
 padding-right = 1
@@ -124,8 +124,8 @@ module-margin-right = 2
 
 ;FONTES DA BARRA BOTTOM
 
-;font-0 = "Poppins:style=Regular:pixelsize=8;1"
-font-0 = "FireCode:style=Regular:pixelsize=8;2"
+font-0 = "Poppins:style=Regular:pixelsize=8;1"
+;font-0 = "FireCode:style=Regular:pixelsize=8;2"
 font-1 = "xos4 Terminess Powerline:pixelsize=13;1"
 font-2 = "Hack Nerd Font:style=Regular:pixelsize=10;2"
 
@@ -424,8 +424,8 @@ interval = 1
 ;date = "%a %d/%m/%y"
 ;date-alt = " %a %d/%m/%y"
 
-time = %I:%M:%S %p
-;time = %I:%M %p
+;time = %I:%M:%S %p
+time = %I:%M %p
 ;time = %H:%M
 ;time-alt = %H:%M:%S
 
