@@ -659,11 +659,6 @@ type = custom/text
 content = "%{F${xrdb:color7:#222}%{F-}  Seja livre, use Linux!!!"
 ;content-underline = #ff00d1
 
-[module/frase1]
-type = custom/text
-content = "%{F${xrdb:color7:#222}%{F-}  Nessa casa, só entra Linux!!!"
-;content-underline = #ff00d1
-
 [module/frase2]
 type = custom/text
 content = "%{F${xrdb:color7:#222}%{F-}  FranklinTech"
