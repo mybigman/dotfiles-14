@@ -212,7 +212,7 @@ bindsym $mod+d exec --no-startup-id rofi -show drun -theme "~/.cache/wal/colors-
 #bindsym $mod+d exec synapse
 
 # Screenshot
-bindsym Print exec flameshot gui
+bindsym Print exec --no-startup-id flameshot gui
 
 ####################################################################
 #                             A R E A S                            #
