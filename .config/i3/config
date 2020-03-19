@@ -89,13 +89,13 @@ bindsym $mod+Shift+n exec ~/Scripts/github.sh
 bindsym $mod+u exec i3-sensible-terminal -e sudo pacman -Syu  &
 
 # Restart OS
-bindsym $mod+r exec reboot
+#bindsym $mod+r exec reboot
 
 # Desligar OS
-bindsym $mod+Shift+o exec poweroff
+#bindsym $mod+Shift+o exec poweroff
 
 # Inicar Calendário
-bindsym $mod+shift+v exec ~/Scripts/calendario.sh &
+#bindsym $mod+shift+v exec ~/Scripts/calendario.sh &
 
 # Iniciar Compositor
 bindsym $mod+p exec picom -c &
@@ -108,7 +108,7 @@ bindsym $mod+o exec ~/.config/polybar/scripts/launch.sh
 
 # Iniciar PPSSPP
 bindsym $mod+Shift+t exec ~/Franks/Jogos/PPSSPP/PPSSPPSDL
-#
+
 # Abrir idle
 bindsym $mod+i exec idle3.8 &
 
@@ -116,14 +116,14 @@ bindsym $mod+i exec idle3.8 &
 bindsym $mod+Shift+e exec "i3-nagbar -t warning -m 'Você deseja sair do i3gaps?' -B 'Sim, desejo sair do i3gaps' 'i3-msg exit'"
 
 # Trocar de wallpaper
-bindsym $mod+Shift+w exec feh --bg-scale "$(find $HOME/Franks/Wallpapers/ -name "*[jJpP][nNpP][gG]" | shuf -n1)"
+#bindsym $mod+Shift+w exec feh --bg-scale "$(find $HOME/Franks/Wallpapers/ -name "*[jJpP][nNpP][gG]" | shuf -n1)"
 
 # Bloquear tela
-bindsym $mod+x exec --no-startup-id ~/Scripts/fortune.sh
+#bindsym $mod+x exec --no-startup-id ~/Scripts/fortune.sh
 #bindsym $mod+x exec --no-startup-id ~/Scripts/blurlock.sh
 
 # Glava
-bindsym $mod+Shift+x exec glava &
+#bindsym $mod+Shift+x exec glava &
 
 # Gravar Tela
 bindsym $mod+m  exec ~/.config/polybar/scripts/gravar.sh &
@@ -144,14 +144,14 @@ bindsym $mod+Return exec alacritty &
 # Iniciar APLICATIVOS
 
 # Firefox/Chrome
-bindsym $mod+b exec firefox
+#bindsym $mod+b exec firefox
 #bindsym $mod+b exec google-chrome-stable
 
 # Thunar
-bindsym $mod+g exec thunar
+#bindsym $mod+g exec thunar
 
 # Telegram
-bindsym $mod+t exec $HOME/.Telegram/Telegram &
+#bindsym $mod+t exec $HOME/.Telegram/Telegram &
 
 # Matar janela focada
 bindsym $mod+Shift+q kill
