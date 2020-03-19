@@ -123,16 +123,16 @@ bindsym $mod+Shift+e exec --no-startup-id "i3-nagbar -t warning -m 'Você deseja
 #bindsym $mod+x exec --no-startup-id ~/Scripts/blurlock.sh
 
 # Glava
-#bindsym $mod+Shift+x exec glava &
+#bindsym $mod+Shift+x exec --no-startup-id glava &
 
 # Gravar Tela
-bindsym $mod+m  exec ~/.config/polybar/scripts/gravar.sh &
+bindsym $mod+m  exec --no-startup-id ~/.config/polybar/scripts/gravar.sh &
 
 # Printar Tela
-#bindsym $mod+c exec bash -c 'scrot "$HOME/Imagens/Captura de tela de %d-%m-%Y %H:%M:%S.png"' &
-#bindsym $mod+c exec bash -c 'maim "$HOME/Imagens/Captura de tela de %d-%m-%Y %H:%M:%S.png"' &
+#bindsym $mod+c exec --no-startup-id bash -c 'scrot "$HOME/Imagens/Captura de tela de %d-%m-%Y %H:%M:%S.png"' &
+bindsym $mod+c exec --no-startup-id bash -c 'maim "$HOME/Imagens/Captura de tela de %d-%m-%Y %H:%M:%S.png"' &
 bindsym $mod+z exec --no-startup-id scrot -d 5 &
-bindsym $mod+c exec --no-startup-id ~/Scripts/screenshot.sh &
+#bindsym $mod+c exec --no-startup-id ~/Scripts/screenshot.sh &
 
 # Iniciar terminal
 #bindsym $mod+Return exec --no-startup-id i3-sensible-terminal
