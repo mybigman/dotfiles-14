@@ -41,7 +41,7 @@ swapon # Montar swap (caso tenha)
 mkdir -p /mnt/boot/efi && mount /dev/sdaX /mnt/boot/efi
 
 ➜ Instalar sistema base
-pacstrap /mnt base linux-firmware base-devel - (base-devel é opcional, mas eu recomendo instalar)
+pacstrap /mnt dhcpcd vim linux-firmware base-devel - (base-devel é opcional, mas eu recomendo instalar para pode usar os pacotes de compilação)
 
 ➜ Gerar FSTAB
 genfstab -p /mnt >> /mnt/etc/fstab
@@ -52,19 +52,21 @@ arch-chroot /mnt
 # Escolha suas opções
 
 # INTERNET
-# OPÇÃO 1 (Recomendado para rede cabeada)
+# OPÇÃO 1 - DHCPCD
 pacman -S dhcpcd
 systemctl enable dhcpcd
 
-# Opção 2 (Recomendado para notebooks - WIFI)
+# Opção 2 - NetworkManager
 pacman -S networkmanager
 systemctl enable NetworkManager
 
 # EDITORES
-# OPÇÃO 1
+# OPÇÃO 1 - VIM EDITOR
 pacman -S vim
 
-# OPÇÃO 2
+OBS: Se já colocou o editor no pacstrap, não precisa baixa-lo novamente.
+
+# OPÇÃO 2 - NANO EDITOR
 pacman -S nano
 
 ➜ Setar o fuso horário do sistema (OPCIONAL)
@@ -154,6 +156,9 @@ sudo pacman -S xf86-video-ati --noconfirm
 ➜ AMDGPU - GPUs mais novas (AMD)
 sudo pacman -S xf86-video-amgpu --noconfirm
 
+➜ Nvidia
+sudo pacman -S nvidia
+
 ➜ GPU INTEL
 sudo pacman -S xf86-video-intel --noconfirm
 
@@ -173,11 +178,7 @@ sudo pacman -S i3
 #(Opções: 1,4)
 
 ➜ Pacotes necessarios (OPCIONAL)
-sudo pacman -S dmenu alacritty feh viewnior imagemagick w3m lxappearance git wget howl thunar firefox-i18n-pt-br scrot flameshot numlockx gnome-disk-utility python-pip --noconfirm
-
-➜ Baixar e instalar Pywall
-pip install --user pywal
-export PATH="${PATH}:${HOME}/.local/bin/" # Jogar no bashrc ou zshrc
+sudo pacman -S dmenu pacman-contrib alacritty feh viewnior imagemagick w3m lxappearance git wget howl thunar firefox-i18n-pt-br scrot flameshot numlockx gnome-disk-utility python-pip --noconfirm
 
 ➜ Baixando Plasma
 sudo pacman -S plasma # Plasma Completo
@@ -209,5 +210,9 @@ systemctl enable lxdm.service
 
 ➜ Configurar o .xinitrc (OPCIONAL, PARA INICIAR O I3WM PELO STARTX)
 echo exec i3 > ~/.xinitrc
+
+➜ Baixar e instalar Pywall (OPCIONAL, caso queira usar o pywal, instale ele e exporta no seu bashrc ou zshrc)
+pip install --user pywal
+export PATH="${PATH}:${HOME}/.local/bin/" # Jogar no bashrc ou zshrc
 
 # FINALIZADA INSTALAÇÃO do Arch Linux
