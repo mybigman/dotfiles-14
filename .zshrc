@@ -181,6 +181,7 @@ source $ZSH/oh-my-zsh.sh
   alias pb="polybar bottom 2>~/Franks/logfile &"
   alias rl="rm -rf ~/Franks/logfile"
   alias imdb="~/Scripts/imdb.sh"
+  alias ug="~/Scripts/update-grub.sh"
 
 
 # Plugins do zsh
