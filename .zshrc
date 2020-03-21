@@ -142,9 +142,8 @@ source $ZSH/oh-my-zsh.sh
   alias neo="neofetch --ascii ~/Ascii/rose.txt"
   alias torr="torrenter"
   alias gpu="inxi -G"
-  alias 1="exec wal -i ~/Franks/Wallpapers/000.png &"
+  alias 1="exec wal -i ~/Franks/Wallpapers/000.jpg &"
   alias 2="exec wal -i ~/Franks/Wallpapers/001.jpg &"
-  alias 3="exec wal -i ~/Franks/Wallpapers/003.jpg &"
   alias toor="sudo howl /usr/lib/node_modules/torrenter/torrenter.js"
   alias dot="howl .config/torrenter-nodejs/config.json"
 
