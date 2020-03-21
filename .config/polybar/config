@@ -66,7 +66,7 @@ font-2 = "Hack Nerd Font:style=Regular:pixelsize=9;2"
  separator = |
 ; separator = /
 
-modules-left =
+modules-left = linux
 modules-center = weather
 modules-right = alsa pacman filesystem calendar date
 
