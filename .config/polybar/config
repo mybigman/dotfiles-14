@@ -427,10 +427,10 @@ interval = 1
 ;date = "%a %d/%m/%y"
 ;date-alt = " %a %d/%m/%y"
 
-;time = %I:%M:%S %p
+time = %I:%M:%S %p
 ;time = %I:%M %p
 ;time = %H:%M
-time = %H: %M: %S
+;time = %H: %M: %S
 ;time-alt = %H:%M:%S
 
 
