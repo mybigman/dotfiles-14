@@ -54,8 +54,8 @@ module-margin-right = 1
 
 ;FONTES DA BARRA TOPO
 
-;font-0 = "Poppins:style=Regular:pixelsize=9;1"
-font-0 = "Baumans:style=Regular:pixelsize=9;2"
+font-0 = "Poppins:style=Regular:pixelsize=9;1"
+;font-0 = "Baumans:style=Regular:pixelsize=9;2"
 ;font-0 = "FireCode:style=Regular:pixelsize=8;2"
 font-1 = "xos4 Terminess Powerline:pixelsize=13;1"
 font-2 = "Hack Nerd Font:style=Regular:pixelsize=9;2"
@@ -125,9 +125,9 @@ module-margin-right = 2
 
 ;FONTES DA BARRA BOTTOM
 
-;font-0 = "Poppins:style=Regular:pixelsize=8;1"
+font-0 = "Poppins:style=Regular:pixelsize=8;1"
 ;font-0 = "feather:style=Regular:pixelsize=10;1"
-font-0 = "Baumans:style=Regular:pixelsize=9;1"
+;font-0 = "Baumans:style=Regular:pixelsize=9;1"
 ;font-0 = "FireCode:style=Regular:pixelsize=8;2"
 font-1 = "xos4 Terminess Powerline:pixelsize=13;1"
 font-2 = "Hack Nerd Font:style=Regular:pixelsize=10;2"
