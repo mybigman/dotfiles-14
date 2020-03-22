@@ -86,7 +86,7 @@ client.background       $bg
 bindsym $mod+Shift+n exec --no-startup-id ~/Scripts/github.sh
 
 # OS update
-bindsym $mod+u exec i3-sensible-terminal -e sudo pacman -Syu  &
+bindsym $mod+u exec --no-startup-id i3-sensible-terminal -e sudo pacman -Syu  &
 
 # Restart OS
 #bindsym $mod+r exec --no-startup-id reboot
