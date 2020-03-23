@@ -74,7 +74,7 @@ modules-right = alsa pacman filesystem calendar date
 
 ;tray-position = left
 ;tray-detached = true
-;tray-maxsize = 16
+;tray-maxsize = 14
 ;tray-padding = 0
 ;tray-scale = 1.0
 ;tray-transparent = false
@@ -101,7 +101,7 @@ monitor = ${env:MONITOR:VGA-0}
 dpi = 80
 width = 100%
 ;width = 80%
-height = 16
+height = 14
 offset-x = 4%
 pffset-y = 6px
 ;override-redirect = true
