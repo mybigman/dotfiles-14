@@ -79,7 +79,7 @@ separator = |
 #                         MÓDULOS BAR TOP                       #
 #################################################################
 
-modules-left = firefox  terminal telegram
+modules-left =
 modules-center = weather
 modules-right = alsa pacman filesystem calendar date
 
