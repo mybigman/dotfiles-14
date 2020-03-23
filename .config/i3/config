@@ -17,7 +17,7 @@ gaps outer 0
 # Bordas Arrendondadas
 # OBS: Tem que ter o pacote:
 # https://aur.archlinux.org/packages/i3-gaps-rounded-git
-#border_radius 5
+border_radius 5
 
 # $mod = Windows
 # Mod4 = Alt
