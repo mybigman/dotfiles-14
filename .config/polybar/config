@@ -327,7 +327,7 @@ index-sort = false
 wrapping-scroll = false
 pin-workspaces = true
 enable-click = true
-enable-scroll = false
+enable-scroll = true
 reverse-scroll = false
 fuzzy-match = true
 
