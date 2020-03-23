@@ -72,15 +72,15 @@ modules-right = alsa pacman filesystem calendar date
 
 ;Icone-Background
 
-;tray-position = left
-;tray-detached = true
-;tray-maxsize = 14
-;tray-padding = 0
+;tray-position = right
+;tray-detached = false
+;tray-maxsize = 12
+;tray-padding = 2
 ;tray-scale = 1.0
 ;tray-transparent = false
-;tray-offset-x = 0
-;tray-offset-y = 0
-;tray-background = ${xrdb:color7:#222}
+;tray-offset-x = 1
+;tray-offset-y = 1
+;tray-background = ${xrdb:color0:#222}
 
 ;wm-restack = bspwm
 ;wm-restack = i3
@@ -102,8 +102,8 @@ dpi = 80
 width = 100%
 ;width = 80%
 height = 16
-offset-x = 4%
-pffset-y = 6px
+;offset-x = 4%
+;pffset-y = 6px
 ;override-redirect = true
 fixed-center = true
 bottom = true
@@ -144,15 +144,15 @@ modules-right = xkeyboard gravar github lock gmail up powermenu
 
 ;Icone-Background
 
-;tray-position = right
-;tray-detached = false
-;tray-maxsize = 10
-;tray-padding = 1
-;tray-scale = 1.0
-;tray-transparent = false
+tray-position = right
+tray-detached = false
+tray-maxsize = 12
+tray-padding = 2
+tray-scale = 1.0
+tray-transparent = false
 ;tray-offset-x = 1
 ;tray-offset-y = 1
-;tray-background = ${xrdb:color7:#222}
+tray-background = ${xrdb:color0:#222}
 
 cursor-click = pointer
 cursor-scroll = ns-resize
