@@ -82,6 +82,9 @@ client.background       $bg
 #                          A T A L H O S                           #
 ####################################################################
 
+# Epic Games
+bindsym $mod+e exec --no-startup-id firefox https://www.epicgames.com/store/pt-BR/
+
 # GitHub.sh
 bindsym $mod+Shift+n exec --no-startup-id ~/Scripts/github.sh
 
