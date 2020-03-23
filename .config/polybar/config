@@ -38,8 +38,8 @@ dpi = 80
 width = 100%
 ;width = 80%
 height = 16
-offset-x = 4%
-pffset-y = 6px
+;offset-x = 4%
+;pffset-y = 6px
 ;override-redirect = true
 fixed-center = true
 
@@ -79,7 +79,7 @@ separator = |
 #                         MÓDULOS BAR TOP                       #
 #################################################################
 
-modules-left =
+modules-left = firefox  terminal telegram
 modules-center = weather
 modules-right = alsa pacman filesystem calendar date
 
@@ -123,8 +123,6 @@ dpi = 80
 width = 100%
 ;width = 80%
 height = 16
-;offset-x = 4%
-;pffset-y = 6px
 ;override-redirect = true
 fixed-center = true
 bottom = true
@@ -710,7 +708,7 @@ content-foreground = ${xrdb:color7:#222
 ;content-underline = ${xrdb:color7:#222
 click-left = exec $HOME/.local/bin/telegram &
 
-[module/alacritty]
+[module/terminal]
 type = custom/text
 content = "  "
 content-foreground = ${xrdb:color7:#222
@@ -890,22 +888,22 @@ interface = wlp2s0
 interval = 0.1
 
 format-packetloss = <animation-packetloss>
-format-connected = <label-connected>
+format-connected = <ramp-signal>
 format-disconnected = <label-disconnected>
-label-connected = Conectado
-label-connected-foreground = #64ff33
+;label-connected = Conectado
+label-connected-foreground = #3dff00
 label-disconnected = Desconectado
-label-disconnected-foreground = #fe2020
+label-disconnected-foreground = #ff0000
 
 ramp-signal-0 = 
-ramp-signal-0-foreground = #BD574C
+ramp-signal-0-foreground = #fe3823
 ramp-signal-1 = 
-ramp-signal-1-foreground = #FF8066
+ramp-signal-1-foreground = #ecf91c
 ramp-signal-2 = 
-ramp-signal-2-foreground = #F5DE72
-ramp-signal-3 = 
-ramp-signal-3-foreground = #D8DE72
-ramp-signal-4 = 
-ramp-signal-4-foreground = #BADE72
-ramp-signal-5 = 
-ramp-signal-5-foreground = #96DE72
+ramp-signal-2-foreground = #55ff00
+;ramp-signal-3 = 
+;ramp-signal-3-foreground = #D8DE72
+;ramp-signal-4 = 
+;ramp-signal-4-foreground = #BADE72
+;ramp-signal-5 = 
+;ramp-signal-5-foreground = #96DE72

@@ -140,6 +140,7 @@ source $ZSH/oh-my-zsh.sh
   alias clima="curl wttr.in"
   alias 1="exec wal -i ~/Franks/Wallpapers/000.jpg &"
   alias 2="exec wal -i ~/Franks/Wallpapers/003.png &"
+  alias 3="exec wal -i ~/Franks/Wallpapers/004.jpg &"
   alias mine="java -jar $HOME/Franks/Jogos/Minecraft/Minecraft.jar"
   alias neo="neofetch --ascii ~/Ascii/rose.txt"
   alias torr="torrenter"
