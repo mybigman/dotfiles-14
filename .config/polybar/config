@@ -174,7 +174,7 @@ modules-right = xkeyboard gravar github lock gmail up powermenu
 
 tray-position = right
 tray-detached = false
-tray-maxsize = 14
+tray-maxsize = 12
 tray-padding = 2
 tray-scale = 1.0
 ;tray-transparent = false
