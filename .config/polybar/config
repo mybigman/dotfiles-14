@@ -782,7 +782,7 @@ click-left = firefox https://www.archlinux.org/ &
 type = custom/script
 exec = ~/.config/polybar/gmail/launch.py
 tail = true
-click-left = firefox https://mail.google.com
+;click-left = firefox https://mail.google.com
 
 [module/kernel]
 type = custom/script
