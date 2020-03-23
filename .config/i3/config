@@ -11,8 +11,8 @@
 #gaps inner $gaps_inner_default 9
 #gaps outer $gaps_outer_default 0
 
-#gaps inner 9
-#gaps outer 0
+gaps inner 9
+gaps outer 0
 
 # Bordas Arrendondadas
 # OBS: Tem que ter o pacote:
