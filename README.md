@@ -4,7 +4,7 @@
 
 # i3-Gaps
 
-![Screenshot](https://github.com/fffranks/dotfiles/blob/master/imagens/i3gaps.png)
+![Screenshot](https://github.com/fffranks/dotfiles/blob/master/imagens/I3wm.png)
 
 # Rofi - Menu
 
@@ -12,7 +12,7 @@
 
 # i3-Lock
 
-![Screenshot](https://github.com/fffranks/dotfiles/blob/master/imagens/i3Lock.png)
+![Screenshot](https://github.com/fffranks/dotfiles/blob/master/imagens/I3LOCK.png)
 
 ## Descrição:
 
