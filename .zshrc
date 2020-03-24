@@ -176,7 +176,8 @@ source $ZSH/oh-my-zsh.sh
   alias gravar="sh $HOME/Scripts/gravar.sh"
 # alias rp="$HOME/.config/polybar/scripts/launch.sh"
   alias dw="wal -c"
-  alias bot="$HOME/Scripts/userbot.sh"
+  alias bot1="$HOME/Scripts/userbot1.sh"
+  alias bot2="$HOME/Scripts/userbot2.sh"
   alias pt="polybar top 2>~/Franks/logfile &"
   alias h="howl ~/Franks/logfile"
   alias pb="polybar bottom 2>~/Franks/logfile &"
@@ -187,7 +188,7 @@ source $ZSH/oh-my-zsh.sh
 
 # Plugins do zsh
 #source /usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
-source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+#source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 
 # Iniciar com o shell
 # neofetch
