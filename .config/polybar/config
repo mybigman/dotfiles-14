@@ -80,7 +80,7 @@ separator = |
 #################################################################
 
 modules-left =
-modules-center =
+modules-center = weather
 modules-right = alsa calendar date
 
 #################################################################
