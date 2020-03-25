@@ -139,7 +139,7 @@ source $ZSH/oh-my-zsh.sh
   alias cache="cd /var/cache/pacman/pkg"
   alias clima="curl wttr.in"
   alias 1="exec wal -i ~/Franks/Wallpapers/000.jpg &"
-  alias 2="exec wal -i ~/Franks/Wallpapers/001.jpg &"
+  alias 2="exec wal -i ~/Franks/Wallpapers/005.jpg &"
   alias 3="exec wal -i ~/Franks/Wallpapers/004.png &"
   alias mine="java -jar $HOME/Franks/Jogos/Minecraft/Minecraft.jar"
   alias neo="neofetch --ascii ~/Ascii/rose.txt"
@@ -205,3 +205,5 @@ source $ZSH/oh-my-zsh.sh
 if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]; then
   source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
 fi
+
+stty -ixon
