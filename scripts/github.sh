@@ -13,7 +13,7 @@
 
 nome="GitHub.sh"
 dir="${HOME}/.github"
-repos=('.dotfiles')
+repos=('dotfiles')
 remoto="Franklin@Souza"
 dotfiles=1
 icone="${HOME}/.local/share/icons/elementary/github.svg"
