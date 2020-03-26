@@ -378,7 +378,7 @@ for_window [class="(qBittorrent)"]floating enable, move position center
 
 # PopcornTime (Streamer de filmes)
 
-for_window [class="(popcorntime)"]floating enable, move position center
+for_window [class="(Popcorntime)"]floating enable, move position center
 
 # Nautilus (Gerenciador de Arquivos)
 
