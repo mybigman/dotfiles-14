@@ -33,7 +33,7 @@ alert = ${xrdb:color3:#222}
 #################################################################
 
 [bar/top]
-monitor = ${env:MONITOR:VGA-1}
+monitor = ${env:MONITOR:VGA-0}
 dpi = 80
 width = 100%
 ;width = 80%
@@ -118,7 +118,7 @@ cursor-scroll = ns-resize
 #################################################################
 
 [bar/bottom]
-monitor = ${env:MONITOR:VGA-1}
+monitor = ${env:MONITOR:VGA-0}
 dpi = 80
 width = 100%
 ;width = 80%
