@@ -81,7 +81,7 @@ separator = |
 
 modules-left =
 modules-center = weather
-modules-right = alsa cpu calendar date
+modules-right = alsa filesystem calendar date
 
 #################################################################
 #                         TRAY BAR TOP                          #
@@ -457,7 +457,7 @@ interval = 1.5
 format-prefix = "  "
 format-prefix-foreground = ${xrdb:color7:#222}
 ;format-underline = ${xrdb:color7:#222}
-label = %percentage:2%%
+label = %percentage%%
 
 #################################################################
 #                            MÓDULO MEMORY                      #
