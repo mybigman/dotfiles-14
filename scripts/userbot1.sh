@@ -1,11 +1,17 @@
 #!/bin/bash
 echo
-clear
-figlet UserBot FTG | lolcat
+figlet UserBOT FTG | lolcat
 echo
+echo "Deseja abrir o UserBOT FTG no Telegram?"
 echo
-echo "BOT RODANDO..." | lolcat
+echo "1 - Sim"
+echo "2 - Não"
 echo
-sleep 2
+read ALT
 echo
-cd ~/.Git/friendly-telegram && python3 -m friendly-telegram
+if [ "$ALT" = "1" ];then
+	echo "Abrindo o userBOT FTG..."
+	clear
+	echo "BOT RODANDO..." | lolcat
+	cd ~/.aur/friendly-telegram && python3 -m friendly-telegram
+fi
