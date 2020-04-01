@@ -81,7 +81,7 @@ separator = |
 
 modules-left =
 modules-center = weather
-modules-right = alsa calendar date
+modules-right = alsa cpu calendar date
 
 #################################################################
 #                         TRAY BAR TOP                          #
