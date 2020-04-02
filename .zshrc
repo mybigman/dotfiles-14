@@ -145,9 +145,9 @@ source $ZSH/oh-my-zsh.sh
   alias neo="neofetch --ascii ~/Ascii/rose.txt"
   alias torr="torrenter"
   alias gpu="inxi -G"
-
   alias toor="sudo howl /usr/lib/node_modules/torrenter/torrenter.js"
   alias dot="howl .config/torrenter-nodejs/config.json"
+  alias hm="systemctl restart logmein-hamachi.service"
 
 #Aliase scripts
   alias pipes="$HOME/Scripts/pipes.sh"
@@ -184,8 +184,7 @@ source $ZSH/oh-my-zsh.sh
   alias rl="rm -rf ~/Franks/logfile"
   alias imdb="~/Scripts/imdb.sh"
   alias ug="~/Scripts/update-grub.sh"
-  alias hm="systemctl restart logmein-hamachi.service"
-
+  alias pes="~/Scripts/browser.sh"
 
 # Plugins do zsh
 #source /usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
