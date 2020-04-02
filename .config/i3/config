@@ -17,7 +17,7 @@ gaps outer 0
 # Bordas Arrendondadas
 # OBS: Tem que ter o pacote:
 # https://aur.archlinux.org/packages/i3-gaps-rounded-git
-border_radius 5
+#border_radius 5
 
 # $mod = Windows
 # Mod4 = Alt
@@ -42,9 +42,9 @@ focus_on_window_activation focus
 #                           B O R D A S                            #
 ####################################################################
 
-default_border pixel 0
-default_floating_border pixel 0
-new_window pixel 0
+default_border pixel 1
+default_floating_border pixel 1
+new_window pixel 1
 
 #hide_edge_borders smart
 hide_edge_borders both
