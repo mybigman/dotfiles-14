@@ -138,9 +138,9 @@ source $ZSH/oh-my-zsh.sh
 # alias pmirror="sudo chmod 0644 /etc/pacman.d/mirrorlist"
   alias cache="cd /var/cache/pacman/pkg"
   alias clima="curl wttr.in"
-  alias 1="exec wal -i ~/Franks/Wallpapers/000.jpg &"
+  alias 1="exec wal -i ~/Franks/Wallpapers/002.jpg &"
   alias 2="exec wal -i ~/Franks/Wallpapers/001.jpg &"
-  alias 3="exec wal -i ~/Franks/Wallpapers/002.png &"
+  alias 3="exec wal -i ~/Franks/Wallpapers/004.jpg &"
   alias mine="java -jar $HOME/Franks/Jogos/Minecraft/Minecraft.jar"
   alias neo="neofetch --ascii ~/Ascii/rose.txt"
   alias torr="torrenter"
@@ -184,6 +184,7 @@ source $ZSH/oh-my-zsh.sh
   alias rl="rm -rf ~/Franks/logfile"
   alias imdb="~/Scripts/imdb.sh"
   alias ug="~/Scripts/update-grub.sh"
+  alias hm="systemctl restart logmein-hamachi.service"
 
 
 # Plugins do zsh
