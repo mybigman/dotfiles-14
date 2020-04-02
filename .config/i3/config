@@ -124,7 +124,7 @@ bindsym $mod+Shift+e exec --no-startup-id "i3-nagbar -t warning -m 'Você deseja
 # Bloquear tela
 #bindsym $mod+x exec --no-startup-id $HOME/.config/polybar/scripts/fortune.sh &
 #bindsym $mod+x exec --no-startup-id ~/Scripts/blurlock.sh
-#bindsym $mod+x exec --no-startup-id $HOME/.config/polybar/scripts/slock.sh &
+#bindsym $mod+x exec --no-startup-id $HOME/Scripts/slock.sh &
 # Glava
 #bindsym $mod+Shift+x exec --no-startup-id glava &
 
