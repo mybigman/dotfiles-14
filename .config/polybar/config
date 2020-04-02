@@ -756,13 +756,6 @@ content-foreground = ${xrdb:color7:#222}
 ;content-underline = ${xrdb:color7:#222}
 click-left = $HOME/.config/polybar/scripts/fortune.sh &
 
-[module/lock1]
-type = custom/text
-content = "  "
-content-foreground = ${xrdb:color7:#222}
-;content-underline = ${xrdb:color7:#222}
-click-left = $HOME/.config/polybar/scripts/slock.sh &
-
 [module/up]
 type = custom/script
 interval = 600
