@@ -754,7 +754,7 @@ type = custom/text
 content = "  "
 content-foreground = ${xrdb:color7:#222}
 ;content-underline = ${xrdb:color7:#222}
-click-left = $HOME/Scripts/fortune.sh &
+click-left = $HOME/.config/polybar/scripts/fortune.sh &
 
 [module/up]
 type = custom/script
