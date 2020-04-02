@@ -81,7 +81,7 @@ separator = |
 
 modules-left =
 modules-center = weather
-modules-right = alsa filesystem calendar date
+modules-right = alsa pacman filesystem calendar date
 
 #################################################################
 #                         TRAY BAR TOP                          #
